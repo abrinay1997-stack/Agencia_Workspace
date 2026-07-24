@@ -10,14 +10,16 @@ Lectura obligatoria al iniciar cualquier tarea. Este archivo no se resume ni se 
 
 | Carpeta | Cliente | Estado del ADN |
 |---|---|---|
-| `Dcasa/` | D'CASA Panamá (muebles y hogar) | ✅ ADN completo (ver `01_ADN_y_Memoria/`) |
+| `Dcasa/` | D'CASA Panamá (muebles y hogar) | 🟡 ADN base — verbal y visual listos; **buyer personas y diccionario SEO por validar con datos reales** (ver notas dentro de `01_ADN_y_Memoria/`) |
 | `57Dmc/` | 57Dmc | ⏳ Pendiente de extracción de ADN |
 | `Baby Caleb/` | Baby Caleb | ⏳ Pendiente de extracción de ADN |
 | `Feria del lente/` | Feria del lente | ⏳ Pendiente de extracción de ADN (assets brutos ya cargados) |
 | `Fotosonido/` | Fotosonido | ⏳ Pendiente de extracción de ADN |
 | `Juancito Ads/` | Juancito Ads | ⏳ Pendiente de extracción de ADN |
 
-Cuando se complete el ADN de un cliente, actualiza el estado en esta tabla.
+**Leyenda de estados:** ✅ ADN completo y validado · 🟡 ADN base (identidad lista, faltan datos duros como personas/SEO reales) · ⏳ Pendiente de extracción (plantilla vacía, no asumir identidad).
+
+Cuando cambie el estado del ADN de un cliente, actualiza esta tabla.
 
 ---
 
