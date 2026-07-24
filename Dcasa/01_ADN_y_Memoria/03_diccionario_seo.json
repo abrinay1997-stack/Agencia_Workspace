@@ -1,0 +1,23 @@
+{
+  "cliente": "Dcasa",
+  "_nota": "Pendiente de construir con investigación real de keywords. El ADN fuente no incluye diccionario SEO — estas son sugerencias iniciales derivadas del posicionamiento del ADN, a validar.",
+  "keywords_principales": [
+    "muebles Panamá",
+    "tienda de muebles Panamá"
+  ],
+  "keywords_secundarias": [
+    "muebles para el hogar Panamá",
+    "sofás Panamá precio",
+    "decoración de hogar accesible",
+    "entrega de muebles a domicilio Panamá"
+  ],
+  "entidades_semanticas_lsi": [
+    "sala",
+    "comedor",
+    "recámara",
+    "ambientes",
+    "medidas de espacio",
+    "garantía",
+    "crédito"
+  ]
+}
