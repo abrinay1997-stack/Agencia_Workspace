@@ -1,5 +1,6 @@
 # MANUAL DE MARCA Y TONO: D'CASA Panamá
 
+> Última actualización: 2026-07-24 · Fuente del ADN: `Assets_Visuales_Base/ADN de Marca DECASA PANAMA.pdf` (v3)
 > Fuente completa: `Assets_Visuales_Base/ADN de Marca DECASA PANAMA.pdf` ("ADN de Marca — D'CASA Panamá", v3). Este `.md` resume lo esencial para uso diario del orquestador; ante cualquier duda de detalle, consulta el PDF.
 > Nota de precisión original: colores y contraste están **extraídos y calculados del archivo real del logo**, no estimados. El giro de negocio asumido es **retail de muebles y artículos para el hogar** (venta, no fabricación a medida) — confirmar con el cliente si esto cambia.
 
