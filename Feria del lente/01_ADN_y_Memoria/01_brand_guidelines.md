@@ -1,5 +1,7 @@
 # MANUAL DE MARCA Y TONO: Óptica Feria del Lente
 
+> 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1U7spt5Mp_zn-Aws49wS_YSnmLOcF_swm) · [Canva](https://www.canva.com/folder/FAHQavWRu8U) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
+
 > Última actualización: 2026-07-24 · Fuentes: inspección de Claude en Chrome sobre redes sociales (Instagram/Facebook/TikTok, no hay sitio web) + `Assets_Visuales_Base/Óptica Feria del Lente Brand Book by Pomelli.pdf` + 2 conversaciones internas de la agencia (campaña "óptica cristiana" y calendario de contenido julio 2026) + assets brutos reales en `06_Assets_Brutos_Solo_Lectura/AGOSTO/`.
 
 ## ⚠️ Nota crítica: esta marca tiene DOS CARAS

@@ -21,6 +21,15 @@ Lectura obligatoria al iniciar cualquier tarea. Este archivo no se resume ni se 
 
 Cuando cambie el estado del ADN de un cliente, actualiza esta tabla.
 
+### Multimedia (Google Drive + Canva)
+
+Este repositorio es la **memoria y estrategia** (texto). La **multimedia pesada** (imágenes, videos, diseños) vive fuera, en dos espacios que **espejan esta misma estructura** (carpeta raíz `Agencia Workspace` → una carpeta por cliente):
+
+- **Google Drive (raíz):** https://drive.google.com/drive/folders/131anvvMKK1iYe15zL1B8fqhpSa3cnamJ — cada cliente con sus subcarpetas `01`–`06`.
+- **Canva (raíz):** https://www.canva.com/folder/FAHQapGMTGs — una carpeta por cliente para los diseños.
+
+El link de Drive y Canva de cada cliente está en su `01_ADN_y_Memoria/01_brand_guidelines.md` (bloque 📁 al inicio). Cuenta de Drive: `juandavidarrieta99@gmail.com`. Regla: no mezclar multimedia entre clientes, igual que con la memoria.
+
 ---
 
 ## 1. PROTOCOLO DE EJECUCIÓN OBLIGATORIO (R.A.G. Local)

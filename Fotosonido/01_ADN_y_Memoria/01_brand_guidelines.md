@@ -1,5 +1,7 @@
 # MANUAL DE MARCA Y TONO: Fotosonido
 
+> 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1UtXcVaIIYl4veauB2k6h5c2_MO3Zoqqx) · [Canva](https://www.canva.com/folder/FAHQaujBe3M) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
+
 > Última actualización: [AAAA-MM-DD al extraer el ADN] · Fuente del ADN: [por definir]
 > ⏳ **Pendiente de extracción de ADN.** Este archivo es una plantilla. No generes entregables asumiendo identidad de marca hasta completarlo — avisa al humano y pregunta antes de continuar.
 

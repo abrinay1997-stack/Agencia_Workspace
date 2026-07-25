@@ -1,5 +1,7 @@
 # MANUAL DE MARCA Y TONO: 57DMC
 
+> 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1bnRYzhZBmh0bwqnaoV5mRdGKBwZq6Ftb) · [Canva](https://www.canva.com/folder/FAHQaqHjBCA) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
+
 > Última actualización: 2026-07-25 · Fuente: análisis profundo de Claude sobre canales públicos (Instagram, YouTube, Facebook, Spotify, Apple Music) — no hay sitio web activo (`juanarrieta.net` caído).
 > Nota: esta marca es un **artista/ministerio musical**, no un negocio de producto. No hay catálogo ni precios; la "conversión" es escucha, seguimiento, donación e invitación a eventos. Lo marcado ⏳ debe confirmarse con el cliente.
 

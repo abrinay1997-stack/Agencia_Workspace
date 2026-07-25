@@ -1,5 +1,7 @@
 # MANUAL DE MARCA Y TONO: Baby Caleb Panamá
 
+> 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1caYVhyBd4NKQzHz8B9neUUQqjnh4_eM8) · [Canva](https://www.canva.com/folder/FAHQarL0ce0) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
+
 > Última actualización: 2026-07-25 · Fuentes: (1) análisis de Claude en Chrome sobre redes sociales (Instagram/Facebook — no hay sitio web propio) + (2) `Assets_Visuales_Base/Baby Caleb Store Brand Book by Pomelli.pdf`.
 > Este `.md` fusiona ambas. Regla de precisión: donde discrepan, se toman los **HEX y tipografías de Pomelli como referencia oficial** y se documenta lo observado en redes como "uso real". Lo marcado ⏳ debe confirmarse con el cliente.
 

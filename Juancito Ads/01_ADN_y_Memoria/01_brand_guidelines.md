@@ -1,5 +1,7 @@
 # MANUAL DE MARCA Y TONO: Juancito Ads
 
+> 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1FkJ4fMn0XTZrhIUMWZVaL_ovT432qRCS) · [Canva](https://www.canva.com/folder/FAHQauLEFS4) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
+
 > Última actualización: 2026-07-24 · Fuentes: inspección de Claude en Chrome sobre `juancitoads.netlify.app` (CSS real) + `Assets_Visuales_Base/Juancito Ads Brand Book by Pomelli.pdf` + 4 conversaciones internas de estrategia de agencia (compartidas por el fundador) + logo (`Assets_Visuales_Base/logo.png`).
 > Nota de precisión: paleta y tipografía **coinciden exactamente** entre las dos fuentes (CSS del sitio y Pomelli) — a diferencia de otros clientes del sistema, aquí no hay discrepancia que resolver.
 
