@@ -1,6 +1,55 @@
 {
   "cliente": "Juancito Ads",
-  "keywords_principales": [],
-  "keywords_secundarias": [],
-  "entidades_semanticas_lsi": []
+  "_nota": "Extraído del CSS/copy real del sitio (juancitoads.netlify.app) via inspección de Claude en Chrome. No es investigación de volumen de búsqueda real (Keyword Planner) — sigue pendiente esa validación.",
+  "ubicacion": "Panamá (mercado nacional, 100% remoto)",
+  "keywords_principales": [
+    "agencia de marketing digital Panamá",
+    "Meta Ads Panamá",
+    "publicidad en Facebook e Instagram Panamá",
+    "gestión de redes sociales Panamá",
+    "campañas publicitarias con IA",
+    "marketing digital para negocios en Panamá"
+  ],
+  "keywords_secundarias": [
+    "publicidad que vende Panamá",
+    "campañas Meta Ads con inteligencia artificial",
+    "manejo de redes sociales para negocios",
+    "propuesta de marketing gratis Panamá",
+    "resultados de publicidad en 2 semanas",
+    "creativos generados con IA",
+    "retargeting Meta Ads Panamá",
+    "reportes de campañas publicitarias",
+    "páginas web para negocios Panamá",
+    "publicidad para PYMEs Panamá",
+    "agencia de publicidad 100% remota"
+  ],
+  "entidades_semanticas_lsi": [
+    "Meta Ads",
+    "Facebook Ads",
+    "Instagram Ads",
+    "inteligencia artificial (IA)",
+    "segmentación de audiencia",
+    "optimización de presupuesto",
+    "ROI",
+    "retargeting",
+    "cliente ideal",
+    "contenido publicitario",
+    "reels promocionales",
+    "creadores de contenido e influencers",
+    "reportes mensuales",
+    "ventas medibles",
+    "óptica",
+    "panadería",
+    "retail y servicios",
+    "Ciudad de Panamá",
+    "Panamá",
+    "WhatsApp",
+    "propuesta sin costo",
+    "página web / diseño web",
+    "hosting y dominio",
+    "SEO",
+    "Google Maps",
+    "presupuesto de pauta",
+    "campañas geolocalizadas"
+  ]
 }

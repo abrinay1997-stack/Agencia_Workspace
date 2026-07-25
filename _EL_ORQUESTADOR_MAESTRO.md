@@ -15,7 +15,7 @@ Lectura obligatoria al iniciar cualquier tarea. Este archivo no se resume ni se 
 | `Baby Caleb/` | Baby Caleb | ⏳ Pendiente de extracción de ADN |
 | `Feria del lente/` | Feria del lente | ⏳ Pendiente de extracción de ADN (assets brutos ya cargados) |
 | `Fotosonido/` | Fotosonido | ⏳ Pendiente de extracción de ADN |
-| `Juancito Ads/` | Juancito Ads | ⏳ Pendiente de extracción de ADN |
+| `Juancito Ads/` | Juancito Ads (agencia — marketing digital con IA) | 🟡 ADN base — visual, verbal, oferta y buyer personas listos con evidencia real (sitio + Pomelli + conversaciones del fundador); **diccionario SEO sin validar volumen de búsqueda real** (ver notas dentro de `01_ADN_y_Memoria/`) |
 
 **Leyenda de estados:** ✅ ADN completo y validado · 🟡 ADN base (identidad lista, faltan datos duros como personas/SEO reales) · ⏳ Pendiente de extracción (plantilla vacía, no asumir identidad).
 
