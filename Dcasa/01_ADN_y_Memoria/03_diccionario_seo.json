@@ -1,23 +1,35 @@
 {
   "cliente": "Dcasa",
-  "_nota": "Pendiente de construir con investigación real de keywords. El ADN fuente no incluye diccionario SEO — estas son sugerencias iniciales derivadas del posicionamiento del ADN, a validar.",
+  "_nota": "Enriquecido con categorías y ubicación confirmadas por el Brand Book de Pomelli (D'CASA Panamá Brand Book by Pomelli.pdf). Sigue pendiente de validar con investigación real de volumen de búsqueda (Google Keyword Planner o similar) antes de tratarlo como definitivo.",
+  "ubicacion": "La Chorrera, Panamá (Panamá Oeste)",
   "keywords_principales": [
     "muebles Panamá",
-    "tienda de muebles Panamá"
+    "tienda de muebles Panamá",
+    "muebles La Chorrera",
+    "colchones Panamá"
   ],
   "keywords_secundarias": [
     "muebles para el hogar Panamá",
-    "sofás Panamá precio",
+    "camas y colchones Panamá",
+    "comedores Panamá",
     "decoración de hogar accesible",
-    "entrega de muebles a domicilio Panamá"
+    "sofás Panamá precio",
+    "entrega de muebles a domicilio Panamá",
+    "muebles al por mayor Panamá",
+    "financiamiento de muebles Panamá"
   ],
   "entidades_semanticas_lsi": [
     "sala",
     "comedor",
     "recámara",
+    "cama",
+    "colchón",
     "ambientes",
     "medidas de espacio",
     "garantía",
-    "crédito"
+    "crédito",
+    "showroom",
+    "mayorista",
+    "Panamá Oeste"
   ]
 }

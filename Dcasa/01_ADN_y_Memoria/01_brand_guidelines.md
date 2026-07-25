@@ -1,7 +1,17 @@
 # MANUAL DE MARCA Y TONO: D'CASA Panamá
 
-> Fuente completa: `Assets_Visuales_Base/ADN de Marca DECASA PANAMA.pdf` ("ADN de Marca — D'CASA Panamá", v3). Este `.md` resume lo esencial para uso diario del orquestador; ante cualquier duda de detalle, consulta el PDF.
-> Nota de precisión original: colores y contraste están **extraídos y calculados del archivo real del logo**, no estimados. El giro de negocio asumido es **retail de muebles y artículos para el hogar** (venta, no fabricación a medida) — confirmar con el cliente si esto cambia.
+> Fuentes: (1) `Assets_Visuales_Base/ADN de Marca DECASA PANAMA.pdf` ("ADN de Marca — D'CASA Panamá", v3) — análisis estratégico profundo, colores extraídos del logo real. (2) `Assets_Visuales_Base/D'CASA Panamá Brand Book by Pomelli.pdf` — brand book generado con Pomelli a partir de los assets reales de la marca (incluye fotos del local físico). Este `.md` fusiona ambas; ante cualquier duda de detalle, consulta los PDF.
+> Nota de precisión: la fuente (1) declara que colores y contraste están **extraídos y calculados del archivo real del logo**. La fuente (2) trae valores HEX ligeramente distintos (ver sección 3.1) — probablemente por muestreo del logo en un formato/momento diferente. Se mantiene (1) como referencia principal para producción hasta que el cliente confirme cuál archivo de logo es el maestro.
+
+## 0. Datos del negocio (confirmado — fuente Pomelli)
+
+- **Ubicación:** La Chorrera, Panamá (tienda física con showroom).
+- **Categoría:** mueblería y artículos para el hogar — **retail**, no fabricación a medida (esto resuelve la duda abierta en la v. anterior de este documento).
+- **Especialidad de producto:** camas, colchones, comedores y decoración.
+- **Clientes:** familias (venta individual) **y clientes al por mayor (wholesale)** — el ADN verbal y los copys deben poder hablarle a ambos segmentos, no solo al consumidor final.
+- **Financiamiento:** ofrece opciones de crédito/financiamiento flexible — refuerza el eje de voz "Clara" (transparencia de precio) y es un diferenciador a explotar en highlights y bio.
+- **Showroom físico:** existe experiencia de compra presencial — el contenido puede invitar a visitar tienda, no solo a comprar por WhatsApp.
+- **Tagline oficial:** *"Tu casa, bien amueblada."*
 
 ## 1. Posicionamiento
 
@@ -17,18 +27,25 @@ El mercado de muebles en Panamá está partido en dos: masivos (grid caótico, s
 2. **La banda inferior amarilla** — patrón de composición: azul arriba (masa), amarillo abajo (base). El amarillo siempre sostiene, nunca flota.
 3. **Tipografía condensada en caja alta** — voz gráfica firme, ideal para titulares cortos y precios.
 
+**Especificaciones de producción del logo (fuente Pomelli):**
+- **Espacio de resguardo:** mantener 190px libres alrededor del logo en cada lado, sin elementos que lo invadan.
+- **Tamaño mínimo:** 1.58 pulgadas / 152px de ancho — por debajo de esto se pierde legibilidad, no usar.
+
 ## 3. Paleta de marca
 
-### Línea primaria (identidad)
+### 3.1 Línea primaria (identidad)
 
-| Color | HEX | RGB | Rol |
+⚠️ **Dos fuentes, valores ligeramente distintos.** Usar la columna "ADN (logo real)" como referencia de producción por ahora; la columna "Pomelli" queda documentada por si el cliente confirma que ese es el archivo maestro correcto.
+
+| Color | HEX — ADN (logo real) | HEX — Pomelli | Rol |
 |---|---|---|---|
-| Azul D'CASA | `#1648C0` | 22, 72, 192 | Color madre: fondos de marca, placas, titulares sobre claro, iconografía |
-| Amarillo D'CASA | `#FFD000` | 255, 208, 0 | Acento y acción: CTAs, precios, destacados, banda de base |
-| Blanco | `#FFFFFF` | 255, 255, 255 | Aire, marcos de placa, texto sobre azul |
-| Navy profundo (derivado) | `#0E2A6B` | 14, 42, 107 | Texto largo, pies de foto, sombras de profundidad |
+| Azul D'CASA | `#1648C0` | `#1E4FC2` (Sapphire Blue) | Color madre: fondos de marca, placas, titulares sobre claro, iconografía |
+| Amarillo D'CASA | `#FFD000` | `#FFC900` (Amber Yellow) | Acento y acción: CTAs, precios, destacados, banda de base |
+| Blanco | `#FFFFFF` | `#FFFFFF` (Pure White) | Aire, marcos de placa, texto sobre azul |
+| Navy profundo (derivado) | `#0E2A6B` | `#152451` (Navy Ink) | Texto largo, pies de foto, sombras de profundidad |
+| Chalk White *(solo en Pomelli)* | — | `#F5F7FC` | Fondos alternos muy claros — similar función al "Blanco hueso" de línea secundaria |
 
-### Línea secundaria (ambiente y fotografía — nunca compite con el logo, le da el lienzo)
+### 3.2 Línea secundaria (ambiente y fotografía — nunca compite con el logo, le da el lienzo)
 
 | Color | HEX | Uso |
 |---|---|---|
@@ -55,8 +72,14 @@ El mercado de muebles en Panamá está partido en dos: masivos (grid caótico, s
 
 ## 4. Tipografía e iconografía
 
-- **Titulares:** sans condensada, bold, caja alta (Oswald, Archivo Narrow, Barlow Condensed o Anton). Solo para frases de 2-5 palabras.
-- **Subtítulos y cuerpo:** sans neutra legible (Inter, Barlow o Work Sans), caja normal — nunca todo mayúsculas en párrafos.
+✅ **Confirmado por Pomelli — tipografías oficiales de marca:**
+- **Primaria: Anton** — para titulares, precios y piezas de impacto (caja alta).
+- **Secundaria: Archivo** — para cuerpo de texto y subtítulos.
+
+Estas dos son ahora la elección por defecto. Las alternativas de la v. anterior de este documento quedan como plan B si Anton/Archivo no están disponibles en la herramienta de diseño:
+
+- **Titulares (plan B):** sans condensada, bold, caja alta (Oswald, Archivo Narrow, Barlow Condensed). Solo para frases de 2-5 palabras.
+- **Subtítulos y cuerpo (plan B):** sans neutra legible (Inter, Barlow o Work Sans), caja normal — nunca todo mayúsculas en párrafos.
 - **Precios:** condensada bold, en amarillo sobre azul, dentro de placa.
 - **Prohibido:** serifs editoriales, scripts, tipografías con bordes/sombras/degradados tipo promoción de bazar.
 - **Iconografía:** línea gruesa uniforme (2-3px), esquinas redondeadas, monocolor. Nunca iconos con relleno multicolor ni emojis dentro de piezas gráficas.
@@ -72,6 +95,12 @@ El mercado de muebles en Panamá está partido en dos: masivos (grid caótico, s
 **Ritmo del grid (patrón de 3 en 3):** Ambiente (foto real, sin texto o mínimo) → Valor (card sobre hueso con tip útil) → Marca/producto (fondo azul, producto recortado, precio en placa amarilla).
 
 ## 6. ADN Verbal
+
+**Valores de marca (fuente Pomelli):** *"Accesibilidad familiar, Conveniencia regional, Transparencia comercial."*
+
+**Aesthetic (cómo se ve la marca):** Reliable · Bold · Accessible · Locally-grounded · Functional.
+
+**Tono de voz (fuente Pomelli, coincide y refuerza los 4 rasgos de voz de abajo):** Cercano · Práctico · Servicial · Confiable.
 
 **Arquetipo:** El Amigo cercano (principal) + El Sabio práctico (secundario). No es el vendedor que grita ni el diseñador que mira por encima del hombro — es el pana que sabe de casas, dice la verdad, resuelve y no hace sentir bruto por preguntar el precio.
 
@@ -118,6 +147,7 @@ D'CASA PANAMÁ 🇵🇦
 
 ## 9. Pendiente de validar con el cliente
 
-- Confirmar giro exacto del negocio (retail vs. fabricación a medida) — cambia el capítulo 6 (ADN verbal) si aplica.
-- Construir `02_buyer_personas.md` con datos reales (aún no está en la fuente original).
-- Completar `03_diccionario_seo.json` con keywords reales de D'CASA.
+- ~~Confirmar giro exacto del negocio~~ ✅ Resuelto por Pomelli (sección 0): retail, con segmento wholesale adicional.
+- **Confirmar cuál archivo de logo es el maestro** para resolver la discrepancia de HEX entre las dos fuentes (sección 3.1).
+- Construir `02_buyer_personas.md` con datos reales — ya tiene un punto de partida (familias vs. wholesale, ver `02_buyer_personas.md`), falta profundizar con entrevistas o data real.
+- Completar `03_diccionario_seo.json` con keywords reales de D'CASA — ya enriquecido con categorías y ubicación de Pomelli, falta validar con búsqueda real (Google Keyword Planner o similar).
