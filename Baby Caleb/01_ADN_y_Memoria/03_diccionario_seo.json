@@ -1,6 +1,37 @@
 {
   "cliente": "Baby Caleb",
-  "keywords_principales": [],
-  "keywords_secundarias": [],
-  "entidades_semanticas_lsi": []
+  "_nota": "Derivado del análisis de redes (Instagram/Facebook). Volumen de búsqueda real SIN validar — usar herramienta de keywords antes de tratarlo como definitivo.",
+  "keywords_principales": [
+    "pañales hipoalergénicos Panamá",
+    "pañales Nateen Panamá",
+    "pañales sin cloro",
+    "wipes Nateen",
+    "fular prearmado Moon",
+    "pañales desechables Panamá",
+    "pañales talla XXL"
+  ],
+  "keywords_secundarias": [
+    "pañales sin químicos agresivos",
+    "pañales sin perfumes",
+    "pañales biodegradables",
+    "porta bebé ergonómico",
+    "fular Moon unitalla",
+    "delivery pañales Panamá",
+    "pañales por talla S M L",
+    "toallitas húmedas hipoalergénicas",
+    "pañales para piel sensible bebé"
+  ],
+  "entidades_semanticas_lsi": [
+    "Nateen",
+    "Moon (marca de fulares)",
+    "hipoalergénico",
+    "biodegradable",
+    "libre de cloro (ECF - Elemental Chlorine Free)",
+    "talla RN, S, M, L, XL, XXL",
+    "rozaduras / pañalitis",
+    "porteo ergonómico",
+    "Ancón, Panamá",
+    "WhatsApp / venta directa por mensaje",
+    "Casa de la Carne (punto de venta físico)"
+  ]
 }

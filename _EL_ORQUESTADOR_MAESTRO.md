@@ -12,7 +12,7 @@ Lectura obligatoria al iniciar cualquier tarea. Este archivo no se resume ni se 
 |---|---|---|
 | `Dcasa/` | D'CASA Panamá (muebles y hogar) | 🟡 ADN base — verbal y visual listos; **buyer personas y diccionario SEO por validar con datos reales** (ver notas dentro de `01_ADN_y_Memoria/`) |
 | `57Dmc/` | 57Dmc | ⏳ Pendiente de extracción de ADN |
-| `Baby Caleb/` | Baby Caleb | ⏳ Pendiente de extracción de ADN |
+| `Baby Caleb/` | Baby Caleb Panamá (pañales/wipes hipoalergénicos Nateen + fulares Moon) | 🟡 ADN base — identidad, verbal, personas y SEO listos con evidencia real (redes + Pomelli). **Discrepancias documentadas:** color oscuro (Navy Ink Pomelli vs. verde en redes) y tipografía (Montserrat+Playfair oficial vs. sans redondeada en uso). Valor "Faith-Based" a definir. Sin web propia |
 | `Feria del lente/` | Óptica Feria del Lente (óptica — "1ª óptica cristiana de Panamá" + línea B2B) | 🟡 ADN base — identidad, ADN verbal, oferta, buyer personas y master prompts listos con evidencia real (redes + Pomelli + conversaciones). **Marca con dos caras (cristiana consumer / institucional B2B) documentadas.** SEO y datos duros (antigüedad, fundadores) por validar |
 | `Fotosonido/` | Fotosonido | ⏳ Pendiente de extracción de ADN |
 | `Juancito Ads/` | Juancito Ads (agencia — marketing digital con IA) | 🟡 ADN base — visual, verbal, oferta y buyer personas listos con evidencia real (sitio + Pomelli + conversaciones del fundador); **diccionario SEO sin validar volumen de búsqueda real** (ver notas dentro de `01_ADN_y_Memoria/`) |
