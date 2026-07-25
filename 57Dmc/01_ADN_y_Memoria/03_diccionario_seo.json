@@ -1,6 +1,31 @@
 {
   "cliente": "57Dmc",
-  "keywords_principales": [],
-  "keywords_secundarias": [],
-  "entidades_semanticas_lsi": []
+  "_nota": "Derivado del análisis de canales públicos. Volumen de búsqueda real SIN validar. Marca de artista/ministerio musical — el SEO aplica sobre todo a YouTube/Spotify/redes, no a un sitio web (juanarrieta.net caído).",
+  "keywords_principales": [
+    "rap cristiano",
+    "57dmc",
+    "Juan Arrieta música",
+    "música cristocéntrica",
+    "rap bíblico"
+  ],
+  "keywords_secundarias": [
+    "rap directo",
+    "predicación en rap",
+    "hip hop cristiano en español",
+    "música para crecer en Cristo",
+    "canciones cristianas Panamá",
+    "rap cristiano Panamá"
+  ],
+  "entidades_semanticas_lsi": [
+    "evangelio",
+    "iglesia",
+    "predicación",
+    "Espíritu Santo",
+    "vida cristiana",
+    "Biblia",
+    "exhortación",
+    "ministerio musical",
+    "cristocéntrico",
+    "crecimiento espiritual"
+  ]
 }
