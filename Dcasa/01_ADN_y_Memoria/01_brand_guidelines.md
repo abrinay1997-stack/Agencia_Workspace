@@ -1,5 +1,6 @@
 # MANUAL DE MARCA Y TONO: D'CASA Panamá
 
+> Última actualización: 2026-07-24 · Fuente del ADN: `ADN de Marca DECASA PANAMA.pdf` (v3) + `D'CASA Panamá Brand Book by Pomelli.pdf`
 > Fuentes: (1) `Assets_Visuales_Base/ADN de Marca DECASA PANAMA.pdf` ("ADN de Marca — D'CASA Panamá", v3) — análisis estratégico profundo, colores extraídos del logo real. (2) `Assets_Visuales_Base/D'CASA Panamá Brand Book by Pomelli.pdf` — brand book generado con Pomelli a partir de los assets reales de la marca (incluye fotos del local físico). Este `.md` fusiona ambas; ante cualquier duda de detalle, consulta los PDF.
 > Nota de precisión: la fuente (1) declara que colores y contraste están **extraídos y calculados del archivo real del logo**. La fuente (2) trae valores HEX ligeramente distintos (ver sección 3.1) — probablemente por muestreo del logo en un formato/momento diferente. Se mantiene (1) como referencia principal para producción hasta que el cliente confirme cuál archivo de logo es el maestro.
 

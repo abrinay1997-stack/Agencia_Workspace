@@ -1,5 +1,6 @@
 # MANUAL DE MARCA Y TONO: Feria del lente
 
+> Última actualización: [AAAA-MM-DD al extraer el ADN] · Fuente del ADN: [por definir — hay assets brutos en `06_Assets_Brutos_Solo_Lectura/AGOSTO/`]
 > ⏳ **Pendiente de extracción de ADN.** Este archivo es una plantilla. No generes entregables asumiendo identidad de marca hasta completarlo — avisa al humano y pregunta antes de continuar.
 
 ## 1. Núcleo Estratégico
