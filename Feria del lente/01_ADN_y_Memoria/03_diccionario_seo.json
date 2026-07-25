@@ -1,6 +1,52 @@
 {
-  "cliente": "Feria del lente",
-  "keywords_principales": [],
-  "keywords_secundarias": [],
-  "entidades_semanticas_lsi": []
+  "cliente": "Óptica Feria del Lente",
+  "_nota": "Derivado del vocabulario real de redes (no hay sitio web que inspeccionar) + conversaciones internas. Sin validación de volumen de búsqueda real (Keyword Planner) — pendiente.",
+  "ubicacion": "Panamá (Ciudad de Panamá y Panamá Oeste: La Chorrera, Nuevo Arraiján)",
+  "keywords_principales": [
+    "óptica en Panamá",
+    "lentes en 40 minutos",
+    "óptica La Chorrera",
+    "óptica Nuevo Arraiján",
+    "óptica Ciudad de Panamá",
+    "aros gratis",
+    "lentes graduados Panamá"
+  ],
+  "keywords_secundarias": [
+    "examen visual computarizado gratis",
+    "lentes de sol gratis",
+    "lentes con color de descanso",
+    "kit de limpieza para lentes",
+    "monturas / aros para lentes",
+    "óptica cristiana Panamá",
+    "feria del lente",
+    "óptica Panamá Oeste",
+    "lentes de contacto Panamá",
+    "renueva tu visión",
+    "óptica cerca de mí Chorrera",
+    "promoción de lentes décimo",
+    "beneficio visual para colaboradores",
+    "financiamiento de lentes por planilla"
+  ],
+  "entidades_semanticas_lsi": [
+    "salud visual",
+    "ver mejor",
+    "graduación / fórmula óptica",
+    "cristales / lentes graduados",
+    "monturas",
+    "sucursales",
+    "Plaza Caldelas",
+    "Vía Brasil",
+    "Ecomoda (La Chorrera)",
+    "Hopsa (Nuevo Arraiján)",
+    "Panamá Oeste",
+    "agenda tu cita / WhatsApp",
+    "atención rápida",
+    "servicio con excelencia",
+    "fe / propósito / Dios",
+    "café y oración en tienda",
+    "décimo (temporada panameña)",
+    "Caja de Ahorros / alianza corporativa",
+    "feria de salud visual",
+    "cuotas / financiamiento"
+  ]
 }
