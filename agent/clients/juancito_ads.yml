@@ -32,6 +32,10 @@ capabilities:
   - instagram_insights
   - web_seo_audit                    # única con web viva
   - insights_digest
+  - market_trends_scan:
+      subreddits: [marketing, PPC, FacebookAds, Entrepreneur, smallbusiness]
+      focus: "tendencias en Meta Ads, IA aplicada a marketing, y pain points de PYMEs latinoamericanas"
+      limit: 8
   - instagram_content_ideas:
       variants: 3
       formats: [reel, carrusel]

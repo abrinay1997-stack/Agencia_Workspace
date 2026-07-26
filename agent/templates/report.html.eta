@@ -22,6 +22,17 @@ function findIdeasCards() {
   }
   return [];
 }
+function findTrends() {
+  for (const block of it.report.sections) {
+    for (const s of block.sections) if (s.kind === "trends") return s;
+  }
+  return null;
+}
+function confidenceColor(c) {
+  if (c === "alta") return "#22a06b";
+  if (c === "media") return "#f0b52a";
+  return "#8a8a8a";
+}
 function findMetrics() {
   for (const block of it.report.sections) {
     if (block.capability === "instagram_insights") return block;
@@ -32,6 +43,7 @@ const diagnosis = findSection("diagnosis");
 const cards = findIdeasCards();
 const campaign = findSection("campaign");
 const metricsBlock = findMetrics();
+const trends = findTrends();
 %>
 <!DOCTYPE html>
 <html lang="es">
@@ -115,6 +127,15 @@ const metricsBlock = findMetrics();
   .top-post .body { flex: 1; font-size: 12px; color: #444; }
   .top-post .metrics { font-size: 11px; color: #888; margin-top: 3px; }
 
+  .trend { padding: 12px 14px; margin: 8px 0; background: #fff; border-radius: 10px; border-left: 3px solid <%= p %>; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+  .trend .head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .trend .conf { font-size: 9px; font-weight: 800; letter-spacing: .1em; padding: 2px 7px; border-radius: 10px; color: #fff; text-transform: uppercase; }
+  .trend .title { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+  .trend .signal { font-size: 12px; color: #666; margin: 4px 0 6px; }
+  .trend .angle { font-size: 13px; color: #333; padding-left: 12px; border-left: 2px solid <%= a %>; }
+  .trend .angle:before { content: "→ "; color: <%= a %>; font-weight: bold; }
+  .trends-meta { font-size: 11px; color: #888; margin-bottom: 8px; font-style: italic; }
+
   .warnings { background: #fff8e6; border-left: 3px solid #f0b52a; padding: 12px 16px; border-radius: 8px; margin-top: 24px; }
   .warnings summary { font-size: 12px; font-weight: 700; color: #8a6d1a; cursor: pointer; }
   .warnings ul { margin: 8px 0 0; padding-left: 18px; }
@@ -172,6 +193,21 @@ const metricsBlock = findMetrics();
             <div class="body"><%~ brInline(rest) %></div>
           </div>
         <% } %>
+      </div>
+    <% } %>
+  <% } %>
+
+  <% if (trends && trends.opportunities && trends.opportunities.length > 0) { %>
+    <div class="section-label">🔥 Oportunidades detectadas esta semana</div>
+    <div class="trends-meta"><%= trends.body %></div>
+    <% for (const o of trends.opportunities) { %>
+      <div class="trend">
+        <div class="head">
+          <span class="conf" style="background:<%~ confidenceColor(o.confidence) %>"><%= o.confidence %></span>
+          <span class="title"><%= o.trend %></span>
+        </div>
+        <div class="signal"><%= o.signal %></div>
+        <div class="angle"><%= o.angle %></div>
       </div>
     <% } %>
   <% } %>

@@ -36,6 +36,14 @@ export function renderMarkdown(report: RunReport): string {
         for (const b of section.bullets) lines.push(`- ${b}`);
         lines.push("");
       }
+      if (section.opportunities && section.opportunities.length > 0) {
+        for (const o of section.opportunities) {
+          lines.push(`- **[${o.confidence.toUpperCase()}]** ${o.trend}`);
+          lines.push(`  - Señal: ${o.signal}`);
+          lines.push(`  - Ángulo: ${o.angle}`);
+        }
+        lines.push("");
+      }
       if (section.cards && section.cards.length > 0) {
         for (const c of section.cards) {
           lines.push(`#### [${c.format}] ${c.title}`, "");

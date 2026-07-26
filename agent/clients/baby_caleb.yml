@@ -32,6 +32,10 @@ capabilities:
   - instagram_insights
   - meta_ads_pulse
   - insights_digest
+  - market_trends_scan:
+      subreddits: [beyondthebump, NewParents, Parenting, ScienceBasedParenting]
+      focus: "productos y tips para madres primerizas + pañales/wipes hipoalergénicos + porteo de bebés"
+      limit: 8
   - instagram_content_ideas:
       variants: 3
       formats: [reel, carrusel, story]

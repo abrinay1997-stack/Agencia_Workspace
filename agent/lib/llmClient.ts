@@ -24,6 +24,45 @@ export async function generate(opts: GenerateOptions): Promise<string> {
   });
 }
 
+export interface GenerateWithFallbackResult {
+  text: string;
+  usedFallback: boolean;
+  primaryError?: string;
+}
+
+// Intenta con `primary` (típicamente Groq gratis); si falla, cae a `fallback`
+// (típicamente Claude Haiku). Ideal para capabilities donde el fast LLM es
+// deseable por costo pero no crítico si no está disponible (sandbox, rate limit).
+export async function generateWithFallback(opts: {
+  primary: GenerateOptions["choice"];
+  fallback: GenerateOptions["choice"];
+  systemStable: string;
+  systemDynamic?: string;
+  userPrompt: string;
+  maxTokens?: number;
+}): Promise<GenerateWithFallbackResult> {
+  try {
+    const text = await generate({
+      choice: opts.primary,
+      systemStable: opts.systemStable,
+      systemDynamic: opts.systemDynamic,
+      userPrompt: opts.userPrompt,
+      maxTokens: opts.maxTokens,
+    });
+    return { text, usedFallback: false };
+  } catch (err) {
+    const primaryError = (err as Error).message;
+    const text = await generate({
+      choice: opts.fallback,
+      systemStable: opts.systemStable,
+      systemDynamic: opts.systemDynamic,
+      userPrompt: opts.userPrompt,
+      maxTokens: opts.maxTokens,
+    });
+    return { text, usedFallback: true, primaryError };
+  }
+}
+
 export interface ProviderCallInput {
   model: LLMModel;
   systemStable: string;

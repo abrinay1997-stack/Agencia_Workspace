@@ -38,6 +38,10 @@ capabilities:
   - instagram_insights
   - tiktok_insights
   - insights_digest
+  - market_trends_scan:
+      subreddits: [glasses, opticians, femalefashionadvice, malefashionadvice]
+      focus: "tendencias de armazones, colecciones nuevas, cuidado visual y beneficios corporativos (para B2B)"
+      limit: 8
   - instagram_content_ideas:
       variants: 4                    # 2 por voz
       formats: [reel, carrusel, story]

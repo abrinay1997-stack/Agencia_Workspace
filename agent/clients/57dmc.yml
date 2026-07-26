@@ -33,6 +33,10 @@ capabilities:
   - youtube_insights
   - spotify_artist_pulse
   - insights_digest
+  - market_trends_scan:
+      subreddits: [ChristianRap, Christianity, Christian, Music]
+      focus: "tendencias de música cristiana, colaboraciones, eventos de ministerio y contenido doctrinal urbano"
+      limit: 8
   - instagram_content_ideas:
       variants: 3
       formats: [reel, carrusel, story]

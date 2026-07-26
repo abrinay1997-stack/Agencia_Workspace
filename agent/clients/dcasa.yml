@@ -32,6 +32,10 @@ capabilities:
   - instagram_insights
   - tiktok_insights
   - insights_digest
+  - market_trends_scan:
+      subreddits: [InteriorDesign, homedecor, HomeImprovement, furniture]
+      focus: "productos y tendencias de mobiliario/hogar accesibles y visualmente ordenadas"
+      limit: 8
   - instagram_content_ideas:
       variants: 3
       formats: [reel, carrusel, story]

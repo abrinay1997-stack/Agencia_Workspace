@@ -4,6 +4,7 @@ export type CapabilityId =
   | "adn_completeness_guard"
   | "instagram_insights"
   | "insights_digest"
+  | "market_trends_scan"
   | "instagram_content_ideas"
   | "tiktok_insights"
   | "youtube_insights"
@@ -102,8 +103,9 @@ export interface ReportSection {
   heading: string;
   body: string;
   bullets?: string[];
-  cards?: IdeaCard[];   // opcional — instagram_content_ideas produce esto
-  kind?: "diagnosis" | "ideas" | "campaign" | "generic";
+  cards?: IdeaCard[];             // opcional — instagram_content_ideas produce esto
+  opportunities?: Opportunity[];  // opcional — market_trends_scan produce esto
+  kind?: "diagnosis" | "ideas" | "campaign" | "trends" | "generic";
 }
 
 // Estructura de una idea de contenido — se renderiza como card visual en el email.
@@ -115,6 +117,13 @@ export interface IdeaCard {
   cta?: string;
   whyItWorks?: string[];   // razones separadas → chips
   expectedKPIs?: string;
+}
+
+export interface Opportunity {
+  trend: string;
+  signal: string;
+  angle: string;
+  confidence: "alta" | "media" | "baja" | string;
 }
 
 export interface CapabilityReport {

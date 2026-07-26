@@ -2,7 +2,7 @@ import type { Capability } from "./_base.ts";
 import { emptyReport, warn } from "./_base.ts";
 import type { CapabilityContext, CapabilityReport } from "../types.ts";
 import type { IGInsights } from "../lib/metaGraph.ts";
-import { generate } from "../lib/llmClient.ts";
+import { generateWithFallback } from "../lib/llmClient.ts";
 import { resolveLLM } from "../lib/llmResolver.ts";
 
 // PRE-procesador barato: toma métricas crudas + historial de reportes y
@@ -45,19 +45,29 @@ export const insightsDigest: Capability = {
       priorBlock,
     ].join("\n");
 
-    const { fast } = resolveLLM(ctx.client);
-    let digest: string;
+    const { fast, primary } = resolveLLM(ctx.client);
+    let result;
     try {
-      digest = await generate({ choice: fast, systemStable, userPrompt, maxTokens: 900 });
+      result = await generateWithFallback({
+        primary: fast,
+        fallback: primary,
+        systemStable,
+        userPrompt,
+        maxTokens: 900,
+      });
     } catch (err) {
-      warn(report, `Fast LLM (${fast.provider}/${fast.model}) falló: ${(err as Error).message}. Se seguirá sin digest.`);
+      warn(report, `Ambos LLMs fallaron para digest: ${(err as Error).message}. Se seguirá sin digest.`);
       return report;
     }
 
-    report.data = { digest };
+    if (result.usedFallback) {
+      warn(report, `Fast LLM (${fast.provider}/${fast.model}) falló: ${result.primaryError}. Se usó fallback ${primary.provider}/${primary.model}.`);
+    }
+    const source = result.usedFallback ? `${primary.provider}/${primary.model} (fallback)` : `${fast.provider}/${fast.model}`;
+    report.data = { digest: result.text };
     report.sections.push({
-      heading: `Digest generado por ${fast.provider}/${fast.model}`,
-      body: digest,
+      heading: `Digest generado por ${source}`,
+      body: result.text,
     });
     return report;
   },
