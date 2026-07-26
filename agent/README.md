@@ -1,13 +1,16 @@
 # Agente diario — Juancito Ads
 
-Sistema modular multi-cliente que corre cada mañana en GitHub Actions, lee el ADN de cada cliente desde su carpeta `01_ADN_y_Memoria/`, analiza sus redes y envía por correo ideas de contenido con hook + guion + CTA. El reporte también se commitea al repo en `[Cliente]/03_Redes_Sociales/Auditorias/` como memoria persistente.
+Sistema modular multi-cliente que corre cada mañana en GitHub Actions, lee el ADN de cada cliente desde su carpeta `01_ADN_y_Memoria/`, analiza sus redes + tendencias del nicho, y envía por correo ideas de contenido con hook + guion + CTA. El reporte también se commitea al repo en `[Cliente]/03_Redes_Sociales/Auditorias/` como memoria persistente.
+
+> **¿Vas a añadir, modificar o desactivar un cliente en el pipeline?** No leas este README — abre [`AUTOMATION_ACTIONS.md`](./AUTOMATION_ACTIONS.md), que es el runbook ejecutable. Este README es solo visión general.
 
 ## Arquitectura en 30 segundos
 
-- **Manifiestos por cliente** en `agent/clients/*.yml` — declaran qué **capabilities** ejecutar. Sin código nuevo para agregar un cliente.
-- **Capabilities** en `agent/capabilities/` — módulos independientes (métricas IG, ideas de contenido, chequeo de CTA WA, dual voice, etc.). Cada uno declara sus inputs y outputs.
-- **Cascada híbrida de LLMs**: Groq (Llama, gratis) preprocesa/destila datos → Claude (Sonnet 5) hace la síntesis estratégica final. Cliente puede overridar.
+- **Manifiestos por cliente** en `agent/clients/*.yml` — declaran qué **capabilities** ejecutar + branding (colores propios de cada marca) + fuentes. Sin código nuevo para agregar un cliente.
+- **Capabilities** en `agent/capabilities/` — módulos independientes (métricas IG, tendencias Reddit + Google Trends, ideas de contenido, chequeo CTA WA, dual voice, etc.). Cada uno declara sus inputs y outputs.
+- **Cascada híbrida de LLMs con fallback automático**: Groq/Llama 3.3 (gratis) preprocesa/destila datos → Claude Haiku 4.5 (~$0.02/correo) hace la síntesis. Si Groq falla, cae a Claude Haiku automáticamente.
 - **ADN sigue viviendo en los .md** de `01_ADN_y_Memoria/`. Los manifiestos NUNCA duplican tono, personas ni SEO (regla del `_EL_ORQUESTADOR_MAESTRO.md`).
+- **Cada correo lleva los colores propios de la marca** (definidos en `branding` del manifiesto).
 
 ## Estructura
 
@@ -25,23 +28,26 @@ agent/
 │   ├── spotify_artist_pulse.ts
 │   ├── meta_ads_pulse.ts
 │   ├── web_seo_audit.ts
-│   ├── insights_digest.ts          # Groq — destila datos
-│   ├── instagram_content_ideas.ts  # Claude — síntesis creativa
+│   ├── insights_digest.ts          # Groq (fallback Haiku) — destila métricas IG
+│   ├── market_trends_scan.ts       # Reddit + Google Trends → Groq destila oportunidades
+│   ├── instagram_content_ideas.ts  # Claude Haiku — síntesis estratégica (ideas + campaña)
 │   ├── whatsapp_cta_review.ts
 │   ├── dual_voice_split.ts         # separa ideas por voz (Feria del Lente)
 │   └── index.ts                    # registry + orden de ejecución
 ├── clients/                        # 1 YAML por cliente
 ├── lib/
 │   ├── adnLoader.ts                # lee los .md/.json del cliente
-│   ├── llmClient.ts                # fachada Claude/Groq
+│   ├── llmClient.ts                # fachada Claude/Groq + generateWithFallback
 │   ├── llmResolver.ts              # resuelve LLMConfig con defaults
 │   ├── providers/{claude,groq}.ts
 │   ├── manifestLoader.ts           # parseo + validación Zod de YAML
 │   ├── metaGraph.ts                # IG/FB Graph API (con mock)
 │   ├── youtubeApi.ts               # mock
 │   ├── spotifyApi.ts               # mock
+│   ├── redditClient.ts             # JSON público de /r/<sub>/hot.json (sin API key)
+│   ├── googleTrendsClient.ts       # daily trends por país (endpoint interno)
 │   ├── resendClient.ts             # envío email
-│   ├── reportRenderer.ts           # Eta → md + html
+│   ├── reportRenderer.ts           # Eta → md + html con branding por marca
 │   └── repoCommitter.ts            # commit del reporte al repo
 ├── templates/
 │   ├── report.md.eta
