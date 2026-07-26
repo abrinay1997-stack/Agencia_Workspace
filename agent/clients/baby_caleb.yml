@@ -1,0 +1,46 @@
+# Baby Caleb Panamá — pañales/wipes Nateen + fulares Moon. Retail delivery WA.
+# Tiene Meta Ads activos (ROI +187% validado en junio).
+# Valor "Faith-Based" silencioso (a diferencia de Feria del Lente): NO se comunica públicamente.
+
+id: baby_caleb
+folder: "Baby Caleb"
+clientName: "Baby Caleb Panamá"
+active: true
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
+
+branding:
+  primary: "#7BAE7F"   # Verde suave del uso en redes (discrepancia con Navy Ink documentada)
+  accent: "#F4B7C4"    # Rosa pastel de bebé
+  logoChar: "👶"
+
+llm:
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
+
+sources:
+  instagram:
+    handle: "@babycalebpanama"
+    ig_user_id_env: IG_USER_ID_BABY_CALEB
+  facebook:
+    page_id_env: FB_PAGE_ID_BABY_CALEB
+  whatsapp:
+    - { label: "Pedidos", number: "+507 6757-5065" }
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - meta_ads_pulse
+  - insights_digest
+  - market_trends_scan:
+      subreddits: [beyondthebump, NewParents, Parenting, ScienceBasedParenting]
+      focus: "productos y tips para madres primerizas + pañales/wipes hipoalergénicos + porteo de bebés"
+      limit: 8
+  - instagram_content_ideas:
+      variants: 3
+      formats: [reel, carrusel, story]
+      objective: "generar mensajes WA de madres con bebés — enfatizar tallas disponibles (incluida XXL), envío rápido y educación sobre pañales hipoalergénicos"
+      cta_options: [whatsapp, mensaje_ig]
+  - whatsapp_cta_review

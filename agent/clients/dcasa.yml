@@ -1,0 +1,46 @@
+# D'CASA Panamá — mueblería retail en La Chorrera.
+# Objetivo: iniciar conversaciones WhatsApp que terminen en venta / visita a showroom.
+# Sin web propia. Segmentos: familias B2C + wholesale B2B poco explotado.
+
+id: dcasa
+folder: "Dcasa"
+clientName: "D'CASA Panamá"
+active: true
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
+
+branding:
+  primary: "#1648C0"   # Azul D'CASA (logo real)
+  accent: "#FFD000"    # Amarillo D'CASA (banda inferior)
+  logoChar: "🏠"
+
+llm:
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
+
+sources:
+  instagram:
+    handle: "@dcasapty"
+    ig_user_id_env: IG_USER_ID_DCASA
+  tiktok:
+    handle: "@dcasapty"
+  whatsapp:
+    - { label: "WhatsApp Ventas", number: "+507 0000-0000" }  # TODO: reemplazar con número real
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - tiktok_insights
+  - insights_digest
+  - market_trends_scan:
+      subreddits: [InteriorDesign, homedecor, HomeImprovement, furniture]
+      focus: "productos y tendencias de mobiliario/hogar accesibles y visualmente ordenadas"
+      limit: 8
+  - instagram_content_ideas:
+      variants: 3
+      formats: [reel, carrusel, story]
+      objective: "iniciar conversación por WhatsApp o invitar a visitar el showroom en La Chorrera; equilibrar B2C familias y menciones ocasionales al segmento wholesale"
+      cta_options: [whatsapp, visita_showroom]
+  - whatsapp_cta_review

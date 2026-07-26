@@ -1,0 +1,46 @@
+# Juancito Ads — la agencia del fundador (meta-cliente).
+# Único cliente con sitio web funcional (juancitoads.netlify.app) → activa web_seo_audit.
+# Dark mode, tono tech, tuteo.
+
+id: juancito_ads
+folder: "Juancito Ads"
+clientName: "Juancito Ads"
+active: true
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
+
+branding:
+  primary: "#00E5A0"   # Verde tech neón (dark mode)
+  accent: "#7B61FF"    # Púrpura futurista
+  logoChar: "⚡"
+
+llm:
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
+
+sources:
+  instagram:
+    handle: "@juancitoads"
+    ig_user_id_env: IG_USER_ID_JUANCITO
+  website:
+    url: "https://juancitoads.netlify.app"
+  whatsapp:
+    - { label: "Leads / propuestas", number: "+507 6596-9428" }
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - web_seo_audit                    # única con web viva
+  - insights_digest
+  - market_trends_scan:
+      subreddits: [marketing, PPC, FacebookAds, Entrepreneur, smallbusiness]
+      focus: "tendencias en Meta Ads, IA aplicada a marketing, y pain points de PYMEs latinoamericanas"
+      limit: 8
+  - instagram_content_ideas:
+      variants: 3
+      formats: [reel, carrusel]
+      objective: "captar PYMEs interesadas en Meta Ads con IA — tono socio-consultor, no vendedor"
+      cta_options: [whatsapp, web_propuesta]
+  - whatsapp_cta_review

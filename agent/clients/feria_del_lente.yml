@@ -1,0 +1,60 @@
+# Óptica Feria del Lente — 3 sucursales (Cd Panamá, La Chorrera, Nuevo Arraiján). +28 años.
+# MARCA CON DOS CARAS estrictamente separadas:
+#   (a) Consumer cristiano — voseo panameño emotivo
+#   (b) Institucional B2B — corporativo, totalmente sin religión (instrucción del fundador)
+# El capability dual_voice_split es OBLIGATORIO para no mezclarlas.
+
+id: feria_del_lente
+folder: "Feria del lente"
+clientName: "Óptica Feria del Lente"
+active: true
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
+
+branding:
+  primary: "#003366"   # Azul institucional óptica
+  accent: "#F2A900"    # Naranja/mostaza de acento
+  logoChar: "👓"
+
+llm:
+  # Voz dual + tono cristiano específico. Empieza con Haiku 4.5 para ahorrar;
+  # si la síntesis se queda corta en calidad, promueve este cliente a sonnet-5.
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
+
+sources:
+  instagram:
+    handle: "@opticaferiadellente"
+    ig_user_id_env: IG_USER_ID_FERIA
+  tiktok:
+    handle: "@ferialentepa"
+  whatsapp:
+    - { label: "Cd Panamá", number: "6544-5656" }
+    - { label: "Chorrera/Arraiján", number: "6445-3379" }
+    - { label: "Alianzas B2B", number: "+507 6386-9908" }
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - tiktok_insights
+  - insights_digest
+  - market_trends_scan:
+      subreddits: [glasses, opticians, femalefashionadvice, malefashionadvice]
+      focus: "tendencias de armazones, colecciones nuevas, cuidado visual y beneficios corporativos (para B2B)"
+      limit: 8
+  - instagram_content_ideas:
+      variants: 4                    # 2 por voz
+      formats: [reel, carrusel, story]
+      objective: "agendar cita (AgendaPro/WhatsApp) para consumer; abrir conversaciones de alianza corporativa para B2B — NUNCA mezclar registros"
+      cta_options: [agendapro, whatsapp_sucursal, whatsapp_b2b]
+  - dual_voice_split:
+      voices:
+        - name: consumer_cristiano
+          persona_hint: "familia"
+          rules: "voseo panameño emotivo, permitido lenguaje espiritual"
+        - name: institucional_b2b
+          persona_hint: "empresa"
+          rules: "corporativo, sin lenguaje religioso"
+  - whatsapp_cta_review

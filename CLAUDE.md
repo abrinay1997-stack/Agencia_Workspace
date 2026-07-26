@@ -1,6 +1,6 @@
 # CLAUDE.md — Arranque obligatorio
 
-Este repositorio es el sistema de memoria y orquestación de la agencia **Juancito Ads**. No es código: es la "memoria" que se lee antes de generar cualquier entregable de marketing para un cliente.
+Este repositorio es el sistema de memoria y orquestación de la agencia **Juancito Ads**. Su núcleo es la "memoria" (los `.md` y `.json` bajo cada carpeta de cliente) que se lee antes de generar cualquier entregable. Encima de esa memoria vive `agent/` — código TypeScript que cada mañana lee el ADN de cada cliente, escanea sus redes/tendencias y envía por correo un reporte con ideas de contenido. Ambas capas conviven: la memoria manda, el agente la consume.
 
 ## ⚠️ Antes de hacer NADA
 
@@ -15,8 +15,16 @@ Este repositorio es el sistema de memoria y orquestación de la agencia **Juanci
 
 ## Mapa rápido
 
-- `_EL_ORQUESTADOR_MAESTRO.md` — cerebro del sistema. **Empieza aquí siempre.**
+- `_EL_ORQUESTADOR_MAESTRO.md` — cerebro del sistema. **Empieza aquí siempre** para cualquier tarea de contenido/estrategia.
 - `00_Estandares_Agencia/` — reglas globales de la agencia + `plantilla_cliente_nuevo/` para onboarding.
 - Una carpeta por cliente (`Dcasa/`, `Feria del lente/`, …), cada una con la misma estructura interna `01`–`06`.
+- `agent/` — subsistema de automatización (agente diario multi-cliente que corre en GitHub Actions).
+  - `agent/README.md` — visión general de la arquitectura (para humanos).
+  - **`agent/AUTOMATION_ACTIONS.md` — runbook para cuando el humano pida algo que toque el agente** (añadir/modificar/desactivar cliente, cambiar capabilities, colores, tendencias). **Léelo entero antes de tocar nada en `agent/`.**
+
+## Cuándo va cada archivo
+
+- Si el humano pide algo sobre **contenido, estrategia o memoria del cliente** (posts, campañas, análisis, ADN) → `_EL_ORQUESTADOR_MAESTRO.md` manda.
+- Si el humano pide algo sobre **el correo diario, automatización, o `agent/`** (añadir cliente al pipeline, cambiar colores del email, activar scraping) → `agent/AUTOMATION_ACTIONS.md` manda.
 
 El estado de ADN de cada cliente (completo / base / pendiente) vive en la sección 0 del orquestador. Confía en esa tabla y mantenla actualizada cuando cambie el ADN de un cliente.
