@@ -9,10 +9,8 @@ active: true
 recipientEmail: abrinay1997@gmail.com
 
 llm:
-  # Meta-cliente: la calidad del análisis reflect la marca de la propia agencia.
-  # Claude Sonnet 5 en primary; Groq en fast para el digest.
-  primary: { provider: claude, model: sonnet-5 }
-  fast: { provider: groq, model: llama-3.1-8b-instant }
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
 
 sources:
   instagram:

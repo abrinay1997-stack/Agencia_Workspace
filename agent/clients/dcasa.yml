@@ -9,10 +9,8 @@ active: true
 recipientEmail: abrinay1997@gmail.com
 
 llm:
-  # Cascada default: Groq destila, Claude sintetiza.
-  # Dcasa tiene ADN rico y voz muy particular ("Panameño Ordenado") → conviene Claude para la síntesis.
-  primary: { provider: claude, model: sonnet-5 }
-  fast: { provider: groq, model: llama-3.1-8b-instant }
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
 
 sources:
   instagram:

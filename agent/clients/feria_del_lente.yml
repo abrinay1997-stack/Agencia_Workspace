@@ -11,9 +11,10 @@ active: true
 recipientEmail: abrinay1997@gmail.com
 
 llm:
-  # Voz dual + tono cristiano específico → Claude Sonnet 5 es la mejor apuesta.
-  primary: { provider: claude, model: sonnet-5 }
-  fast: { provider: groq, model: llama-3.1-8b-instant }
+  # Voz dual + tono cristiano específico. Empieza con Haiku 4.5 para ahorrar;
+  # si la síntesis se queda corta en calidad, promueve este cliente a sonnet-5.
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
 
 sources:
   instagram:

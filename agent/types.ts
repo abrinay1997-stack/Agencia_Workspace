@@ -37,8 +37,11 @@ export interface LLMConfig {
 }
 
 export const DEFAULT_LLM_CONFIG: LLMConfig = {
-  primary: { provider: "claude", model: "sonnet-5" },
-  fast: { provider: "groq", model: "llama-3.1-8b-instant" },
+  // Haiku 4.5: el Claude más económico (~$0.80/M in · $4/M out) — suficiente para síntesis
+  // con contexto ya destilado por Groq. Cambiar a sonnet-5 si algún cliente exige más calidad.
+  primary: { provider: "claude", model: "haiku-4-5" },
+  // Llama 3.3 70B versátil en Groq: gratis y de calidad muy alta para destilado.
+  fast: { provider: "groq", model: "llama-3.3-70b-versatile" },
 };
 
 export interface ClientSources {

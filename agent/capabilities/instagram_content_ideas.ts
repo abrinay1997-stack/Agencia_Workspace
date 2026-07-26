@@ -63,7 +63,7 @@ export const instagramContentIdeas: Capability = {
     const { primary } = resolveLLM(ctx.client);
     let markdown: string;
     try {
-      markdown = await generate({ choice: primary, systemStable, systemDynamic, userPrompt, maxTokens: 2200 });
+      markdown = await generate({ choice: primary, systemStable, systemDynamic, userPrompt, maxTokens: 3500 });
     } catch (err) {
       warn(report, `Primary LLM (${primary.provider}/${primary.model}) falló: ${(err as Error).message}. Se omite este capability.`);
       return report;

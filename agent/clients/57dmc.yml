@@ -9,10 +9,8 @@ active: true
 recipientEmail: abrinay1997@gmail.com
 
 llm:
-  # Cliente sin conversión comercial directa → menor sensibilidad económica.
-  # Mantengo Claude para la síntesis porque el tono doctrinal-urbano es específico.
-  primary: { provider: claude, model: sonnet-5 }
-  fast: { provider: groq, model: llama-3.1-8b-instant }
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
 
 sources:
   instagram:
