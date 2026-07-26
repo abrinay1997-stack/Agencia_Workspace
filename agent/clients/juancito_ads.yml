@@ -1,0 +1,37 @@
+# Juancito Ads — la agencia del fundador (meta-cliente).
+# Único cliente con sitio web funcional (juancitoads.netlify.app) → activa web_seo_audit.
+# Dark mode, tono tech, tuteo.
+
+id: juancito_ads
+folder: "Juancito Ads"
+clientName: "Juancito Ads"
+active: true
+recipientEmail: abrinay1997@gmail.com
+
+llm:
+  # Meta-cliente: la calidad del análisis reflect la marca de la propia agencia.
+  # Claude Sonnet 5 en primary; Groq en fast para el digest.
+  primary: { provider: claude, model: sonnet-5 }
+  fast: { provider: groq, model: llama-3.1-8b-instant }
+
+sources:
+  instagram:
+    handle: "@juancitoads"
+    ig_user_id_env: IG_USER_ID_JUANCITO
+  website:
+    url: "https://juancitoads.netlify.app"
+  whatsapp:
+    - { label: "Leads / propuestas", number: "+507 6596-9428" }
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - web_seo_audit                    # única con web viva
+  - insights_digest
+  - instagram_content_ideas:
+      variants: 3
+      formats: [reel, carrusel]
+      objective: "captar PYMEs interesadas en Meta Ads con IA — tono socio-consultor, no vendedor"
+      cta_options: [whatsapp, web_propuesta]
+  - whatsapp_cta_review

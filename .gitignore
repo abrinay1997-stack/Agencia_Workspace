@@ -6,3 +6,18 @@ desktop.ini
 # Temp files
 *.tmp
 ~$*
+
+# Node
+node_modules/
+dist/
+*.log
+npm-debug.log*
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# Agent runtime artifacts
+agent/.cache/
+agent/.runs/

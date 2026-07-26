@@ -1,0 +1,80 @@
+name: Agente diario multi-cliente
+
+on:
+  schedule:
+    # 12:00 UTC = 7:00 AM Panamá (UTC-5, sin DST)
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+    inputs:
+      client_id:
+        description: "Correr solo este cliente (opcional). Vacío = todos los activos."
+        required: false
+        type: string
+
+permissions:
+  contents: write   # necesario para el commit de los reportes al repo
+
+concurrency:
+  group: daily-agent
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    name: Descubrir clientes activos
+    runs-on: ubuntu-latest
+    outputs:
+      clients: ${{ steps.list.outputs.clients }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - id: list
+        run: |
+          if [ -n "${{ github.event.inputs.client_id }}" ]; then
+            echo 'clients=["${{ github.event.inputs.client_id }}"]' >> "$GITHUB_OUTPUT"
+          else
+            CLIENTS=$(npm run --silent list-clients)
+            echo "clients=$CLIENTS" >> "$GITHUB_OUTPUT"
+          fi
+
+  run-agent:
+    name: Agent · ${{ matrix.client }}
+    needs: discover
+    if: needs.discover.outputs.clients != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 2   # evita rate limits en Meta Graph y Anthropic
+      matrix:
+        client: ${{ fromJSON(needs.discover.outputs.clients) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # token del GITHUB_TOKEN default; permite push si permissions.contents=write
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Correr agente
+        env:
+          CLIENT_ID: ${{ matrix.client }}
+          # LLMs
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # Email
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          # Meta Graph API (uno por cliente cuando estén disponibles)
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          IG_USER_ID_DCASA: ${{ secrets.IG_USER_ID_DCASA }}
+          IG_USER_ID_BABY_CALEB: ${{ secrets.IG_USER_ID_BABY_CALEB }}
+          IG_USER_ID_57DMC: ${{ secrets.IG_USER_ID_57DMC }}
+          IG_USER_ID_FERIA: ${{ secrets.IG_USER_ID_FERIA }}
+          IG_USER_ID_JUANCITO: ${{ secrets.IG_USER_ID_JUANCITO }}
+          FB_PAGE_ID_BABY_CALEB: ${{ secrets.FB_PAGE_ID_BABY_CALEB }}
+        run: npm run --silent agent

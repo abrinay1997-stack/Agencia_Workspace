@@ -1,0 +1,13 @@
+# Fotosonido — ADN vacío (plantilla en blanco).
+# Bloqueado hasta ejecutar 00_Estandares_Agencia/prompt_extraccion_adn_chrome.md
+# y llenar 01_ADN_y_Memoria/ con datos reales.
+
+id: fotosonido
+folder: "Fotosonido"
+clientName: "Fotosonido"
+active: false
+skipReason: "ADN vacío — completar 01_ADN_y_Memoria/ antes de reactivar."
+recipientEmail: abrinay1997@gmail.com
+
+sources: {}
+capabilities: []

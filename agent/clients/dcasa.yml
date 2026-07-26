@@ -1,0 +1,37 @@
+# D'CASA Panamá — mueblería retail en La Chorrera.
+# Objetivo: iniciar conversaciones WhatsApp que terminen en venta / visita a showroom.
+# Sin web propia. Segmentos: familias B2C + wholesale B2B poco explotado.
+
+id: dcasa
+folder: "Dcasa"
+clientName: "D'CASA Panamá"
+active: true
+recipientEmail: abrinay1997@gmail.com
+
+llm:
+  # Cascada default: Groq destila, Claude sintetiza.
+  # Dcasa tiene ADN rico y voz muy particular ("Panameño Ordenado") → conviene Claude para la síntesis.
+  primary: { provider: claude, model: sonnet-5 }
+  fast: { provider: groq, model: llama-3.1-8b-instant }
+
+sources:
+  instagram:
+    handle: "@dcasapty"
+    ig_user_id_env: IG_USER_ID_DCASA
+  tiktok:
+    handle: "@dcasapty"
+  whatsapp:
+    - { label: "WhatsApp Ventas", number: "+507 0000-0000" }  # TODO: reemplazar con número real
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - tiktok_insights
+  - insights_digest
+  - instagram_content_ideas:
+      variants: 3
+      formats: [reel, carrusel, story]
+      objective: "iniciar conversación por WhatsApp o invitar a visitar el showroom en La Chorrera; equilibrar B2C familias y menciones ocasionales al segmento wholesale"
+      cta_options: [whatsapp, visita_showroom]
+  - whatsapp_cta_review

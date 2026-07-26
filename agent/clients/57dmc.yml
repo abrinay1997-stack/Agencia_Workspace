@@ -1,0 +1,37 @@
+# 57DMC — artista/ministerio musical rap-hip-hop cristiano (Juan Arrieta).
+# NO es negocio de producto. Métricas relevantes: streams, oyentes, donaciones, invitaciones a eventos.
+# Alcance internacional (PR). Sin web (juanarrieta.net caído).
+
+id: 57dmc
+folder: "57Dmc"
+clientName: "57DMC"
+active: true
+recipientEmail: abrinay1997@gmail.com
+
+llm:
+  # Cliente sin conversión comercial directa → menor sensibilidad económica.
+  # Mantengo Claude para la síntesis porque el tono doctrinal-urbano es específico.
+  primary: { provider: claude, model: sonnet-5 }
+  fast: { provider: groq, model: llama-3.1-8b-instant }
+
+sources:
+  instagram:
+    handle: "@57dmc"
+    ig_user_id_env: IG_USER_ID_57DMC
+  youtube:
+    channel_id: "UC_57DMC_PLACEHOLDER"
+  spotify:
+    artist_id: "SPOTIFY_ARTIST_57DMC_PLACEHOLDER"
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - youtube_insights
+  - spotify_artist_pulse
+  - insights_digest
+  - instagram_content_ideas:
+      variants: 3
+      formats: [reel, carrusel, story]
+      objective: "empujar escucha en Spotify/YouTube, donaciones vía PayPal e invitaciones a eventos/iglesias — nunca vender producto"
+      cta_options: [spotify_link, youtube_link, paypal_donation, whatsapp_channel]

@@ -1,0 +1,35 @@
+# Baby Caleb Panamá — pañales/wipes Nateen + fulares Moon. Retail delivery WA.
+# Tiene Meta Ads activos (ROI +187% validado en junio).
+# Valor "Faith-Based" silencioso (a diferencia de Feria del Lente): NO se comunica públicamente.
+
+id: baby_caleb
+folder: "Baby Caleb"
+clientName: "Baby Caleb Panamá"
+active: true
+recipientEmail: abrinay1997@gmail.com
+
+llm:
+  primary: { provider: claude, model: sonnet-5 }
+  fast: { provider: groq, model: llama-3.1-8b-instant }
+
+sources:
+  instagram:
+    handle: "@babycalebpanama"
+    ig_user_id_env: IG_USER_ID_BABY_CALEB
+  facebook:
+    page_id_env: FB_PAGE_ID_BABY_CALEB
+  whatsapp:
+    - { label: "Pedidos", number: "+507 6757-5065" }
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - meta_ads_pulse
+  - insights_digest
+  - instagram_content_ideas:
+      variants: 3
+      formats: [reel, carrusel, story]
+      objective: "generar mensajes WA de madres con bebés — enfatizar tallas disponibles (incluida XXL), envío rápido y educación sobre pañales hipoalergénicos"
+      cta_options: [whatsapp, mensaje_ig]
+  - whatsapp_cta_review
