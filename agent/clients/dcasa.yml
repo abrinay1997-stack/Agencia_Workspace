@@ -8,6 +8,11 @@ clientName: "D'CASA Panamá"
 active: true
 recipientEmail: abrinay1997@gmail.com
 
+branding:
+  primary: "#1648C0"   # Azul D'CASA (logo real)
+  accent: "#FFD000"    # Amarillo D'CASA (banda inferior)
+  logoChar: "🏠"
+
 llm:
   primary: { provider: claude, model: haiku-4-5 }
   fast: { provider: groq, model: llama-3.3-70b-versatile }

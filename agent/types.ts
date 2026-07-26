@@ -44,6 +44,12 @@ export const DEFAULT_LLM_CONFIG: LLMConfig = {
   fast: { provider: "groq", model: "llama-3.3-70b-versatile" },
 };
 
+export interface ClientBranding {
+  primary: string;    // color de acento principal, ej. "#1648C0"
+  accent: string;     // color secundario / highlights, ej. "#FFD000"
+  logoChar?: string;  // emoji o carácter representativo, ej. "🏠"
+}
+
 export interface ClientSources {
   instagram?: { handle: string; ig_user_id_env?: string };
   facebook?: { page_id_env?: string };
@@ -66,6 +72,7 @@ export interface ClientManifest {
   active: boolean;
   skipReason?: string;
   recipientEmail: string;
+  branding?: ClientBranding;
   llm?: Partial<LLMConfig>;
   sources: ClientSources;
   capabilities: CapabilityDeclaration[];
@@ -95,6 +102,19 @@ export interface ReportSection {
   heading: string;
   body: string;
   bullets?: string[];
+  cards?: IdeaCard[];   // opcional — instagram_content_ideas produce esto
+  kind?: "diagnosis" | "ideas" | "campaign" | "generic";
+}
+
+// Estructura de una idea de contenido — se renderiza como card visual en el email.
+export interface IdeaCard {
+  format: string;          // "REEL" | "CARRUSEL" | "STORY" | ...
+  title: string;
+  hook?: string;
+  scriptBullets?: string[];
+  cta?: string;
+  whyItWorks?: string[];   // razones separadas → chips
+  expectedKPIs?: string;
 }
 
 export interface CapabilityReport {

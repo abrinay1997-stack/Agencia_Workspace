@@ -36,6 +36,22 @@ export function renderMarkdown(report: RunReport): string {
         for (const b of section.bullets) lines.push(`- ${b}`);
         lines.push("");
       }
+      if (section.cards && section.cards.length > 0) {
+        for (const c of section.cards) {
+          lines.push(`#### [${c.format}] ${c.title}`, "");
+          if (c.hook) lines.push(`**Hook:** ${c.hook}`, "");
+          if (c.scriptBullets && c.scriptBullets.length > 0) {
+            lines.push("**Guion:**");
+            for (const b of c.scriptBullets) lines.push(`- ${b}`);
+            lines.push("");
+          }
+          if (c.cta) lines.push(`**CTA:** ${c.cta}`, "");
+          if (c.whyItWorks && c.whyItWorks.length > 0) {
+            lines.push(`**Por qué funciona:** ${c.whyItWorks.join(" · ")}`, "");
+          }
+          if (c.expectedKPIs) lines.push(`**KPIs esperados:** ${c.expectedKPIs}`, "");
+        }
+      }
     }
   }
 

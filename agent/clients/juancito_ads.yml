@@ -8,6 +8,11 @@ clientName: "Juancito Ads"
 active: true
 recipientEmail: abrinay1997@gmail.com
 
+branding:
+  primary: "#00E5A0"   # Verde tech neón (dark mode)
+  accent: "#7B61FF"    # Púrpura futurista
+  logoChar: "⚡"
+
 llm:
   primary: { provider: claude, model: haiku-4-5 }
   fast: { provider: groq, model: llama-3.3-70b-versatile }

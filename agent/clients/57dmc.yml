@@ -8,6 +8,11 @@ clientName: "57DMC"
 active: true
 recipientEmail: abrinay1997@gmail.com
 
+branding:
+  primary: "#1A1A1A"   # Negro urbano (estimado — HEX exactos pendientes)
+  accent: "#D4AF37"    # Dorado litúrgico
+  logoChar: "🎤"
+
 llm:
   primary: { provider: claude, model: haiku-4-5 }
   fast: { provider: groq, model: llama-3.3-70b-versatile }

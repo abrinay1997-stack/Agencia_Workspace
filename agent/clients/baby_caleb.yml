@@ -8,6 +8,11 @@ clientName: "Baby Caleb Panamá"
 active: true
 recipientEmail: abrinay1997@gmail.com
 
+branding:
+  primary: "#7BAE7F"   # Verde suave del uso en redes (discrepancia con Navy Ink documentada)
+  accent: "#F4B7C4"    # Rosa pastel de bebé
+  logoChar: "👶"
+
 llm:
   primary: { provider: claude, model: haiku-4-5 }
   fast: { provider: groq, model: llama-3.3-70b-versatile }

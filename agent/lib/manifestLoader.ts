@@ -17,6 +17,13 @@ const ManifestSchema = z.object({
   active: z.boolean().default(true),
   skipReason: z.string().optional(),
   recipientEmail: z.string().email(),
+  branding: z
+    .object({
+      primary: z.string(),
+      accent: z.string(),
+      logoChar: z.string().optional(),
+    })
+    .optional(),
   llm: z
     .object({
       primary: z.object({ provider: z.enum(["claude", "groq"]), model: z.string() }).optional(),
@@ -48,6 +55,7 @@ export async function loadManifest(clientId: string): Promise<ClientManifest> {
     active: parsed.active,
     skipReason: parsed.skipReason,
     recipientEmail: parsed.recipientEmail,
+    branding: parsed.branding,
     llm: parsed.llm as unknown as ClientManifest["llm"],
     sources: parsed.sources,
     capabilities: parsed.capabilities.map((c) => {

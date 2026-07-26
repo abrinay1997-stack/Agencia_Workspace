@@ -10,6 +10,11 @@ clientName: "Óptica Feria del Lente"
 active: true
 recipientEmail: abrinay1997@gmail.com
 
+branding:
+  primary: "#003366"   # Azul institucional óptica
+  accent: "#F2A900"    # Naranja/mostaza de acento
+  logoChar: "👓"
+
 llm:
   # Voz dual + tono cristiano específico. Empieza con Haiku 4.5 para ahorrar;
   # si la síntesis se queda corta en calidad, promueve este cliente a sonnet-5.
