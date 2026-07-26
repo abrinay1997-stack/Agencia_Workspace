@@ -7,7 +7,9 @@ folder: "Fotosonido"
 clientName: "Fotosonido"
 active: false
 skipReason: "ADN vacío — completar 01_ADN_y_Memoria/ antes de reactivar."
-recipientEmail: abrinay1997@gmail.com
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
 
 sources: {}
 capabilities: []

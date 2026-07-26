@@ -6,7 +6,9 @@ id: dcasa
 folder: "Dcasa"
 clientName: "D'CASA Panamá"
 active: true
-recipientEmail: abrinay1997@gmail.com
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
 
 branding:
   primary: "#1648C0"   # Azul D'CASA (logo real)

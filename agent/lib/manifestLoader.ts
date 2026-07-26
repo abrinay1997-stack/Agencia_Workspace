@@ -16,7 +16,8 @@ const ManifestSchema = z.object({
   clientName: z.string(),
   active: z.boolean().default(true),
   skipReason: z.string().optional(),
-  recipientEmail: z.string().email(),
+  // Acepta string (legacy) o string[]. Normaliza a array abajo.
+  recipientEmails: z.union([z.string().email(), z.array(z.string().email()).min(1)]),
   branding: z
     .object({
       primary: z.string(),
@@ -54,7 +55,7 @@ export async function loadManifest(clientId: string): Promise<ClientManifest> {
     clientName: parsed.clientName,
     active: parsed.active,
     skipReason: parsed.skipReason,
-    recipientEmail: parsed.recipientEmail,
+    recipientEmails: Array.isArray(parsed.recipientEmails) ? parsed.recipientEmails : [parsed.recipientEmails],
     branding: parsed.branding,
     llm: parsed.llm as unknown as ClientManifest["llm"],
     sources: parsed.sources,

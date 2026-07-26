@@ -72,7 +72,7 @@ export interface ClientManifest {
   clientName: string;
   active: boolean;
   skipReason?: string;
-  recipientEmail: string;
+  recipientEmails: string[];   // uno o varios destinatarios por cliente
   branding?: ClientBranding;
   llm?: Partial<LLMConfig>;
   sources: ClientSources;

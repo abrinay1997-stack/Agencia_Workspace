@@ -6,7 +6,9 @@ id: 57dmc
 folder: "57Dmc"
 clientName: "57DMC"
 active: true
-recipientEmail: abrinay1997@gmail.com
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
 
 branding:
   primary: "#1A1A1A"   # Negro urbano (estimado — HEX exactos pendientes)

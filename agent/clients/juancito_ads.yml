@@ -6,7 +6,9 @@ id: juancito_ads
 folder: "Juancito Ads"
 clientName: "Juancito Ads"
 active: true
-recipientEmail: abrinay1997@gmail.com
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
 
 branding:
   primary: "#00E5A0"   # Verde tech neón (dark mode)

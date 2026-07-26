@@ -8,7 +8,9 @@ id: feria_del_lente
 folder: "Feria del lente"
 clientName: "Óptica Feria del Lente"
 active: true
-recipientEmail: abrinay1997@gmail.com
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
 
 branding:
   primary: "#003366"   # Azul institucional óptica

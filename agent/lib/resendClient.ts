@@ -10,7 +10,7 @@ function getClient(): Resend {
 }
 
 export interface SendEmailInput {
-  to: string;
+  to: string | string[];   // uno o varios destinatarios — todos ven a los demás
   subject: string;
   html: string;
   from?: string;
@@ -19,10 +19,11 @@ export interface SendEmailInput {
 
 export async function sendEmail(input: SendEmailInput): Promise<void> {
   const from = input.from ?? process.env.EMAIL_FROM ?? "Juancito Ads Agent <agent@juancitoads.local>";
+  const to = Array.isArray(input.to) ? input.to : [input.to];
   const r = getClient();
   const { error } = await r.emails.send({
     from,
-    to: [input.to],
+    to,
     subject: input.subject,
     html: input.html,
     replyTo: input.replyTo,

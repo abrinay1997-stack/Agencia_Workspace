@@ -49,7 +49,10 @@ id: <id_del_cliente>
 folder: "<Nombre Exacto De La Carpeta>"      # con espacios/mayúsculas si aplica
 clientName: "<Nombre público para el email>"
 active: true
-recipientEmail: abrinay1997@gmail.com        # o el correo del cliente si aplica
+recipientEmails:                             # uno o varios destinatarios (todos reciben el correo)
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
+  # Añade aquí el correo del cliente cuando corresponda
 
 # Colores de marca — leídos del 01_brand_guidelines.md sección "Paleta"
 # Si el ADN no tiene HEX exactos, usa los del logo real; si no hay logo, usa
@@ -225,9 +228,11 @@ Edita `agent/clients/<id>.yml` → bloque `branding`. No requiere typecheck. Com
 
 Edita `agent/clients/<id>.yml` → bloque `capabilities`. Corre typecheck si añades una capability con config nueva. Commit + push.
 
-### 3.3. Cambiar el email destinatario
+### 3.3. Cambiar los destinatarios del email
 
-Edita `agent/clients/<id>.yml` → `recipientEmail`. Commit + push.
+Edita `agent/clients/<id>.yml` → bloque `recipientEmails` (es una lista). Añade/quita correos según necesidad. Commit + push.
+
+Por defecto los nuevos clientes van a `abrinay1997@gmail.com` y `juanarrietabusiness@gmail.com` (ambos correos del dueño de la agencia). Si un cliente externo debe recibir el reporte directo, añade su correo a la lista.
 
 ### 3.4. Cambiar subreddits o focus de tendencias
 

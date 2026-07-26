@@ -41,8 +41,8 @@ async function main(): Promise<void> {
       ? `⚠️ [${client.clientName}] Run abortado — ${runDate}`
       : `☕ [${client.clientName}] Ideas del día — ${runDate}`;
     try {
-      await sendEmail({ to: client.recipientEmail, subject, html });
-      console.log(`[${clientId}] email enviado a ${client.recipientEmail}`);
+      await sendEmail({ to: client.recipientEmails, subject, html });
+      console.log(`[${clientId}] email enviado a ${client.recipientEmails.join(", ")}`);
     } catch (err) {
       console.error(`[${clientId}] email falló: ${(err as Error).message}`);
       process.exitCode = 1;
