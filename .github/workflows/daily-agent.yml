@@ -1,9 +1,12 @@
 name: Agente diario multi-cliente
 
 on:
-  schedule:
-    # 12:00 UTC = 7:00 AM Panamá (UTC-5, sin DST)
-    - cron: "0 12 * * *"
+  # PAUSADO por decisión del owner (2026-07-27).
+  # Para reactivar el envío diario: descomentar el bloque `schedule` completo.
+  # Mientras esté pausado, el workflow solo corre con `workflow_dispatch` (manual).
+  # schedule:
+  #   # 12:00 UTC = 7:00 AM Panamá (UTC-5, sin DST)
+  #   - cron: "0 12 * * *"
   workflow_dispatch:
     inputs:
       client_id:
