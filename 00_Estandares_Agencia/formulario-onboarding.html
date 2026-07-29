@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formulario de Onboarding — Juancito Ads</title>
+<meta name="description" content="Completa esta ficha con la informacion de tu marca para que Juancito Ads pueda crear contenido y campanas a tu medida.">
+<style>
+  @font-face {
+    font-family: 'Display';
+    src: local('Inter'), local('SF Pro Display'), local('Segoe UI');
+    font-weight: 100 900;
+  }
+  @font-face {
+    font-family: 'Body';
+    src: local('Hanken Grotesk'), local('SF Pro Text'), local('Segoe UI'), local('system-ui');
+    font-weight: 100 900;
+  }
+
+  :root {
+    --bg: #050D1F;
+    --bg-card: #0B1730;
+    --bg-input: #0E1E3A;
+    --border: #1A2D52;
+    --border-focus: #1E90FF;
+    --text: #FFFFFF;
+    --text-secondary: #A0B4CC;
+    --text-muted: #5A7399;
+    --accent: #F5A623;
+    --accent-hover: #FFB840;
+    --blue: #1E90FF;
+    --blue-dim: rgba(30,144,255,0.12);
+    --red: #FF6B6B;
+    --green: #4ECB71;
+    --shadow: 0 2px 12px rgba(0,0,0,0.4);
+    --radius: 8px;
+    --radius-lg: 14px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #F0F2F7;
+      --bg-card: #FFFFFF;
+      --bg-input: #F7F8FB;
+      --border: #D4DAE5;
+      --border-focus: #1E90FF;
+      --text: #0A1628;
+      --text-secondary: #4A5B73;
+      --text-muted: #8896AB;
+      --accent: #E8940E;
+      --accent-hover: #D4850A;
+      --blue: #1A7CE0;
+      --blue-dim: rgba(30,144,255,0.08);
+      --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Body', 'Hanken Grotesk', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--blue-dim);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  .header h1 {
+    font-family: 'Display', 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.15;
+    text-wrap: balance;
+    margin-bottom: 14px;
+  }
+  .header h1 span { color: var(--accent); }
+  .header p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  .form-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; flex-shrink: 0;
+  }
+  .section-icon.orange { background: rgba(245,166,35,0.15); }
+  .section-icon.blue { background: var(--blue-dim); }
+  .section-icon.green { background: rgba(78,203,113,0.12); }
+  .section-icon.red { background: rgba(255,107,107,0.12); }
+  .section-icon.purple { background: rgba(160,120,255,0.12); }
+
+  .section-header h2 {
+    font-family: 'Display', 'Inter', system-ui, sans-serif;
+    font-weight: 800; font-size: 17px; letter-spacing: -0.01em;
+  }
+  .section-header .sub { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+
+  .field-group { display: grid; gap: 18px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 5px; }
+  .field label {
+    font-size: 12px; font-weight: 700; color: var(--text-secondary);
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .field label .req { color: var(--accent); margin-left: 2px; }
+  .field label .hint {
+    font-weight: 400; text-transform: none; letter-spacing: 0;
+    color: var(--text-muted); font-size: 11px; display: block; margin-top: 2px;
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"],
+  input[type="url"], input[type="number"], textarea, select {
+    font-family: inherit; font-size: 14px; color: var(--text);
+    background: var(--bg-input); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 10px 14px;
+    transition: border-color 0.15s, box-shadow 0.15s; width: 100%;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none; border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px var(--blue-dim);
+  }
+  ::placeholder { color: var(--text-muted); opacity: 1; }
+  textarea { resize: vertical; min-height: 80px; }
+  select {
+    cursor: pointer; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A7399' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center;
+    padding-right: 32px;
+  }
+
+  .checkbox-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;
+  }
+  .checkbox-item {
+    display: flex; align-items: center; gap: 8px; font-size: 13px;
+    color: var(--text-secondary); cursor: pointer; padding: 8px 12px;
+    border-radius: var(--radius); border: 1px solid transparent;
+    transition: background 0.12s, border-color 0.12s;
+  }
+  .checkbox-item:hover { background: var(--blue-dim); border-color: var(--border); }
+  .checkbox-item input[type="checkbox"] {
+    width: 16px; height: 16px; accent-color: var(--blue); cursor: pointer;
+  }
+
+  .color-row {
+    display: grid; grid-template-columns: 48px 1fr 100px 1fr;
+    gap: 8px; align-items: end; padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .color-row:last-child { border-bottom: none; }
+  @media (max-width: 560px) { .color-row { grid-template-columns: 48px 1fr; } }
+  input[type="color"] {
+    width: 40px; height: 36px; border: 1px solid var(--border);
+    border-radius: var(--radius); cursor: pointer; padding: 2px; background: var(--bg-input);
+  }
+
+  .persona-card {
+    background: var(--bg); border: 1px dashed var(--border);
+    border-radius: var(--radius); padding: 20px; margin-top: 12px;
+  }
+  .persona-card h4 {
+    font-family: 'Display', 'Inter', system-ui, sans-serif;
+    font-size: 14px; font-weight: 700; color: var(--blue);
+    margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+
+  .submit-section { text-align: center; margin-top: 40px; }
+  .submit-btn {
+    font-family: 'Display', 'Inter', system-ui, sans-serif;
+    font-weight: 800; font-size: 16px; color: #050D1F;
+    background: var(--accent); border: none; border-radius: var(--radius);
+    padding: 14px 48px; cursor: pointer;
+    transition: background 0.15s, transform 0.1s; letter-spacing: -0.01em;
+  }
+  .submit-btn:hover { background: var(--accent-hover); }
+  .submit-btn:active { transform: scale(0.98); }
+  .submit-note { color: var(--text-muted); font-size: 12px; margin-top: 12px; line-height: 1.5; }
+
+  .toast {
+    position: fixed; bottom: 24px; left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--green); color: #050D1F;
+    font-weight: 700; font-size: 14px; padding: 12px 28px;
+    border-radius: 100px; opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 100; pointer-events: none;
+  }
+  .toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  @media print { .page { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="header">
+    <div class="header-badge">Juancito Ads</div>
+    <h1>Formulario de <span>Onboarding</span></h1>
+    <p>Completa esta ficha con la informacion de tu marca. Mientras mas detalles nos des, mejor podremos crear contenido y campanas que realmente representen tu negocio.</p>
+  </header>
+
+  <form id="onboardingForm">
+
+    <!-- 1. DATOS DEL NEGOCIO -->
+    <div class="form-section" data-section="Datos del Negocio">
+      <div class="section-header">
+        <div class="section-icon orange">&#9733;</div>
+        <div><h2>Datos del Negocio</h2><p class="sub">Informacion basica de tu empresa</p></div>
+      </div>
+      <div class="field-group">
+        <div class="field-row">
+          <div class="field">
+            <label>Nombre del negocio <span class="req">*</span></label>
+            <input type="text" name="nombre_negocio" placeholder="Ej: Mi Tienda Panama">
+          </div>
+          <div class="field">
+            <label>Nombre del dueno / contacto <span class="req">*</span></label>
+            <input type="text" name="nombre_dueno" placeholder="Nombre completo">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Rubro / industria <span class="req">*</span></label>
+            <input type="text" name="rubro" placeholder="Ej: Optica, retail de moda, panaderia...">
+          </div>
+          <div class="field">
+            <label>Ubicacion / mercado</label>
+            <input type="text" name="ubicacion" placeholder="Ej: Ciudad de Panama, 2 sucursales">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>WhatsApp <span class="req">*</span></label>
+            <input type="tel" name="whatsapp" placeholder="+507 6XXX-XXXX">
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="correo@ejemplo.com">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Instagram</label>
+            <input type="text" name="instagram" placeholder="@tucuenta">
+          </div>
+          <div class="field">
+            <label>Sitio web</label>
+            <input type="url" name="sitio_web" placeholder="https://...">
+          </div>
+        </div>
+        <div class="field">
+          <label>Otras redes sociales<span class="hint">TikTok, Facebook, LinkedIn, YouTube — pega los links</span></label>
+          <textarea name="otras_redes" rows="2" placeholder="TikTok: @... / Facebook: ..."></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Antiguedad del negocio</label>
+            <input type="text" name="antiguedad" placeholder="Ej: 3 anos, desde 2021...">
+          </div>
+          <div class="field">
+            <label>Cantidad de empleados</label>
+            <select name="empleados">
+              <option value="">Seleccionar...</option>
+              <option>Solo yo</option>
+              <option>2-5 personas</option>
+              <option>6-15 personas</option>
+              <option>16-50 personas</option>
+              <option>Mas de 50</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. PRODUCTOS / SERVICIOS -->
+    <div class="form-section" data-section="Productos y Servicios">
+      <div class="section-header">
+        <div class="section-icon blue">&#9880;</div>
+        <div><h2>Productos y Servicios</h2><p class="sub">Que vendes y como lo vendes</p></div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label>Describe que vendes o que servicio ofreces <span class="req">*</span>
+            <span class="hint">Se especifico: productos estrella, rangos de precio, categorias principales</span>
+          </label>
+          <textarea name="descripcion_producto" rows="4" placeholder="Ej: Vendemos lentes oftalmicos y de sol. Nuestro producto estrella son los lentes progresivos con filtro azul ($120-$280)..."></textarea>
+        </div>
+        <div class="field">
+          <label>Rango de precios<span class="hint">Precio mas bajo y mas alto que manejas</span></label>
+          <input type="text" name="rango_precios" placeholder="Ej: $15 - $500">
+        </div>
+        <div class="field">
+          <label>Que diferencia a tu negocio de la competencia? <span class="req">*</span>
+            <span class="hint">Se honesto: por que te eligen a ti y no al de al lado?</span>
+          </label>
+          <textarea name="diferenciacion" rows="3" placeholder="Ej: Somos la unica optica con laboratorio propio - entregamos en el mismo dia..."></textarea>
+        </div>
+        <div class="field">
+          <label>Donde vendes hoy?</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox" name="canal_venta" value="Tienda fisica"> Tienda fisica</label>
+            <label class="checkbox-item"><input type="checkbox" name="canal_venta" value="WhatsApp"> WhatsApp</label>
+            <label class="checkbox-item"><input type="checkbox" name="canal_venta" value="Instagram DM"> Instagram DM</label>
+            <label class="checkbox-item"><input type="checkbox" name="canal_venta" value="Sitio web / e-commerce"> Sitio web / e-commerce</label>
+            <label class="checkbox-item"><input type="checkbox" name="canal_venta" value="Delivery apps"> Delivery apps</label>
+            <label class="checkbox-item"><input type="checkbox" name="canal_venta" value="Otro"> Otro</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Metodos de pago que aceptas</label>
+          <input type="text" name="metodos_pago" placeholder="Ej: Yappy, efectivo, tarjeta, transferencia ACH...">
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. AUDIENCIA / PUBLICO IDEAL -->
+    <div class="form-section" data-section="Audiencia y Publico Ideal">
+      <div class="section-header">
+        <div class="section-icon green">&#9824;</div>
+        <div><h2>Audiencia y Publico Ideal</h2><p class="sub">A quien le vendes — mientras mas sepas de tu cliente, mejor apuntamos las campanas</p></div>
+      </div>
+      <div class="field-group">
+        <div class="field-row">
+          <div class="field">
+            <label>Rango de edad de tus clientes <span class="req">*</span></label>
+            <input type="text" name="rango_edad" placeholder="Ej: 25-45 anos">
+          </div>
+          <div class="field">
+            <label>Genero predominante</label>
+            <select name="genero">
+              <option value="">Seleccionar...</option>
+              <option>Mayormente mujeres</option>
+              <option>Mayormente hombres</option>
+              <option>Mixto / parejo</option>
+              <option>No aplica</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Nivel socioeconomico</label>
+            <select name="nivel_socioeconomico">
+              <option value="">Seleccionar...</option>
+              <option>Popular / accesible</option>
+              <option>Clase media</option>
+              <option>Clase media-alta</option>
+              <option>Premium / lujo</option>
+              <option>Mixto</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Ubicacion geografica de tus clientes</label>
+            <input type="text" name="ubicacion_clientes" placeholder="Ej: Panama Oeste, todo el pais, solo mi barrio...">
+          </div>
+        </div>
+
+        <div class="persona-card">
+          <h4>Perfil de cliente tipo A — tu cliente ideal</h4>
+          <div class="field-group">
+            <div class="field">
+              <label>Describe a tu mejor cliente<span class="hint">Piensa en una persona real que te compra seguido. Quien es? A que se dedica?</span></label>
+              <textarea name="persona_a_desc" rows="3" placeholder="Ej: Mujer de 35 anos, mama profesional, vive en Costa del Este, busca calidad y conveniencia..."></textarea>
+            </div>
+            <div class="field">
+              <label>Que problema le resuelves a esa persona?</label>
+              <input type="text" name="persona_a_problema" placeholder="Ej: No tiene tiempo de ir a 5 tiendas a comparar lentes">
+            </div>
+            <div class="field">
+              <label>Que la convence de comprarte a ti?</label>
+              <input type="text" name="persona_a_convence" placeholder="Ej: Rapidez de entrega, que le expliquen sin tecnicismos">
+            </div>
+          </div>
+        </div>
+
+        <div class="persona-card">
+          <h4>Perfil de cliente tipo B — tu segundo publico</h4>
+          <div class="field-group">
+            <div class="field">
+              <label>Describe a este segundo tipo de cliente<span class="hint">Si solo tienes un tipo de cliente, dejalo en blanco</span></label>
+              <textarea name="persona_b_desc" rows="3" placeholder="Ej: Hombre de 50+, empresario, viene referido, compra gama alta..."></textarea>
+            </div>
+            <div class="field">
+              <label>Que problema le resuelves?</label>
+              <input type="text" name="persona_b_problema" placeholder="Ej: Necesita lentes urgentes y no quiere esperar una semana">
+            </div>
+            <div class="field">
+              <label>Que lo convence de comprarte a ti?</label>
+              <input type="text" name="persona_b_convence" placeholder="Ej: Garantia, marcas reconocidas, atencion personalizada">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Intereses y comportamientos de tus clientes<span class="hint">Que les gusta? Que siguen en redes? Como es su estilo de vida?</span></label>
+          <textarea name="intereses" rows="3" placeholder="Ej: Les gusta la moda, siguen influencers de lifestyle, son activos en Instagram, van al gym..."></textarea>
+        </div>
+        <div class="field">
+          <label>De donde vienen tus clientes hoy?<span class="hint">Como te encuentran? Marca lo que aplique</span></label>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox" name="fuente_clientes" value="Referidos / boca a boca"> Referidos / boca a boca</label>
+            <label class="checkbox-item"><input type="checkbox" name="fuente_clientes" value="Instagram"> Instagram</label>
+            <label class="checkbox-item"><input type="checkbox" name="fuente_clientes" value="Google / busqueda"> Google / busqueda</label>
+            <label class="checkbox-item"><input type="checkbox" name="fuente_clientes" value="Pasan por el local"> Pasan por el local</label>
+            <label class="checkbox-item"><input type="checkbox" name="fuente_clientes" value="Facebook"> Facebook</label>
+            <label class="checkbox-item"><input type="checkbox" name="fuente_clientes" value="TikTok"> TikTok</label>
+            <label class="checkbox-item"><input type="checkbox" name="fuente_clientes" value="Publicidad pagada"> Publicidad pagada</label>
+            <label class="checkbox-item"><input type="checkbox" name="fuente_clientes" value="Otro"> Otro</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. IDENTIDAD VISUAL -->
+    <div class="form-section" data-section="Identidad Visual">
+      <div class="section-header">
+        <div class="section-icon purple">&#9670;</div>
+        <div><h2>Identidad Visual</h2><p class="sub">Colores, tipografia y estilo grafico de tu marca</p></div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label>Tienes logo? <span class="req">*</span><span class="hint">Si si, envialo por WhatsApp en la mejor calidad que tengas (PNG o PDF)</span></label>
+          <select name="tiene_logo">
+            <option value="">Seleccionar...</option>
+            <option>Si, tengo logo</option>
+            <option>Esta en proceso</option>
+            <option>No, necesito uno</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Tienes manual de marca o brand book?<span class="hint">Un PDF con colores, tipografia y reglas visuales de tu marca</span></label>
+          <select name="tiene_brandbook">
+            <option value="">Seleccionar...</option>
+            <option>Si, lo tengo y puedo compartirlo</option>
+            <option>Si, pero no lo encuentro / esta desactualizado</option>
+            <option>No tengo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Colores de tu marca<span class="hint">Si conoces los codigos HEX exactos, mejor. Si no, describe los colores</span></label>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div class="color-row">
+              <input type="color" name="color1_picker" value="#1E90FF">
+              <input type="text" name="color1_hex" placeholder="Codigo HEX (ej: #1E90FF)">
+              <input type="text" name="color1_nombre" placeholder="Nombre" style="font-size:12px;">
+              <input type="text" name="color1_uso" placeholder="Donde se usa?" style="font-size:12px;">
+            </div>
+            <div class="color-row">
+              <input type="color" name="color2_picker" value="#F5A623">
+              <input type="text" name="color2_hex" placeholder="Codigo HEX">
+              <input type="text" name="color2_nombre" placeholder="Nombre" style="font-size:12px;">
+              <input type="text" name="color2_uso" placeholder="Donde se usa?" style="font-size:12px;">
+            </div>
+            <div class="color-row">
+              <input type="color" name="color3_picker" value="#FFFFFF">
+              <input type="text" name="color3_hex" placeholder="Codigo HEX">
+              <input type="text" name="color3_nombre" placeholder="Nombre" style="font-size:12px;">
+              <input type="text" name="color3_uso" placeholder="Donde se usa?" style="font-size:12px;">
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Tipografia principal<span class="hint">La fuente de tus titulares o logo</span></label>
+            <input type="text" name="tipografia_principal" placeholder="Ej: Montserrat Bold">
+          </div>
+          <div class="field">
+            <label>Tipografia secundaria</label>
+            <input type="text" name="tipografia_secundaria" placeholder="Ej: Open Sans para cuerpo de texto">
+          </div>
+        </div>
+        <div class="field">
+          <label>Estilo visual que te representa<span class="hint">Marca todas las que apliquen</span></label>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox" name="estilo_visual" value="Minimalista / limpio"> Minimalista / limpio</label>
+            <label class="checkbox-item"><input type="checkbox" name="estilo_visual" value="Colorido / vibrante"> Colorido / vibrante</label>
+            <label class="checkbox-item"><input type="checkbox" name="estilo_visual" value="Elegante / premium"> Elegante / premium</label>
+            <label class="checkbox-item"><input type="checkbox" name="estilo_visual" value="Divertido / informal"> Divertido / informal</label>
+            <label class="checkbox-item"><input type="checkbox" name="estilo_visual" value="Corporativo / serio"> Corporativo / serio</label>
+            <label class="checkbox-item"><input type="checkbox" name="estilo_visual" value="Tecnologico / moderno"> Tecnologico / moderno</label>
+            <label class="checkbox-item"><input type="checkbox" name="estilo_visual" value="Organico / natural"> Organico / natural</label>
+            <label class="checkbox-item"><input type="checkbox" name="estilo_visual" value="No estoy seguro"> No estoy seguro</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Marcas que admiras visualmente<span class="hint">No tienen que ser de tu rubro — que marcas te gustan como se ven?</span></label>
+          <textarea name="marcas_admiras" rows="2" placeholder="Ej: Me gusta como se ve Apple, Nike, la cuenta de Instagram de @fulano..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. VOZ Y TONO -->
+    <div class="form-section" data-section="Voz y Tono de Marca">
+      <div class="section-header">
+        <div class="section-icon orange">&#9998;</div>
+        <div><h2>Voz y Tono de Marca</h2><p class="sub">Como habla tu negocio — esto define todo el contenido que creemos</p></div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label>Si tu marca fuera una persona, como hablaria? <span class="req">*</span><span class="hint">Piensalo como si describieras la personalidad de alguien</span></label>
+          <textarea name="personalidad_marca" rows="3" placeholder="Ej: Como un amigo que sabe mucho del tema pero te explica sin hacerte sentir bruto..."></textarea>
+        </div>
+        <div class="field">
+          <label>Tuteas o hablas de usted a tus clientes?</label>
+          <select name="tuteo">
+            <option value="">Seleccionar...</option>
+            <option>Tuteo siempre (tu, tu negocio...)</option>
+            <option>De usted siempre</option>
+            <option>Depende del contexto</option>
+            <option>No lo he pensado</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Palabras o frases que tu marca SI usa<span class="hint">Muletillas, esloganes, expresiones que te identifican</span></label>
+          <textarea name="palabras_si" rows="2" placeholder="Ej: 'Calidad que se nota', 'Hecho con amor', siempre decimos 'familia'..."></textarea>
+        </div>
+        <div class="field">
+          <label>Palabras o cosas que tu marca NUNCA haria<span class="hint">Lo que te haria perder clientes o contradice tu identidad</span></label>
+          <textarea name="palabras_no" rows="2" placeholder="Ej: Nunca decir 'barato' (decimos 'accesible'), nada de humor negro..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. COMPETENCIA -->
+    <div class="form-section" data-section="Competencia">
+      <div class="section-header">
+        <div class="section-icon red">&#9878;</div>
+        <div><h2>Competencia</h2><p class="sub">Contra quien compites y que hacen</p></div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label>Quienes son tus competidores directos? <span class="req">*</span><span class="hint">Los negocios que tus clientes consideran antes de elegirte a ti</span></label>
+          <textarea name="competidores" rows="3" placeholder="Ej:&#10;1. Optica Vision Total — estan en 3 malls, precios mas bajos&#10;2. LenteExpress — venden mucho por Instagram&#10;3. ..."></textarea>
+        </div>
+        <div class="field">
+          <label>Que hacen ellos que tu NO haces (y te gustaria)?</label>
+          <textarea name="competencia_ventaja" rows="2" placeholder="Ej: Publican todos los dias en Instagram, tienen tienda online..."></textarea>
+        </div>
+        <div class="field">
+          <label>Que haces tu que ellos NO hacen?</label>
+          <textarea name="tu_ventaja" rows="2" placeholder="Ej: Laboratorio propio, entrega el mismo dia, atencion personalizada..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. MARKETING ACTUAL -->
+    <div class="form-section" data-section="Marketing Actual y Objetivos">
+      <div class="section-header">
+        <div class="section-icon blue">&#9889;</div>
+        <div><h2>Marketing Actual y Objetivos</h2><p class="sub">Donde estas hoy y a donde quieres llegar</p></div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label>Has invertido en publicidad digital antes?</label>
+          <select name="experiencia_ads">
+            <option value="">Seleccionar...</option>
+            <option>Nunca — seria mi primera vez</option>
+            <option>Si, pero sin mucho resultado</option>
+            <option>Si, con algo de resultado</option>
+            <option>Si, activamente y funciona bien</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Cuanto estarias dispuesto a invertir en pauta (Meta Ads) al mes?<span class="hint">Este es el presupuesto que se le paga a Meta, separado de los honorarios de la agencia</span></label>
+          <select name="presupuesto_pauta">
+            <option value="">Seleccionar...</option>
+            <option>$100-$250 / mes</option>
+            <option>$300-$600 / mes</option>
+            <option>$700-$2,000 / mes</option>
+            <option>Mas de $2,000 / mes</option>
+            <option>No estoy seguro todavia</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Que servicio te interesa? <span class="req">*</span></label>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox" name="servicio_interes" value="Campanas de Meta Ads"> Campanas de Meta Ads</label>
+            <label class="checkbox-item"><input type="checkbox" name="servicio_interes" value="Manejo de redes sociales"> Manejo de redes sociales</label>
+            <label class="checkbox-item"><input type="checkbox" name="servicio_interes" value="Ambos (campanas + redes)"> Ambos (campanas + redes)</label>
+            <label class="checkbox-item"><input type="checkbox" name="servicio_interes" value="Pagina web"> Pagina web</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Tu objetivo principal con este servicio <span class="req">*</span><span class="hint">Que seria un "exito" para ti en los proximos 3 meses?</span></label>
+          <textarea name="objetivo" rows="3" placeholder="Ej: Que me lleguen al menos 20 mensajes de WhatsApp al mes de gente interesada..."></textarea>
+        </div>
+        <div class="field">
+          <label>Preguntas que tus clientes te hacen mas seguido<span class="hint">Lo que preguntan por WhatsApp o en persona antes de comprar</span></label>
+          <textarea name="faq_clientes" rows="3" placeholder="Ej: Cuanto cuesta? Hacen envios? Aceptan Yappy? Tienen garantia?..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. EXTRA -->
+    <div class="form-section" data-section="Informacion Adicional">
+      <div class="section-header">
+        <div class="section-icon green">&#10003;</div>
+        <div><h2>Informacion Adicional</h2><p class="sub">Cualquier cosa que nos ayude a entender mejor tu negocio</p></div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label>Hay algo que siempre quisiste hacer en marketing pero no has podido?</label>
+          <textarea name="sueno_marketing" rows="2" placeholder="Ej: Siempre quise hacer reels pero no se como empezar..."></textarea>
+        </div>
+        <div class="field">
+          <label>Hay algo que NO quieres que hagamos o que te preocupa?</label>
+          <textarea name="restricciones" rows="2" placeholder="Ej: No quiero que publiquen mi cara, no quiero humor..."></textarea>
+        </div>
+        <div class="field">
+          <label>Cualquier otro comentario</label>
+          <textarea name="comentario_extra" rows="2" placeholder="Lo que sea que creas importante y no hayamos preguntado..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="submit-section">
+      <button type="button" class="submit-btn" onclick="generatePDF()">Descargar PDF</button>
+      <p class="submit-note">Al hacer clic se genera un PDF con tus respuestas.<br>Guardalo con "Guardar como PDF" y envialo a Juancito Ads por WhatsApp o email.</p>
+    </div>
+
+  </form>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function getFormData() {
+  var data = [];
+  var sections = document.querySelectorAll('.form-section');
+  sections.forEach(function(section) {
+    var sectionName = section.dataset.section || '';
+    var fields = [];
+    section.querySelectorAll('.field').forEach(function(field) {
+      var labelEl = field.querySelector('label');
+      if (!labelEl) return;
+      var labelClone = labelEl.cloneNode(true);
+      var hints = labelClone.querySelectorAll('.hint, .req');
+      hints.forEach(function(h) { h.remove(); });
+      var label = labelClone.textContent.trim();
+      var input = field.querySelector('input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="number"]');
+      var textarea = field.querySelector('textarea');
+      var select = field.querySelector('select');
+      var checkboxes = field.querySelectorAll('input[type="checkbox"]');
+      var value = '';
+      if (input && input.value.trim()) {
+        value = input.value.trim();
+      } else if (textarea && textarea.value.trim()) {
+        value = textarea.value.trim();
+      } else if (select && select.value) {
+        value = select.options[select.selectedIndex].text;
+        if (value === 'Seleccionar...') value = '';
+      } else if (checkboxes.length > 0) {
+        var checked = [];
+        checkboxes.forEach(function(cb) { if (cb.checked) checked.push(cb.value); });
+        value = checked.join(', ');
+      }
+      if (value) fields.push({ label: label, value: value });
+    });
+    var colorRows = section.querySelectorAll('.color-row');
+    if (colorRows.length > 0) {
+      var colors = [];
+      colorRows.forEach(function(row) {
+        var picker = row.querySelector('input[type="color"]');
+        var texts = row.querySelectorAll('input[type="text"]');
+        var hex = (texts[0] && texts[0].value.trim()) || (picker ? picker.value : '');
+        var nombre = (texts[1] && texts[1].value.trim()) || '';
+        var uso = (texts[2] && texts[2].value.trim()) || '';
+        if (nombre || uso || (texts[0] && texts[0].value.trim())) {
+          colors.push({ hex: picker ? picker.value : hex, nombre: nombre, uso: uso, userHex: texts[0] ? texts[0].value.trim() : '' });
+        }
+      });
+      if (colors.length > 0) {
+        fields.push({ label: 'Colores de marca', value: '__colors__', colors: colors });
+      }
+    }
+    if (fields.length > 0) data.push({ sectionName: sectionName, fields: fields });
+  });
+  return data;
+}
+
+function esc(s) {
+  var d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function generatePDF() {
+  var data = getFormData();
+  var nameInput = document.querySelector('[name="nombre_negocio"]');
+  var businessName = (nameInput && nameInput.value.trim()) || 'Cliente';
+  var today = new Date().toLocaleDateString('es-PA', { year: 'numeric', month: 'long', day: 'numeric' });
+  if (data.length === 0 || data.every(function(s) { return s.fields.length === 0; })) {
+    showToast('Completa al menos algunos campos antes de descargar', '#FF6B6B');
+    return;
+  }
+  var sectionsHTML = '';
+  data.forEach(function(section) {
+    var fieldsHTML = '';
+    section.fields.forEach(function(f) {
+      if (f.value === '__colors__' && f.colors) {
+        var swatches = '';
+        f.colors.forEach(function(c) {
+          swatches += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">' +
+            '<div style="width:28px;height:28px;border-radius:6px;background:' + esc(c.hex) + ';border:1px solid #ddd;flex-shrink:0;"></div>' +
+            '<span style="font-size:13px;color:#333;font-family:monospace;">' + esc(c.userHex || c.hex) + '</span>' +
+            (c.nombre ? '<span style="font-size:13px;color:#555;"> — ' + esc(c.nombre) + '</span>' : '') +
+            (c.uso ? '<span style="font-size:12px;color:#888;"> (' + esc(c.uso) + ')</span>' : '') +
+            '</div>';
+        });
+        fieldsHTML += '<div style="margin-bottom:16px;">' +
+          '<div style="font-size:11px;font-weight:700;color:#1A7CE0;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">' + esc(f.label) + '</div>' +
+          swatches + '</div>';
+      } else {
+        fieldsHTML += '<div style="margin-bottom:16px;">' +
+          '<div style="font-size:11px;font-weight:700;color:#1A7CE0;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">' + esc(f.label) + '</div>' +
+          '<div style="font-size:14px;color:#222;line-height:1.55;">' + esc(f.value).replace(/\n/g, '<br>') + '</div>' +
+          '</div>';
+      }
+    });
+    sectionsHTML += '<div style="margin-bottom:28px;page-break-inside:avoid;">' +
+      '<div style="font-size:16px;font-weight:800;color:#050D1F;border-bottom:2px solid #1E90FF;padding-bottom:8px;margin-bottom:16px;font-family:Inter,system-ui,sans-serif;">' + esc(section.sectionName) + '</div>' +
+      fieldsHTML + '</div>';
+  });
+
+  var pdfHTML = '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+    '<title>Onboarding ' + esc(businessName) + ' — Juancito Ads</title>' +
+    '<style>' +
+    '@page{size:letter;margin:20mm 18mm 25mm 18mm}' +
+    '*{box-sizing:border-box;margin:0;padding:0}' +
+    'body{font-family:"Hanken Grotesk","SF Pro Text",system-ui,sans-serif;background:#fff;color:#111;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
+    '@media print{body{background:#fff}.no-print{display:none!important}}' +
+    '</style></head><body>' +
+    '<div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid #050D1F;padding-bottom:20px;margin-bottom:32px;">' +
+    '<div><div style="font-family:Inter,system-ui,sans-serif;font-weight:900;font-size:26px;color:#050D1F;letter-spacing:-0.02em;">JUANCITO<span style="color:#F5A623;"> ADS</span></div>' +
+    '<div style="font-size:11px;color:#666;margin-top:4px;letter-spacing:0.04em;">FORMULARIO DE ONBOARDING</div></div>' +
+    '<div style="text-align:right;"><div style="font-size:20px;font-weight:800;color:#050D1F;font-family:Inter,system-ui,sans-serif;">' + esc(businessName) + '</div>' +
+    '<div style="font-size:12px;color:#888;margin-top:4px;">' + esc(today) + '</div></div></div>' +
+    sectionsHTML +
+    '<div style="border-top:2px solid #050D1F;padding-top:16px;margin-top:40px;display:flex;justify-content:space-between;align-items:center;">' +
+    '<div style="font-size:11px;color:#888;">Documento generado para uso interno de Juancito Ads</div>' +
+    '<div style="text-align:right;"><div style="font-size:12px;font-weight:700;color:#050D1F;">Juancito Ads</div>' +
+    '<div style="font-size:11px;color:#1E90FF;">WhatsApp: +507 6596-9428</div>' +
+    '<div style="font-size:11px;color:#1E90FF;">juanarrietabusiness@gmail.com</div></div></div>' +
+    '<div class="no-print" style="position:fixed;bottom:0;left:0;right:0;background:#050D1F;padding:16px;text-align:center;z-index:100;">' +
+    '<button onclick="window.print()" style="font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:15px;color:#050D1F;background:#F5A623;border:none;border-radius:8px;padding:12px 40px;cursor:pointer;">Guardar como PDF</button>' +
+    '<div style="color:#A0B4CC;font-size:12px;margin-top:8px;">En el dialogo de impresion, selecciona <strong>"Guardar como PDF"</strong> como destino</div></div>' +
+    '</body></html>';
+
+  var pdfWindow = window.open('', '_blank');
+  if (pdfWindow) {
+    pdfWindow.document.write(pdfHTML);
+    pdfWindow.document.close();
+    showToast('PDF generado — guardalo desde el dialogo de impresion', '#4ECB71');
+  } else {
+    showToast('Permite las ventanas emergentes para generar el PDF', '#FF6B6B');
+  }
+}
+
+function showToast(msg, color) {
+  var toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.style.background = color || '#4ECB71';
+  toast.classList.add('visible');
+  setTimeout(function() { toast.classList.remove('visible'); }, 3500);
+}
+</script>
+
+</body>
+</html>
