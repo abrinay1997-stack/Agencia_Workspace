@@ -14,6 +14,7 @@
 - **Ubicación / mercado:** Panamá ("AGENCIA DE MARKETING DIGITAL · PANAMÁ"; footer "© 2026 Juancito Ads · Panamá").
 - **Modalidad:** 100% remoto, con una jornada de producción/grabación presencial mensual incluida cuando el plan lo contempla (no presencia diaria).
 - **Contacto:** WhatsApp/teléfono +507 6596-9428 (`wa.me/50765969428`) · email `juanarrietabusiness@gmail.com` · Instagram [@juancitoads](https://instagram.com/juancitoads) · web `juancitoads.netlify.app`.
+- **Métodos de pago:** Yappy 6910-3347 (titular: Juan David Arrieta Navarro).
 - **Respuesta:** en menos de 24 horas hábiles.
 
 ## 1. Posicionamiento
