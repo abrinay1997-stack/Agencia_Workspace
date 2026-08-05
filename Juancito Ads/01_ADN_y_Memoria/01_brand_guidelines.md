@@ -2,8 +2,8 @@
 
 > 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1FkJ4fMn0XTZrhIUMWZVaL_ovT432qRCS) · [Canva](https://www.canva.com/folder/FAHQauLEFS4) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
 
-> Última actualización: 2026-07-24 · Fuentes: inspección de Claude en Chrome sobre `juancitoads.netlify.app` (CSS real) + `Assets_Visuales_Base/Juancito Ads Brand Book by Pomelli.pdf` + 4 conversaciones internas de estrategia de agencia (compartidas por el fundador) + logo (`Assets_Visuales_Base/logo.png`).
-> Nota de precisión: paleta y tipografía **coinciden exactamente** entre las dos fuentes (CSS del sitio y Pomelli) — a diferencia de otros clientes del sistema, aquí no hay discrepancia que resolver.
+> Última actualización: 2026-08-05 · **Fuente de verdad: `Assets_Visuales_Base/Juancito Ads - Formulario Onboarding (verificado 2026-08).docx`** (revisado y confirmado por el fundador) + CSS real de `juancitoads.netlify.app` + logo (`Assets_Visuales_Base/logo.png`). El brand book de Pomelli fue eliminado por desactualizado.
+> Nota: la paleta se actualizó con los HEX verificados del formulario (el acento naranja pasó de `#F5A623` a `#CF6019`); la tipografía (Inter + Hanken Grotesk) se mantiene, coincide con el CSS del sitio.
 
 ## 0. Datos del negocio
 
@@ -43,13 +43,15 @@
 
 ## 3. Paleta de marca
 
-| Color | HEX | RGB | Rol |
-|---|---|---|---|
-| Obsidian Black / azul noche | `#050D1F` | 5, 13, 31 | Fondo principal — base de casi todo el sitio y piezas de marca |
-| Carrot Orange / ámbar | `#F5A623` | 245, 166, 35 | Acento principal — CTAs ("Quiero crecer"), cifras destacadas, estrellas del logo |
-| Azure Blue | `#1E90FF` | 30, 144, 255 | Acento secundario — subtítulos, enlaces, widgets, monograma del logo |
-| Pure White | `#FFFFFF` | 255, 255, 255 | Texto principal sobre fondo oscuro |
-| Gris azulado (texto secundario) | `#A0B4CC` | 160, 180, 204 | Texto secundario, cuerpo largo sobre fondo oscuro |
+| Color | HEX | Rol |
+|---|---|---|
+| Fondo oscuro principal | `#050D1F` | Base de casi todo el sitio y piezas de marca (dark-mode por defecto) |
+| Fondo oscuro secundario | `#0A1628` | Fondo alterno, un poco más claro |
+| Azul logo | `#0D489F` | Azul del monograma/logo |
+| Azul acento | `#1E90FF` · `#004AAD` | Links, títulos destacados, íconos, widgets |
+| Naranja/dorado CTA | `#CF6019` | Botones CTA y detalles (acento principal) |
+| Blanco | `#FFFFFF` | Texto principal sobre fondo oscuro |
+| Gris-azulado (muted) | `#A0B4CC` | Texto secundario, cuerpo largo sobre fondo oscuro |
 
 **Estética resultante:** azul noche + azul eléctrico + naranja ámbar sobre blanco → look tecnológico/"espacial" (constelaciones y estrellas de fondo). Es una identidad **dark-mode por defecto** — a diferencia de la mayoría de clientes del sistema, aquí el fondo oscuro es la norma, no la excepción.
 

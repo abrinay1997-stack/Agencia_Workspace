@@ -11,8 +11,8 @@ recipientEmails:
   - juanarrietabusiness@gmail.com
 
 branding:
-  primary: "#7BAE7F"   # Verde suave del uso en redes (discrepancia con Navy Ink documentada)
-  accent: "#F4B7C4"    # Rosa pastel de bebé
+  primary: "#1B3246"   # Navy Ink — títulos/logo (HEX verificado por el cliente 2026-08)
+  accent: "#EE924A"    # Naranja de acento (HEX verificado por el cliente 2026-08)
   logoChar: "👶"
 
 llm:

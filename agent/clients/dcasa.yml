@@ -11,8 +11,8 @@ recipientEmails:
   - juanarrietabusiness@gmail.com
 
 branding:
-  primary: "#1648C0"   # Azul D'CASA (logo real)
-  accent: "#FFD000"    # Amarillo D'CASA (banda inferior)
+  primary: "#1340B1"   # Azul D'CASA (HEX verificado por el cliente 2026-08)
+  accent: "#FED00F"    # Amarillo D'CASA (HEX verificado por el cliente 2026-08)
   logoChar: "🏠"
 
 llm:
@@ -26,7 +26,7 @@ sources:
   tiktok:
     handle: "@dcasapty"
   whatsapp:
-    - { label: "WhatsApp Ventas", number: "+507 0000-0000" }  # TODO: reemplazar con número real
+    - { label: "WhatsApp Ventas", number: "+507 6026-1919" }
 
 capabilities:
   - adn_completeness_guard

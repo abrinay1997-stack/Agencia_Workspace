@@ -10,12 +10,12 @@ Lectura obligatoria al iniciar cualquier tarea. Este archivo no se resume ni se 
 
 | Carpeta | Cliente | Estado del ADN |
 |---|---|---|
-| `Dcasa/` | D'CASA Panamá (muebles y hogar) | 🟡 ADN base — verbal y visual listos; **buyer personas y diccionario SEO por validar con datos reales** (ver notas dentro de `01_ADN_y_Memoria/`) |
+| `Dcasa/` | D'CASA Panamá (muebles y hogar) | ✅ Identidad verificada por el cliente (onboarding 2026-08): datos, contacto, web, colores (`#1340B1`/`#FED00F`), tipografía (Anton+Oswald), público y competencia. Pendiente menor: SEO por validar con datos reales |
 | `57Dmc/` | 57DMC — Juan Arrieta (rap/hip-hop cristiano, ministerio musical) | 🟡 ADN base — posicionamiento, verbal, personas y SEO listos con evidencia real (redes/streaming). **Sin producto/precios (es artista):** conversión = escucha/donación/invitación. Pendiente: HEX exactos, tipografía, sitio web caído (`juanarrieta.net`) |
-| `Baby Caleb/` | Baby Caleb Panamá (pañales/wipes hipoalergénicos Nateen + fulares Moon) | 🟡 ADN base — identidad, verbal, personas y SEO listos con evidencia real (redes + Pomelli). **Discrepancias documentadas:** color oscuro (Navy Ink Pomelli vs. verde en redes) y tipografía (Montserrat+Playfair oficial vs. sans redondeada en uso). Valor "Faith-Based" a definir. Sin web propia |
-| `Feria del lente/` | Óptica Feria del Lente (óptica — "1ª óptica cristiana de Panamá" + línea B2B) | 🟡 ADN base — identidad, ADN verbal, oferta, buyer personas y master prompts listos con evidencia real (redes + Pomelli + conversaciones). **Marca con dos caras (cristiana consumer / institucional B2B) documentadas.** SEO y datos duros (antigüedad, fundadores) por validar |
+| `Baby Caleb/` | Baby Caleb Panamá (pañales/wipes hipoalergénicos Nateen + fulares Moon) | ✅ Identidad verificada por el cliente (onboarding 2026-08). **Discrepancias resueltas:** color oscuro = Navy Ink `#1B3246`; tipografía = Montserrat (sin Playfair). Web propia [babycaleb.netlify.app](https://babycaleb.netlify.app). Fe = valor silencioso confirmado. Precios y tallas verificados |
+| `Feria del lente/` | Óptica Feria del Lente (óptica — "1ª óptica cristiana de Panamá" + línea B2B) | ✅ Identidad verificada por el cliente (onboarding 2026-08): dueños (Nelson/Marta Muñoz), 28 años, email, web, oxblood `#D91B19`+dorado `#C5A059`, WhatsApp por sucursal, precios $90–180 (no mencionar directo). **Dos caras (consumer cristiano / B2B corporativo) — nunca mezclar** |
 | `Fotosonido/` | Fotosonido | ⏳ Pendiente de extracción de ADN |
-| `Juancito Ads/` | Juancito Ads (agencia — marketing digital con IA) | 🟡 ADN base — visual, verbal, oferta y buyer personas listos con evidencia real (sitio + Pomelli + conversaciones del fundador); **diccionario SEO sin validar volumen de búsqueda real** (ver notas dentro de `01_ADN_y_Memoria/`) |
+| `Juancito Ads/` | Juancito Ads (agencia — marketing digital con IA) | ✅ Identidad verificada por el fundador (onboarding 2026-08): paleta dark (`#050D1F` + azul `#0D489F`/`#1E90FF` + naranja `#CF6019`), tipografía Inter+Hanken, oferta y público. Pendiente menor: SEO por validar |
 
 **Leyenda de estados:** ✅ ADN completo y validado · 🟡 ADN base (identidad lista, faltan datos duros como personas/SEO reales) · ⏳ Pendiente de extracción (plantilla vacía, no asumir identidad).
 

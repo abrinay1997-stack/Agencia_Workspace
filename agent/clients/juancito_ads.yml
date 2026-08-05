@@ -11,8 +11,8 @@ recipientEmails:
   - juanarrietabusiness@gmail.com
 
 branding:
-  primary: "#00E5A0"   # Verde tech neón (dark mode)
-  accent: "#7B61FF"    # Púrpura futurista
+  primary: "#0D489F"   # Azul del logo (HEX verificado por el fundador 2026-08)
+  accent: "#CF6019"    # Naranja/dorado CTA (HEX verificado por el fundador 2026-08)
   logoChar: "⚡"
 
 llm:

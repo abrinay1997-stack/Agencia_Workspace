@@ -13,8 +13,8 @@ recipientEmails:
   - juanarrietabusiness@gmail.com
 
 branding:
-  primary: "#003366"   # Azul institucional óptica
-  accent: "#F2A900"    # Naranja/mostaza de acento
+  primary: "#D91B19"   # Oxblood Red — color primario (HEX verificado por el cliente 2026-08)
+  accent: "#C5A059"    # Doe Brown/dorado — acento premium B2B (verificado 2026-08)
   logoChar: "👓"
 
 llm:
@@ -31,7 +31,8 @@ sources:
     handle: "@ferialentepa"
   whatsapp:
     - { label: "Cd Panamá", number: "6544-5656" }
-    - { label: "Chorrera/Arraiján", number: "6445-3379" }
+    - { label: "La Chorrera", number: "6554-6752" }
+    - { label: "Nuevo Arraiján", number: "6445-3379" }
     - { label: "Alianzas B2B", number: "+507 6386-9908" }
 
 capabilities:
