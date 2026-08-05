@@ -2,101 +2,100 @@
 
 > 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1caYVhyBd4NKQzHz8B9neUUQqjnh4_eM8) · [Canva](https://www.canva.com/folder/FAHQarL0ce0) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
 
-> Última actualización: 2026-07-25 · Fuentes: (1) análisis de Claude en Chrome sobre redes sociales (Instagram/Facebook — no hay sitio web propio) + (2) `Assets_Visuales_Base/Baby Caleb Store Brand Book by Pomelli.pdf`.
-> Este `.md` fusiona ambas. Regla de precisión: donde discrepan, se toman los **HEX y tipografías de Pomelli como referencia oficial** y se documenta lo observado en redes como "uso real". Lo marcado ⏳ debe confirmarse con el cliente.
+> Última actualización: 2026-08-05 · **Fuente de verdad: `Assets_Visuales_Base/Baby Caleb - Formulario Onboarding (verificado 2026-08).docx`** (revisado y confirmado por el cliente). Reemplaza el brand book de Pomelli (eliminado por desactualizado). **Este formulario resuelve las dos discrepancias que estaban abiertas:** el color oscuro es Navy Ink `#1B3246` (no verde bosque) y la tipografía es **Montserrat** (no Playfair Display).
 
-## 0. Datos del negocio
+## 0. Datos del negocio (verificado por el cliente)
 
-- **Nombre comercial:** Baby Caleb (Panamá) / "Pañales Baby Caleb" / "Baby Caleb Store".
-- **Naturaleza:** revendedor/distribuidor local especializado (retail) de pañales desechables **Nateen**, wipes Nateen y fulares/portabebés **Moon**.
-- **Categoría (Pomelli):** *"specialized retailer in Panama providing high-quality, eco-friendly baby essentials"* — esenciales de bebé hipoalergénicos, biodegradables y libres de tóxicos.
-- **Ubicación física:** Ancón, Panamá (Facebook). Punto de venta físico adicional: **"Casa de la Carne / Meat House"** (historias destacadas de Instagram).
-- **Contacto:** WhatsApp/tel. **+507 6757-5065** (`wa.me/message/2W4DYVYOCPMFK1`) · email **babycalebpanama@gmail.com**.
-- **Redes:** Instagram [@babycalebpanama](https://www.instagram.com/babycalebpanama/) · Facebook [Baby Caleb](https://www.facebook.com/people/Baby-Caleb/61570932952782/).
-- **Sitio web propio:** ⏳ NO existe — verificar con el cliente si el "sitio" a auditar es en realidad Instagram/Facebook, o si planean crear uno.
+- **Nombre:** Baby Caleb (Panamá).
+- **Dueño / contacto:** Yulilka Godoy / Juan Arrieta.
+- **Naturaleza:** retail especializado en **esenciales de bebé hipoalergénicos y biodegradables** que cuidan la salud del bebé — pañales y wipes desechables (varias marcas: **Nateen**, wipes de agua **Dany Baby**) + fulares/portabebés **Moon**.
+- **Antigüedad:** 2 años — desde **2024**.
+- **Modelo:** venta **únicamente online por delivery**. Principalmente WhatsApp + Instagram DM.
+- **Contacto:** WhatsApp **+507 6757-5065** (`wa.me/message/2W4DYVYOCPMFK1`) · email **babycalebpanama@gmail.com** · Instagram [@babycalebpanama](https://www.instagram.com/babycalebpanama/) · Facebook Baby Caleb · **web [babycaleb.netlify.app](https://babycaleb.netlify.app)**.
+- **Equipo:** solo el encargado de marketing.
 
 ## 1. Posicionamiento
 
-**Promesa central (Pomelli):** *"Give your baby the care they deserve with hypoallergenic and eco-friendly products."*
-
-- **Nicho:** pañales y wipes **hipoalergénicos** "sin químicos agresivos, sin perfumes, sin alcohol y sin cloro" (cita textual de la bio de Instagram), más accesorios de porteo ergonómico (fulares Moon).
-- **Propuesta de valor:** producto seguro/suave para la piel del bebé + **atención directa y personalizada por WhatsApp** + venta de **paquetes pequeños** (no solo cajas grandes) para probar tallas antes de comprar en volumen.
-- **Doble eje de marca:** salud/seguridad del bebé **y** sostenibilidad ambiental (biodegradable, libre de cloro). Ambos son pilares reales según Pomelli, no adorno.
-- **Tagline de facto** (repetido en varios posts): *"En Baby Caleb Panamá pensamos en cada etapa de tu bebé."*
-- **Historia / Sobre nosotros:** ⏳ no encontrado en redes — no hay narrativa de fundación. Verificar con el cliente.
+- **Promesa central:** *"En Baby Caleb Panamá pensamos en cada etapa de tu bebé."*
+- **Nicho:** pañales y wipes **hipoalergénicos** "sin químicos agresivos, sin perfumes, sin alcohol y sin cloro", más porteo ergonómico (fulares Moon).
+- **Propuesta de valor (verificada):** producto hipoalergénico real + **atención directa y personalizada por WhatsApp** + **venta en cajas grandes para todo el mes** (más accesible que por paquete) + **cobertura de talla XXL**, poco común en el mercado local.
+- **Marcas de confianza:** el diferencial no es solo el producto, sino vender marcas con **buena reputación** con precios accesibles y trato cercano.
 
 ## 2. Identidad visual
 
-### 2.1 Paleta de marca
+### 2.1 Paleta de marca (HEX verificados por el cliente)
 
-⚠️ **Dos fuentes.** El análisis de redes solo pudo *estimar* colores a ojo (no hay CSS). Pomelli da los **HEX exactos** → se toman como oficiales. Nota importante de discrepancia en la fila del color oscuro (ver abajo).
+| Color | HEX | Rol |
+|---|---|---|
+| Verde background | `#EFFFED` | Fondo principal — **construye el feed** |
+| Beige claro | `#F9F6ED` | Fondo principal alterno · texto sobre acentos |
+| Verde logo | `#91C9A2` | Color de marca — logo, plantillas |
+| Verde secundario | `#C0D4B9` | Apoyo del verde de marca |
+| Azul oscuro (Navy Ink) | `#1B3246` | **Títulos y logo** — texto de alto contraste |
+| Naranja | `#EE924A` | **Acento** (~10%) — highlights, detalles |
 
-| Color (Pomelli) | HEX oficial | RGB | Estimado en redes (Claude) | Rol |
-|---|---|---|---|---|
-| **Sage Green** (verde salvia/menta) | `#91C9A2` | 145, 201, 162 | ≈`#A8D5B5` | **Color madre** — fondos, plantillas de posts, insignia del logo |
-| **Navy Ink** (azul noche muy oscuro) | `#1B3246` | 27, 50, 70 | percibido como "verde bosque" ≈`#234D33` | Texto, titulares oscuros, alto contraste |
-| **Chalk White** (blanco crema) | `#F9F6ED` | 249, 246, 237 | blanco/crema | Fondo secundario, base de piezas de producto |
-| **Honeyed Amber** (ámbar/terracota) | `#EE924A` | 238, 146, 74 | ≈`#D97A50` | **Acento** — pelo del personaje del logo, títulos destacados ("FULAR PREARMADO"), "Promo", sellos "Premium" |
+- **Uso:** verdes suaves + beige dominan el lienzo (feed limpio, natural), Navy Ink para texto/títulos, naranja solo como acento. Estética: minimalista/limpio, elegante/premium, orgánico/natural.
+- Contraste: Navy Ink `#1B3246` sobre fondos claros (beige/verde background) = apto para texto. El naranja y el verde no se usan para texto largo.
 
-- **Discrepancia clave a resolver:** el color oscuro de la marca. Claude lo percibió como **verde bosque** (`#234D33`) en las piezas de redes, pero Pomelli lo define como **Navy Ink azul** (`#1B3246`). Puede ser muestreo distinto o que las plantillas de redes usen un verde oscuro que no es el color oficial. **Confirmar con el cliente cuál es el maestro** antes de producir piezas de marca.
-- El **dorado/mostaza** (`#C9A227`) que Claude vio en detalles tipo "Promo" no está en la paleta oficial de Pomelli → probablemente es una variante del ámbar o un color de apoyo puntual. No elevarlo a color de marca sin confirmar.
-- **Proporción sugerida** (según estética "soft-toned minimalism" de Pomelli, a validar): Sage Green + Chalk White dominan el lienzo · Navy Ink para texto · Honeyed Amber como acento (~10%, nunca dominante).
-- ⏳ **Ratios de contraste WCAG:** aún sin calcular. Guía provisional: Navy Ink sobre Chalk White = alto contraste (apto para texto); Sage Green sobre blanco = bajo contraste (solo decorativo); Honeyed Amber sobre Navy Ink = usable para acentos. Calcular ratios exactos antes de fijar reglas.
+### 2.2 Tipografía (verificado — Montserrat en todo)
 
-### 2.2 Tipografía
-
-⚠️ **El brand book y el uso real no coinciden — documentar ambos:**
-
-- **Oficial (Pomelli):**
-  - **Primaria: Montserrat** — sans-serif geométrica, para estructura y cuerpo.
-  - **Secundaria: Playfair Display** — **serif elegante** de alto contraste, para acentos editoriales.
-- **Uso real observado en redes (Claude):** sans-serif geométrica **gruesa y redondeada** tipo Poppins/Baloo en mayúsculas para nombres de producto ("FULAR PREARMADO", "NATEEN HIPOALERGÉNICOS"), + algún script/cursiva dorada ("Promo").
-- **Implicación:** hay una **brecha entre la identidad definida (Montserrat + Playfair) y la ejecución en redes** (sans redondeada). Recomendación: adoptar Montserrat + Playfair Display como estándar oficial y alinear las plantillas de redes a esa combinación. Confirmar con el cliente si quiere mantener el look redondeado actual o migrar al del brand book.
+- **Familia única: Montserrat.**
+  - Titulares h1: 700 (bold), 48px · h2: 700, 60px · h3: 18px, 700.
+  - Cuerpo/párrafos: 400 (regular), 20px · navegación/body general: 400, 16px.
+  - Etiqueta principal de marca: Montserrat 700, ~20px, `letter-spacing: -0.5px` (más compacto).
+- No usar Playfair Display (era una lectura previa, descartada por el cliente).
 
 ### 2.3 Logo
 
-- **Variante detectada:** insignia **circular** con fondo verde menta, personaje ilustrado tipo **"bebé vikingo"** (pelo naranja/ámbar, casco con cuernos, con sonajero y escudo), texto arqueado **"BABY CALEB"** arriba y **"PAÑALES Y WIPES"** abajo, en color oscuro (navy/verde — ver discrepancia 2.1).
-- **Elementos gráficos recurrentes:** margaritas/flores blancas y azules (fotos de producto Nateen), íconos de hoja (hipoalergénico/biodegradable), gota tachada (sin cloro).
-- ⏳ No se detectaron variantes horizontal/vertical ni versión sin fondo — verificar con el cliente si existen.
+- Insignia **circular**, fondo verde menta, personaje "bebé vikingo" (pelo naranja/ámbar, casco con cuernos, sonajero y escudo), texto arqueado "BABY CALEB" arriba y "PAÑALES Y WIPES" abajo en Navy Ink.
+- Elementos recurrentes: hoja (hipoalergénico/biodegradable), gota tachada (sin cloro), flores decorativas.
 
-### 2.4 Estilo fotográfico
+## 3. ADN Verbal (verificado)
 
-- Mezcla de tres tipos de imagen: (1) **stock** para lifestyle (mamás cargando bebés en fulares), (2) **fotos propias poco pulidas** en anaqueles de tienda física (se ven etiquetas de precio), (3) **fotos reales de clientes** como testimonio.
-- No hay dirección de arte fotográfica unificada; sí hay consistencia en los **overlays de color verde/crema** sobre las plantillas de producto.
-- Oportunidad: definir una dirección de arte fotográfica mínima (luz cálida, fondos limpios) para subir el nivel percibido sin perder autenticidad.
+**Tono:** servicial y cercano, en segunda persona. Combina registro **educativo/divulgativo** (desmontar mitos) con **comercial-directo** (promos y CTAs). Cálido, maternal, confiable — *"como una amiga experta hablándole a una mamá."*
 
-## 3. ADN Verbal
+**¿Tutea o usted?** Tuteo — "tu bebé", "escríbenos".
 
-**Valores de marca (Pomelli):** *"Environmental Responsibility, Child Health and Safety, **Faith-Based Values**, Transparency."*
+**Léxico propio:** "En Baby Caleb Panamá pensamos en cada etapa de tu bebé" · "Haz tu pedido" · "Escríbenos ahora" · **"Talla"** (no "size") · **"libras"** (no kg) · hashtag **#QUENOTENEGAÑEN** · "hipoalergénico" · "sin cloro / libre de cloro" · "biodegradable" · "libre de químicos agresivos".
 
-> 🔎 **Nota sobre "Faith-Based Values":** Pomelli lista valores basados en la fe, y el nombre **"Caleb"** es un personaje bíblico — sugiere un origen/valor de fe en la marca. Sin embargo, el análisis de redes **no** encontró mensajería religiosa explícita en el contenido público. Tratar la fe como un **valor de origen/interno silencioso**, no como ángulo de venta abierto, hasta que el cliente confirme qué tan visible quiere hacerlo (a diferencia de Feria del Lente, cuyo ángulo cristiano sí es explícito y central).
+**Nunca haría:** minimizar la seguridad del bebé · exagerar beneficios sin respaldo · ser apático o negligente.
 
-**Aesthetic (Pomelli):** nurturing playfulness · eco-conscious clarity · soft-toned minimalism · approachable authority · wholesome simplicity.
+> 🔎 **Fe (valor de origen silencioso — confirmado):** el nombre "Caleb" sugiere origen de fe, pero **NO hay mensajería religiosa explícita en redes hoy**. Tratar como valor interno silencioso hasta que el cliente confirme qué tan visible quiere hacerlo (a diferencia de Feria del Lente, cuyo ángulo cristiano sí es explícito).
 
-**Tone of voice (Pomelli):** Caring · Informative · Reassuring · Traditional.
+## 4. Productos, tallas y precios (verificado)
 
-**Tono real observado en redes:** informal y cercano, con emojis, en segunda persona ("tu bebé", "escríbenos"). Combina un registro **educativo/divulgativo** (desmontar mitos) con uno **comercial-directo** (promos y CTAs). Encaja bien con el "Caring + Informative" de Pomelli.
+### Pañales NATEEN — hipoalergénicos, súper absorbentes, sin cloro ni perfumes, 100% fibras de bambú, biodegradables
 
-**Frases textuales de evidencia:**
-- "En Baby Caleb Panamá pensamos en cada etapa de tu bebé."
-- "¿Sabías que no es lo mismo 'libre de cloro' que 'sin cloro'?" (post educativo, hashtag propio **#QUENOTENEGAÑEN**).
-- "Estamos a la orden siempre" (respuesta a clienta, destacada "CLIENTES").
+| Talla | Peso | Costo (interno) | Precio venta | Ganancia/caja |
+|---|---|---|---|---|
+| RN | 2–5 kg | $28.00 | **$45.00** | $17.00 |
+| S | 3–6 kg | $32.00 | **$50.00** | $18.00 |
+| M | 4–9 kg | $32.00 | **$50.00** | $18.00 |
+| L | 7–18 kg | $30.00 | **$45.00** | $15.00 |
+| XL | 12–25 kg | $28.00 | **$45.00** | $17.00 |
+| XXL | +55 lbs | $29.20 | **$45.00** | $15.80 |
 
-**Léxico propio / repetido:** "Haz tu pedido" · "Escríbenos ahora" · **"Talla"** (S/M/L/XL/XXL, no "size") · **"libras"** (no kg) · hashtag **#QUENOTENEGAÑEN** · "hipoalergénico" · "sin cloro / libre de cloro" · "biodegradable".
+*(Costo y ganancia = memoria interna, NUNCA se dicen al cliente. La guía de peso por talla sí sirve para atención.)*
 
-## 4. Diferenciadores y datos duros
+- **Wipes Nateen** hipoalergénicos (cajas grandes).
+- **Wipes de agua Dany Baby** (AquaWipes 100, agua 99% pura) — combo de 2 cajas (1,200 toallitas) a **$35**.
+- **Fulares/portabebés Moon** — unitalla ajustable, RN hasta ~25 lbs.
+- **Diferenciador operativo:** venta en **cajas grandes** (para todo el mes), no por paquete suelto.
 
-- **Delivery a domicilio** con costo adicional ("HAZ TU PEDIDO (DELIVERY COSTO ADICIONAL)").
-- **Punto físico asociado:** "Casa de la Carne / Meat House" (Ancón).
-- **Paquetes pequeños** de pañales Nateen (S/M/L) para probar talla antes de la caja grande — diferenciador operativo explícito.
-- **Talla XXL** (bebés de +55 libras): nicho que otras marcas no siempre cubren ("¡YA LLEGÓ LA TALLA XXL!").
-- **Fulares Moon:** unitalla ajustable de recién nacido hasta ~25 lbs.
-- ⏳ Zona de cobertura de entrega exacta: no encontrado — verificar con el cliente.
+## 5. Público y objetivos (verificado)
 
-## 5. Pendiente de validar con el cliente
+- **Público A ("Mamá primeriza cuidadosa"):** madre/cuidadora principal, 25–45 años, activa en redes, con capacidad económica. Le resuelve evitar irritación/rozaduras con pañales hipoalergénicos suaves. La convence: marcas de buena reputación, cajas para el mes, atención por WhatsApp, confianza.
+- **Público B:** familias con bebés de piel delicada que buscan pañales buenos y no muy caros que "les den paz". Le vendes tranquilidad; lo convence: cajas grandes más accesibles que por paquete + confianza hipoalergénica.
+- **FAQ frecuentes:** ¿cuánto cuesta el delivery? (depende de la ubicación) · ¿hay que abonar antes de la entrega? · ¿es contra entrega? · ¿son pants o de cierre?
+- **Presupuesto de pauta:** $200–$500/mes (escalamiento validado). **Objetivo 3 meses:** escalar el volumen (~40 cajas/mes actuales) manteniendo el ROI y evaluar abrir una **pañalera física** especializada.
 
-1. **Color oscuro maestro:** ¿Navy Ink `#1B3246` (Pomelli) o el verde bosque que se ve en redes? (§2.1)
-2. **Tipografía:** ¿migrar las plantillas de redes a Montserrat + Playfair Display (oficial) o mantener el sans redondeado actual? (§2.2)
-3. **Ángulo de fe:** ¿qué tan visible se quiere el valor "Faith-Based"? (§3)
-4. Datos faltantes: historia/fundación de la marca, variantes de logo, zona de cobertura de delivery, y si habrá sitio web propio.
-5. Construir `04_master_prompts.md` con prompts probados a medida que se generen piezas.
+## 6. Límites estrictos (Red Flags)
+
+- Nunca **declarar un producto como una marca que no es** (ej. nunca decir "WaterWipes" a algo que no lo sea — riesgo legal/aduanero).
+- Nunca minimizar la seguridad del bebé ni exagerar beneficios sin respaldo.
+- Nunca mensajería religiosa explícita sin autorización del cliente.
+
+## 7. Pendiente de validar
+
+- Zona exacta y costo del delivery; métodos de pago (abono vs. contra entrega).
+- Datos de historia/fundación de la marca.
