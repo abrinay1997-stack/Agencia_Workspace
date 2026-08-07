@@ -1,5 +1,7 @@
 # Master Prompts: Juancito Ads
 
+> ⚠️ **Estos NO son "el combo".** Si el humano dice "combo", aplica `00_Estandares_Agencia/comando_combo.md` (6 prompts de video solo-producto + descripción IG + guion de voz). No uses estos prompts como pipeline ni inventes pasos.
+
 Prompts y plantillas que ya han dado resultado real en la operación de la agencia (extraídos de conversaciones de estrategia del fundador, no inventados).
 
 ## Plantilla de propuesta comercial "anclada al esfuerzo real"

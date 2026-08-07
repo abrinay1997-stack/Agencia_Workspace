@@ -1,6 +1,8 @@
 # Master Prompts: Dcasa
 
-Prompts que han dado resultados probados con este cliente. Fuente: `Assets_Visuales_Base/ADN de Marca DECASA PANAMA.pdf`, sección 9.
+Prompts sueltos ya probados para tareas puntuales. Fuente: onboarding verificado + `01_brand_guidelines.md`.
+
+> ⚠️ **Estos NO son "el combo".** Si el humano dice "combo" (p.ej. "dame el combo de esta cama"), aplica `00_Estandares_Agencia/comando_combo.md` — 6 prompts de video (solo el producto, sin logo/precio) + descripción IG + guion de voz. **No uses estos master_prompts como pipeline de combo ni inventes pasos (Higgsfield/Suno/etc.).**
 
 ## Nano Banana v3 — Mockup de perfil de Instagram
 
