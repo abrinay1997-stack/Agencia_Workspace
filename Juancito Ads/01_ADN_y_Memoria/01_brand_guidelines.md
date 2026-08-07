@@ -2,7 +2,7 @@
 
 > 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1FkJ4fMn0XTZrhIUMWZVaL_ovT432qRCS) · [Canva](https://www.canva.com/folder/FAHQauLEFS4) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
 
-> Última actualización: 2026-08-05 · **Fuente de verdad: `Assets_Visuales_Base/Juancito Ads - Formulario Onboarding (verificado 2026-08).docx`** (revisado y confirmado por el fundador) + CSS real de `juancitoads.netlify.app` + logo (`Assets_Visuales_Base/logo.png`). El brand book de Pomelli fue eliminado por desactualizado.
+> Última actualización: 2026-08-05 · **Fuente de verdad: el **formulario de onboarding verificado por el cliente (2026-08)** (queda en el historial de git)** (revisado y confirmado por el fundador) + CSS real de `juancitoads.netlify.app` + logo (`Assets_Visuales_Base/logo.png`). El brand book de Pomelli fue eliminado por desactualizado.
 > Nota: la paleta se actualizó con los HEX verificados del formulario (el acento naranja pasó de `#F5A623` a `#CF6019`); la tipografía (Inter + Hanken Grotesk) se mantiene, coincide con el CSS del sitio.
 
 ## 0. Datos del negocio

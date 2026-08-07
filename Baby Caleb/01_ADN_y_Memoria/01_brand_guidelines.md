@@ -2,7 +2,7 @@
 
 > 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1caYVhyBd4NKQzHz8B9neUUQqjnh4_eM8) · [Canva](https://www.canva.com/folder/FAHQarL0ce0) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
 
-> Última actualización: 2026-08-05 · **Fuente de verdad: `Assets_Visuales_Base/Baby Caleb - Formulario Onboarding (verificado 2026-08).docx`** (revisado y confirmado por el cliente). Reemplaza el brand book de Pomelli (eliminado por desactualizado). **Este formulario resuelve las dos discrepancias que estaban abiertas:** el color oscuro es Navy Ink `#1B3246` (no verde bosque) y la tipografía es **Montserrat** (no Playfair Display).
+> Última actualización: 2026-08-05 · **Fuente de verdad: el **formulario de onboarding verificado por el cliente (2026-08)** (queda en el historial de git)** (revisado y confirmado por el cliente). Reemplaza el brand book de Pomelli (eliminado por desactualizado). **Este formulario resuelve las dos discrepancias que estaban abiertas:** el color oscuro es Navy Ink `#1B3246` (no verde bosque) y la tipografía es **Montserrat** (no Playfair Display).
 
 ## 0. Datos del negocio (verificado por el cliente)
 
