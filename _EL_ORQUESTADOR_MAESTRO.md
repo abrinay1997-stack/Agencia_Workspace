@@ -54,7 +54,7 @@ Según lo que te pidan, consulta reglas adicionales:
 - **Redes sociales (posts, Reels, bio, highlights):** revisa `03_Redes_Sociales/Calendarios_Aprobados/` para no repetir ni contradecir lo ya publicado.
 - **Inspección/optimización de redes o competencia:** guarda hallazgos en `03_Redes_Sociales/Auditorias/` (créala si no existe) y en `01_ADN_y_Memoria/` si revela algo nuevo sobre el ADN (colores reales usados, competencia, nicho).
 - **Inventario (productos/servicios/catálogo):** trabaja dentro de `01_ADN_y_Memoria/` o crea `00_Inventario/` dentro del cliente si el volumen lo amerita; nunca mezcles inventario de un cliente con otro.
-- **Comando "Combo" ("quiero/dame el combo de…") + foto de producto:** aplica `00_Estandares_Agencia/comando_combo.md` — 6 prompts de video (Symphony/Veo Flow) por ángulo + descripción de Instagram + guion de voz (≤500 car.) cuando la imagen traiga precio/modelo. Guarda en `03_Redes_Sociales/Instagram_TikTok/`.
+- **Comando "Combo" ("quiero/dame el combo de…") + foto de producto:** aplica `00_Estandares_Agencia/comando_combo.md` — los 6 prompts de video completos (Symphony/Veo Flow) por ángulo + descripción de Instagram + guion de voz (≤500 car.) cuando la imagen traiga precio/modelo. **Se entrega SOLO en el chat, no se guarda en el repo.**
 
 ### Paso 3 — Generación y guardado
 
