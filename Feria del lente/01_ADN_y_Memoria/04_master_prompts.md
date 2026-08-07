@@ -22,7 +22,7 @@ religioso extremo, sino cálido, profesional y con propósito. Usa elementos vis
 como luz, visión, lentes y simbolismo suave de fe. Cada portada debe tener alto impacto
 visual para detener el scroll.
 
-Colores de marca: rojo vino/granate (#8B0000), crema hueso, negro. Titulares en
+Colores de marca: rojo vino/granate (#D91B19), crema hueso, negro. Titulares en
 tipografía condensada pesada (Oswald), cuerpo en Montserrat.
 
 [Pegar aquí el contenido slide por slide]
@@ -84,7 +84,7 @@ la respuesta a su oración. 🙏
 **Prompt base para Flow (en español):**
 ```
 Flyer corporativo moderno para anuncio de beneficio laboral. Fondo oscuro casi negro
-con detalles en rojo oscuro (#8B0000) y toques dorados (#C5A059). Mitad superior: foto
+con detalles en rojo oscuro (#D91B19) y toques dorados (#C5A059). Mitad superior: foto
 grande de persona panameña con lentes modernos, expresión de satisfacción, iluminación
 cinematográfica, primer plano. Sobre la foto: texto superpuesto grande y bold "Tu visión
 es nuestro compromiso" en blanco. Franja diagonal roja cruzando el centro separando la
