@@ -27,20 +27,22 @@ Luego **lee el ADN** del cliente (`[Cliente]/01_ADN_y_Memoria/01_brand_guideline
 
 **Los 6 prompts completos** para **TikTok Symphony Creative Studio** o **Veo / Flow** (siempre los 6, escritos enteros en el chat), cada uno en un **ángulo/escena distinta** del producto, pegados lo máximo posible a la imagen de referencia (mismo producto, mismos materiales, mismo color).
 
-**Marco de 6 ángulos** (adáptalo al tipo de producto — cama, lentes, objeto, comida, etc.):
+> 🎥 **EL VIDEO ES SOLO EL PRODUCTO.** Cada prompt es una **presentación cinemática del producto tal cual**, como si lo estuvieran grabando en vivo/en persona. **JAMÁS** incluyas logo, precio, texto, marca de agua ni "espacio para overlays". El video no tiene nada que ver con el precio: es propaganda/presentación visual, punto.
+
+**Marco de 6 ángulos/escenas** (todos puramente del producto — adáptalo al tipo: cama, lentes, objeto, comida, etc.):
 1. **Hero / establishing** — belleza del producto, plano principal, push-in.
 2. **Detalle / textura** — macro de materiales, acabados, costuras, piezas.
-3. **Lifestyle / ambiente** — el producto en uso o en su contexto real (persona, momento del día).
+3. **Lifestyle / en uso** — el producto usándose o en su contexto real (persona, momento del día).
 4. **Movimiento** — dolly/orbit/360 cinematográfico alrededor del producto.
-5. **Oferta / valor** — plano limpio con espacio negativo para overlays de precio (si la imagen trae precio/modelo).
-6. **Aspiracional / emocional** — el "para qué" del producto, cierre con espacio para CTA.
+5. **Composición alterna** — un encuadre/escena distinta del producto (ángulo bajo, cenital, contraluz, reflejo, cambio de set) que lo haga ver diferente pero siga siendo el mismo producto.
+6. **Aspiracional / emocional** — el "para qué" del producto, el momento que evoca. Cierre cinematográfico, sin CTA ni texto.
 
 **Reglas de los prompts:**
 - **Estilo, cámara y luz se adaptan a:** (1) el ADN de la marca, (2) el producto, (3) el estilo que el humano pida explícitamente.
 - Respeta las **prohibiciones visuales del ADN** (ej. D'CASA: nada de estética escandinava fría → calienta la luz; Juancito: dark-mode tech; Feria consumer vs B2B, etc.).
 - **Formato:** 9:16 vertical por defecto (reel/TikTok), ~6–8s cada uno, salvo que se pida otro.
 - **Idioma del prompt:** por defecto en **inglés** (mejor fidelidad en Symphony/Veo). Entrégalos en español si el humano lo pide.
-- ⚠️ **Texto/precio/logo NUNCA se piden dentro del prompt de IA** (los modelos de video renderizan texto con errores). El video se genera limpio y el precio/logo/placa se **superponen en post** (CapCut/Canva). Deja espacio negativo en el prompt del ángulo de oferta.
+- ⚠️ **Regla absoluta — cero texto/logo/precio en el video.** Si la imagen de referencia trae logo o precio, eso **solo indica** que hay información comercial para las Partes B y C (descripción y guion) — **nunca** es algo que deba aparecer en el video. El precio/logo, si se quisieran, se superponen aparte en post (CapCut/Canva), pero el prompt entrega el producto limpio, sin reservar espacio para ellos.
 
 ### Parte B — Descripción para post de Instagram (si la imagen trae precio/modelo)
 
