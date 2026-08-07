@@ -1,5 +1,7 @@
 # Master Prompts: Baby Caleb Panamá
 
+> ⚠️ **Estos NO son "el combo".** Si el humano dice "combo", aplica `00_Estandares_Agencia/comando_combo.md` (6 prompts de video solo-producto + descripción IG + guion de voz). No uses estos prompts como pipeline ni inventes pasos.
+
 Prompts y plantillas que ya dieron resultado real en la operación del negocio (extraídos de conversaciones internas del fundador — no inventados). Complementan el ADN de marca (`01_brand_guidelines.md`) con la memoria operativa/comercial.
 
 ---

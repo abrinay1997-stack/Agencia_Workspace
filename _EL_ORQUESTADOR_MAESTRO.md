@@ -32,6 +32,16 @@ El link de Drive y Canva de cada cliente está en su `01_ADN_y_Memoria/01_brand_
 
 ---
 
+## ⚡ Comandos rápidos (palabras clave que disparan un entregable fijo)
+
+Antes de improvisar, revisa si el pedido matchea un comando. Si matchea, **el comando manda** sobre cualquier otra interpretación.
+
+| Palabra clave del humano | Comando | Qué entregas |
+|---|---|---|
+| **"combo" / "dame/quiero el combo de…"** (+ foto de producto) | `00_Estandares_Agencia/comando_combo.md` | **6 prompts de video** (cada uno un ángulo, **SOLO el producto** — sin logo/precio/texto) + **descripción de Instagram** + **guion de voz (≤500 car.)**. Todo **en el chat**, sin guardar. **NO** es un pipeline; **NO** inventes pasos (Nano Banana/Higgsfield/Suno) ni uses el `04_master_prompts.md` de la marca como combo. Colores/tono = ADN verificado del cliente. |
+
+---
+
 ## 1. PROTOCOLO DE EJECUCIÓN OBLIGATORIO (R.A.G. Local)
 
 Antes de generar CUALQUIER entregable, ejecuta esta secuencia:

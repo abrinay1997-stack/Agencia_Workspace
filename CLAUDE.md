@@ -22,6 +22,10 @@ Este repositorio es el sistema de memoria y orquestación de la agencia **Juanci
   - `agent/README.md` — visión general de la arquitectura (para humanos).
   - **`agent/AUTOMATION_ACTIONS.md` — runbook para cuando el humano pida algo que toque el agente** (añadir/modificar/desactivar cliente, cambiar capabilities, colores, tendencias). **Léelo entero antes de tocar nada en `agent/`.**
 
+## Comandos de la agencia (palabras clave)
+
+- **"combo" / "dame/quiero el combo de…" + foto de un producto** → aplica `00_Estandares_Agencia/comando_combo.md`. Entrega **en el chat** (no guardes archivos): **6 prompts de video** (cada uno un ángulo, mostrando **SOLO el producto** — sin logo, sin precio, sin texto), la **descripción de Instagram** y el **guion de voz (≤500 car.)**. **NO es un pipeline de producción**: no inventes pasos (Nano Banana / Higgsfield / Suno / flyers), no uses el `04_master_prompts.md` de la marca como si fuera el combo. Los colores/tono salen del ADN verificado del cliente.
+
 ## Cuándo va cada archivo
 
 - Si el humano pide algo sobre **contenido, estrategia o memoria del cliente** (posts, campañas, análisis, ADN) → `_EL_ORQUESTADOR_MAESTRO.md` manda.
