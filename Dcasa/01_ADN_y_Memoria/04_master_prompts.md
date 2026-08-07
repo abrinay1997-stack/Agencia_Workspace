@@ -14,8 +14,8 @@ Genera un mockup fotorrealista de un perfil de Instagram en un iPhone, en españ
 MARCA: D'CASA PANAMÁ (@dcasapty), tienda de muebles y artículos para el hogar en Panamá.
 
 IDENTIDAD CROMÁTICA OBLIGATORIA — usa EXACTAMENTE estos códigos:
-- Azul cobalto #1648C0 (color dominante de marca)
-- Amarillo #FFD000 (solo acentos, precios y botones; NUNCA sobre blanco)
+- Azul cobalto #1340B1 (color dominante de marca)
+- Amarillo #FED00F (solo acentos, precios y botones; NUNCA sobre blanco)
 - Blanco #FFFFFF
 - Neutros de ambiente para la fotografía: hueso #F7F4EF, arena #E8E2D9, madera natural
 
@@ -27,12 +27,12 @@ DISPOSITIVO GRÁFICO CLAVE: un marco de esquinas redondeadas en blanco (estilo p
 
 CABECERA: foto de perfil = el logo adjunto. Nombre "D'CASA PANAMÁ". Bio de 4 líneas: "D'CASA PANAMÁ 🇵🇦" / "Muebles y todo para tu casa" / "Entrega a todo el país 🚚" / "📲 Escríbenos y te asesoramos 👇". Botones Seguir/Mensaje/Contactar.
 
-HIGHLIGHTS (7 círculos idénticos): fondo azul #1648C0 con ícono de línea blanca gruesa. Títulos: Catálogo, Ofertas, Ambientes, Entregas, Pagos, Clientes, Ubicación.
+HIGHLIGHTS (7 círculos idénticos): fondo azul #1340B1 con ícono de línea blanca gruesa. Títulos: Catálogo, Ofertas, Ambientes, Entregas, Pagos, Clientes, Ubicación.
 
 GRID 3x3 alternando tres tipos de pieza, con ritmo visual claro:
 - (1) Sala real de un hogar panameño, luz natural cálida, tonos hueso y madera, sin texto.
 - (2) Card sobre fondo hueso #F7F4EF con titular condensado azul "CÓMO MEDIR TU SALA" y un pequeño subrayado amarillo.
-- (3) Fondo azul #1648C0 con un sofá recortado y el precio dentro de una placa amarilla #FFD000 con texto azul.
+- (3) Fondo azul #1340B1 con un sofá recortado y el precio dentro de una placa amarilla #FED00F con texto azul.
 - (4) Comedor montado en ambiente real, neutros cálidos.
 - (5) Antes/después dividido de una sala transformada.
 - (6) Fondo azul con recámara completa y badge amarillo "NUEVO".
