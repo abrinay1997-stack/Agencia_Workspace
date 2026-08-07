@@ -25,7 +25,7 @@ Luego **lee el ADN** del cliente (`[Cliente]/01_ADN_y_Memoria/01_brand_guideline
 
 ### Parte A — 6 prompts de video (siempre)
 
-6 prompts para **TikTok Symphony Creative Studio** o **Veo / Flow**, cada uno en un **ángulo distinto** del producto, pegados lo máximo posible a la imagen de referencia (mismo producto, mismos materiales, mismo color).
+**Los 6 prompts completos** para **TikTok Symphony Creative Studio** o **Veo / Flow** (siempre los 6, escritos enteros en el chat), cada uno en un **ángulo/escena distinta** del producto, pegados lo máximo posible a la imagen de referencia (mismo producto, mismos materiales, mismo color).
 
 **Marco de 6 ángulos** (adáptalo al tipo de producto — cama, lentes, objeto, comida, etc.):
 1. **Hero / establishing** — belleza del producto, plano principal, push-in.
@@ -50,10 +50,11 @@ Caption en el **tono verbal del ADN** del cliente (léxico sí/no, tuteo/usted, 
 
 Guion para presentar el producto (voz en off, presentador o influencer), en el tono del ADN, **máximo 500 caracteres**. Basado en la imagen (producto + precio + oferta + CTA).
 
-## 4. Guardado y reporte
+## 4. Entrega (SOLO en el chat — NO se guarda en memoria)
 
-- Guarda el combo en `[Cliente]/03_Redes_Sociales/Instagram_TikTok/AAAA-MM-DD_Combo_[Producto].md`.
-- Reporta en el chat: qué cliente, qué producto, y recuerda que el precio/logo va en post y que publicar requiere confirmación del humano.
+- **Este comando es un entregable de chat.** Entrega las 3 partes directamente en la respuesta: **los 6 prompts completos** (no un resumen ni un ejemplo), la descripción de Instagram y el guion de voz.
+- **NO crees archivos ni guardes nada en el repo** por cada combo — no se ensucia la memoria con outputs. El repo solo guarda la *definición* del comando (este archivo) y el ADN, no cada resultado.
+- Recuerda en una línea que el precio/logo va superpuesto en post y que publicar requiere confirmación del humano.
 
 ## 5. Notas
 
