@@ -2,7 +2,7 @@
 
 > 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/15XTDcI-m7dFSJpaQfTiIcQIa8NjLE_Gm) · [Canva](https://www.canva.com/folder/FAHQar7z5vU) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
 
-> Última actualización: 2026-08-05 · **Fuente de verdad: `Assets_Visuales_Base/Dcasa - Formulario Onboarding (verificado 2026-08).docx`** (formulario de onboarding revisado y confirmado por el cliente). Reemplaza los brand books PDF anteriores (Pomelli / ADN v3), que quedaron desactualizados y fueron eliminados. Donde el análisis previo discrepaba (colores, tipografía secundaria), **manda este formulario.**
+> Última actualización: 2026-08-05 · **Fuente de verdad: el **formulario de onboarding verificado por el cliente (2026-08)** (queda en el historial de git)** (formulario de onboarding revisado y confirmado por el cliente). Reemplaza los brand books PDF anteriores (Pomelli / ADN v3), que quedaron desactualizados y fueron eliminados. Donde el análisis previo discrepaba (colores, tipografía secundaria), **manda este formulario.**
 
 ## 0. Datos del negocio (verificado por el cliente)
 

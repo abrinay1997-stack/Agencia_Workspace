@@ -2,7 +2,7 @@
 
 > 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1U7spt5Mp_zn-Aws49wS_YSnmLOcF_swm) · [Canva](https://www.canva.com/folder/FAHQavWRu8U) — los archivos pesados (imágenes, videos, diseños) viven ahí; este repo es la memoria/estrategia. Ambos espejan la estructura del cliente.
 
-> Última actualización: 2026-08-05 · **Fuente de verdad: `Assets_Visuales_Base/Feria del Lente - Formulario Onboarding (verificado 2026-08).docx`** (revisado y confirmado por el cliente). Reemplaza el brand book de Pomelli (eliminado por desactualizado). Resuelve varios pendientes: antigüedad (28 años), dueños, email, sitio web, HEX del oxblood y números por sucursal.
+> Última actualización: 2026-08-05 · **Fuente de verdad: el **formulario de onboarding verificado por el cliente (2026-08)** (queda en el historial de git)** (revisado y confirmado por el cliente). Reemplaza el brand book de Pomelli (eliminado por desactualizado). Resuelve varios pendientes: antigüedad (28 años), dueños, email, sitio web, HEX del oxblood y números por sucursal.
 
 ## ⚠️ Nota crítica: esta marca tiene DOS CARAS
 
