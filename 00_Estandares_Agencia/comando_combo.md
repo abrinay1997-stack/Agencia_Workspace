@@ -1,0 +1,61 @@
+# Comando de Agencia — "El Combo" (producción de video + redes)
+
+> Estándar global. Aplica a **todos los clientes**. El ADN del cliente define tono/colores/reglas; este documento define el **formato del entregable**.
+
+## 1. Disparadores
+
+Cuando el humano diga cualquiera de estas frases **+ adjunte la foto del producto**, ejecuta este comando:
+
+- "quiero el combo de producción"
+- "quiero el combo de redes"
+- "dame el combo de…" / "el combo de [producto]" / "combo para [cliente]"
+
+Todos los nombres entregan **el mismo combo completo** (no son entregables separados).
+
+## 2. Identificar el cliente (regla "ambas")
+
+En este orden:
+1. Si el humano **nombra el cliente** ("combo para D'CASA"), usa ese.
+2. Si no, **infiérelo del branding/logo** visible en la imagen adjunta.
+3. Si no hay marca visible ni mención, **pregunta antes de generar** (nunca asumas — Regla de Oro #2).
+
+Luego **lee el ADN** del cliente (`[Cliente]/01_ADN_y_Memoria/01_brand_guidelines.md`) antes de escribir nada.
+
+## 3. Entregable (3 partes)
+
+### Parte A — 6 prompts de video (siempre)
+
+6 prompts para **TikTok Symphony Creative Studio** o **Veo / Flow**, cada uno en un **ángulo distinto** del producto, pegados lo máximo posible a la imagen de referencia (mismo producto, mismos materiales, mismo color).
+
+**Marco de 6 ángulos** (adáptalo al tipo de producto — cama, lentes, objeto, comida, etc.):
+1. **Hero / establishing** — belleza del producto, plano principal, push-in.
+2. **Detalle / textura** — macro de materiales, acabados, costuras, piezas.
+3. **Lifestyle / ambiente** — el producto en uso o en su contexto real (persona, momento del día).
+4. **Movimiento** — dolly/orbit/360 cinematográfico alrededor del producto.
+5. **Oferta / valor** — plano limpio con espacio negativo para overlays de precio (si la imagen trae precio/modelo).
+6. **Aspiracional / emocional** — el "para qué" del producto, cierre con espacio para CTA.
+
+**Reglas de los prompts:**
+- **Estilo, cámara y luz se adaptan a:** (1) el ADN de la marca, (2) el producto, (3) el estilo que el humano pida explícitamente.
+- Respeta las **prohibiciones visuales del ADN** (ej. D'CASA: nada de estética escandinava fría → calienta la luz; Juancito: dark-mode tech; Feria consumer vs B2B, etc.).
+- **Formato:** 9:16 vertical por defecto (reel/TikTok), ~6–8s cada uno, salvo que se pida otro.
+- **Idioma del prompt:** por defecto en **inglés** (mejor fidelidad en Symphony/Veo). Entrégalos en español si el humano lo pide.
+- ⚠️ **Texto/precio/logo NUNCA se piden dentro del prompt de IA** (los modelos de video renderizan texto con errores). El video se genera limpio y el precio/logo/placa se **superponen en post** (CapCut/Canva). Deja espacio negativo en el prompt del ángulo de oferta.
+
+### Parte B — Descripción para post de Instagram (si la imagen trae precio/modelo)
+
+Caption en el **tono verbal del ADN** del cliente (léxico sí/no, tuteo/usted, arquetipo). Incluye los datos comerciales reales de la imagen (precio, combo, financiamiento, promo), CTA del ADN (ej. WhatsApp del cliente) y hashtags de marca. Nunca inventar precios que no estén en la imagen o en `05_Campanas_Activas/`.
+
+### Parte C — Guion de voz en off / locutor / influencer (si la imagen trae precio/modelo)
+
+Guion para presentar el producto (voz en off, presentador o influencer), en el tono del ADN, **máximo 500 caracteres**. Basado en la imagen (producto + precio + oferta + CTA).
+
+## 4. Guardado y reporte
+
+- Guarda el combo en `[Cliente]/03_Redes_Sociales/Instagram_TikTok/AAAA-MM-DD_Combo_[Producto].md`.
+- Reporta en el chat: qué cliente, qué producto, y recuerda que el precio/logo va en post y que publicar requiere confirmación del humano.
+
+## 5. Notas
+
+- Si la imagen es un producto **sin precio ni modelo**, entrega solo la Parte A (6 prompts) y ofrece las partes B y C.
+- Si el humano pide un estilo específico ("más lujoso", "estilo UGC casero", "nocturno"), ese estilo manda sobre el default, siempre dentro de las prohibiciones del ADN.
