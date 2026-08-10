@@ -1,6 +1,7 @@
 # Buyer Personas — Baby Caleb Panamá
 
-> Última actualización: 2026-07-25 · Fuente: análisis de Claude sobre Instagram/Facebook (no hay web propia).
+> Última actualización: 2026-07-25 · Fuente: análisis de Claude sobre Instagram/Facebook.
+> Datos de negocio (modelo, tallas, precios) ya superados por `01_brand_guidelines.md` (2026-08-05, verificado por el cliente). Lo que sigue vigente aquí es el perfil de las personas, no los datos operativos. La marca ya tiene web: [babycaleb.netlify.app](https://babycaleb.netlify.app).
 > ⚠️ Evidencia limitada. Se marca explícitamente qué es **evidencia directa (E)** vs. **inferencia razonable (I)**. Levantar con datos reales (ventas/WhatsApp) antes de tratar como definitivo.
 
 ## Persona 1: "Mamá primeriza cuidadosa" (principal)

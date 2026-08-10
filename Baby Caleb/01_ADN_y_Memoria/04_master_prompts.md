@@ -14,6 +14,8 @@ Prompts y plantillas que ya dieron resultado real en la operación del negocio (
 
 **Marca del producto en los anuncios:** NATEEN (ya reconocida por los clientes existentes; no requiere presentación completa).
 
+> 💲 **Los precios de este archivo son copia de la tabla de `01_brand_guidelines.md` §4, que es la única fuente de verdad.** Si cambia un precio, se cambia allí primero y luego se replica aquí. Los creativos que corrieron en junio 2026 llevaban la Caja RN a $50; la lista verificada por el cliente (2026-08) la fija en **$45** y es la que vale — hay que corregir los creativos vivos que aún digan $50.
+
 **Anuncio 1 — Video mostrando la caja**
 - **Título:** Nateen ya está en Panamá 🌿
 - **Texto principal:** Conoce Nateen: pañales hipoalergénicos, súper absorbentes y sin cloro ni perfumes. Fabricados con fibras de bambú, biodegradables y con protección contra fugas todo el día. Escríbenos por WhatsApp y te ayudamos a elegir la talla ideal para tu bebé. 🍼
@@ -30,7 +32,7 @@ Prompts y plantillas que ya dieron resultado real en la operación del negocio (
 - **Texto principal:** Pañales hipoalergénicos Nateen, disponibles en todas las tallas 👇 Súper absorbentes, sin cloro ni perfumes, 100% fibras de bambú. Escríbenos por WhatsApp y hacemos tu pedido a domicilio.
 - **Descripción:** Delivery disponible (costo adicional)
 - **Tarjetas del carrusel (1 talla por tarjeta):**
-  - Talla RN (2–5 kg) — Caja 160u — $50
+  - Talla RN (2–5 kg) — Caja 160u — $45
   - Talla S (3–6 kg) — Caja 160u — $50
   - Talla M (4–9 kg) — Caja 144u — $50
   - Talla L (7–18 kg) — Caja 128u — $45
@@ -40,7 +42,8 @@ Prompts y plantillas que ya dieron resultado real en la operación del negocio (
 **Anuncio 4 — Imagen con precios de caja + información**
 - **Título:** Precios Nateen — Todas las tallas
 - **Texto principal:**
-  📦 Caja RN/S (160 pañales) — $50
+  📦 Caja RN (160 pañales) — $45
+  📦 Caja S (160 pañales) — $50
   📦 Caja M (144 pañales) — $50
   📦 Caja L (128 pañales) — $45
   📦 Caja XL/XXL (112 pañales) — $45
@@ -83,8 +86,8 @@ madres que priorizan la salud y el cuidado de la piel de sus bebés.
 Identidad visual:
 Usa el logo adjunto en portadas y contratapas. Paleta: Sage Green #91C9A2 (color
 madre), Chalk White #F9F6ED (fondo), Navy Ink #1B3246 (texto), Honeyed Amber #EE924A
-(acento, ~10%). Tipografía Montserrat (cuerpo) + Playfair Display (acentos
-editoriales). Estética limpia, natural, con elementos decorativos orgánicos
+(acento, ~10%). Tipografía Montserrat en todo (titulares 700, cuerpo 400) —
+no uses Playfair Display. Estética limpia, natural, con elementos decorativos orgánicos
 (hojitas, formas suaves). Tono visual: cálido, maternal, confiable.
 
 Imágenes: Mezcla de ilustraciones flat style con íconos y de fotografías realistas
@@ -150,7 +153,7 @@ Lo que necesito de ti: [DESCRIBIR AQUÍ LA TAREA ESPECÍFICA]
 - Con 10 cajas ($99 de inversión) → 5 ventas → ingreso $175 → **ganancia neta $76 (77% de margen sobre inversión)**.
 
 **Pañales hoy (NATEEN):**
-- Costo caja ~$32 · venta $50 (tallas RN/S/M) o $45 (L/XL/XXL) · **margen ~$18 por caja**.
+- Costo caja ~$32 · venta $50 (tallas S/M) o $45 (RN/L/XL/XXL) · **margen ~$15–18 por caja**.
 - Volumen actual: ~40 cajas/mes con $150 de inversión en publicidad (junio 2026).
 
 **Alternativas evaluadas y descartadas:**
