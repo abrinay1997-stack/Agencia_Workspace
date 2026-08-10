@@ -2,9 +2,9 @@
 
 > Fecha: 2026-08-10 · Repo del sitio: `abrinay1997-stack/Baby-caleb` · Rama: `claude/baby-caleb-adn-update-kjz9jw`
 > Fuente de verdad aplicada: `01_ADN_y_Memoria/01_brand_guidelines.md` (actualizado 2026-08-05, formulario de onboarding verificado por el cliente).
-> **Este documento supersede las partes desactualizadas de `2026-07-25_Brief_Sitio_Web.md`**, que se escribió sobre el brand book de Pomelli (eliminado) y sobre el análisis de redes previo.
+> El brief `2026-07-25_Brief_Sitio_Web.md` —escrito sobre el brand book de Pomelli (eliminado) y sobre el análisis de redes previo— **fue eliminado y reemplazado por `2026-08-10_Brief_Sitio_Web.md`**, alineado con el ADN verificado.
 
-El sitio ([babycaleb.netlify.app](https://babycaleb.netlify.app)) se construyó con el brief del 25-jul, anterior al ADN verificado. Se corrigió toda la información que el ADN nuevo contradice.
+El sitio ([babycaleb.netlify.app](https://babycaleb.netlify.app)) se construyó con el brief del 25-jul, anterior al ADN verificado. Se corrigió toda la información que el ADN nuevo contradice, y se borró de la memoria el dato viejo que quedaba en conflicto.
 
 ---
 
@@ -85,27 +85,32 @@ El prompt del sistema del asistente Groq también arrastraba el punto físico y 
 
 ---
 
-## 2. Discrepancia detectada dentro del propio ADN ⚠️
+## 2. Discrepancias del ADN resueltas — se borró el dato viejo ✅
 
-**Precio de la Caja RN.**
+Decisión del cliente (2026-08-10): **vale siempre el dato más reciente; el viejo se elimina, no se conserva en paralelo.** Aplicado así:
 
-- `01_brand_guidelines.md` §4 (tabla verificada por el cliente, 2026-08-05): RN = **$45** (costo $28, ganancia $17 — la aritmética cuadra).
-- `04_master_prompts.md` §1 (anuncios de Meta que corrieron en junio): RN = **$50**, y el anuncio 4 dice *"Caja RN/S (160 pañales) — $50"*.
+**Precio de la Caja RN → $45.** `01_brand_guidelines.md` §4 (tabla verificada, 2026-08-05) decía $45; `04_master_prompts.md` §1 arrastraba $50 de los anuncios de Meta que corrieron en junio. Se borró el $50: los anuncios 3 y 4 y la economía unitaria del §4 ahora dicen $45, y se añadió una nota que fija `01_brand_guidelines.md` §4 como única fuente de precios.
+→ **Acción pendiente fuera del repo:** los creativos de Meta que sigan vivos con $50 hay que corregirlos, porque están cobrando $5 por encima de la lista oficial.
 
-Se publicó **$45** por ser el dato del formulario verificado y más reciente, que el propio `01_brand_guidelines.md` declara fuente de verdad. **Requiere confirmación del cliente**: si el precio real es $50, hay que corregir la web y la tabla del ADN; si es $45, hay que corregir los creativos de Meta, que están cobrando $5 de más sobre la lista oficial.
+**Tipografía → Montserrat en todo.** El prompt de Claude Design en `04_master_prompts.md` §2 todavía pedía *"Montserrat (cuerpo) + Playfair Display (acentos editoriales)"*, descartado por el cliente en el ADN §2.2. Se eliminó Playfair Display.
+
+**Punto de venta físico → borrado de la memoria.** `03_diccionario_seo.json` listaba *"Casa de la Carne (punto de venta físico)"* y *"Ancón, Panamá"* como entidades semánticas — de ahí salió el punto físico que se publicó en la web. Se reemplazaron por *"Ciudad de Panamá"* y *"venta 100% online con delivery"*.
+
+**"No hay web propia" → borrado.** Lo decían la cabecera de `02_buyer_personas.md` y la nota del diccionario SEO. Ambos apuntan ahora a babycaleb.netlify.app, y se marcó explícitamente que los datos operativos de las buyer personas quedaron superados por el ADN verificado.
+
+**Brief del sitio → reemplazado.** `2026-07-25_Brief_Sitio_Web.md` se eliminó (llevaba Pomelli como fuente, Playfair Display, el punto físico y el color oscuro "sin decidir") y en su lugar quedó `2026-08-10_Brief_Sitio_Web.md`, con la especificación vigente y sin perder lo que seguía siendo válido.
 
 ---
 
 ## 3. Pendiente de material o confirmación del cliente
 
-1. **Precio de la Caja RN** — ver §2.
-2. **Foto de los AquaWipes Dany Baby.** El producto se publicó con el logo de Baby Caleb como placeholder. No se usó una foto de la caja Nateen a propósito: mostrar un producto de una marca como si fuera de otra es la Red Flag §6.
-3. **Zonas y costo del delivery** (ADN §7) — hoy la web dice "según zona, cotizamos por WhatsApp".
-4. **Métodos de pago** (abono vs. contra entrega) — no se publican; el ADN los marca como pendientes.
-5. **Testimonios.** El sitio muestra tres: "Elizabeth M." está respaldada por el ADN (`02_buyer_personas.md`, evidencia directa), pero **"Ana C." y "Carla R." no aparecen en ninguna parte de la memoria**. Se dejaron intactos porque el ADN no los contradice, pero si fueron generados hay que reemplazarlos por testimonios reales con permiso — publicar reseñas inventadas es un riesgo reputacional y legal.
-6. **Precio de los Wipes Nateen ($25) y los Wipes Nateen Adulto ($15).** No están en el ADN §4. Se dejaron como estaban (llegaron con las fotos reales de producto), pero conviene incorporarlos a la tabla de precios del ADN o corregirlos.
-7. **Horario "Lunes a Sábado 9:00–18:00"** — no está verificado en el ADN.
-8. **Precio de los fulares Moon** — sigue como "consultar por WhatsApp", igual que en el ADN.
+1. **Foto de los AquaWipes Dany Baby.** El producto se publicó con el logo de Baby Caleb como placeholder. No se usó una foto de la caja Nateen a propósito: mostrar un producto de una marca como si fuera de otra es la Red Flag §6.
+2. **Zonas y costo del delivery** (ADN §7) — hoy la web dice "según zona, cotizamos por WhatsApp".
+3. **Métodos de pago** (abono vs. contra entrega) — no se publican; el ADN los marca como pendientes.
+4. **Testimonios.** El sitio muestra tres: "Elizabeth M." está respaldada por el ADN (`02_buyer_personas.md`, evidencia directa), pero **"Ana C." y "Carla R." no aparecen en ninguna parte de la memoria**. Se dejaron intactos porque el ADN no los contradice, pero si fueron generados hay que reemplazarlos por testimonios reales con permiso — publicar reseñas inventadas es un riesgo reputacional y legal.
+5. **Precio de los Wipes Nateen ($25) y los Wipes Nateen Adulto ($15).** No están en el ADN §4. Se dejaron como estaban (llegaron con las fotos reales de producto), pero conviene incorporarlos a la tabla de precios del ADN o corregirlos.
+6. **Horario "Lunes a Sábado 9:00–18:00"** — no está verificado en el ADN.
+7. **Precio de los fulares Moon** — sigue como "consultar por WhatsApp", igual que en el ADN.
 
 ---
 
