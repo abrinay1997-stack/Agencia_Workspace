@@ -109,7 +109,26 @@ Coincide exactamente entre CSS real del sitio y Pomelli:
 | Crecimiento ⭐ más popular | $600–$800/mes (2 redes, 2 posts/día) |
 | Escala | $900–$1,200/mes (3 redes, 4 posts/día, reels con presentador) |
 
-**C) Servicio adicional — Páginas Web (pago único):** Básica $149 · Profesional $299 · Premium $499.
+**C) Servicio adicional — Páginas Web (pago único, precios + ITBMS):**
+
+| Plan | Precio | Entrega | Incluye |
+|---|---|---|---|
+| Juancito Start | $295 | 72 horas | 1 página (4–5 secciones), 100% responsive, SEO básico, formulario→WhatsApp, Analytics, dominio+hosting+SSL 1er año |
+| Juancito Launch ⭐ más pedido | $450 | 4–5 días | 1 página premium a medida (7 secciones), SEO on-page completo, velocidad PageSpeed 90+, video-tutorial, 30 días soporte |
+| Juancito Corporate 🏷️ recomendado | $850 | 8–12 días | Hasta 10 páginas a medida, panel autogestionable (edita textos/imágenes/blog sin programador), blog, SEO técnico, Google Maps, 3 correos corporativos, dominio+hosting+SSL, capacitación + 45 días soporte |
+| Juancito Commerce | $1,200 | 15–20 días | Todo Corporate + catálogo con inventario, carrito, pagos Yappy/tarjeta/PayPal, panel de pedidos, cuentas de cliente, hasta 50 productos, 60 días soporte |
+
+**Mantenimiento (Juancito Care, mensual):** Base $35/mes · Pro $75/mes · Business desde $150/mes (2 meses gratis pagando el año completo).
+
+**Complementos:** redacción de textos desde $60/página · segundo idioma desde $180 · chatbot IA desde $350+$25/mes · SEO técnico continuo desde $120/mes · migración desde WordPress desde $250 · pasarela de pago adicional $150.
+
+**A medida (apps/sistemas web):** login/usuarios desde $450 · panel admin desde $650 · sistema de reservas/citas desde $600 · portal de clientes desde $750 · automatización IA/WhatsApp desde $250.
+
+**Gancho de entrada de bajo compromiso:** diagnóstico gratuito (análisis de velocidad + 3 oportunidades de mejora + plan de acción, sin compromiso, entregado en 48h) — vía WhatsApp.
+
+**Garantías de marca para este servicio:** carga en menos de 1 segundo, código 100% del cliente (se transfiere a su GitHub), sin plugins vulnerables, pagos con Yappy, hecho en Panamá.
+
+*(Fuente verificada directamente en juancitoads.netlify.app/servicios/paginas-web/ el 12 de agosto de 2026 — reemplaza la tabla anterior de $149/$299/$499 que estaba desactualizada.)*
 
 **Regla de precios no negociable:** el presupuesto de pauta (lo que se le paga a Meta) **siempre va aparte** de los honorarios de gestión. Nunca se mezcla en el copy ni en la cotización.
 
