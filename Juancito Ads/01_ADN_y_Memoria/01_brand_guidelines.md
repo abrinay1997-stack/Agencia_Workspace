@@ -94,20 +94,24 @@ Coincide exactamente entre CSS real del sitio y Pomelli:
 
 **A) Solo Campañas Meta Ads** (gestión; pauta/ads siempre aparte):
 
-| Plan | Honorarios | Ads sugeridos |
-|---|---|---|
-| Emprendedor | $150/mes | $100–$250 |
-| Negocio ⭐ más popular | $250/mes | $300–$600 |
-| Empresa | $400/mes | $700–$2,000 |
-| Corporativo | $600/mes | $2,000–$5,000+ |
+| Plan | Honorarios | Pauta sugerida | Incluye |
+|---|---|---|---|
+| Emprendedor | $150/mes | $100–$250 | Estrategia centrada en ventas · creación de contenido publicitario con IA · configuración completa de la campaña · seguimiento semanal y optimización · reporte básico mensual |
+| Negocio ⭐ más popular | $250/mes | $300–$600 | Estrategia centrada en ventas · creación de contenido publicitario con IA · multicampaña optimizada con segmentación avanzada · seguimiento cada 2 días y optimización continua · reporte mensual detallado |
+| Empresa | $400/mes | $700–$2,000 | Estrategia avanzada centrada en ventas · creación de contenido publicitario con IA · creación de Reels estratégico · múltiples campañas activas + retargeting · seguimiento diario y optimización constante · reporte mensual detallado + reunión de resultados |
+| Corporativo | $600/mes | $2,000–$5,000+ | Estrategia avanzada centrada en ventas · creación de contenido publicitario con IA · creación de Reels estratégicos + múltiples campañas + retargeting · seguimiento diario y optimización avanzada · reporte mensual premium + reunión estratégica mensual |
 
-**B) Campañas + Redes Sociales** (marketing completo):
+**B) Campañas + Redes Sociales** (marketing completo; pauta siempre aparte):
 
-| Plan | Honorarios |
-|---|---|
-| Arranque | $450–$550/mes (1 red, 1 post/día) |
-| Crecimiento ⭐ más popular | $600–$800/mes (2 redes, 2 posts/día) |
-| Escala | $900–$1,200/mes (3 redes, 4 posts/día, reels con presentador) |
+| Plan | Honorarios | Redes | Posts/día | Visitas presenciales/grabación al mes | Incluye |
+|---|---|---|---|---|---|
+| Arranque | $450–$550/mes | 2 (Instagram y Facebook) | 1 | 1 | Plan de calendario completo — 1 post diario de lunes a domingo (Post/Reels/Carruseles) · contenido creado con IA · campañas publicitarias básicas en Meta |
+| Crecimiento ⭐ más popular | $600–$800/mes | 3 (Instagram, Facebook y TikTok Básico) | 2 | 2 | Plan de calendario completo — 2 posts diarios de lunes a domingo (Post/Reels/Carruseles) · presencia básica en TikTok · contenido con IA + contenido real · campañas estratégicas activas en Meta · conexión con creadores de contenido e influencers · reporte mensual de resultados |
+| Escala | $900–$1,200/mes | 3 (Instagram, Facebook y TikTok Avanzado) | 4 | 4 | Calendario robusto centrado en ventas — 4 posts diarios de lunes a domingo (Post/Reels/Carruseles) · contenido con IA + contenido real · reels promocionales con presentador incluido · estrategia avanzada de TikTok viral · acceso a red de creadores e influencers · locuciones profesionales para anuncios · múltiples campañas avanzadas + retargeting · estrategia mensual personalizada + reporte |
+
+**Nota:** "visita presencial" y "visita de grabación" son el mismo evento (no se suman por separado). Arranque incluye 1 al mes, Crecimiento 2 al mes, Escala 4 al mes.
+
+*(Fuente: cuadro actualizado por el fundador, 13 de agosto de 2026 — sube el alcance de Arranque (ahora 2 redes) y Crecimiento (ahora 3 redes, incluye TikTok Básico) sin cambiar precio respecto a la versión anterior verificada en el sitio web.)*
 
 **C) Servicio adicional — Páginas Web (pago único, precios + ITBMS):**
 
