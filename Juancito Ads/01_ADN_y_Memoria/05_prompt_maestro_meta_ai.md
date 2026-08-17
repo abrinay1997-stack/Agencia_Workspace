@@ -4,8 +4,14 @@ Cómo se le pide a **Meta AI** un documento HTML con el lote entero de piezas de
 Instagram de Juancito Ads: cada pieza ya compuesta con su texto, su descripción,
 sus hashtags y un botón que la descarga en PNG a 1080×1350.
 
-> Este archivo es **la especificación**. El prompt ya armado y listo para pegar
-> vive en `03_Redes_Sociales/Instagram_TikTok/` con su fecha
+> **La estructura del prompt —las siete secciones, las convenciones de notación,
+> la regla del exportador y la verificación común— vive en
+> [`00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md`](../../00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md)
+> y es la misma para todos los clientes. Este archivo solo trae lo que es de
+> Juancito Ads.** Léelos en ese orden: primero el estándar, después este.
+
+> El prompt ya armado y listo para pegar vive en
+> `03_Redes_Sociales/Instagram_TikTok/` con su fecha
 > (el vigente: `2026-08-17_prompt_maestro_meta_ai_lote12.md`).
 
 **Antes de tocar nada:** `01_brand_guidelines.md` (paleta, tipografía, oferta,
@@ -165,12 +171,18 @@ con forma "no hacemos X, hacemos Y", el naranja es **Y**.
 **Qué no va en naranja nunca:** la negación, la bajada, la nota, ni el titular
 entero. Un titular entero en naranja no tiene acento — es una pieza naranja.
 
-```
-✓  NO VENDEMOS SEGUIDORES.
-   VENDEMOS CLIENTES QUE ESCRIBEN.     ← "CLIENTES QUE ESCRIBEN" en naranja
+**El tramo se marca con `⟦ ⟧`** (convención del estándar): los corchetes no se
+imprimen, solo dicen dónde empieza y dónde acaba el naranja. Puede cruzar un
+salto de línea y sigue siendo un solo tramo.
 
-✗  NO VENDEMOS SEGUIDORES.             ← dos tramos naranjas: ya no hay acento,
-   VENDEMOS CLIENTES QUE ESCRIBEN.        hay dos colores peleando
+```
+✓  NO VENDEMOS
+   SEGUIDORES.
+   ⟦VENDEMOS CLIENTES
+   QUE TE ESCRIBEN.⟧        ← un solo tramo, cruza el salto de línea
+
+✗  ⟦NO VENDEMOS SEGUIDORES.⟧   ← dos tramos naranjas: ya no hay acento,
+   ⟦VENDEMOS CLIENTES.⟧           hay dos colores peleando
 ```
 
 ### Los cortes de línea se escriben, no se calculan
@@ -320,7 +332,14 @@ https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Hanken+Gr
 ```
 
 Sin esas dos, todo lo demás da igual: el navegador cae a una fuente del sistema
-y la pieza deja de ser de la marca.
+y la pieza deja de ser de la marca. Y se le cierra la puerta a las sustituciones,
+literalmente en el prompt:
+
+```
+Ninguna otra familia, en ningún caso. En particular NO uses Montserrat, Open
+Sans, Roboto, Poppins, Oswald, Bebas Neue, Anton, Impact, Helvetica, Arial,
+Lato ni Futura, aunque te parezcan parecidas a Inter.
+```
 
 ### Cada pieza, compuesta y a medida real
 
@@ -336,32 +355,17 @@ texto sobre un `<canvas>` de 1080×1350. Sin librerías externas: el lienzo del
 navegador dibuja tildes y eñes sin ningún problema, y las fuentes ya están
 cargadas. Y un botón que las descargue todas.
 
-### Las cinco trampas del exportador
+### La regla del exportador
 
-Aquí es donde falla, y **falla en silencio: la vista previa se ve perfecta y el
-PNG sale roto**. Van literales en el prompt maestro.
+**El exportador no recalcula nada**: lee del DOM ya maquetado y espera a
+`document.fonts.ready`. La regla completa, con las cinco trampas que sobreviven
+a ella, está en la sección 4 del
+[estándar](../../00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md) y se
+copia literal en el prompt.
 
-```
-1. ctx.letterSpacing NO se reinicia al cambiar ctx.font. Si lo usas para el
-   tracking del antetítulo o del wordmark, ponlo a '0px' inmediatamente
-   después de dibujarlo. Si no, el tracking se filtra al titular y el titular
-   se sale del lienzo.
-
-2. Fija ctx.textBaseline='top' antes de dibujar y usa la misma Y que el
-   maquetado. Con el valor por defecto ('alphabetic') el texto del PNG cae más
-   abajo que en la vista previa.
-
-3. Mide el alto real del bloque de texto con getBoundingClientRect() del
-   elemento ya maquetado. No lo estimes multiplicando líneas por interlínea:
-   el anclaje al centro óptico se descuadra respecto a lo que se ve.
-
-4. El wordmark se posiciona por su BASE en y=1258, no por su borde superior.
-   Si lo colocas por arriba queda unos 28 px alto y se nota contra el margen.
-
-5. Un botón que lanza 12 descargas seguidas lo bloquea el navegador a la
-   tercera. O agrupas en un ZIP de verdad, o el botón se llama "descargar una
-   por una" y avisa de que hay que permitirlo.
-```
+Lo propio de esta marca, en la trampa de los elementos anclados por su base:
+**el wordmark se posiciona por su BASE en y=1258.** Colocado por su borde
+superior queda unos 28 px alto y se nota contra el margen.
 
 **Y una comprobación que hace el humano, no el modelo:** descarga una pieza y
 ponla al lado de su vista previa. Si no son idénticas, el exportador está mal —
@@ -387,35 +391,17 @@ documento es feo, las piezas parecen feas.
 
 ## 6 · Cómo se arma el prompt maestro
 
-Siete secciones, en este orden. El orden no es decorativo.
+**Las siete secciones y su orden están en la sección 2 del
+[estándar de agencia](../../00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md).**
+No se repiten aquí para que no se desincronicen. Lo que aporta esta marca a cada
+sección: los HEX y sus roles (sección 2 de este archivo), las dos familias, la
+retícula y la escala, la regla del acento naranja único, el bloque de estilo
+(sección 3) y los negativos (sección 4).
 
-```
-━━ 1. QUÉ ERES Y QUÉ NO HACES ━━
-El reparto del trabajo y la prohibición literal de redactar, mejorar, acortar,
-traducir o completar cualquier texto.
-
-━━ 2. EL SISTEMA VISUAL ━━
-Los HEX. Las dos familias con sus roles. La retícula en píxeles. La escala
-completa. EL ORDEN DEL BLOQUE DE TEXTO. El velo. La regla del acento naranja.
-
-━━ 3. EL CONTRATO DEL HTML ━━
-Las dos fuentes de Google Fonts. Lienzo de 1080×1350 exactos. Botón por pieza
-y botón de todas. Descripción y hashtags en texto seleccionable. Y las cinco
-trampas del exportador, literales.
-
-━━ 4. EL BLOQUE DE ESTILO ━━
-Literal, de la sección 3 de este archivo. Una sola vez, idéntico para todas.
-
-━━ 5. LOS NEGATIVOS ━━
-Literal, de la sección 4, más los del tema del lote.
-
-━━ 6. LAS PIEZAS ━━
-Una por una: número, tipo, antetítulo, titular con sus cortes y su tramo
-naranja, anclaje, prompt del fondo, descripción, hashtags.
-
-━━ 7. ANTES DE DEVOLVER ━━
-La lista que Meta tiene que comprobar, con la prohibición repetida.
-```
+**El modo por defecto de esta marca es el lote mensual**: 12 piezas sueltas,
+cada una con su descripción y sus hashtags. Si el humano pide un carrusel, se
+aplican las reglas de carrusel del estándar — numerador `01/0N`, una sola
+descripción para el conjunto y el anclaje que no salta.
 
 ### Qué se decide antes de escribir una sola pieza
 
@@ -506,7 +492,13 @@ máximo**, concretos y con anclaje local (Panamá).
 - [ ] ¿Alguna letra en `#0D489F`? → no se lee sobre el fondo, cámbiala
 - [ ] ¿El bloque de estilo aparece una sola vez y es idéntico para todas?
 - [ ] ¿Está el orden del bloque de texto escrito, y no solo la escala?
-- [ ] ¿Están las cinco trampas del exportador dentro del prompt maestro?
+- [ ] ¿Está el tramo naranja marcado con `⟦ ⟧`, y explicado que no se imprimen?
+- [ ] ¿Está la regla del exportador (lee del DOM + `document.fonts.ready`) con
+      sus cinco trampas dentro del prompt maestro?
+- [ ] ¿Está la lista de familias tipográficas prohibidas?
+- [ ] ¿Está escrita **una por una** la lista de palabras con tilde o eñe que
+      Meta tiene que revisar en este lote —`CAMPAÑA`, `PANAMÁ`, `IA`,
+      `PYMES`—? «Revisa las tildes» no sirve
 - [ ] ¿La prohibición de escribir aparece al principio **y** al final?
 - [ ] ¿Quedó algún hueco sin resolver —`[completa aquí]`, `<tu producto>`— en
       el prompt maestro? No se entrega con huecos.

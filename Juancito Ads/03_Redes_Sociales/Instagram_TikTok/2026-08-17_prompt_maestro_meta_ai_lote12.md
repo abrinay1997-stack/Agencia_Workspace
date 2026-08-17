@@ -38,8 +38,8 @@ botón por pieza que la descarga en PNG a tamaño real.
    Meta AI en un solo mensaje.
 2. Cuando devuelva el HTML, ábrelo en el navegador.
 3. **Descarga una pieza y ponla al lado de su vista previa.** Si no son
-   idénticas, el exportador está mal y lo están las 12 — pídele que arregle las
-   cinco trampas antes de seguir.
+   idénticas, el exportador está mal y lo están las 12 — pídele que lea las
+   posiciones del DOM en vez de recalcularlas.
 4. Revisa con la tabla de la sección 9 de la especificación (lo primero que se
    comprueba: que no haya reescrito ni un texto y que no haya metido un precio).
 
@@ -65,6 +65,9 @@ está así a propósito. No añadas ningún precio, monto, porcentaje, estadíst
 plazo, testimonio, nombre de cliente ni beneficio que no esté escrito
 literalmente en este documento.
 
+Tampoco cambies el orden de las piezas, ni añadas una decimotercera, ni
+añadas hashtags, ni añadas emojis en ningún sitio.
+
 Esto es una agencia de marketing en Panamá cuya regla número uno es que nunca
 se publica un monto en un creativo. Si añades un precio, rompes su regla de
 negocio. Si añades una cifra de resultados, la conviertes en una promesa que
@@ -89,7 +92,10 @@ TIPOGRAFÍAS
   Inter 900 (black)      titular, cifra y wordmark. SIEMPRE EN VERSALITAS
   Hanken Grotesk         antetítulo (500), bajada (300), nota (400)
 
-  No uses ninguna serif en ningún punto del documento.
+  Ninguna otra familia, en ningún caso. No uses ninguna serif, y en particular
+  NO uses Montserrat, Open Sans, Roboto, Poppins, Oswald, Bebas Neue, Anton,
+  Impact, Helvetica, Arial, Lato ni Futura, aunque te parezcan parecidas a
+  Inter.
 
 RETÍCULA, sobre lienzo de 1080×1350 exactos
 
@@ -132,10 +138,18 @@ ANCLAJE VERTICAL DEL BLOQUE — también está decidido pieza por pieza:
 
 EL ACENTO NARANJA
 
-  En cada titular hay UN SOLO tramo continuo en #CF6019. Te lo marco pieza por
-  pieza. Todo el resto del titular va en #FFFFFF. Dos tramos naranjas en un
-  mismo titular arruinan la pieza: ya no hay acento, hay dos colores peleando.
-  La bajada y la nota nunca van en naranja.
+  En cada titular hay UN SOLO tramo continuo en #CF6019. Todo el resto del
+  titular va en #FFFFFF. Dos tramos naranjas en un mismo titular arruinan la
+  pieza: ya no hay acento, hay dos colores peleando. La bajada y la nota nunca
+  van en naranja.
+
+  El tramo va marcado así en cada pieza: ⟦texto en naranja⟧. Los corchetes
+  ⟦ ⟧ son marcas para ti: NO se imprimen, no aparecen en el lienzo, no
+  aparecen en el PNG. Solo dicen dónde empieza y dónde termina el color. Todo
+  lo que quede fuera de ellos va en #FFFFFF.
+
+  El tramo puede cruzar un salto de línea. Cuando lo hace, sigue siendo un
+  solo tramo.
 
 EL VELO
 
@@ -166,8 +180,23 @@ DESCARGA. Cada pieza lleva debajo un botón que la descarga en PNG a 1080×1350,
 dibujando imagen y texto sobre un <canvas>. Sin librerías externas. Y arriba
 del documento, un botón que las descargue todas.
 
-LAS CINCO TRAMPAS DEL EXPORTADOR. Léelas antes de escribir el canvas: la vista
-previa se ve perfecta y el PNG sale roto por estas cinco cosas.
+LA REGLA QUE MÁS FALLA: EL EXPORTADOR NO RECALCULA NADA.
+
+El PNG sale distinto de la vista previa cuando el canvas vuelve a maquetar el
+texto por su cuenta. No lo hagas.
+
+  · Maqueta cada línea del titular como su propio elemento en el HTML.
+  · Al exportar, lee la posición Y de CADA elemento ya maquetado con
+    getBoundingClientRect() u offsetTop, y dibuja en esa Y.
+  · No estimes multiplicando líneas por interlínea, no vuelvas a partir la
+    bajada con otro ancho, no recalcules dónde empieza el bloque.
+  · Espera a que las fuentes estén listas —await document.fonts.ready— ANTES
+    de medir nada y ANTES de exportar. Si mides con la fuente de reserva, todo
+    lo demás queda mal colocado.
+
+Si el canvas lee del DOM en vez de recalcular, casi ninguna de las cinco
+trampas de abajo puede ocurrir. Aun así van escritas, porque cada una es un
+fallo observado.
 
   1. ctx.letterSpacing NO se reinicia al cambiar ctx.font. Si lo usas para el
      tracking del antetítulo o del wordmark, ponlo a '0px' inmediatamente
@@ -249,9 +278,7 @@ TITULAR (tamaño L, anclaje MEDIO), con estos cortes exactos:
   PAGAS ANUNCIOS
   CADA MES
   Y NADIE TE DICE
-  QUÉ ESTÁ PASANDO.
-EN NARANJA #CF6019:  QUÉ ESTÁ PASANDO.
-(el resto del titular en #FFFFFF)
+  ⟦QUÉ ESTÁ PASANDO.⟧
 
 FONDO: un flujo de partículas de luz azul eléctrica que sale de un nodo de
 cristal oscuro en la esquina superior derecha y se dispersa hacia la izquierda
@@ -278,8 +305,7 @@ TITULAR (tamaño M, anclaje MEDIO), con estos cortes exactos:
   OFERTA CLARA
   + CONTENIDO CONSTANTE
   + CAMPAÑA ESTRATÉGICA
-  = VENTAS REALES.
-EN NARANJA #CF6019:  = VENTAS REALES.
+  ⟦= VENTAS REALES.⟧
 
 FONDO: tres nodos de cristal oscuro alineados en diagonal, unidos por líneas
 finas de luz azul eléctrica, que convergen en un cuarto nodo encendido en
@@ -305,8 +331,7 @@ TITULAR (tamaño L, anclaje MEDIO), con estos cortes exactos:
   NO TIENES TIEMPO
   DE PENSAR QUÉ
   PUBLICAR HOY.
-  NOSOTROS SÍ.
-EN NARANJA #CF6019:  NOSOTROS SÍ.
+  ⟦NOSOTROS SÍ.⟧
 
 FONDO: una cuadrícula de nodos de cristal oscuro, la mayoría apagados, que se
 van encendiendo en azul eléctrica en secuencia de izquierda a derecha, con un
@@ -333,8 +358,7 @@ TITULAR (tamaño L, anclaje BAJO), con estos cortes exactos:
   UNA ÓPTICA
   CON 2 SUCURSALES
   PASÓ DE $10K
-  A $17K AL MES.
-EN NARANJA #CF6019:  A $17K AL MES.
+  ⟦A $17K AL MES.⟧
 NOTA (obligatoria, debajo del titular):
   CASO REAL DE UN CLIENTE EN PANAMÁ, PRIMEROS MESES DE TRABAJO. ES NUESTRA
   EXPERIENCIA, NO UNA PROMESA DE RESULTADOS.
@@ -364,8 +388,7 @@ TITULAR (tamaño L, anclaje MEDIO), con estos cortes exactos:
   «YA PROBÉ
   Y NO FUNCIONÓ».
   PUBLICAR NO ES
-  PAUTAR.
-EN NARANJA #CF6019:  PAUTAR.
+  ⟦PAUTAR.⟧
 BAJADA:
   Publicar es suerte. Pautar es segmentar, medir y corregir cada semana hasta
   que el número cierra.
@@ -395,11 +418,9 @@ TITULAR (tamaño M, anclaje ALTO), con estos cortes exactos:
   LA IA
   PRODUCE
   TU CONTENIDO.
-  EL CRITERIO
+  ⟦EL CRITERIO
   LO PONEMOS
-  NOSOTROS.
-EN NARANJA #CF6019:  EL CRITERIO LO PONEMOS NOSOTROS.
-(las tres últimas líneas completas en naranja; las tres primeras en #FFFFFF)
+  NOSOTROS.⟧
 
 FONDO: un enjambre denso de pequeños nodos de cristal generándose en paralelo
 en la mitad INFERIOR del encuadre, con una sola línea ámbar que los atraviesa
@@ -425,10 +446,8 @@ ANTETÍTULO:  LO QUE NO HACEMOS
 TITULAR (tamaño L, anclaje MEDIO), con estos cortes exactos:
   NO VENDEMOS
   SEGUIDORES.
-  VENDEMOS CLIENTES
-  QUE TE ESCRIBEN.
-EN NARANJA #CF6019:  VENDEMOS CLIENTES QUE TE ESCRIBEN.
-(las dos últimas líneas completas en naranja)
+  ⟦VENDEMOS CLIENTES
+  QUE TE ESCRIBEN.⟧
 
 FONDO: muchas líneas finas de luz azul eléctrica que convergen desde los
 bordes del encuadre hacia un único nodo ámbar encendido, situado en el tercio
@@ -456,10 +475,8 @@ TITULAR (tamaño M, anclaje ALTO), con estos cortes exactos:
   EN META
   Y LO QUE PAGAS
   POR GESTIÓN
-  SON DOS COSAS
-  DISTINTAS.
-EN NARANJA #CF6019:  SON DOS COSAS DISTINTAS.
-(las dos últimas líneas completas en naranja)
+  ⟦SON DOS COSAS
+  DISTINTAS.⟧
 
 FONDO: dos corrientes de luz paralelas que recorren el encuadre de izquierda a
 derecha sin tocarse nunca — una azul eléctrica y otra ámbar, más delgada —
@@ -486,8 +503,7 @@ TITULAR (tamaño L, anclaje MEDIO), con estos cortes exactos:
   SI NO PUEDES
   MEDIRLO,
   NO ES PUBLICIDAD.
-  ES UN GASTO.
-EN NARANJA #CF6019:  ES UN GASTO.
+  ⟦ES UN GASTO.⟧
 
 FONDO: un panel de cristal oscuro pulido, visto de frente y ligeramente
 inclinado, con una retícula de medición muy fina grabada en azul eléctrica y
@@ -512,8 +528,7 @@ PIEZA 10
 ANTETÍTULO:  RESULTADOS
 TITULAR (tamaño XL, anclaje BAJO), con estos cortes exactos:
   NO ES NUESTRO
-  PRIMER RODEO.
-EN NARANJA #CF6019:  PRIMER RODEO.
+  ⟦PRIMER RODEO.⟧
 BAJADA:
   Presupuesto de clientes gestionado en Meta Ads desde que arrancamos.
 CIFRA:
@@ -545,8 +560,7 @@ TITULAR (tamaño L, anclaje MEDIO), con estos cortes exactos:
   PAUTAR CUESTA.
   PAUTAR SIN
   ESTRATEGIA
-  CUESTA EL DOBLE.
-EN NARANJA #CF6019:  CUESTA EL DOBLE.
+  ⟦CUESTA EL DOBLE.⟧
 
 FONDO: dos trayectorias de luz que salen del mismo punto en el borde
 izquierdo: una recta y corta que llega a un nodo ámbar encendido, y otra larga
@@ -572,10 +586,8 @@ ANTETÍTULO:  PROPUESTA SIN COSTO
 TITULAR (tamaño L, anclaje MEDIO), con estos cortes exactos:
   CUÉNTANOS
   TU SITUACIÓN
-  Y TE ARMAMOS
-  LA PROPUESTA.
-EN NARANJA #CF6019:  Y TE ARMAMOS LA PROPUESTA.
-(las dos últimas líneas completas en naranja)
+  ⟦Y TE ARMAMOS
+  LA PROPUESTA.⟧
 BAJADA:
   Sin costo y sin compromiso. Te respondemos en menos de 24 horas hábiles.
 
@@ -615,6 +627,14 @@ Comprueba esto una por una, en las 12 piezas:
      Cuéntalos: son seis en cada pieza.
   9. ¿Hay algún emoji dentro de una imagen? Los emojis van solo en las
      descripciones.
+  9b. ¿Se te ha colado algún corchete ⟦ o ⟧ dentro de un lienzo o de un PNG?
+      No puede aparecer ninguno.
+  9c. ¿Está el texto con todas sus tildes y todas sus eñes? Busca en concreto:
+      CAMPAÑA, PANAMÁ, ÓPTICA, MÁS, PROBÉ, FUNCIONÓ, CUÉNTANOS, SITUACIÓN,
+      GESTIÓN, INVERSIÓN, ESTRATEGIA, PEQUEÑO.
+  9d. ¿El exportador lee las posiciones del DOM ya maquetado, o las vuelve a
+      calcular? Si las recalcula, el PNG no va a coincidir con la vista previa.
+  9e. ¿Esperas a document.fonts.ready antes de medir y antes de exportar?
  10. ¿El lienzo de exportación de cada pieza mide exactamente 1080×1350?
  11. ¿Hay alguna caja, franja o sombra detrás de algún texto? No debe haberla.
  12. ¿El wordmark dice "JUANCITO" en blanco y "ADS" en naranja, con su base
@@ -626,7 +646,8 @@ No escribas, no redactes, no completes, no acortes, no traduzcas y no
 "mejores" ningún texto. Todo el texto de este documento ya estaba escrito
 arriba. No añadas ningún precio, monto, porcentaje, estadística, plazo,
 testimonio, nombre de cliente ni beneficio que no esté escrito literalmente
-en este documento.
+en este documento. No cambies el orden de las piezas, no añadas ninguna más,
+no añadas hashtags y no añadas emojis.
 ```
 
 ---
