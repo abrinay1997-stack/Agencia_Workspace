@@ -49,6 +49,25 @@ descubren el día que alguien llega a la tienda a pedir "el de la foto".
 **Las piezas de producto y de comunidad llevan foto real.** El HTML trae un hueco
 para cargarla desde el disco antes de exportar (ver sección 5).
 
+### La excepción: limpiar una foto real no es generar un producto
+
+Cuando el humano **sube la foto del producto real** —y a Meta AI le pasa esas
+mismas fotos como referencia— sí se le puede pedir acabado de catálogo:
+
+| Se le puede pedir | No se le puede pedir nunca |
+|---|---|
+| Recortar el fondo del producto | Redibujar el producto |
+| Centrarlo y nivelarlo | «Mejorarlo» o cambiarle el diseño |
+| Igualar la luz y limpiar el ruido | Añadirle un nivel, una puerta o una pata |
+| Ponerlo sobre un fondo liso de marca | Cambiarle el color o el material |
+| Una sombra de contacto muy suave bajo la base | Sombra proyectada dramática |
+
+**La comprobación es de una sola mirada:** pon la pieza al lado de la foto
+original. Si el mueble no tiene el mismo número de niveles, las mismas patas y
+el mismo color, Meta AI lo regeneró en vez de recortarlo, y esa pieza no se
+publica. Un catálogo que enseña un mueble que no es el que llega a la casa es
+el problema más caro que puede tener una tienda.
+
 La instrucción que lo cierra va **literal** en el prompt maestro, al principio y
 otra vez al final:
 
@@ -134,6 +153,29 @@ Fondo #1340B1 completo.
 **El precio se dice con orgullo, no con vergüenza:** grande, en la placa
 amarilla, sin disculpas y sin stickers rojos.
 
+**Variante C con rebaja.** Cuando el cliente confirma un precio anterior y uno
+nuevo, el bloque va en este orden y no en otro:
+
+```
+TITULAR
+ANTES $29.99          Inter 500, 34 px, TACHADO. Pequeño y sin drama.
+┌──────────────┐
+│   $20.99     │      placa amarilla, Anton 96, azul. El protagonista.
+└──────────────┘
+CÓDIGO 230701         Inter 400, 22 px. Es lo que se escribe al WhatsApp.
+```
+
+**El «antes» va arriba, pequeño y tachado; nunca en rojo, nunca en una
+explosión, nunca con «¡CORRE!».** El ADN permite el descuento como campaña
+puntual, no como identidad (§6), y prohíbe los stickers rojos de oferta y la
+escasez falsa (§9). Una rebaja bien puesta se lee sola: si necesita adornos, es
+que no es buena rebaja.
+
+**Y el código es tan importante como el precio.** Es lo que convierte un post en
+un pedido: el cliente copia `230701`, lo manda por WhatsApp y la vendedora sabe
+exactamente qué mueble es, sin describirlo ni buscarlo. Va en todas las piezas
+de producto.
+
 **Variante C sin precio.** Cuando la categoría de la semana no tiene precio
 verificado, la placa amarilla **no se dibuja** — no se deja vacía, no se rellena
 con «consúltanos» y no se inventa un importe. El titular sube su peso y la nota
@@ -185,7 +227,9 @@ estridente. Se mira la pieza entera, no cada elemento suelto.
 |---|---|---|---|---|---|---|
 | Titular XL · 2–3 líneas | Anton | 400 | 128 | 0.92 | según plantilla | 16 |
 | Titular L · 4–5 líneas | Anton | 400 | 104 | 0.94 | según plantilla | 20 |
-| Precio | Anton | 400 | 96 | — | `#1340B1` sobre placa `#FED00F` | — |
+| Precio (el de ahora) | Anton | 400 | 96 | — | `#1340B1` sobre placa `#FED00F` | — |
+| Precio anterior | Inter | 500 | 34 | — | `#FFFFFF` o `#3A3A3A`, **tachado** | — |
+| Código de producto | Inter | 400 | 22 | — | según fondo, tracking 0.1em | — |
 | Antetítulo | Oswald | 500 | 26 | — | `#1340B1` (tracking 0.14em) | — |
 | Subtítulo | Oswald | 400 | 34 | 1.3 | `#3A3A3A` | — |
 | Lista / cuerpo | Inter | 400 | 26 | 1.5 | `#3A3A3A` | — |
@@ -233,10 +277,43 @@ inferior amarilla, o el badge. Nunca los tres a la vez — se pisan.
   con `D'CASA` a la izquierda en x=80 y `ESCRÍBENOS AL WHATSAPP` a la derecha,
   las dos en azul.
 
-> ⚠️ `Assets_Visuales_Base/` está vacío: **no hay archivo de logo en el repo.**
-> Mientras no lo haya, la firma de las piezas es tipográfica (`D'CASA` en Anton)
-> más los dispositivos del sistema. Cuando llegue el logo en PNG con
-> transparencia o en SVG, sustituye el wordmark por él y actualiza este párrafo.
+### El logo, desde que existe el archivo (2026-08-17)
+
+`Assets_Visuales_Base/logo-dcasa.png` — 1783×809, **fondo transparente**,
+recortado a su caja útil. Es el archivo que se compone. (El `.svg` del mismo
+directorio es el original que subió el cliente, pero **no es vectorial**: es ese
+mismo PNG incrustado en base64, así que no aporta nada para maquetar y sí pesa
+seis veces más.)
+
+**El logo ya es la placa.** Trae dentro el marco blanco, el borde azul, la masa
+azul con `D'CASA` y la banda amarilla con `PANAMÁ`. Así que **sustituye al badge
+tipográfico y a la banda dibujada**, no se suma a ellos:
+
+| Plantilla | Antes | Ahora |
+|---|---|---|
+| A · Ambiente | Placa dibujada + badge `D'CASA` | **El logo**, esquina inferior derecha |
+| B · Valor | Banda amarilla con wordmark | Banda amarilla + **el logo** encima, a la izquierda |
+| C · Producto | Banda amarilla con wordmark | Banda amarilla + **el logo** encima, a la izquierda |
+| D · Portada de Reel | Badge `D'CASA` | **El logo**, esquina inferior derecha |
+
+Cinco reglas de colocación, y ninguna es de gusto:
+
+1. **Proporción 2.204 : 1, intocable.** A 360 px de ancho mide 163 de alto. Es
+   la caja del logo: estirarlo o meterlo en un cuadrado lo deforma.
+2. **Espacio de resguardo:** como mínimo la altura de su banda amarilla —
+   aproximadamente el 18 % de su alto— libre por los cuatro lados. Nada de texto
+   ni de borde de foto dentro de esa franja.
+3. **Nunca se recolorea, ni se pone en blanco y negro, ni se le baja la
+   opacidad.** Es un raster: cualquier retoque se ve.
+4. **No se apoya sobre una masa plana de azul ni de amarillo de la marca.**
+   Los HEX del logo (`#1648C0` / `#FFD000`) no son exactamente los del ADN
+   (`#1340B1` / `#FED00F`), y pegados se ve el escalón. Sobre foto, sobre hueso
+   o sobre la banda amarilla —que ya es su propio amarillo— sí funciona.
+   La divergencia está anotada en `01_brand_guidelines.md` §10, pendiente de que
+   el cliente decida cuál es el oficial.
+5. **Sobre foto oscura o con detalle, va sobre la banda amarilla o dentro de una
+   zona limpia.** El logo tiene marco blanco: sobre un fondo claro y movido,
+   desaparece.
 
 ---
 
