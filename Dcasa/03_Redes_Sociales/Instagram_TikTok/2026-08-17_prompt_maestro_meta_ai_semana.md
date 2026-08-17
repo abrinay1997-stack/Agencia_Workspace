@@ -1,70 +1,82 @@
 # Prompt maestro · Meta AI · Semana de contenido en HTML (2026-08-17)
 
 > **Especificación completa:** `01_ADN_y_Memoria/05_prompt_maestro_meta_ai.md`.
+> **Formato:** `00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md`.
 > Este archivo es el prompt ya armado, **listo para pegar en Meta AI tal cual**.
 
-**Foco de la semana: ZAPATERAS.**
+**Foco de la semana: ZAPATERAS, con precio rebajado y código de pedido.**
 
-**Qué produce:** un documento HTML con las 5 piezas de la semana ya compuestas a
-1080×1350, su descripción, sus hashtags, el guion de los dos Reels y un botón
-que descarga cada pieza en PNG.
+**Qué produce:** un documento HTML con **5 publicaciones · 9 lienzos** ya
+compuestos a 1080×1350 —cuatro piezas únicas y un carrusel de cinco
+diapositivas—, sus descripciones, sus hashtags, el guion del Reel y un botón que
+descarga cada lienzo en PNG.
+
+**Los tres productos, tal como los dio el cliente el 2026-08-17:**
+
+| Producto | Código | Antes | Ahora | Baja |
+|---|---|---|---|---|
+| Zapatera 1 | `230701` | $29.99 | **$20.99** | $9.00 · 30 % |
+| Zapatera 2 | `230702` | $29.99 | **$22.99** | $7.00 · 23 % |
+| Zapatera 3 | `230612` | $35.99 | **$29.99** | $6.00 · 17 % |
 
 **Decisiones de esta semana:**
 
 | | |
 |---|---|
-| Foco | Zapateras — el mueble que resuelve la entrada y el clóset |
-| Ángulo | Problema → solución. La pieza 1 muestra el desorden, no el mueble |
+| Publicaciones | 5 (4 únicas + 1 carrusel de 5 diapositivas) = 9 lienzos |
 | Público | Familias que amueblan su hogar (Panamá Oeste / La Chorrera) |
-| Piezas | 5, todas 1080×1350 |
-| Reels | 2 (piezas 4 y 5), con guion escrito |
+| Mecánica de venta | **Pedir por código** por WhatsApp — el código va en toda pieza de producto |
+| Fotos reales | Las tres del cliente, cargadas en el HTML antes de exportar |
+| Logo | El archivo real, `Assets_Visuales_Base/logo-dcasa.png` |
 | CTA | El mismo en las 5: *Escríbenos por WhatsApp* |
-| Orden de publicación | Ambiente → Valor → Producto → Valor/Reel → Ambiente/Reel |
+| Orden de publicación | Ambiente → Valor → Carrusel → Producto → Reel |
 
-**La mezcla de esta semana, contra la del ADN §8:**
+**La mezcla, contra la del ADN §8:**
 
 | Tipo | ADN | Esta semana |
 |---|---|---|
 | Valor | 40 % | 2 de 5 ✅ |
-| Ambiente | 30 % | 2 de 5 ⚠️ queda largo |
-| Producto | 20 % | 1 de 5 ✅ |
-| Comunidad | 10 % | 0 ⚠️ **se rota a la semana que viene** |
+| Ambiente | 30 % | 1 de 5 ⚠️ queda corto |
+| Producto | 20 % | 2 de 5 ⚠️ queda largo |
+| Comunidad | 10 % | 0 ⚠️ se rota |
 
-Comunidad queda fuera a propósito: pide foto real de un cliente y su permiso, y
-hoy no la hay. En cuanto haya una entrega fotografiada, entra como sexta pieza o
-sustituye a una de ambiente.
+**Producto va doble a propósito: es una semana de rebaja puntual.** El ADN
+permite el descuento como campaña, no como identidad (§6). Esta proporción no se
+puede repetir el mes entero — la semana que viene vuelve el reparto normal, con
+dos de ambiente y una de comunidad.
 
 **Qué NO incluye esta semana:**
 
-- **Ningún precio.** No hay precio de zapatera verificado en el ADN — la única
-  cifra confirmada es «camas desde $49.99», y esa es de otra categoría. La pieza
-  3 va **sin placa amarilla de precio** y remite a WhatsApp. → *En cuanto Marcial
-  confirme el precio, se enciende la placa y esa pieza mejora mucho: el ADN dice
-  que el precio se dice con orgullo, y hoy no lo podemos decir.*
+- **Ninguna medida, capacidad ni número de niveles de las tres zapateras.** El
+  cliente dio código y precio, no fichas. Por eso los titulares del carrusel las
+  distinguen por precio —lo único verificado— y no por tamaño. → *Con el alto,
+  el ancho y cuántos pares aguanta cada una, el carrusel pasa de «tres precios» a
+  «cuál te sirve», que es lo que de verdad decide la compra.*
+- **Ninguna fecha de fin de la rebaja.** No la dio nadie, así que ninguna pieza
+  dice «hasta el domingo» ni «últimos días». Escasez falsa está prohibida (§9).
+- **Ninguna mención de ITBMS.** No está declarado si los precios lo incluyen
+  (anotado en `01_brand_guidelines.md` §10). Si lo llevan aparte, hay que añadir
+  la nota antes de publicar.
 - **Ningún costo de delivery, de armado ni plazo de entrega.** Siguen sin estar
-  en el ADN y siguen siendo las preguntas más frecuentes de los clientes.
-- **Ninguna capacidad concreta** — nada de "12 pares", "3 niveles". No sabemos
-  qué modelos hay. Las piezas hablan de medir, no de un modelo.
-- **Dos piezas necesitan foto real** (3 y 5) y el HTML trae el hueco para
-  cargarla. Sin esas fotos, esas dos piezas no se publican.
-- **Meta AI no genera la zapatera.** Los ambientes que sí genera muestran el
-  problema (zapatos regados en la entrada, pared vacía), nunca el mueble que se
-  está vendiendo.
-- **Ni logo ni prueba social generada.** `Assets_Visuales_Base/` sigue vacío: la
-  firma es tipográfica.
+  en el ADN, y siguen siendo las preguntas más frecuentes de los clientes.
+- **Nada de prueba social.** Sin foto real de cliente y su permiso, no hay pieza
+  de comunidad.
 
 ---
 
-## Cómo se usa
+## Antes de pegar el prompt
 
-1. Copia **todo** el bloque de abajo y pégalo en Meta AI en un solo mensaje.
-2. Cuando devuelva el HTML, ábrelo en el navegador y **carga las fotos reales**
-   de las piezas 3 y 5 con su botón.
-3. **Descarga una pieza y ponla al lado de su vista previa.** Si no son
-   idénticas, el exportador está mal y lo están las 5.
-4. Revisa con la tabla de la sección 9 de la especificación. Lo primero que se
-   mira: que no haya generado la zapatera ni personas, y que no haya un solo
-   amarillo sobre blanco.
+1. **Adjunta a Meta AI las tres fotos** de las zapateras, en el mismo mensaje.
+   El prompt se refiere a ellas como `FOTO 230701`, `FOTO 230702` y
+   `FOTO 230612`, así que nómbralas o preséntalas en ese orden.
+2. **Adjunta también `logo-dcasa.png`** (el de
+   `01_ADN_y_Memoria/Assets_Visuales_Base/`, no el `.svg`).
+3. Copia **todo** el bloque de abajo y pégalo en el mismo mensaje.
+
+Cuando devuelva el HTML: carga las tres fotos con sus botones, y **pon cada
+pieza al lado de la foto original**. Si el mueble no tiene el mismo número de
+niveles, las mismas patas y el mismo color, Meta AI lo regeneró en vez de
+recortarlo y esa pieza no se publica.
 
 ---
 
@@ -73,40 +85,52 @@ sustituye a una de ambiente.
 ━━ 1. QUÉ ERES Y QUÉ NO HACES ━━
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Vas a hacer dos cosas, y ninguna más:
+Tienes dos trabajos y ninguno más:
 
-1. Generar las imágenes de ambiente que te describo más abajo (solo las de las
-   piezas 1 y 4).
-2. Devolver UN documento HTML completo, con las imágenes dentro del propio
-   archivo, donde las 5 piezas aparecen ya compuestas con su texto encima, a
-   1080×1350, con un botón que descarga cada una en PNG.
+  A) Preparar las imágenes de los 9 lienzos: generar dos fondos de ambiente, y
+     recortar y limpiar las tres fotos de producto que te adjunto.
+  B) Devolver UN documento HTML que componga el texto encima y permita
+     descargar cada lienzo en PNG a 1080×1350 exactos.
+
+Los 9 lienzos son 5 publicaciones distintas: cuatro piezas únicas y un
+carrusel de cinco diapositivas. El carrusel va en orden y con UNA SOLA
+descripción para todo el conjunto.
 
 No escribas, no redactes, no completes, no acortes, no traduzcas y no
 "mejores" ningún texto. Todo el texto de este documento ya está escrito más
 abajo. Cópialo carácter por carácter, con sus tildes, sus eñes, sus signos de
-apertura y sus puntos finales. No añadas ningún precio, medida, capacidad,
-cantidad de pares, plazo de entrega, costo de armado, costo de delivery,
-testimonio ni nombre de cliente que no esté escrito literalmente en este
-documento.
+apertura y sus puntos finales. Si algo te parece incompleto, déjalo como está:
+está así a propósito. No añadas ningún precio, medida, capacidad, cantidad de
+pares, fecha, plazo de entrega, costo de armado, costo de delivery, testimonio
+ni nombre de cliente que no esté escrito literalmente en este documento.
 
-Tampoco cambies el orden de las piezas, ni añadas una sexta, ni añadas
-hashtags, ni añadas emojis en ningún sitio.
+Tampoco cambies el orden de las piezas ni el de las diapositivas, ni añadas
+una décima, ni añadas hashtags, ni añadas emojis en ningún sitio.
 
-Y dos prohibiciones más, propias de esta marca:
+━━ LAS TRES FOTOS DE PRODUCTO ━━
 
-NO GENERES EL PRODUCTO, NI CLIENTES, NI ENTREGAS.
+Te adjunto tres fotos reales de tres zapateras que esta tienda vende hoy:
+FOTO 230701, FOTO 230702 y FOTO 230612.
 
-Esto es una tienda de muebles real en La Chorrera, Panamá, y esta semana el
-tema son las ZAPATERAS. Si dibujas una zapatera, estoy anunciando un mueble
-que la tienda quizá no tiene, con un diseño que no es el suyo. Si dibujas a
-una familia, estoy inventando un testimonio. Los ambientes que sí generas
-muestran el PROBLEMA —zapatos regados, una pared vacía—, nunca el mueble.
-Las piezas 3 y 5 llevan una FOTO REAL que carga el usuario desde su
-computadora: tú solo pones el hueco para cargarla.
+LO QUE SÍ HACES CON ELLAS:
+  · Recortar el fondo y dejar el mueble limpio.
+  · Centrarlo y nivelarlo.
+  · Igualar la luz entre las tres, para que el carrusel se vea de una sola
+    sesión de fotos y no de tres días distintos.
+  · Ponerlo sobre el fondo azul de marca, con una sombra de contacto muy
+    suave bajo la base para que no flote.
 
-NO PONGAS NINGÚN PRECIO. Esta semana ninguna pieza lleva precio, ni placa de
-precio, ni "desde", ni "consulta nuestras ofertas". Si te falta un precio para
-que la pieza te parezca completa, déjala como está: está así a propósito.
+LO QUE NO HACES NUNCA:
+  · Redibujar el mueble, "mejorarlo" o cambiarle el diseño.
+  · Añadirle o quitarle un nivel, una puerta, una pata o un tirador.
+  · Cambiarle el color, la madera o el material.
+  · Sustituirlo por otro que te parezca más bonito.
+
+Si redibujas el mueble, la tienda estará anunciando algo que no es lo que
+llega a la casa del cliente. Es el error más caro que puede cometer una
+tienda de muebles. En la duda, recorta y no toques nada más.
+
+Y NO GENERES PERSONAS, CLIENTES NI ENTREGAS en ninguna imagen.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ━━ 2. EL SISTEMA VISUAL ━━
@@ -114,9 +138,9 @@ que la pieza te parezca completa, déjala como está: está así a propósito.
 
 COLORES (cópialos exactos, no los aproximes)
 
-  #1340B1   azul D'CASA: fondos de marca, titulares sobre claro, banda
-  #FED00F   amarillo D'CASA: badges, banda inferior, subrayado
-  #FFFFFF   blanco: aire, marcos de placa, texto sobre azul
+  #1340B1   azul D'CASA: fondo de las piezas de marca, titulares sobre claro
+  #FED00F   amarillo D'CASA: placa de precio, banda inferior, subrayado
+  #FFFFFF   blanco: aire y texto sobre azul
   #E0DDD1   hueso: fondo de las cards de valor
   #3A3A3A   grafito: subtítulos y cuerpo sobre fondo claro
 
@@ -134,11 +158,25 @@ LA REGLA DE CONTRASTE QUE NO SE ROMPE
 PROPORCIÓN CROMÁTICA de cada pieza: 60 % blanco o neutro claro · 30 % azul ·
 10 % amarillo. El amarillo nunca pasa del 15 % de la pieza.
 
+EL LOGO. Te adjunto el archivo logo-dcasa.png, con fondo transparente. ES EL
+LOGO REAL DE LA MARCA Y NO SE TOCA.
+
+  · Proporción 2.204 : 1. A 360 px de ancho mide 163 px de alto. No lo
+    estires, no lo metas en un cuadrado, no lo recortes.
+  · No lo recolorees, no lo pongas en blanco y negro, no le bajes la
+    opacidad, no le pongas sombra ni borde.
+  · No lo redibujes ni lo "reconstruyas" con tipografía: úsalo como imagen.
+  · Deja libre alrededor, por los cuatro lados, al menos 30 px a ese tamaño.
+    Ningún texto ni borde de foto entra en esa franja.
+  · No lo pongas encima de una masa plana de azul #1340B1: los azules no son
+    exactamente iguales y se ve el escalón. Sobre la banda amarilla, sobre
+    hueso o sobre foto, sí.
+
 TIPOGRAFÍAS
 
-  Anton     titulares. SIEMPRE EN CAJA ALTA. Nunca en párrafos.
+  Anton     titulares y precios. SIEMPRE EN CAJA ALTA. Nunca en párrafos.
   Oswald    antetítulos y subtítulos. Nunca en caja alta en un párrafo.
-  Inter     listas, cuerpo y notas.
+  Inter     listas, cuerpo, notas, precio anterior y códigos.
 
   Prohibido: cualquier serif, cualquier script, y cualquier tipografía con
   borde, sombra o degradado. Nada de estética de promoción de bazar.
@@ -150,59 +188,98 @@ ESCALA
 
   Titular XL · 2–3 líneas   Anton  128px  interlínea 0.92  máx. 16 car./línea
   Titular L  · 4–5 líneas   Anton  104px  interlínea 0.94  máx. 20 car./línea
+  Precio de ahora           Anton   96px  azul sobre la placa amarilla
+  Precio anterior           Inter 500 34px  TACHADO
+  Código de producto        Inter 400 22px  tracking 0.1em
   Antetítulo                Oswald  26px  tracking 0.14em
   Subtítulo                 Oswald  34px  interlínea 1.3   #3A3A3A
   Lista / cuerpo            Inter   26px  interlínea 1.5   #3A3A3A
   Nota                      Inter   20px  interlínea 1.5
-  Wordmark de banda         Anton   30px  azul sobre banda amarilla
+
+EL BLOQUE DE PRECIO. Este orden y no otro:
+
+  TITULAR
+  ANTES $29.99          Inter 500, 34px, TACHADO. Pequeño y sin drama.
+  ┌──────────────┐
+  │   $20.99     │      placa amarilla 420×140, radio 16px,
+  └──────────────┘      Anton 96px azul #1340B1 centrado dentro.
+  CÓDIGO 230701         Inter 400, 22px.
+
+  El "antes" va ARRIBA, pequeño y tachado. NUNCA en rojo, nunca dentro de una
+  explosión, nunca con signos de exclamación. Sin stickers de oferta, sin
+  círculos rojos, sin "corre". Una rebaja bien puesta se lee sola.
+
+EL ACENTO. En cada titular hay UNA SOLA parte acentuada, marcada así:
+⟦texto acentuado⟧.
+
+  Los corchetes ⟦ ⟧ son marcas para ti: NO se imprimen, no aparecen en el
+  lienzo, no aparecen en el PNG. Solo dicen dónde empieza y dónde termina el
+  acento. El tramo puede cruzar un salto de línea y sigue siendo uno solo.
+
+  Cómo se pinta el acento, según el fondo de la pieza:
+    · Sobre fondo AZUL  → el tramo va en amarillo #FED00F. El resto, blanco.
+    · Sobre fondo HUESO → el tramo lleva SUBRAYADO amarillo de 10px debajo,
+                          y la letra sigue azul #1340B1.
+    · Sobre FOTO con velo azul → el tramo va en amarillo #FED00F.
 
 LAS PLANTILLAS. Cada pieza te dice cuál usa.
 
   PLANTILLA A — AMBIENTE (la foto manda)
     Foto de ambiente a sangre en los 1080×1350.
-    Encima, una PLACA: marco blanco de 12 px de grosor, inset de 32 px
-    respecto al borde del lienzo, esquinas redondeadas de radio 48 px.
-    Badge amarillo #FED00F en la esquina inferior derecha, con "D'CASA" en
-    Anton 30px azul #1340B1 dentro; el badge mide 260×72, esquinas de radio
-    16 px, su base va en y=1230 y su borde derecho en x=1000.
+    Encima, un marco blanco de 12 px de grosor, inset de 32 px respecto al
+    borde del lienzo, esquinas redondeadas de radio 48 px.
+    El LOGO en la esquina inferior derecha, 300 px de ancho (136 de alto),
+    su borde derecho en x=1000 y su base en y=1240.
     Sin titular. Si la pieza no lleva texto, no le pongas texto.
 
   PLANTILLA B — VALOR (card sobre hueso)
     Fondo #E0DDD1 completo, sin foto.
     Antetítulo Oswald azul en x=80, y=200.
     Titular Anton azul #1340B1, tope del bloque en y=280.
-    Un solo subrayado amarillo de 10 px de alto bajo UNA palabra del titular:
-    la que va marcada con ⟦ ⟧. Los corchetes ⟦ ⟧ son marcas para ti: NO se
-    imprimen, no aparecen en el lienzo, no aparecen en el PNG. Solo dicen qué
-    palabra lleva el subrayado.
     Subtítulo Oswald grafito, 40 px de aire por encima.
     Lista en Inter grafito, cada punto con un guion largo, interlínea 1.5.
-    Banda inferior amarilla de 88 px de alto, de y=1262 a y=1350, con
-    "D'CASA" en x=80 y "ESCRÍBENOS AL WHATSAPP" alineado a la derecha en
-    x=1000, las dos en Anton 30px azul #1340B1.
+    Banda inferior amarilla de 88 px de alto, de y=1262 a y=1350.
+    El LOGO encima de la banda, 300 px de ancho, alineado a x=80 y centrado
+    verticalmente en la banda.
+    A la derecha de la banda, "ESCRÍBENOS AL WHATSAPP" en Anton 30px azul,
+    con su borde derecho en x=1000.
 
-  PLANTILLA C SIN PRECIO — PRODUCTO (fondo azul)
+  PLANTILLA P — PRODUCTO (fondo azul) · la usan las piezas de producto y las
+  diapositivas 2, 3 y 4 del carrusel
     Fondo #1340B1 completo.
-    Zona de FOTO REAL de 1080×700 en la parte superior, desde y=0 hasta y=700,
-    con la imagen cargada por el usuario ajustada con object-fit: cover.
-    Titular Anton blanco, tope del bloque en y=780.
-    Nota en Inter 20px blanco debajo del titular, 32 px de aire.
-    ESTA SEMANA NO HAY PLACA DE PRECIO. No la dibujes, no la dejes vacía y no
-    inventes un importe para llenarla.
-    Banda inferior amarilla igual que en la plantilla B.
+    Zona de FOTO REAL de y=0 a y=700, el mueble recortado y CENTRADO
+    horizontalmente dentro de esa zona, con aire alrededor y una sombra de
+    contacto muy suave bajo la base.
+    Antetítulo Oswald, blanco, en x=80, y=760.
+    Titular Anton blanco, tope del bloque en y=812.
+    Bloque de precio debajo, en el orden de arriba.
+    Banda inferior amarilla y logo, igual que en la plantilla B.
+
+  PLANTILLA T — SOLO TIPOGRAFÍA (fondo azul) · portada y cierre del carrusel
+    Fondo #1340B1 completo, sin foto.
+    Titular Anton blanco anclado por la BASE del bloque en y=1150.
+    Antetítulo Oswald blanco encima del titular, con 32 px de aire.
+    Banda inferior amarilla y logo, igual que en la plantilla B.
 
   PLANTILLA D — PORTADA DE REEL
-    Foto a sangre (generada por ti en la pieza 4, cargada por el usuario en la
-    pieza 5), bajo un velo azul plano rgba(19,64,177,0.55) sobre toda la pieza.
+    Foto a sangre, bajo un velo azul plano rgba(19,64,177,0.55).
     Titular Anton blanco, centro óptico del bloque en y=594 (no en 675: un
     bloque centrado matemáticamente se lee caído).
     Ícono de play: triángulo de línea blanca de 4 px dentro de un círculo de
     línea blanca de 4 px, 72×72, centrado horizontalmente, base en y=1120.
-    Badge amarillo con "D'CASA" en azul, igual que en la plantilla A.
+    El LOGO en la esquina inferior derecha, igual que en la plantilla A.
 
-REGLA DE CONVIVENCIA: cada pieza lleva UN elemento del sistema (la placa, la
-banda amarilla o el badge), nunca los tres a la vez. Y ninguna pieza mezcla la
-línea de marca y la de ambiente al 50 %: o manda el azul, o manda la foto.
+EL CARRUSEL. Sus cinco diapositivas van en orden y con el MISMO anclaje: el
+bloque de texto ancla siempre por su base. El anclaje no salta entre
+diapositivas de un mismo carrusel — es lo que hace que el deslizamiento se
+sienta como una sola pieza larga.
+Numerador en las cinco: Inter 400, 22px, blanco, formato 01/05, alineado a la
+derecha con su borde en x=1000 y su base en y=180.
+El logo y la banda amarilla van en las cinco: cada diapositiva se puede
+compartir suelta.
+
+REGLA DE CONVIVENCIA: ninguna pieza mezcla la línea de marca y la de ambiente
+al 50 %. O manda el azul, o manda la foto.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ━━ 3. EL CONTRATO DEL HTML ━━
@@ -212,20 +289,29 @@ FUENTES. Cárgalas desde Google Fonts en el <head>:
 
   https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500&family=Inter:wght@400;500&display=swap
 
-EL HUECO PARA LA FOTO REAL. Las piezas 3 y 5 llevan cada una un
-<input type="file" accept="image/*">. Al elegir una foto del disco, se dibuja
-en la zona de imagen de esa pieza con object-fit: cover y queda incluida en el
-PNG que se exporta. Mientras no se cargue nada, esa zona muestra un rectángulo
-hueso #E0DDD1 con el texto "FOTO REAL — CÁRGALA AQUÍ" en Inter gris centrado.
-La foto se lee con FileReader y se dibuja en el canvas; no se sube a ningún
-sitio.
+LAS TRES FOTOS DE PRODUCTO. Arriba del documento, tres campos
+<input type="file" accept="image/*">, etiquetados "Zapatera 230701",
+"Zapatera 230702" y "Zapatera 230612". Cada foto cargada se usa en TODAS las
+piezas donde aparece ese producto. Se lee con FileReader y se dibuja en el
+canvas; no se sube a ningún sitio.
 
-CADA PIEZA se maqueta a 1080×1350 exactos. En pantalla puedes mostrarla
-reducida con transform: scale(), pero el lienzo que se exporta mide 1080×1350.
+Mientras una foto no esté cargada, su zona muestra un rectángulo hueso
+#E0DDD1 con el texto "FOTO REAL — CÁRGALA AQUÍ" en Inter gris centrado.
 
-DESCARGA. Cada pieza lleva su botón que la descarga en PNG a tamaño real,
-dibujando fondo, foto y texto sobre un <canvas>. Sin librerías externas. Y
-arriba del documento, un botón que las descargue todas.
+EL LOGO va incrustado en el propio HTML como imagen en base64, para que el
+documento funcione sin depender de ningún archivo externo.
+
+CADA LIENZO se maqueta a 1080×1350 exactos. En pantalla puedes mostrarlo
+reducido con transform: scale(), pero el lienzo que se exporta mide 1080×1350.
+
+CÓMO SE MUESTRAN. Las cuatro piezas únicas, cada una por separado con su
+descripción y sus hashtags debajo. Las cinco diapositivas del carrusel, en
+fila y en orden, y debajo del grupo entero UNA sola descripción y UN solo
+juego de hashtags.
+
+DESCARGA. Cada lienzo lleva su botón, que lo baja en PNG a 1080×1350. Sin
+librerías externas. Y un botón arriba que descargue los nueve, con nombres
+numerados, y las del carrusel de 01 a 05 para que se suban sin reordenar.
 
 LA REGLA QUE MÁS FALLA: EL EXPORTADOR NO RECALCULA NADA.
 
@@ -238,44 +324,35 @@ texto por su cuenta. No lo hagas.
   · No estimes multiplicando líneas por interlínea, no vuelvas a partir el
     subtítulo con otro ancho, no recalcules dónde empieza el bloque.
   · Espera a que las fuentes estén listas —await document.fonts.ready— ANTES
-    de medir nada y ANTES de exportar. Si mides con la fuente de reserva, todo
-    lo demás queda mal colocado.
+    de medir nada y ANTES de exportar. Si mides con la fuente de reserva,
+    todo lo demás queda mal colocado.
 
-Si el canvas lee del DOM en vez de recalcular, casi ninguna de las seis
-trampas de abajo puede ocurrir. Aun así van escritas, porque cada una es un
-fallo observado.
+Y estas seis, porque cada una es un fallo observado:
 
   1. ctx.letterSpacing NO se reinicia al cambiar ctx.font. Si lo usas para el
-     tracking del antetítulo o del wordmark, ponlo a '0px' inmediatamente
+     tracking del antetítulo o del código, ponlo a '0px' inmediatamente
      después de dibujarlo. Si no, el tracking se filtra al titular y el
      titular se sale del lienzo.
 
-  2. Fija ctx.textBaseline='top' antes de dibujar y usa la misma Y que el
-     maquetado. Con el valor por defecto ('alphabetic') el texto del PNG cae
-     más abajo que en la vista previa.
+  2. Fija ctx.textBaseline='top' antes de dibujar. Y ten en cuenta que una
+     interlínea menor que 1 sube la primera línea por encima del borde del
+     bloque: por eso la Y se lee del elemento, no se supone.
 
-  3. La banda inferior amarilla y la placa se posicionan por su BASE (y=1350 y
-     y=1318). Si las colocas por su borde superior, quedan fuera del lienzo o
-     comidas por el margen.
+  3. La banda inferior amarilla y el logo se posicionan por su BASE. Puestos
+     por su borde superior quedan fuera del lienzo o comidos por el margen.
 
-  4. Si el usuario no ha cargado la foto real de la pieza 3 o de la 5, el botón
-     de descarga de esa pieza avisa y NO exporta. Un PNG con el rectángulo de
-     "cárgala aquí" dentro se publica por error una de cada tres veces.
+  4. El tachado del precio anterior tiene que dibujarse también en el canvas.
+     text-decoration: line-through existe en CSS pero NO en el canvas: ahí es
+     una línea que dibujas tú a la altura media del texto, con el ancho que
+     te dé measureText().
 
-  5. Un botón que lanza 5 descargas seguidas lo bloquea el navegador a la
-     tercera. O agrupas en un ZIP de verdad, o el botón se llama "descargar
-     una por una" y avisa de que hay que permitirlo.
+  5. Si una foto de producto no está cargada, el botón de descarga de esa
+     pieza avisa y NO exporta. Un PNG con el rectángulo de "cárgala aquí"
+     dentro se publica por error una de cada tres veces.
 
   6. Ningún texto, ícono ni línea en #FED00F puede quedar sobre #FFFFFF ni
      sobre #E0DDD1. Antes de devolver el documento, busca esa combinación en
      tu propio código y corrígela: el amarillo lleva azul encima, siempre.
-
-DEBAJO DE CADA PIEZA, en texto seleccionable para copiar y pegar:
-
-  - La descripción de la publicación, tal cual te la doy
-  - Los hashtags, tal cual te los doy
-  - El guion, si la pieza es portada de Reel
-  - El prompt del fondo, por si hay que regenerar la imagen
 
 LA INTERFAZ DEL DOCUMENTO: fondo #FFFFFF, texto #3A3A3A, títulos y acentos
 #1340B1, botones con fondo #FED00F y texto #1340B1.
@@ -284,13 +361,13 @@ LA INTERFAZ DEL DOCUMENTO: fondo #FFFFFF, texto #3A3A3A, títulos y acentos
 ━━ 4. EL BLOQUE DE ESTILO ━━
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Este párrafo va en todas las imágenes que generes, idéntico. No lo resumas ni
-lo cambies de una pieza a otra.
+Para las DOS imágenes de ambiente que generas (piezas 1 y 5). Idéntico en las
+dos, no lo varíes.
 
   Estilo: fotografía de interiores de un hogar panameño real, no un showroom.
-  Luz natural cálida de media mañana entrando por una ventana, sombras suaves.
-  Paleta de la escena: hueso, arena, madera natural, gris cálido, verde de
-  planta viva. Ambiente ordenado pero habitado, con la escala de un
+  Luz natural cálida de media mañana entrando por una ventana, sombras
+  suaves. Paleta de la escena: hueso, arena, madera natural, gris cálido,
+  verde de planta viva. Ambiente ordenado pero habitado, con la escala de un
   apartamento o una casa de barrio panameño, no de una mansión. Cámara a la
   altura de los ojos, encuadre frontal y limpio, profundidad natural. Sin
   personas. Fotografía realista, nada de render 3D ni de ilustración.
@@ -299,7 +376,7 @@ lo cambies de una pieza a otra.
 ━━ 5. LOS NEGATIVOS ━━
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-No incluyas nada de esto en ninguna imagen:
+Para las dos imágenes de ambiente que generas:
 
   zapateras, muebles organizadores de zapatos, estantes de zapatos, personas,
   gente, rostros, manos, niños, mascotas, terracota, bronce, cobre, verde
@@ -307,16 +384,17 @@ No incluyas nada de esto en ninguna imagen:
   nórdico, estética escandinava, minimalismo frío, nieve, invierno, chimenea,
   lujo, mármol, dorado, candelabros, degradados, sombras dramáticas, viñeta,
   stickers de oferta, círculos rojos, explosiones de precio, tipografía serif,
-  scripts, texto, letras, números, logotipos, marcas de agua, marcos, collage,
-  render 3D, ilustración, dibujo, fisheye, gran angular deformado, HDR
-  exagerado, saturación excesiva.
+  scripts, texto, letras, números, logotipos, marcas de agua, marcos,
+  collage, render 3D, ilustración, dibujo, fisheye, gran angular deformado,
+  HDR exagerado, saturación excesiva.
 
-Fíjate en el primer grupo: esta semana el mueble que se vende es la zapatera,
-así que NINGUNA imagen generada puede contener una. Los zapatos sí aparecen —
+Fíjate en el primer grupo: el mueble que se vende esta semana es la zapatera,
+y las únicas zapateras que pueden aparecer son las de las TRES FOTOS REALES.
+Ninguna imagen que generes tú puede contener una. Los zapatos sí aparecen —
 regados por el piso, que es justamente el problema del que habla la semana.
 
-Ni una letra, ni un número dentro de las imágenes generadas. Todo el texto lo
-compones tú encima, con Anton, Oswald e Inter cargadas.
+Ni una letra, ni un número dentro de las imágenes que generes. Todo el texto
+lo compones tú encima, con Anton, Oswald e Inter cargadas.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ━━ 6. LAS PIEZAS ━━
@@ -325,22 +403,22 @@ compones tú encima, con Anton, Oswald e Inter cargadas.
 ────────────────────────────────────────────────────────────
 PIEZA 1 · AMBIENTE · PLANTILLA A · imagen generada por ti
 ────────────────────────────────────────────────────────────
-SIN TITULAR. Esta pieza no lleva ni una letra encima: solo la placa blanca y
-el badge amarillo con "D'CASA" en azul.
+SIN TITULAR. Esta pieza no lleva ni una letra encima: solo el marco blanco y
+el logo.
 
 FONDO: la entrada de una casa panameña vista de frente, con ocho o diez pares
 de zapatos regados por el piso junto a la puerta — tenis, chancletas, un par
 de zapatos de vestir, unas botas de trabajo. Pared clara, piso de baldosa
-clara, una puerta de madera entreabierta y luz cálida de media mañana entrando
-desde un lado. Se ve vivido y normal, no sucio ni miserable. NO pongas ningún
-mueble organizador, estante ni zapatera: el piso es lo único que sostiene los
-zapatos. Sin personas.
+clara, una puerta de madera entreabierta y luz cálida de media mañana
+entrando desde un lado. Se ve vivido y normal, no sucio ni miserable. NO
+pongas ningún mueble organizador, estante ni zapatera: el piso es lo único
+que sostiene los zapatos. Sin personas.
 
 DESCRIPCIÓN:
 La entrada de la casa siempre pierde. 👟
 Ahí terminan los zapatos de todo el mundo, y ahí es donde primero se nota el
-desorden cuando llega visita. Esta semana te vamos a enseñar a arreglarlo con
-un solo mueble.
+desorden cuando llega visita. Esta semana te traemos tres formas de
+arreglarlo, con precio nuevo.
 Escríbenos por WhatsApp.
 
 HASHTAGS:
@@ -351,7 +429,7 @@ HASHTAGS:
 PIEZA 2 · VALOR · PLANTILLA B · sin foto
 ────────────────────────────────────────────────────────────
 ANTETÍTULO:  ANTES DE COMPRAR
-TITULAR (tamaño XL, Anton azul #1340B1), con estos cortes exactos:
+TITULAR (tamaño XL), con estos cortes exactos:
   ⟦CUÁNTOS⟧ PARES
   TE CABEN
   DE VERDAD.
@@ -368,7 +446,7 @@ DESCRIPCIÓN:
 Casi nadie mide antes de comprar una zapatera, y por eso terminan con las
 botas afuera. 📏
 Mide el par más alto que tengas, la pared donde va a ir y fíjate si la puerta
-abre encima. Con esos tres datos te decimos cuál te sirve.
+abre encima. Con esos tres datos te decimos cuál de las tres te sirve.
 Guarda este post para cuando vayas a medir.
 Escríbenos por WhatsApp.
 
@@ -377,26 +455,97 @@ HASHTAGS:
 #PanamáOeste
 
 ────────────────────────────────────────────────────────────
-PIEZA 3 · PRODUCTO · PLANTILLA C SIN PRECIO · FOTO REAL (la carga el usuario)
+PIEZA 3 · CARRUSEL DE 5 DIAPOSITIVAS · producto
 ────────────────────────────────────────────────────────────
-ZONA DE FOTO REAL en la parte superior. NO generes ninguna imagen para esta
-pieza: pon el hueco de carga. La foto será una zapatera real de la tienda.
 
-TITULAR (tamaño XL, Anton blanco), con estos cortes exactos:
+┌── DIAPOSITIVA 1 de 5 · PLANTILLA T ──────────────────────
+
+NUMERADOR: 01/05
+ANTETÍTULO:  PRECIO NUEVO
+TITULAR (tamaño XL), con estos cortes exactos:
+  TRES ZAPATERAS.
+  TRES PRECIOS.
+  ⟦ELIGE LA TUYA.⟧
+
+┌── DIAPOSITIVA 2 de 5 · PLANTILLA P · FOTO 230701 ────────
+
+NUMERADOR: 02/05
+ANTETÍTULO:  ZAPATERA · CÓDIGO 230701
+TITULAR (tamaño XL), con estos cortes exactos:
+  LA MÁS BARATA
+  ⟦DE LAS TRES.⟧
+PRECIO ANTERIOR:  ANTES $29.99
+PRECIO:  $20.99
+CÓDIGO:  CÓDIGO 230701
+
+┌── DIAPOSITIVA 3 de 5 · PLANTILLA P · FOTO 230702 ────────
+
+NUMERADOR: 03/05
+ANTETÍTULO:  ZAPATERA · CÓDIGO 230702
+TITULAR (tamaño XL), con estos cortes exactos:
+  LA SEGUNDA,
+  POR DOS DÓLARES
+  ⟦MÁS.⟧
+PRECIO ANTERIOR:  ANTES $29.99
+PRECIO:  $22.99
+CÓDIGO:  CÓDIGO 230702
+
+┌── DIAPOSITIVA 4 de 5 · PLANTILLA P · FOTO 230612 ────────
+
+NUMERADOR: 04/05
+ANTETÍTULO:  ZAPATERA · CÓDIGO 230612
+TITULAR (tamaño XL), con estos cortes exactos:
+  LA TERCERA
+  ⟦Y LA ÚLTIMA.⟧
+PRECIO ANTERIOR:  ANTES $35.99
+PRECIO:  $29.99
+CÓDIGO:  CÓDIGO 230612
+
+┌── DIAPOSITIVA 5 de 5 · PLANTILLA T ──────────────────────
+
+NUMERADOR: 05/05
+ANTETÍTULO:  ASÍ SE PIDE
+TITULAR (tamaño XL), con estos cortes exactos:
+  MÁNDANOS
+  ⟦EL CÓDIGO.⟧
+NOTA (Inter 20px, blanco, debajo del titular, con 32 px de aire):
+  230701 · 230702 · 230612 — ESCRÍBENOS EL NÚMERO POR WHATSAPP Y TE DECIMOS
+  MEDIDAS, COLORES Y SI HAY EN EXISTENCIA.
+
+┌── LA DESCRIPCIÓN — una sola, para el carrusel entero ────
+
+Tres zapateras, tres precios, y las tres bajaron esta semana. 👟
+
+La 230701 pasó de $29.99 a $20.99. La 230702, de $29.99 a $22.99. Y la
+230612, de $35.99 a $29.99.
+
+No te vamos a decir cuál es la mejor, porque depende de tu espacio: manda el
+código de la que te gustó por WhatsApp y te decimos medidas, colores y si hay
+en existencia. Si todavía no sabes cuál te sirve, mándanos el alto de tus
+botas y el ancho de la pared donde la quieres poner, y te decimos nosotros.
+Escríbenos por WhatsApp.
+
+HASHTAGS:
+#Zapateras #OrganizaTuCasa #MueblesPanamá #DcasaPanamá #LaChorrera
+#PanamáOeste
+
+────────────────────────────────────────────────────────────
+PIEZA 4 · PRODUCTO · PLANTILLA P · FOTO 230701
+────────────────────────────────────────────────────────────
+ANTETÍTULO:  ZAPATERA · CÓDIGO 230701
+TITULAR (tamaño XL), con estos cortes exactos:
   TUS ZAPATOS
-  YA TIENEN CASA.
-
-SIN PLACA DE PRECIO. Esta pieza no lleva importe.
-
-NOTA (Inter 20px, blanco, debajo del titular), con este texto exacto:
-  TENEMOS ZAPATERAS EN VARIAS MEDIDAS. ESCRÍBENOS CON EL ALTO DE TUS BOTAS Y
-  EL ANCHO DE TU PARED Y TE DECIMOS CUÁL TE SIRVE.
+  YA TIENEN
+  ⟦DÓNDE VIVIR.⟧
+PRECIO ANTERIOR:  ANTES $29.99
+PRECIO:  $20.99
+CÓDIGO:  CÓDIGO 230701
 
 DESCRIPCIÓN:
 Un mueble, y la entrada deja de ser el problema de la casa. 💙
-Tenemos zapateras en varias medidas, así que la que te sirve depende de tu
-espacio y de cuántos pares tengas que guardar. Escríbenos con el alto de tus
-botas y el ancho de la pared donde la quieres poner, y te decimos cuál pedir.
+Esta es la 230701, la más económica de las tres que tenemos ahora mismo: pasó
+de $29.99 a $20.99. Mándanos el código por WhatsApp y te decimos medidas,
+colores y si hay en existencia.
 Escríbenos por WhatsApp.
 
 HASHTAGS:
@@ -404,19 +553,18 @@ HASHTAGS:
 #PanamáOeste
 
 ────────────────────────────────────────────────────────────
-PIEZA 4 · VALOR · REEL 1 · PLANTILLA D · imagen generada por ti
+PIEZA 5 · VALOR · REEL · PLANTILLA D · imagen generada por ti
 ────────────────────────────────────────────────────────────
-TITULAR (tamaño XL, Anton blanco, anclado al centro óptico), con estos cortes
-exactos:
+TITULAR (tamaño XL, anclado al centro óptico), con estos cortes exactos:
   DÓNDE PONER
   LA ZAPATERA
-  SIN ESTORBAR.
+  ⟦SIN ESTORBAR.⟧
 
 FONDO: el recibidor de una casa panameña con una pared lateral completamente
-vacía junto a la puerta de entrada, piso de baldosa clara y luz natural cálida
-entrando de lado. Encuadre frontal y limpio, con la pared vacía ocupando el
-tercio derecho. NO pongas ningún mueble en esa pared: está vacía a propósito.
-Sin personas.
+vacía junto a la puerta de entrada, piso de baldosa clara y luz natural
+cálida entrando de lado. Encuadre frontal y limpio, con la pared vacía
+ocupando el tercio derecho. NO pongas ningún mueble en esa pared: está vacía
+a propósito. Sin personas.
 
 GUION DEL REEL (va debajo de la pieza en el documento, en texto
 seleccionable):
@@ -429,120 +577,92 @@ seleccionable):
           — plano del clóset abierto.
   21-26 s "Lo único que no funciona: frente a la puerta, donde estorba al
           abrir." — plano del error.
-  Cierre  Placa azul con "D'CASA" y "Escríbenos por WhatsApp".
+  Cierre  Placa azul con el logo y "Escríbenos por WhatsApp".
 
-  NOTA PARA QUIEN GRABA: no menciones precios, medidas de modelos, capacidad
-  en pares, costo de armado ni plazos de entrega. Nada de eso está confirmado.
+  NOTA PARA QUIEN GRABA: puedes mencionar los códigos y los precios nuevos,
+  pero no inventes medidas, capacidad en pares, costo de armado ni plazos de
+  entrega. Nada de eso está confirmado.
 
 DESCRIPCIÓN:
-La zapatera no se pone donde sobra espacio: se pone donde no estorba al
-abrir la puerta. 🚪
+La zapatera no se pone donde sobra espacio: se pone donde no estorba al abrir
+la puerta. 🚪
 Tres sitios que sí funcionan y uno que no. Guarda el Reel y míralo cuando
-estés decidiendo.
+estés decidiendo cuál de las tres pedir.
 Escríbenos por WhatsApp.
 
 HASHTAGS:
 #TipsDeHogar #OrganizaTuCasa #Zapateras #DcasaPanamá #MueblesPanamá
 #PanamáOeste
 
-────────────────────────────────────────────────────────────
-PIEZA 5 · AMBIENTE · REEL 2 · PLANTILLA D · FOTO REAL (la carga el usuario)
-────────────────────────────────────────────────────────────
-ZONA DE FOTO a sangre con el hueco de carga. NO generes ninguna imagen para
-esta pieza: la portada es un cuadro del video real, grabado en la tienda o en
-una casa con permiso. El velo azul rgba(19,64,177,0.55) va encima de la foto
-cargada.
-
-TITULAR (tamaño XL, Anton blanco, anclado al centro óptico), con estos cortes
-exactos:
-  LA ENTRADA,
-  ANTES Y DESPUÉS.
-
-GUION DEL REEL (va debajo de la pieza en el documento, en texto
-seleccionable):
-  0-4 s   El antes: los zapatos regados en el piso de la entrada. Sin música
-          de tensión, sin burla — es la casa de cualquiera.
-  4-10 s  La zapatera llegando y quedando contra la pared. Una sola toma.
-  10-18 s Los zapatos entrando en la zapatera, par por par, en cámara rápida.
-  18-24 s El después: el mismo plano del principio, mismo encuadre exacto.
-          Es lo único que hace que un antes/después funcione.
-  Cierre  Placa azul con "D'CASA" y "Escríbenos por WhatsApp".
-
-  NOTA PARA QUIEN GRABA: el plano del antes y el del después tienen que ser
-  desde el MISMO punto, con la misma altura de cámara. Si se mueve, deja de
-  leerse como el mismo espacio. Y si la casa es de un cliente, pide permiso
-  por escrito antes de publicar.
-
-DESCRIPCIÓN:
-El mismo rincón, el mismo día, con quince minutos de diferencia. ✨
-No hicimos remodelación ni cambiamos nada más: pusimos una zapatera y los
-zapatos dejaron de vivir en el piso.
-Escríbenos por WhatsApp.
-
-HASHTAGS:
-#AntesYDespués #OrganizaTuCasa #DcasaPanamá #MueblesPanamá #LaChorrera
-#PanamáOeste
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-━━ 7. ANTES DE DEVOLVER EL DOCUMENTO ━━
+━━ 7. ANTES DE DEVOLVER ━━
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Comprueba esto una por una, en las 5 piezas:
-
-  1. ¿Cada texto está copiado carácter por carácter, con sus tildes, sus eñes
-     y sus puntos finales?
-  2. ¿Hay algún precio, importe o placa de precio en alguna pieza? Esta semana
-     no lleva ninguna. Quítalo.
-  3. ¿Añadiste alguna medida, capacidad, cantidad de pares, plazo de entrega,
-     costo de armado o de delivery que no estuviera escrito arriba? Quítalo.
-  4. ¿Alguna imagen generada tiene una zapatera, un estante o un organizador
-     de zapatos dentro? Regenérala sin él.
-  5. ¿Generaste alguna persona? Quítala y regenera el ambiente vacío.
-  6. ¿Las piezas 3 y 5 tienen su hueco de carga de foto real, en vez de una
-     imagen generada?
-  7. ¿Hay algún texto, ícono o línea en #FED00F sobre blanco o sobre hueso?
-     Ese texto va en azul #1340B1.
-  8. ¿La pieza 1 quedó sin ninguna letra encima? Debe quedar así.
-  9. ¿La pieza 2 tiene UN solo subrayado amarillo, bajo la palabra CUÁNTOS?
-  9b. ¿Se te ha colado algún corchete ⟦ o ⟧ dentro de un lienzo o de un PNG?
-      No puede aparecer ninguno.
-  9c. ¿Está el texto con todas sus tildes y todas sus eñes? Busca en concreto:
-      CUÁNTOS, DÓNDE, DESPUÉS, PANAMÁ, ESCRÍBENOS, clóset, más alto, botas,
-      zapatería, baldosa, MEDIDAS.
-  9d. ¿El exportador lee las posiciones del DOM ya maquetado, o las vuelve a
-      calcular? Si las recalcula, el PNG no va a coincidir con la vista previa.
-  9e. ¿Esperas a document.fonts.ready antes de medir y antes de exportar?
- 10. ¿Cada pieza lleva UN elemento del sistema (placa, banda o badge) y no
-     tres?
- 11. ¿Hay algún emoji dentro de una pieza? Los emojis van solo en las
-     descripciones.
- 12. ¿Los titulares están en Anton, en caja alta, y ningún párrafo está en
-     mayúsculas?
- 13. ¿Cada pieza tiene exactamente los hashtags que te di? Son seis en cada
-     una: cuéntalos.
- 14. ¿El lienzo de exportación de cada pieza mide exactamente 1080×1350?
- 15. ¿Las piezas 4 y 5 traen su guion completo debajo, en texto seleccionable?
-
-Y una vez más, porque es lo único que no se puede arreglar después:
+Repito la regla con la que empezó este documento, porque es la que más se
+olvida a mitad de un texto largo:
 
 No escribas, no redactes, no completes, no acortes, no traduzcas y no
-"mejores" ningún texto. No generes zapateras, ni clientes, ni entregas. No
-pongas ningún precio. No añadas ninguna medida, capacidad, plazo ni costo que
-no esté escrito literalmente en este documento. No cambies el orden de las
-piezas, no añadas ninguna más, no añadas hashtags y no añadas emojis.
+"mejores" ningún texto. No redibujes las zapateras: recórtalas y limpia la
+foto, nada más. No añadas ningún precio, medida, capacidad, fecha, plazo ni
+costo que no esté escrito literalmente en este documento. No cambies el orden
+de las piezas ni el de las diapositivas, no añadas ninguna más, no añadas
+hashtags y no añadas emojis.
+
+Y comprueba, una por una, antes de devolver nada:
+
+  [ ] ¿Son 9 lienzos, y cada uno mide 1080×1350 exactos?
+  [ ] ¿El carrusel son 5 diapositivas en orden, con su numerador de 01/05 a
+      05/05, una sola descripción y un solo juego de hashtags?
+  [ ] ¿Las cinco diapositivas anclan el bloque de texto por su base, sin que
+      el anclaje salte de una a otra?
+  [ ] ¿Cada zapatera de las piezas es la MISMA que la de su foto adjunta —
+      mismo número de niveles, mismas patas, mismo color? Si dudas, no la
+      retoques más.
+  [ ] ¿Cada titular tiene los mismos saltos de línea que le puse, sin
+      recolocar ni una palabra?
+  [ ] ¿Hay UN SOLO acento por titular, y coincide exactamente con lo que iba
+      entre ⟦ ⟧?
+  [ ] ¿Se te ha colado algún corchete ⟦ o ⟧ dentro de un lienzo o de un PNG?
+      No puede aparecer ninguno.
+  [ ] ¿Los tres precios anteriores salen tachados, y también en el PNG?
+  [ ] ¿Cada pieza de producto lleva su código, y es el que le corresponde?
+      230701 con $20.99, 230702 con $22.99, 230612 con $29.99.
+  [ ] ¿Hay algún texto, ícono o línea en #FED00F sobre blanco o sobre hueso?
+      Ese texto va en azul #1340B1.
+  [ ] ¿Aparece algún sticker de oferta, círculo rojo, explosión de precio o
+      signo de exclamación? No puede haber ninguno.
+  [ ] ¿El logo está sin estirar, sin recolorear, sin sombra, con su espacio
+      libre alrededor y sin apoyarse sobre una masa plana de azul?
+  [ ] ¿Está el texto con todas sus tildes y todas sus eñes? Busca en
+      concreto: CUÁNTOS, DÓNDE, MÁS, ÚLTIMA, ASÍ, MÁNDANOS, ESCRÍBENOS,
+      PANAMÁ, DÓLARES, clóset, botas, medidas.
+  [ ] ¿La pieza 1 quedó sin ninguna letra encima? Debe quedar así.
+  [ ] ¿Alguna imagen que generaste tiene una zapatera, un estante o un
+      organizador de zapatos dentro? Regenérala sin él.
+  [ ] ¿Generaste alguna persona? Quítala y regenera el ambiente vacío.
+  [ ] ¿Hay algún emoji dentro de un lienzo? Los emojis van solo en las
+      descripciones.
+  [ ] ¿Los titulares están en Anton, en caja alta, y ningún párrafo está en
+      mayúsculas?
+  [ ] ¿El exportador lee las posiciones del DOM ya maquetado, o las vuelve a
+      calcular? Si las recalcula, el PNG no va a coincidir con la vista
+      previa.
+  [ ] ¿Esperas a document.fonts.ready antes de medir y antes de exportar?
 ```
 
 ---
 
 ## Después de que Meta AI devuelva el documento
 
-1. **Carga las fotos reales** de las piezas 3 y 5 antes de exportar nada.
-2. **Busca cualquier `$`** en el HTML que devuelva. **No debe aparecer ninguno.**
-   Si hay un importe, lo inventó.
-3. **Mira las dos imágenes generadas** (piezas 1 y 4). Si en alguna hay un
-   mueble organizador de zapatos, se regenera: esta semana el producto solo
-   aparece en foto real.
-4. **Busca `#FED00F`** en el código y mira sobre qué fondo cae cada vez. Si en
-   algún sitio cae sobre `#FFFFFF` o `#E0DDD1`, esa pieza está mal.
-5. **Compara una descarga con su vista previa.** Si no son idénticas, el
-   exportador está mal y lo están las 5.
+1. **Carga las tres fotos** con sus botones antes de exportar nada.
+2. **Pon cada pieza de producto al lado de su foto original.** Si el mueble no
+   es idéntico, Meta AI lo regeneró y esa pieza no se publica.
+3. **Busca cada `$`** en el HTML. Solo pueden aparecer estos seis importes:
+   `$29.99` y `$20.99` (230701), `$29.99` y `$22.99` (230702), `$35.99` y
+   `$29.99` (230612). Cualquier otro lo inventó.
+4. **Comprueba que cada código va con su precio.** Es el error más fácil de
+   cometer y el más caro: un cliente que llega a la tienda con el código de una
+   y el precio de otra.
+5. **Busca `#FED00F`** en el código y mira sobre qué fondo cae cada vez.
+6. **Compara una descarga con su vista previa.** Si no son idénticas, el
+   exportador está mal y lo están los nueve.

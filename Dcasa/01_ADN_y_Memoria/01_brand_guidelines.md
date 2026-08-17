@@ -34,6 +34,24 @@ El mercado de muebles en Panamá está partido en dos: masivos (grid caótico, s
 
 ## 2. El logo como sistema (3 activos reutilizables)
 
+> 📌 **Archivo del logo (subido por el cliente, 2026-08-17):**
+> `Assets_Visuales_Base/logo-dcasa.svg` — y su versión lista para componer,
+> `Assets_Visuales_Base/logo-dcasa.png` (1783×809, **fondo transparente**).
+>
+> Tres cosas que hay que saber antes de usarlo:
+> 1. **El `.svg` no es vectorial.** Es un PNG incrustado en base64 dentro de un
+>    envoltorio SVG: cero `<path>`, cero texto editable. No se puede recolorear
+>    ni escalar sin límite. Para componer, usa el `.png` recortado.
+> 2. **El fondo es transparente**, así que el logo se puede poner sobre foto,
+>    sobre azul o sobre hueso sin cuadrado blanco detrás.
+> 3. **Proporción 2.204 : 1** (1783×809). No es cuadrado y no se estira: a
+>    360 px de ancho mide 163 px de alto.
+>
+> El logo **es la placa**: marco blanco de esquinas redondeadas, borde azul
+> fino, masa azul arriba con `D'CASA` en blanco y banda amarilla abajo con
+> `PANAMÁ` en azul. Es decir, los tres activos de esta sección vienen ya
+> montados dentro del archivo.
+
 1. **La placa** — marco blanco de esquinas redondeadas. El elemento más "ownable" de la marca; úsalo como dispositivo gráfico recurrente (marco de fotos, contenedor de precios, badge de "NUEVO", portada de highlights, marco de video en Reels).
 2. **La banda inferior amarilla** — patrón de composición: azul arriba (masa), amarillo abajo (base). El amarillo siempre sostiene, nunca flota.
 3. **Tipografía condensada en caja alta** — voz gráfica firme, ideal para titulares cortos y precios.
@@ -132,5 +150,29 @@ El mercado de muebles en Panamá está partido en dos: masivos (grid caótico, s
 
 ## 10. Pendiente de validar
 
+- **⚠️ Divergencia de color entre el formulario y el archivo del logo.** Los HEX
+  medidos directamente sobre `Assets_Visuales_Base/logo-dcasa.png` no son los
+  que el cliente confirmó en el formulario de onboarding:
+
+  | | Medido en el logo | Confirmado en el formulario (§3) |
+  |---|---|---|
+  | Azul | `#1648C0` | `#1340B1` |
+  | Amarillo | `#FFD000` | `#FED00F` |
+  | Blanco | `#FFFFFF` | `#FFFFFF` ✅ |
+
+  Las diferencias son pequeñas —el amarillo es casi imperceptible; el azul del
+  logo es algo más claro— pero **se notan cuando una masa plana de uno queda
+  pegada a una masa plana del otro**, que es justo lo que pasa al poner el logo
+  sobre una pieza de fondo azul.
+
+  Mientras el cliente no decida, manda el formulario (`#1340B1` / `#FED00F`)
+  para todo lo que se compone, y el logo se coloca tal cual, con su espacio de
+  resguardo y sin masa plana del otro azul pegada al borde. **Lo que hay que
+  preguntarle a Marcial:** ¿cuál de los dos es el oficial? Si es el del logo, se
+  corrige el §3; si es el del formulario, hay que reexportar el logo — y como el
+  `.svg` es un raster incrustado, eso no es una edición: hay que rehacerlo desde
+  el original vectorial, si existe.
+- **¿Los precios llevan ITBMS incluido?** No está declarado en ninguna parte y
+  hace falta para poder ponerlos en una pieza sin nota al pie.
 - Profundizar `02_buyer_personas.md` con data real de ventas.
 - Validar `03_diccionario_seo.json` con búsqueda real de keywords.
