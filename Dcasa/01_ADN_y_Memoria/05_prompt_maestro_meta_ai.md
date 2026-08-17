@@ -128,6 +128,14 @@ Fondo #1340B1 completo.
 **El precio se dice con orgullo, no con vergüenza:** grande, en la placa
 amarilla, sin disculpas y sin stickers rojos.
 
+**Variante C sin precio.** Cuando la categoría de la semana no tiene precio
+verificado, la placa amarilla **no se dibuja** — no se deja vacía, no se rellena
+con «consúltanos» y no se inventa un importe. El titular sube su peso y la nota
+pide el dato que hace falta para cotizar ("escríbenos con el alto de tus botas y
+el ancho de tu pared"). Es una pieza más débil que la de precio, y por eso la
+variante lleva su propio recordatorio: **conseguir ese precio es la tarea, no
+maquetar alrededor de su ausencia.**
+
 ### D · Portada de Reel
 
 ```
