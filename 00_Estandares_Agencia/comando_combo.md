@@ -43,6 +43,47 @@ Luego **lee el ADN** del cliente (`[Cliente]/01_ADN_y_Memoria/01_brand_guideline
 - **Formato:** 9:16 vertical por defecto (reel/TikTok), ~6–8s cada uno, salvo que se pida otro.
 - **Idioma del prompt:** por defecto en **inglés** (mejor fidelidad en Symphony/Veo). Entrégalos en español si el humano lo pide.
 - ⚠️ **Regla absoluta — cero texto/logo/precio en el video.** Si la imagen de referencia trae logo o precio, eso **solo indica** que hay información comercial para las Partes B y C (descripción y guion) — **nunca** es algo que deba aparecer en el video. El precio/logo, si se quisieran, se superponen aparte en post (CapCut/Canva), pero el prompt entrega el producto limpio, sin reservar espacio para ellos.
+- 🔒 **Regla absoluta — los 6 prompts SIEMPRE llevan el bloque PRODUCT LOCK completo** (ver *Parte A.bis*, aquí abajo). No es opcional, no se resume, no se pone "una sola vez arriba": va **pegado dentro de cada uno de los 6 prompts**, palabra por palabra idéntico entre los seis. Además se entrega el **negativo estándar** aparte.
+
+### Parte A.bis — Bloque de fidelidad obligatorio (PRODUCT LOCK)
+
+> **Por qué existe:** los generadores "mejoran" el mueble por su cuenta (le cambian el color, le suman o le quitan niveles, le ponen patas o puertas, lo estiran). El cliente vende **ese** producto, no una versión bonita de otro. Este bloque es lo que hace que el resultado sea **el mismo siempre**, sin depender de que alguien se acuerde de pedirlo.
+
+**Cómo se arma (2 partes):**
+
+1. **Texto fijo** — se copia literal, nunca se reescribe ni se "mejora":
+
+```
+PRODUCT LOCK — Reproduce the reference product EXACTLY as provided. Do not redesign,
+restyle, simplify or "improve" it. Preserve with 100% accuracy: {INVENTARIO}.
+Do not add doors, drawers, legs, handles, hardware, baskets, back panels, extra
+shelves, cushions or decorative trim. Do not change the number of parts, the color,
+the finish, the material, the grain direction or the proportions. Only the camera,
+the lighting and the environment may change.
+```
+
+2. **`{INVENTARIO}`** — la única parte variable. Se llena **mirando la imagen de referencia**, listando entre 6 y 10 rasgos verificables, separados por punto y coma, en este orden:
+   1. **Acabado y color exacto** (ej. *clean matte white finish with subtle satin sheen* / *dark walnut wood grain, warm brown tone*).
+   2. **Conteo de piezas** — niveles, repisas, puertas, gavetas, cojines, patas (el dato duro que el generador siempre altera).
+   3. **Estructura interna** — divisores, travesaños, refuerzos.
+   4. **Laterales / marco** — paneles completos, tapones de tornillo visibles, marco metálico.
+   5. **Remates y bordes** — labio superior, radio de esquinas, canto redondeado o recto.
+   6. **Espesor y base** — grosor de panel, base cerrada, patas, si apoya directo al piso.
+   7. **Proporción general** — alto vs. ancho vs. fondo, y las medidas reales si la imagen o el flyer las traen.
+   8. **Detalles únicos** de esa pieza (herrajes, costuras, textura de tela, capitoné, tirador).
+
+   Regla: **solo se escribe lo que se ve.** Nada de suponer material ("MDF", "roble macizo") si la foto no lo confirma — se describe el aspecto, no la ficha técnica.
+
+3. **Negativo estándar** — se entrega siempre aparte, para el campo *negative prompt* del generador. Base fija + los específicos del producto (los conteos y colores que NO debe inventar):
+
+```
+different furniture, redesigned product, changed part count, extra parts, missing parts,
+altered proportions, doors, drawers, legs, metal frame, handles, baskets, closed back panel,
+warped geometry, melted edges, floating parts, duplicated product, text, letters, numbers,
+logo, price tag, sticker, watermark, brand name, UI overlay
+```
+
+**Cierre de entrega (siempre, una línea):** recuérdale al humano subir las fotos de referencia al generador — la frontal y la de tres cuartos son las que fijan la geometría — y bajar el *creativity / imagination strength* al mínimo que permita la herramienta.
 
 ### Parte B — Descripción para post de Instagram (si la imagen trae precio/modelo)
 

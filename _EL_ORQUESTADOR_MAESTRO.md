@@ -38,7 +38,7 @@ Antes de improvisar, revisa si el pedido matchea un comando. Si matchea, **el co
 
 | Palabra clave del humano | Comando | Qué entregas |
 |---|---|---|
-| **"combo" / "dame/quiero el combo de…"** (+ foto de producto) | `00_Estandares_Agencia/comando_combo.md` | **6 prompts de video** (cada uno un ángulo, **SOLO el producto** — sin logo/precio/texto) + **descripción de Instagram** + **guion de voz (≤500 car.)**. Todo **en el chat**, sin guardar. **NO** es un pipeline; **NO** inventes pasos (Nano Banana/Higgsfield/Suno) ni uses el `04_master_prompts.md` de la marca como combo. Colores/tono = ADN verificado del cliente. |
+| **"combo" / "dame/quiero el combo de…"** (+ foto de producto) | `00_Estandares_Agencia/comando_combo.md` | **6 prompts de video** (cada uno un ángulo, **SOLO el producto** — sin logo/precio/texto) + **descripción de Instagram** + **guion de voz (≤500 car.)**. Todo **en el chat**, sin guardar. Cada prompt lleva el bloque **`PRODUCT LOCK`** obligatorio + negativo estándar (el producto no se altera). **NO** es un pipeline; **NO** inventes pasos (Nano Banana/Higgsfield/Suno) ni uses el `04_master_prompts.md` de la marca como combo. Colores/tono = ADN verificado del cliente. |
 
 ---
 
@@ -65,7 +65,7 @@ Según lo que te pidan, consulta reglas adicionales:
 - **Cualquier cosa para Meta AI (lote de piezas, semana, carrusel, "hasta el HTML"):** manda `00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md` — es el **estándar de agencia** y define las siete secciones, las convenciones de notación (`⟦ ⟧` para el acento, bandas en % para los fondos), la regla del exportador y la verificación común. **Es el mismo formato para todos los clientes.** Encima de él, el cliente aporta sus valores en `01_ADN_y_Memoria/05_prompt_maestro_meta_ai.md` (retícula, escala, plantillas, bloque de estilo, negativos, reglas duras); hoy existe para **Juancito Ads** (lote mensual) y **D'CASA** (semana). El prompt ya armado se guarda en `03_Redes_Sociales/Instagram_TikTok/` con fecha. Regla que no cambia nunca: Meta AI genera los fondos y monta el HTML, **jamás escribe el copy**.
 - **Inspección/optimización de redes o competencia:** guarda hallazgos en `03_Redes_Sociales/Auditorias/` (créala si no existe) y en `01_ADN_y_Memoria/` si revela algo nuevo sobre el ADN (colores reales usados, competencia, nicho).
 - **Inventario (productos/servicios/catálogo):** trabaja dentro de `01_ADN_y_Memoria/` o crea `00_Inventario/` dentro del cliente si el volumen lo amerita; nunca mezcles inventario de un cliente con otro.
-- **Comando "Combo" ("quiero/dame el combo de…") + foto de producto:** aplica `00_Estandares_Agencia/comando_combo.md` — los 6 prompts de video completos (Symphony/Veo Flow) por ángulo + descripción de Instagram + guion de voz (≤500 car.) cuando la imagen traiga precio/modelo. **Se entrega SOLO en el chat, no se guarda en el repo.**
+- **Comando "Combo" ("quiero/dame el combo de…") + foto de producto:** aplica `00_Estandares_Agencia/comando_combo.md` — los 6 prompts de video completos (Symphony/Veo Flow) por ángulo, **cada uno con el bloque `PRODUCT LOCK` íntegro** (Parte A.bis del comando), + descripción de Instagram + guion de voz (≤500 car.) cuando la imagen traiga precio/modelo. **Se entrega SOLO en el chat, no se guarda en el repo.**
 
 ### Paso 3 — Generación y guardado
 
