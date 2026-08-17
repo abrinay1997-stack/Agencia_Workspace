@@ -2,6 +2,12 @@
 
 Prompts sueltos ya probados para tareas puntuales. Fuente: onboarding verificado + `01_brand_guidelines.md`.
 
+> 🧩 **Semana de contenido en un HTML (Meta AI):** la especificación completa
+> —las cuatro plantillas, la escala, el bloque de estilo, los negativos y el
+> contrato del HTML con el hueco para la foto real del producto— vive en
+> [`05_prompt_maestro_meta_ai.md`](05_prompt_maestro_meta_ai.md). El prompt ya
+> armado se guarda en `03_Redes_Sociales/Instagram_TikTok/` con su fecha.
+
 > ⚠️ **Estos NO son "el combo".** Si el humano dice "combo" (p.ej. "dame el combo de esta cama"), aplica `00_Estandares_Agencia/comando_combo.md` — 6 prompts de video (solo el producto, sin logo/precio) + descripción IG + guion de voz. **No uses estos master_prompts como pipeline de combo ni inventes pasos (Higgsfield/Suno/etc.).**
 
 ## Nano Banana v3 — Mockup de perfil de Instagram
