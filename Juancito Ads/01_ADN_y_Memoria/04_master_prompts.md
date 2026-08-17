@@ -4,6 +4,12 @@
 
 Prompts y plantillas que ya han dado resultado real en la operación de la agencia (extraídos de conversaciones de estrategia del fundador, no inventados).
 
+> 🧩 **Lote de piezas de Instagram en un HTML (Meta AI):** la especificación
+> completa —retícula, escala, bloque de estilo, negativos y contrato del HTML—
+> vive en [`05_prompt_maestro_meta_ai.md`](05_prompt_maestro_meta_ai.md). El
+> prompt ya armado y listo para pegar está en
+> `03_Redes_Sociales/Instagram_TikTok/` con su fecha.
+
 ## Plantilla de propuesta comercial "anclada al esfuerzo real"
 
 **Cuándo usarlo:** cuando un prospecto no encaja limpio en la tabla estándar de precios (`01_brand_guidelines.md` sección 6) — típicamente negocios multi-sucursal, que piden influencers/video real, o que son recelosos con el precio. Método probado con el caso real de una panadería de 5 locales en malls.
