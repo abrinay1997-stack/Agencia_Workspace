@@ -89,6 +89,9 @@ cantidad de pares, plazo de entrega, costo de armado, costo de delivery,
 testimonio ni nombre de cliente que no esté escrito literalmente en este
 documento.
 
+Tampoco cambies el orden de las piezas, ni añadas una sexta, ni añadas
+hashtags, ni añadas emojis en ningún sitio.
+
 Y dos prohibiciones más, propias de esta marca:
 
 NO GENERES EL PRODUCTO, NI CLIENTES, NI ENTREGAS.
@@ -139,6 +142,9 @@ TIPOGRAFÍAS
 
   Prohibido: cualquier serif, cualquier script, y cualquier tipografía con
   borde, sombra o degradado. Nada de estética de promoción de bazar.
+  Ninguna otra familia, en ningún caso. En particular NO uses Bebas Neue,
+  Impact, Archivo Narrow, Montserrat, Poppins, Roboto, Open Sans, Lato,
+  Helvetica ni Arial, aunque te parezcan parecidas a Anton o a Oswald.
 
 ESCALA
 
@@ -165,7 +171,10 @@ LAS PLANTILLAS. Cada pieza te dice cuál usa.
     Fondo #E0DDD1 completo, sin foto.
     Antetítulo Oswald azul en x=80, y=200.
     Titular Anton azul #1340B1, tope del bloque en y=280.
-    Un solo subrayado amarillo de 10 px de alto bajo UNA palabra del titular.
+    Un solo subrayado amarillo de 10 px de alto bajo UNA palabra del titular:
+    la que va marcada con ⟦ ⟧. Los corchetes ⟦ ⟧ son marcas para ti: NO se
+    imprimen, no aparecen en el lienzo, no aparecen en el PNG. Solo dicen qué
+    palabra lleva el subrayado.
     Subtítulo Oswald grafito, 40 px de aire por encima.
     Lista en Inter grafito, cada punto con un guion largo, interlínea 1.5.
     Banda inferior amarilla de 88 px de alto, de y=1262 a y=1350, con
@@ -218,8 +227,23 @@ DESCARGA. Cada pieza lleva su botón que la descarga en PNG a tamaño real,
 dibujando fondo, foto y texto sobre un <canvas>. Sin librerías externas. Y
 arriba del documento, un botón que las descargue todas.
 
-LAS SEIS TRAMPAS DEL EXPORTADOR. Léelas antes de escribir el canvas: la vista
-previa se ve perfecta y el PNG sale roto por estas seis cosas.
+LA REGLA QUE MÁS FALLA: EL EXPORTADOR NO RECALCULA NADA.
+
+El PNG sale distinto de la vista previa cuando el canvas vuelve a maquetar el
+texto por su cuenta. No lo hagas.
+
+  · Maqueta cada línea del titular como su propio elemento en el HTML.
+  · Al exportar, lee la posición Y de CADA elemento ya maquetado con
+    getBoundingClientRect() u offsetTop, y dibuja en esa Y.
+  · No estimes multiplicando líneas por interlínea, no vuelvas a partir el
+    subtítulo con otro ancho, no recalcules dónde empieza el bloque.
+  · Espera a que las fuentes estén listas —await document.fonts.ready— ANTES
+    de medir nada y ANTES de exportar. Si mides con la fuente de reserva, todo
+    lo demás queda mal colocado.
+
+Si el canvas lee del DOM en vez de recalcular, casi ninguna de las seis
+trampas de abajo puede ocurrir. Aun así van escritas, porque cada una es un
+fallo observado.
 
   1. ctx.letterSpacing NO se reinicia al cambiar ctx.font. Si lo usas para el
      tracking del antetítulo o del wordmark, ponlo a '0px' inmediatamente
@@ -328,10 +352,9 @@ PIEZA 2 · VALOR · PLANTILLA B · sin foto
 ────────────────────────────────────────────────────────────
 ANTETÍTULO:  ANTES DE COMPRAR
 TITULAR (tamaño XL, Anton azul #1340B1), con estos cortes exactos:
-  CUÁNTOS PARES
+  ⟦CUÁNTOS⟧ PARES
   TE CABEN
   DE VERDAD.
-SUBRAYADO AMARILLO bajo esta palabra, y solo esta:  CUÁNTOS
 
 SUBTÍTULO:
   Tres cosas que se miden antes de escoger tu zapatera.
@@ -481,6 +504,14 @@ Comprueba esto una por una, en las 5 piezas:
      Ese texto va en azul #1340B1.
   8. ¿La pieza 1 quedó sin ninguna letra encima? Debe quedar así.
   9. ¿La pieza 2 tiene UN solo subrayado amarillo, bajo la palabra CUÁNTOS?
+  9b. ¿Se te ha colado algún corchete ⟦ o ⟧ dentro de un lienzo o de un PNG?
+      No puede aparecer ninguno.
+  9c. ¿Está el texto con todas sus tildes y todas sus eñes? Busca en concreto:
+      CUÁNTOS, DÓNDE, DESPUÉS, PANAMÁ, ESCRÍBENOS, clóset, más alto, botas,
+      zapatería, baldosa, MEDIDAS.
+  9d. ¿El exportador lee las posiciones del DOM ya maquetado, o las vuelve a
+      calcular? Si las recalcula, el PNG no va a coincidir con la vista previa.
+  9e. ¿Esperas a document.fonts.ready antes de medir y antes de exportar?
  10. ¿Cada pieza lleva UN elemento del sistema (placa, banda o badge) y no
      tres?
  11. ¿Hay algún emoji dentro de una pieza? Los emojis van solo en las
@@ -497,7 +528,8 @@ Y una vez más, porque es lo único que no se puede arreglar después:
 No escribas, no redactes, no completes, no acortes, no traduzcas y no
 "mejores" ningún texto. No generes zapateras, ni clientes, ni entregas. No
 pongas ningún precio. No añadas ninguna medida, capacidad, plazo ni costo que
-no esté escrito literalmente en este documento.
+no esté escrito literalmente en este documento. No cambies el orden de las
+piezas, no añadas ninguna más, no añadas hashtags y no añadas emojis.
 ```
 
 ---

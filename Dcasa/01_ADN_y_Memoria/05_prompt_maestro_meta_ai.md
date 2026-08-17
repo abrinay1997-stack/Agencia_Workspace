@@ -4,8 +4,14 @@ Cómo se le pide a **Meta AI** un documento HTML con la semana entera de D'CASA:
 cada pieza ya compuesta a 1080×1350, su descripción, sus hashtags, el guion de
 los Reels y un botón que descarga cada pieza en PNG.
 
-> Este archivo es **la especificación**. El prompt ya armado y listo para pegar
-> vive en `03_Redes_Sociales/Instagram_TikTok/` con su fecha.
+> **La estructura del prompt —las siete secciones, las convenciones de notación,
+> la regla del exportador y la verificación común— vive en
+> [`00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md`](../../00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md)
+> y es la misma para todos los clientes. Este archivo solo trae lo que es de
+> D'CASA.** Léelos en ese orden: primero el estándar, después este.
+
+> El prompt ya armado y listo para pegar vive en
+> `03_Redes_Sociales/Instagram_TikTok/` con su fecha.
 
 **Antes de tocar nada:** `01_brand_guidelines.md` (paleta, tipografía, reglas de
 convivencia visual, red flags) y `02_buyer_personas.md`. Los HEX y los precios
@@ -190,6 +196,28 @@ estridente. Se mira la pieza entera, no cada elemento suelto.
 firme del logo. **Oswald y Inter nunca en caja alta en párrafos** — el ADN lo
 prohíbe expresamente (§6: nada de mayúsculas gritadas).
 
+Y se le cierra la puerta a las sustituciones, literalmente en el prompt:
+
+```
+Ninguna otra familia, en ningún caso. En particular NO uses Bebas Neue,
+Impact, Archivo Narrow, Montserrat, Poppins, Roboto, Open Sans, Lato,
+Helvetica ni Arial, aunque te parezcan parecidas a Anton o a Oswald.
+```
+
+**El acento de esta marca se marca con `⟦ ⟧`** (convención del estándar). Aquí
+el acento no es un tramo de color: es **el subrayado amarillo bajo una sola
+palabra** del titular de la plantilla B. Los corchetes no se imprimen; solo
+dicen qué palabra lleva el subrayado.
+
+```
+✓  ⟦CUÁNTOS⟧ PARES
+   TE CABEN
+   DE VERDAD.
+
+✗  ⟦CUÁNTOS PARES⟧          ← dos palabras subrayadas ya no son un acento
+   ⟦TE CABEN⟧               ← y dos subrayados, menos todavía
+```
+
 **Prohibido:** serifs editoriales, scripts, tipografías con bordes, sombras o
 degradados tipo promoción de bazar. Un solo signo de exclamación como máximo, y
 casi nunca.
@@ -296,37 +324,30 @@ Cada pieza se maqueta a **1080×1350 exactos** y lleva su botón que la descarga
 en PNG a tamaño real, dibujando fondo, foto y texto sobre un `<canvas>`. Sin
 librerías externas. Y un botón que las descargue todas.
 
-### Las cinco trampas del exportador
+### La regla del exportador
 
-Van literales en el prompt maestro. **Fallan en silencio: la vista previa se ve
-perfecta y el PNG sale roto.**
+**El exportador no recalcula nada**: lee del DOM ya maquetado y espera a
+`document.fonts.ready`. La regla completa, con las cinco trampas que sobreviven
+a ella, está en la sección 4 del
+[estándar](../../00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md) y se
+copia literal en el prompt.
+
+**Dos trampas más, propias de esta marca**, que también van literales:
 
 ```
-1. ctx.letterSpacing NO se reinicia al cambiar ctx.font. Si lo usas para el
-   tracking del antetítulo o del wordmark, ponlo a '0px' inmediatamente
-   después de dibujarlo. Si no, el tracking se filtra al titular y el titular
-   se sale del lienzo.
+· La banda inferior amarilla y la placa se posicionan por su BASE (y=1350 y
+  y=1318). Colocadas por su borde superior quedan fuera del lienzo.
 
-2. Fija ctx.textBaseline='top' antes de dibujar y usa la misma Y que el
-   maquetado. Con el valor por defecto ('alphabetic') el texto del PNG cae más
-   abajo que en la vista previa.
-
-3. La banda inferior amarilla y la placa se posicionan por su BASE (y=1350 y
-   y=1318). Si las colocas por su borde superior, quedan fuera del lienzo o
-   comidas por el margen.
-
-4. Si el usuario no ha cargado la foto real de una pieza de producto, el botón
-   de descarga de esa pieza avisa y no exporta. Un PNG con el rectángulo de
-   "cárgala aquí" dentro se publica por error una de cada tres veces.
-
-5. Un botón que lanza 5 descargas seguidas lo bloquea el navegador a la
-   tercera. O agrupas en un ZIP de verdad, o el botón se llama "descargar una
-   por una" y avisa de que hay que permitirlo.
+· Si el usuario no ha cargado la foto real de una pieza de producto, el botón
+  de descarga de esa pieza avisa y NO exporta. Un PNG con el rectángulo de
+  "cárgala aquí" dentro se publica por error una de cada tres veces.
 ```
 
-**Y una sexta, propia de esta marca:** ningún texto `#FED00F` puede terminar
-sobre `#FFFFFF` ni sobre `#E0DDD1`. Si en el HTML aparece esa combinación, la
-pieza está mal aunque se vea "bien" en la pantalla del que la montó.
+**Y la que más se escapa:** ningún texto, ícono ni línea en `#FED00F` puede
+terminar sobre `#FFFFFF` ni sobre `#E0DDD1`. Si en el HTML aparece esa
+combinación, la pieza está mal aunque se vea "bien" en la pantalla del que la
+montó. Va como comprobación explícita: *busca esa combinación en tu propio
+código y corrígela.*
 
 ### El resto del documento
 
@@ -345,6 +366,11 @@ Fondo `#FFFFFF`, texto `#3A3A3A`, títulos y acentos `#1340B1`, botones con fond
 ---
 
 ## 6 · Cómo se arma la semana
+
+**Las siete secciones del prompt y su orden están en la sección 2 del
+[estándar de agencia](../../00_Estandares_Agencia/formato_prompt_maestro_meta_ai.md),
+y las reglas del modo «semana» en su sección 5.** No se repiten aquí para que no
+se desincronicen. Lo que sigue es lo que aporta D'CASA.
 
 ### La mezcla, de `01_brand_guidelines.md` §8
 
@@ -431,8 +457,14 @@ Emojis: con moderación en la descripción, **nunca dentro de una pieza gráfica
 - [ ] ¿Se nombra a algún competidor?
 - [ ] ¿El CTA es el mismo en todas: «Escríbenos por WhatsApp»?
 - [ ] ¿Seis hashtags o menos?
-- [ ] ¿Están las cinco trampas del exportador, más la del amarillo, dentro del
-      prompt maestro?
+- [ ] ¿Está la palabra subrayada marcada con `⟦ ⟧`, y explicado que los
+      corchetes no se imprimen?
+- [ ] ¿Está la regla del exportador (lee del DOM + `document.fonts.ready`), más
+      las dos trampas propias y la del amarillo, dentro del prompt maestro?
+- [ ] ¿Está la lista de familias tipográficas prohibidas?
+- [ ] ¿Está escrita **una por una** la lista de palabras con tilde o eñe que
+      Meta tiene que revisar en esta semana —`PANAMÁ`, `CUÁNTOS`, `DÓNDE`,
+      `DESPUÉS`, `clóset`, `baldosa`—? «Revisa las tildes» no sirve
 - [ ] ¿La prohibición de escribir aparece al principio **y** al final?
 - [ ] ¿Quedó algún hueco sin resolver en el prompt maestro?
 
