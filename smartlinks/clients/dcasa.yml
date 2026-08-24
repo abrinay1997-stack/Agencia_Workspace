@@ -6,6 +6,8 @@
 # Regla de contraste §3.2: el amarillo NUNCA toca blanco pelado → el botón de acento va con
 # texto azul y contorno azul (accentOutline).
 # Enlaces de catálogo y ubicación: entregados por el cliente vía el humano (2026-08-24).
+# Catálogo actualizado el 2026-08-24: nuevos links de camas, camarotes, colchones y zapateras.
+# Sofás mantiene su link original (el cliente confirmó que canva.link/zapateras es de zapateras).
 
 id: dcasa
 folder: "Dcasa"
@@ -64,13 +66,13 @@ buttons:
     items:
       - label: "Camas"
         items:
-          - { label: "Queen", href: "https://canva.link/xew1xlkhfrrfext" }
-          - { label: "Full", href: "https://canva.link/3yknsqkt55vuj6o" }
-          - { label: "King", href: "https://canva.link/iuvty4q3tei97yp" }
-          - { label: "Twin", href: "https://canva.link/goqi4ce2c3hf6av" }
-      - { label: "Camarotes", href: "https://canva.link/0v2kk574yndo0y8" }
-      - { label: "Zapateras", href: "https://canva.link/y3gyzz9w0536ahf" }
-      - { label: "Colchones", href: "https://canva.link/4waia98swi4c37u" }
+          - { label: "Queen", href: "https://canva.link/16gjocoj0kkr8nv" }
+          - { label: "Full", href: "https://canva.link/ccyb0cpi1469pw1" }
+          - { label: "King", href: "https://canva.link/6yz6o2wvbfbh9ys" }
+          - { label: "Twin", href: "https://canva.link/rlw9sisbmzzvw4s" }
+      - { label: "Camarotes", href: "https://canva.link/angis5bm5m9c6zm" }
+      - { label: "Zapateras", href: "https://canva.link/zapateras" }
+      - { label: "Colchones", href: "https://canva.link/7o48hmbpuk00eey" }
       - { label: "Sofás", href: "https://canva.link/t3yibi3a4mfl17i" }
 
   - kind: menu
