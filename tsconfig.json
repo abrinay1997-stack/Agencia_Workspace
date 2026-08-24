@@ -16,6 +16,6 @@
     "isolatedModules": true,
     "types": ["node"]
   },
-  "include": ["agent/**/*.ts"],
+  "include": ["agent/**/*.ts", "smartlinks/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

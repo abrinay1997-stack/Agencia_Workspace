@@ -1,0 +1,87 @@
+# Baby Caleb Panamá — SmartLink.
+# Fuente de marca: Baby Caleb/01_ADN_y_Memoria/01_brand_guidelines.md
+#   §2.1 paleta verificada (#EFFFED / #F9F6ED / #91C9A2 / #1B3246 / #EE924A)
+#   §2.2 tipografía: Montserrat en todo · §0 contacto (WhatsApp +507 6757-5065, web propia)
+#
+# Decisiones tomadas para esta marca (el cliente no dio destinos como D'CASA):
+#   · No hay punto físico (venta 100% online por delivery) → en vez de "Ubicación"
+#     el botón de zona abre WhatsApp preguntando por cobertura de entrega.
+#   · No hay catálogo en PDF/Canva → el menú manda a la web propia y a WhatsApp
+#     con mensaje precargado por línea de producto. No se inventan URLs de sección.
+#   · El equivalente a "compras al por mayor" es su propuesta de valor real:
+#     la caja grande para el mes completo (§1 del ADN).
+#   · Sin archivo de logo en el repo → monograma "BC" hasta que el cliente lo suba.
+
+id: baby_caleb
+folder: "Baby Caleb"
+slug: baby-caleb
+enabled: true
+name: "Baby Caleb Panamá"
+shortName: "Baby Caleb"
+handle: "@babycalebpanama"
+tagline: "Pensamos en cada etapa de tu bebé."
+description: "Pañales y wipes hipoalergénicos Nateen y fulares Moon, con entrega en Panamá. Pedidos directos por WhatsApp."
+
+monogram: "BC"
+
+theme:
+  mode: light
+  bg: "#EFFFED"          # verde background — el que construye el feed
+  bgAlt: "#F9F6ED"       # beige claro
+  hero: "#91C9A2"        # verde del logo
+  onHero: "#1B3246"      # Navy Ink: el color de títulos de la marca
+  surface: "#FFFFFF"
+  text: "#1B3246"
+  muted: "#5E7285"
+  border: "#D4E3D6"
+  primary: "#1B3246"
+  onPrimary: "#FFFFFF"
+  accent: "#EE924A"
+  onAccent: "#1B3246"    # navy sobre naranja ≈ 5.6:1 (el blanco sobre naranja no pasa AA)
+  accentOutline: "#D97C33"
+  radius: 16
+  fonts:
+    display: "Montserrat"
+    body: "Montserrat"
+    displayTracking: "-0.02em"
+    google: ["Montserrat:wght@400;500;600;700"]
+
+buttons:
+  - kind: link
+    label: "Haz tu pedido por WhatsApp"
+    note: "+507 6757-5065"
+    icon: whatsapp
+    variant: accent
+    href: "https://wa.me/50767575065?text=Hola%20Baby%20Caleb%2C%20vengo%20de%20su%20p%C3%A1gina%20de%20enlaces.%20Quiero%20hacer%20un%20pedido."
+
+  - kind: menu
+    label: "Catálogo"
+    note: "Pañales, wipes y porteo"
+    icon: catalog
+    variant: primary
+    items:
+      - { label: "Ver todo en la tienda online", href: "https://babycaleb.netlify.app" }
+      - { label: "Pañales Nateen · tallas RN a XXL", href: "https://wa.me/50767575065?text=Hola%20Baby%20Caleb%2C%20quiero%20informaci%C3%B3n%20de%20los%20pa%C3%B1ales%20Nateen.%20%C2%BFQu%C3%A9%20tallas%20tienen%20disponibles%3F" }
+      - { label: "Wipes hipoalergénicos", href: "https://wa.me/50767575065?text=Hola%20Baby%20Caleb%2C%20quiero%20informaci%C3%B3n%20de%20los%20wipes%20hipoalerg%C3%A9nicos." }
+      - { label: "Fulares Moon · porteo", href: "https://wa.me/50767575065?text=Hola%20Baby%20Caleb%2C%20quiero%20informaci%C3%B3n%20de%20los%20fulares%20Moon." }
+
+  - kind: link
+    label: "¿Llegan a mi zona?"
+    note: "Entregamos en todo Panamá"
+    icon: location
+    href: "https://wa.me/50767575065?text=Hola%20Baby%20Caleb%2C%20%C2%BFhacen%20entrega%20en%20mi%20zona%3F%20Estoy%20en%3A"
+
+  - kind: link
+    label: "Caja para el mes completo"
+    note: "Sale más a cuenta que por paquete"
+    icon: wholesale
+    href: "https://wa.me/50767575065?text=Hola%20Baby%20Caleb%2C%20quiero%20precio%20por%20caja%20para%20el%20mes%20completo."
+
+social:
+  - { network: instagram, url: "https://www.instagram.com/babycalebpanama/", label: "Instagram" }
+  - { network: web, url: "https://babycaleb.netlify.app", label: "Tienda online" }
+  - { network: mail, url: "mailto:babycalebpanama@gmail.com", label: "Correo" }
+
+footer:
+  note: "Venta 100% online con entrega · Panamá"
+  credit: true

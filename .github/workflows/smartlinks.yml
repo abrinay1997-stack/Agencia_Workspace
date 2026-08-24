@@ -1,0 +1,84 @@
+name: SmartLinks · publicar landings
+
+# Genera las landings de enlaces de cada cliente (smartlinks/clients/*.yml) y las
+# publica en GitHub Pages. El Source de Pages ya está en "GitHub Actions".
+#
+# Los links de cada cliente quedan en el RESUMEN del run (pestaña Actions → run →
+# Summary) y también en el hub interno que se publica en la raíz del sitio.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "smartlinks/**"
+      - ".github/workflows/smartlinks.yml"
+      - "package.json"
+      - "package-lock.json"
+      - "*/01_ADN_y_Memoria/Assets_Visuales_Base/**"   # logos de los clientes
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: "Publicar en GitHub Pages (desmarcado = solo generar y revisar el resumen)"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: smartlinks-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Generar landings
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Configurar GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Generar SmartLinks
+        env:
+          SMARTLINKS_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: npm run --silent smartlinks
+
+      - name: Subir artefacto de Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/smartlinks
+
+  deploy:
+    name: Publicar en Pages
+    needs: build
+    if: github.event_name != 'workflow_dispatch' || inputs.deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Desplegar
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Enlaces publicados
+        run: |
+          {
+            echo "## ✅ SmartLinks en vivo"
+            echo ""
+            echo "Hub interno: ${{ steps.deployment.outputs.page_url }}"
+            echo ""
+            echo "El link de cada cliente está en el resumen del job **Generar landings**."
+          } >> "$GITHUB_STEP_SUMMARY"
