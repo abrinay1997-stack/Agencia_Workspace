@@ -7,7 +7,7 @@
 # texto azul y contorno azul (accentOutline).
 # Enlaces de catálogo y ubicación: entregados por el cliente vía el humano (2026-08-24).
 # Catálogo actualizado el 2026-08-24: nuevos links de camas, camarotes, colchones y zapateras.
-# Sofás mantiene su link original (el cliente confirmó que canva.link/zapateras es de zapateras).
+# Sofás recibió su link propio el 2026-08-24 (canva.link/zapateras era el de zapateras).
 
 id: dcasa
 folder: "Dcasa"
@@ -73,7 +73,7 @@ buttons:
       - { label: "Camarotes", href: "https://canva.link/angis5bm5m9c6zm" }
       - { label: "Zapateras", href: "https://canva.link/zapateras" }
       - { label: "Colchones", href: "https://canva.link/7o48hmbpuk00eey" }
-      - { label: "Sofás", href: "https://canva.link/t3yibi3a4mfl17i" }
+      - { label: "Sofás", href: "https://canva.link/lx8qjh86ovmz0ub" }
 
   - kind: menu
     label: "Ubicación"
