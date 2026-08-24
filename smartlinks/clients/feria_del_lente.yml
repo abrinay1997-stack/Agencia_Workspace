@@ -1,0 +1,101 @@
+# Óptica Feria del Lente — SmartLink.
+# Fuente de marca: Feria del lente/01_ADN_y_Memoria/01_brand_guidelines.md
+#   §2 paleta verificada (#D91B19 oxblood / #C5A059 dorado / negro / crema ≈#F2EDE4)
+#   §2 tipografía: Oswald titulares + Montserrat cuerpo · §0 sucursales y WhatsApp por sucursal
+#
+# ⚠️ Regla de oro del ADN: la marca tiene DOS CARAS y no se mezclan. Esta landing es
+# superficie consumer (link-in-bio de redes), así que el tagline usa el posicionamiento
+# cristiano. El botón B2B ("Convenios para empresas") va con copy estrictamente
+# corporativo y abre el WhatsApp de alianzas de Nelson Muñoz — sin lenguaje religioso.
+#
+# Decisiones tomadas (el cliente no dio destinos como D'CASA):
+#   · Catálogo → no hay catálogo Canva/PDF; manda a la web propia.
+#   · Ubicación → 3 sucursales. Los enlaces son BÚSQUEDAS de Google Maps armadas con la
+#     dirección verificada del ADN, no place-ids inventados. Reemplazar por el link real
+#     de cada ficha de Google Business cuando el cliente lo pase.
+#   · Sin archivo de logo en el repo → monograma "FL" (isotipo real del ADN) hasta que lo suba.
+
+id: feria_del_lente
+folder: "Feria del lente"
+slug: feria-del-lente
+enabled: true
+name: "Óptica Feria del Lente"
+shortName: "Feria del Lente"
+handle: "@opticaferiadellente"
+tagline: "La primera óptica cristiana de Panamá · tus lentes en 40 minutos."
+description: "Lentes graduados, aros y lentes de sol en 40 minutos. Tres sucursales en Panamá y Panamá Oeste. Agenda tu examen visual."
+
+monogram: "FL"
+
+theme:
+  mode: light
+  bg: "#F2EDE4"          # crema hueso del registro consumer
+  bgAlt: "#FBF8F3"
+  hero: "#D91B19"        # oxblood, color primario
+  onHero: "#FFFFFF"
+  surface: "#FFFFFF"
+  text: "#151515"
+  muted: "#6E6559"
+  border: "#E3DACB"
+  primary: "#D91B19"
+  onPrimary: "#FFFFFF"
+  accent: "#C5A059"      # dorado premium
+  onAccent: "#1A1A1A"
+  accentOutline: "#B08C45"
+  baseBand: "#C5A059"
+  radius: 12
+  fonts:
+    display: "Oswald"
+    body: "Montserrat"
+    displayUppercase: true
+    displayTracking: "0.005em"
+    google: ["Oswald:wght@500;600;700", "Montserrat:wght@400;500;600;700"]
+
+buttons:
+  - kind: menu
+    label: "Escríbenos por WhatsApp"
+    note: "Elegí tu sucursal"
+    icon: whatsapp
+    variant: primary
+    items:
+      - { label: "Ciudad de Panamá · 6544-5656", href: "https://wa.me/50765445656?text=Hola%20Feria%20del%20Lente%2C%20vengo%20de%20su%20p%C3%A1gina%20de%20enlaces.%20Quiero%20informaci%C3%B3n." }
+      - { label: "La Chorrera · 6554-6752", href: "https://wa.me/50765546752?text=Hola%20Feria%20del%20Lente%2C%20vengo%20de%20su%20p%C3%A1gina%20de%20enlaces.%20Quiero%20informaci%C3%B3n." }
+      - { label: "Nuevo Arraiján · 6445-3379", href: "https://wa.me/50764453379?text=Hola%20Feria%20del%20Lente%2C%20vengo%20de%20su%20p%C3%A1gina%20de%20enlaces.%20Quiero%20informaci%C3%B3n." }
+
+  - kind: link
+    label: "Agendá tu cita"
+    note: "Examen visual computarizado"
+    icon: calendar
+    variant: accent
+    href: "https://link.agendapro.com/opticaferiadellente"
+
+  - kind: link
+    label: "Catálogo y servicios"
+    note: "Aros, lentes de sol y de contacto"
+    icon: catalog
+    href: "https://feriadellente.netlify.app/"
+
+  - kind: menu
+    label: "Ubicación"
+    note: "3 sucursales"
+    icon: location
+    items:
+      - { label: "Ciudad de Panamá", note: "Plaza Caldela, después de Vía Brasil", href: "https://www.google.com/maps/search/?api=1&query=%C3%93ptica%20Feria%20del%20Lente%20Plaza%20Caldela%20V%C3%ADa%20Brasil%20Panam%C3%A1" }
+      - { label: "La Chorrera", note: "Frente a Ecomoda", href: "https://www.google.com/maps/search/?api=1&query=%C3%93ptica%20Feria%20del%20Lente%20La%20Chorrera%20frente%20a%20Ecomoda" }
+      - { label: "Nuevo Arraiján", note: "Frente a Hopsa", href: "https://www.google.com/maps/search/?api=1&query=%C3%93ptica%20Feria%20del%20Lente%20Nuevo%20Arraij%C3%A1n%20frente%20a%20Hopsa" }
+
+  - kind: link
+    label: "Convenios para empresas"
+    note: "Financiamiento por planilla sin intereses"
+    icon: wholesale
+    href: "https://wa.me/50763869908?text=Hola%2C%20escribo%20por%20una%20alianza%20corporativa%20con%20Feria%20del%20Lente."
+
+social:
+  - { network: instagram, url: "https://www.instagram.com/opticaferiadellente/", label: "Instagram" }
+  - { network: tiktok, url: "https://www.tiktok.com/@ferialentepa", label: "TikTok" }
+  - { network: web, url: "https://feriadellente.netlify.app/", label: "Sitio web" }
+  - { network: mail, url: "mailto:info@feriadellenteoptica.com", label: "Correo" }
+
+footer:
+  note: "28 años cuidando la visión de las familias panameñas"
+  credit: true

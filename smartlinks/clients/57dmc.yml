@@ -1,0 +1,90 @@
+# 57DMC (Juan Arrieta) — SmartLink.
+# Fuente de marca: 57Dmc/01_ADN_y_Memoria/01_brand_guidelines.md
+#   §2 paleta ESTIMADA (negro + dorado/ámbar + blanco) — ⏳ HEX exactos pendientes de que
+#   el cliente pase el archivo de marca. Los valores de abajo son los del manifiesto del
+#   agente (#1A1A1A / #D4AF37) para que todo el sistema use el mismo estimado.
+#   §2 tipografía estimada: condensada mayúsculas tipo póster → Anton + Inter de cuerpo.
+#   §5 canales oficiales (Spotify, YouTube, Apple Music, Deezer, PayPal).
+#
+# Decisiones tomadas (es artista/ministerio, no negocio de producto):
+#   · No hay catálogo ni precios → el desplegable es "Escucha mi música" con las
+#     plataformas reales listadas en el ADN.
+#   · No hay punto de venta → el equivalente de "ubicación" es invitaciones a eventos.
+#   · ⏳ El +507 6840-0144 figura en el ADN como teléfono de contacto; asumimos que es
+#     WhatsApp (celular panameño). Confirmar con Juan antes de difundir la landing.
+#   · Sin archivo de logo en el repo → monograma "57".
+
+id: 57dmc
+folder: "57Dmc"
+slug: 57dmc
+enabled: true
+name: "57DMC"
+handle: "Exhorto · Consuelo · Edifico"
+tagline: "Rap cristiano con enseñanza bíblica. Servidor, artista y compositor."
+description: "Música y contenido de exhortación bíblica de 57DMC (Juan Arrieta). Escucha, apoya el ministerio o invítalo a tu evento."
+
+monogram: "57"
+
+theme:
+  mode: dark
+  bg: "#0D0D0D"
+  bgAlt: "#1A1A1A"
+  hero: "#161616"
+  onHero: "#FFFFFF"
+  surface: "#1A1A1A"
+  text: "#FFFFFF"
+  muted: "#9A9086"
+  border: "#2E2A24"
+  primary: "#D4AF37"
+  onPrimary: "#141210"
+  accent: "#D4AF37"
+  onAccent: "#141210"
+  accentOutline: "#D4AF37"
+  radius: 12
+  fonts:
+    display: "Anton"
+    body: "Inter"
+    displayUppercase: true
+    displayTracking: "0.02em"
+    google: ["Anton", "Inter:wght@400;500;600"]
+
+buttons:
+  - kind: menu
+    label: "Escucha mi música"
+    note: "Spotify, YouTube, Apple Music, Deezer"
+    icon: music
+    variant: accent
+    items:
+      - { label: "Spotify", href: "https://open.spotify.com/artist/1vV083YQ6jtLGRQc8VjenD" }
+      - { label: "YouTube", href: "https://youtube.com/@57DMC" }
+      - { label: "Apple Music", href: "https://itunes.apple.com/pa/artist/57dmc/1400685047" }
+      - { label: "Deezer", href: "https://www.deezer.com/es/artist/14913559" }
+
+  - kind: link
+    label: "Videos en YouTube"
+    note: "Sencillos, raps directos y reflexiones"
+    icon: video
+    href: "https://youtube.com/@57DMC"
+
+  - kind: link
+    label: "Apoya el ministerio"
+    note: "Donación por PayPal"
+    icon: heart
+    href: "https://www.paypal.com/paypalme/juanarrieta57dmc"
+
+  - kind: link
+    label: "Invitaciones a eventos"
+    note: "Iglesias, conciertos y ministerio"
+    icon: whatsapp
+    href: "https://wa.me/50768400144?text=Hola%2057DMC%2C%20quiero%20invitarte%20a%20un%20evento/ministerio."
+
+social:
+  - { network: instagram, url: "https://instagram.com/57dmc", label: "Instagram" }
+  - { network: youtube, url: "https://youtube.com/@57DMC", label: "YouTube" }
+  - { network: spotify, url: "https://open.spotify.com/artist/1vV083YQ6jtLGRQc8VjenD", label: "Spotify" }
+  - { network: facebook, url: "https://facebook.com/57DMC", label: "Facebook" }
+  - { network: mail, url: "mailto:equipo57dmc@gmail.com", label: "Correo" }
+
+footer:
+  note: "Panamá · música y exhortación bíblica desde 2012"
+  credit: true

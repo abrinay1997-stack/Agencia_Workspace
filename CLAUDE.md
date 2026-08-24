@@ -21,6 +21,9 @@ Este repositorio es el sistema de memoria y orquestación de la agencia **Juanci
 - `agent/` — subsistema de automatización (agente diario multi-cliente que corre en GitHub Actions).
   - `agent/README.md` — visión general de la arquitectura (para humanos).
   - **`agent/AUTOMATION_ACTIONS.md` — runbook para cuando el humano pida algo que toque el agente** (añadir/modificar/desactivar cliente, cambiar capabilities, colores, tendencias). **Léelo entero antes de tocar nada en `agent/`.**
+- `smartlinks/` — SmartLinks: la landing de enlaces (link-in-bio) de cada cliente, generada desde `smartlinks/clients/<id>.yml` y publicada en GitHub Pages por `.github/workflows/smartlinks.yml`.
+  - `smartlinks/README.md` — visión general y estado por cliente (para humanos).
+  - **`smartlinks/AUTOMATION_ACTIONS.md` — runbook para cuando el humano pida algo de una landing de enlaces** (añadir/quitar botones, cambiar WhatsApp/catálogo/ubicación, publicar un cliente nuevo). **Léelo entero antes de tocar nada en `smartlinks/`.**
 
 ## Comandos de la agencia (palabras clave)
 
@@ -32,5 +35,6 @@ Este repositorio es el sistema de memoria y orquestación de la agencia **Juanci
 
 - Si el humano pide algo sobre **contenido, estrategia o memoria del cliente** (posts, campañas, análisis, ADN) → `_EL_ORQUESTADOR_MAESTRO.md` manda.
 - Si el humano pide algo sobre **el correo diario, automatización, o `agent/`** (añadir cliente al pipeline, cambiar colores del email, activar scraping) → `agent/AUTOMATION_ACTIONS.md` manda.
+- Si el humano pide algo sobre **el SmartLink / la landing de enlaces / el link de la bio de un cliente** (botones, catálogo, ubicación, WhatsApp de la landing) → `smartlinks/AUTOMATION_ACTIONS.md` manda.
 
 El estado de ADN de cada cliente (completo / base / pendiente) vive en la sección 0 del orquestador. Confía en esa tabla y mantenla actualizada cuando cambie el ADN de un cliente.

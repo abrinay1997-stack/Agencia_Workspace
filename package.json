@@ -10,7 +10,8 @@
   "scripts": {
     "agent": "tsx agent/run.ts",
     "typecheck": "tsc --noEmit",
-    "list-clients": "tsx agent/scripts/list-clients.ts"
+    "list-clients": "tsx agent/scripts/list-clients.ts",
+    "smartlinks": "tsx smartlinks/build.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",

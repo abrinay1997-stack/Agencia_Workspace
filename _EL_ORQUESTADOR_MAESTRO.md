@@ -21,6 +21,16 @@ Lectura obligatoria al iniciar cualquier tarea. Este archivo no se resume ni se 
 
 Cuando cambie el estado del ADN de un cliente, actualiza esta tabla.
 
+### SmartLinks (landing de enlaces de cada cliente)
+
+Cada cliente activo tiene una **landing de enlaces** (la que va en la bio de Instagram/TikTok)
+generada desde `smartlinks/clients/<id>.yml` y publicada en GitHub Pages con el workflow
+`.github/workflows/smartlinks.yml`. Lleva el logo del cliente, contacto directo por WhatsApp y
+los botones que su negocio necesita (catálogo, ubicación, mayoristas…), siempre con **su** marca.
+Cuando el humano pida cambiar botones o destinos de esa landing, manda
+**`smartlinks/AUTOMATION_ACTIONS.md`** (no este archivo). Hoy están publicadas: D'CASA,
+Baby Caleb, Feria del Lente, 57DMC y Juancito Ads; Fotosonido queda fuera hasta tener ADN.
+
 ### Multimedia (Google Drive + Canva)
 
 Este repositorio es la **memoria y estrategia** (texto). La **multimedia pesada** (imágenes, videos, diseños) vive fuera, en dos espacios que **espejan esta misma estructura** (carpeta raíz `Agencia Workspace` → una carpeta por cliente):

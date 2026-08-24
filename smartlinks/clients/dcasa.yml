@@ -1,0 +1,97 @@
+# D'CASA Panamá — SmartLink de referencia (el resto de clientes copia esta estructura).
+# Fuente de marca: Dcasa/01_ADN_y_Memoria/01_brand_guidelines.md
+#   §3 paleta verificada (#1340B1 / #FED00F / #E0DDD1) · §4 tipografía (Anton + Oswald)
+#   §0 contacto (WhatsApp +507 6026-1919, web dcasapty.com) · §2 sistema de logo (masa azul
+#   arriba, banda amarilla de base) — por eso el hero es azul y la página cierra con banda amarilla.
+# Regla de contraste §3.2: el amarillo NUNCA toca blanco pelado → el botón de acento va con
+# texto azul y contorno azul (accentOutline).
+# Enlaces de catálogo y ubicación: entregados por el cliente vía el humano (2026-08-24).
+
+id: dcasa
+folder: "Dcasa"
+slug: dcasa
+enabled: true
+name: "D'CASA Panamá"
+shortName: "D'CASA"
+handle: "@dcasapty"
+tagline: "Tu casa, bien amueblada."
+description: "Muebles, camas y colchones para tu casa en La Chorrera. Catálogo, ubicación y atención directa por WhatsApp."
+
+logo:
+  src: "Dcasa/01_ADN_y_Memoria/Assets_Visuales_Base/logo-dcasa.png"
+  alt: "Logo D'CASA Panamá"
+  style: plate         # el archivo ya trae la placa blanca del sistema de marca
+  replacesName: true   # el logo ya dice "D'CASA PANAMÁ" — el <h1> no se repite en pantalla
+  maxHeight: 122
+
+theme:
+  mode: light
+  bg: "#EDEAE0"          # hueso #E0DDD1 aclarado para que el blanco de las tarjetas respire
+  bgAlt: "#F8F7F2"
+  hero: "#1340B1"        # masa azul arriba (§2 del ADN)
+  onHero: "#FFFFFF"
+  surface: "#FFFFFF"
+  text: "#141C2E"
+  muted: "#6E7686"
+  border: "#E1DDD1"
+  primary: "#1340B1"
+  onPrimary: "#FFFFFF"
+  accent: "#FED00F"
+  onAccent: "#1340B1"    # azul sobre amarillo = 5.9:1 (AA) — combinación de CTA aprobada
+  accentOutline: "#1340B1"
+  baseBand: "#FED00F"    # banda amarilla de base: el amarillo sostiene, nunca flota
+  radius: 14
+  fonts:
+    display: "Anton"
+    body: "Oswald"
+    displayUppercase: true
+    displayTracking: "0.01em"
+    google: ["Anton", "Oswald:wght@300;400;500;600"]
+
+buttons:
+  - kind: link
+    label: "Escríbenos por WhatsApp"
+    note: "+507 6026-1919"
+    icon: whatsapp
+    variant: accent
+    href: "https://wa.me/50760261919?text=Hola%20D%27CASA%2C%20vengo%20de%20su%20p%C3%A1gina%20de%20enlaces.%20Quiero%20informaci%C3%B3n."
+
+  - kind: menu
+    label: "Catálogo"
+    note: "Camas, camarotes, colchones y más"
+    icon: catalog
+    variant: primary
+    items:
+      - label: "Camas"
+        items:
+          - { label: "Queen", href: "https://canva.link/xew1xlkhfrrfext" }
+          - { label: "Full", href: "https://canva.link/3yknsqkt55vuj6o" }
+          - { label: "King", href: "https://canva.link/iuvty4q3tei97yp" }
+          - { label: "Twin", href: "https://canva.link/goqi4ce2c3hf6av" }
+      - { label: "Camarotes", href: "https://canva.link/0v2kk574yndo0y8" }
+      - { label: "Zapateras", href: "https://canva.link/y3gyzz9w0536ahf" }
+      - { label: "Colchones", href: "https://canva.link/4waia98swi4c37u" }
+      - { label: "Sofás", href: "https://canva.link/t3yibi3a4mfl17i" }
+
+  - kind: menu
+    label: "Ubicación"
+    note: "La Chorrera · frente al parque Libertadores"
+    icon: location
+    items:
+      - { label: "Abrir en Waze", href: "https://waze.com/ul/hd1x62rvjc" }
+      - { label: "Abrir en Google Maps", href: "https://share.google/8gb6goOe0xZ2BZ6Yu" }
+
+  - kind: link
+    label: "Compras al por mayor"
+    note: "Hoteles, alquileres y revendedores"
+    icon: wholesale
+    href: "https://dcasapty.com/#mayoristas"
+
+social:
+  - { network: instagram, url: "https://instagram.com/dcasapty", label: "Instagram" }
+  - { network: tiktok, url: "https://www.tiktok.com/@dcasapty", label: "TikTok" }
+  - { network: web, url: "https://dcasapty.com/", label: "Sitio web" }
+
+footer:
+  note: "La Chorrera, Panamá Oeste · diagonal a la discoteca Seven"
+  credit: true

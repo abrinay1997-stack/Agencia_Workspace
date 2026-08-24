@@ -1,0 +1,85 @@
+# Juancito Ads — SmartLink de la propia agencia.
+# Fuente de marca: Juancito Ads/01_ADN_y_Memoria/01_brand_guidelines.md
+#   §3 paleta verificada (#050D1F / #0A1628 / #0D489F / #1E90FF / #CF6019 / #A0B4CC)
+#   §4 tipografía: Inter (titulares 900) + Hanken Grotesk (cuerpo) · §0 contacto y web
+#   Identidad dark-mode por defecto — es el único cliente cuya base es oscura.
+#
+# Decisiones tomadas:
+#   · No hay catálogo de producto; el equivalente es la web con servicios y portafolio.
+#   · 100% remoto → sin botón de ubicación.
+#   · El gancho de entrada del ADN (§ diagnóstico gratuito) es el segundo CTA.
+#   · footer.credit: false — la agencia no se firma a sí misma.
+#   · El logo.png tiene fondo claro no transparente → se monta en círculo blanco
+#     sobre el hero oscuro (style: circle).
+
+id: juancito_ads
+folder: "Juancito Ads"
+slug: juancito-ads
+enabled: true
+name: "Juancito Ads"
+handle: "@juancitoads"
+tagline: "Tráfico. Ventas. Resultados. Campañas de Meta Ads potenciadas con IA."
+description: "Agencia de marketing digital en Panamá especializada en Meta Ads con IA. Diagnóstico gratuito de tu negocio por WhatsApp."
+
+logo:
+  src: "Juancito Ads/01_ADN_y_Memoria/Assets_Visuales_Base/logo.png"
+  alt: "Logo Juancito Ads"
+  style: circle
+  maxHeight: 116
+
+theme:
+  mode: dark
+  bg: "#050D1F"
+  bgAlt: "#0A1628"
+  hero: "#0A1628"
+  onHero: "#FFFFFF"
+  surface: "#0E1B30"
+  text: "#FFFFFF"
+  muted: "#A0B4CC"
+  border: "#1C2C46"
+  primary: "#0D489F"
+  onPrimary: "#FFFFFF"
+  accent: "#CF6019"
+  onAccent: "#050D1F"
+  accentOutline: "#CF6019"
+  radius: 14
+  fonts:
+    display: "Inter"
+    body: "Hanken Grotesk"
+    displayTracking: "-0.025em"
+    google: ["Inter:wght@600;900", "Hanken+Grotesk:wght@400;500;600"]
+
+buttons:
+  - kind: link
+    label: "Escríbeme por WhatsApp"
+    note: "+507 6596-9428 · respondo en 24h hábiles"
+    icon: whatsapp
+    variant: accent
+    href: "https://wa.me/50765969428?text=Hola%20Juancito%20Ads%2C%20vengo%20de%20su%20p%C3%A1gina%20de%20enlaces.%20Quiero%20informaci%C3%B3n."
+
+  - kind: link
+    label: "Servicios y portafolio"
+    note: "Meta Ads, contenido y sitios web"
+    icon: web
+    variant: primary
+    href: "https://juancitoads.netlify.app"
+
+  - kind: link
+    label: "Diagnóstico gratuito"
+    note: "Análisis y plan de acción en 48h"
+    icon: star
+    href: "https://wa.me/50765969428?text=Hola%20Juancito%20Ads%2C%20quiero%20el%20diagn%C3%B3stico%20gratuito%20de%20mi%20negocio."
+
+  - kind: link
+    label: "Escríbeme por correo"
+    note: "juanarrietabusiness@gmail.com"
+    icon: mail
+    href: "mailto:juanarrietabusiness@gmail.com"
+
+social:
+  - { network: instagram, url: "https://instagram.com/juancitoads", label: "Instagram" }
+  - { network: web, url: "https://juancitoads.netlify.app", label: "Sitio web" }
+
+footer:
+  note: "Panamá · 100% remoto"
+  credit: false

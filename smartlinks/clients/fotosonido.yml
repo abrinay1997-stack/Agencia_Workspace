@@ -1,0 +1,15 @@
+# Fotosonido — SIN SmartLink todavía.
+# El ADN está vacío (plantilla en blanco), igual que en agent/clients/fotosonido.yml.
+# No se publica landing: no hay identidad verificada que respetar ni destinos reales.
+#
+# Para activarlo: correr 00_Estandares_Agencia/prompt_extraccion_adn_chrome.md, llenar
+# 01_ADN_y_Memoria/ y recién ahí completar theme + buttons acá y poner enabled: true.
+
+id: fotosonido
+folder: "Fotosonido"
+slug: fotosonido
+enabled: false
+disabledReason: "ADN vacío — completar 01_ADN_y_Memoria/ antes de publicar la landing."
+name: "Fotosonido"
+tagline: "Pendiente de extracción de ADN."
+description: "Cliente sin ADN verificado — landing no publicada."
