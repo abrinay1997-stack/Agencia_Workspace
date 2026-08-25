@@ -1,0 +1,294 @@
+{
+  "$comentario": "Receta visual de Baby Caleb Panamá, legible por máquina. La lee el calendario para armar el prompt maestro de Meta AI sin pedirle a ningún modelo que deduzca la estructura. Máquina antes que prosa: cuando este archivo y 05_prompt_maestro_meta_ai.md se contradigan, manda este.",
+  "version": 1,
+  "verificadoContra": {
+    "archivos": [
+      "01_brand_guidelines.md",
+      "05_prompt_maestro_meta_ai.md"
+    ],
+    "fecha": "2026-08-25"
+  },
+  "marca": "Baby Caleb Panamá",
+  "slug": "baby-caleb",
+  "productoFisico": true,
+  "fotoReal": true,
+  "lienzo": {
+    "ancho": 1080,
+    "alto": 1350
+  },
+  "fuentes": {
+    "$regla": "Una sola familia, con la jerarquía por peso y tamaño. El ADN §2.2 es explícito: Montserrat en todo, y Playfair Display quedó descartada por el cliente.",
+    "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap",
+    "familias": [
+      {
+        "nombre": "Montserrat",
+        "pesos": "400;500;700",
+        "rol": "todo el documento: 400 cuerpo, 500 guía de tallas, 700 titulares y antetítulos"
+      }
+    ]
+  },
+  "fuentesProhibidas": [
+    "Playfair Display",
+    "Poppins",
+    "Nunito",
+    "Quicksand",
+    "Raleway",
+    "Lato",
+    "Open Sans",
+    "Helvetica",
+    "Arial"
+  ],
+  "colores": [
+    {
+      "hex": "#EFFFED",
+      "nombre": "verde background",
+      "rol": "fondo principal — construye el feed"
+    },
+    {
+      "hex": "#F9F6ED",
+      "nombre": "beige claro",
+      "rol": "fondo principal alterno y fondo bajo el logo en la plantilla A"
+    },
+    {
+      "hex": "#91C9A2",
+      "nombre": "verde logo",
+      "rol": "color de marca; fondo de la plantilla C"
+    },
+    {
+      "hex": "#C0D4B9",
+      "nombre": "verde secundario",
+      "rol": "formas vegetales de apoyo"
+    },
+    {
+      "hex": "#1B3246",
+      "nombre": "Navy Ink",
+      "rol": "títulos y todo el texto — el único color apto para texto"
+    },
+    {
+      "hex": "#EE924A",
+      "nombre": "naranja",
+      "rol": "acento de una sola palabra del titular y placa del precio"
+    },
+    {
+      "hex": "#FFFFFF",
+      "nombre": "blanco",
+      "rol": "texto del precio sobre la placa naranja, y texto de los botones de la interfaz"
+    }
+  ],
+  "coloresProhibidos": [
+    {
+      "hex": "rosa, celeste bebé",
+      "porque": "no están en la paleta y son el cliché del que esta marca se separa"
+    },
+    {
+      "hex": "rojo",
+      "porque": "fuera de paleta; asociado a los clichés de oferta"
+    },
+    {
+      "hex": "pastel saturado",
+      "porque": "contradice la estética declarada: minimalista, limpia, elegante"
+    }
+  ],
+  "combinacionesProhibidas": [
+    "Naranja #EE924A sobre verde #91C9A2 — los dos son claros y saturados, no se separan.",
+    "Verde #91C9A2 sobre beige #F9F6ED — no hay contraste.",
+    "Texto largo en naranja o en verde: el ADN §2.1 sólo admite Navy Ink #1B3246 sobre fondo claro."
+  ],
+  "proporcionCromatica": {
+    "$regla": "El ADN fija el naranja en «~10 %, sólo acento». Esto lo traduce a la pieza.",
+    "claro": "70 %",
+    "navy": "20 %",
+    "naranja": "10 %"
+  },
+  "reticula": {
+    "$regla": "Decisión de maquetación tomada el 2026-08-25, derivada de la identidad. Marcada con ✎ en el .md para poder discutirla sin confundirla con datos del cliente.",
+    "texto": "Lienzo 1080×1350. Margen lateral x=72 en los dos lados. Ancho útil 936 px.\n\nPlantilla A (educativa): bloque de texto anclado por su BASE en y=1180. Antetítulo por encima del titular, separado 24 px. Zona del logo de y=1180 a y=1350, fondo liso.\n\nPlantilla B (producto): zona de foto real de y=0 a y=756, el 56 % de la altura. Placa del precio de 300×120, esquina inferior derecha de la foto, base en y=800. Bloque de texto anclado por su BASE en y=1180.\n\nPlantilla C (cercanía): bloque de texto centrado ópticamente, base en y=1120. Zona del logo de y=1120 a y=1350, fondo liso."
+  },
+  "anclaje": "El bloque de texto se ancla por su BASE: se mide el alto real del bloque ya maquetado y se resta de la Y de base. En la plantilla C se centra ópticamente con base en y=1120.",
+  "ordenBloque": [
+    "antetítulo",
+    "titular",
+    "subtítulo o lista",
+    "precio",
+    "guía de talla y peso",
+    "nota"
+  ],
+  "escala": [
+    {
+      "elemento": "Titular XL · 2–3 líneas",
+      "familia": "Montserrat",
+      "peso": 700,
+      "px": 116,
+      "interlinea": "0.98",
+      "mayusculas": false
+    },
+    {
+      "elemento": "Titular L · 4–5 líneas",
+      "familia": "Montserrat",
+      "peso": 700,
+      "px": 92,
+      "interlinea": "1.02",
+      "mayusculas": false
+    },
+    {
+      "elemento": "Precio",
+      "familia": "Montserrat",
+      "peso": 700,
+      "px": 88
+    },
+    {
+      "elemento": "Guía de talla y peso",
+      "familia": "Montserrat",
+      "peso": 500,
+      "px": 28,
+      "interlinea": "1.4"
+    },
+    {
+      "elemento": "Antetítulo",
+      "familia": "Montserrat",
+      "peso": 700,
+      "px": 24,
+      "tracking": "0.12em",
+      "mayusculas": true
+    },
+    {
+      "elemento": "Subtítulo",
+      "familia": "Montserrat",
+      "peso": 400,
+      "px": 34,
+      "interlinea": "1.35"
+    },
+    {
+      "elemento": "Lista / cuerpo",
+      "familia": "Montserrat",
+      "peso": 400,
+      "px": 26,
+      "interlinea": "1.55"
+    },
+    {
+      "elemento": "Nota",
+      "familia": "Montserrat",
+      "peso": 400,
+      "px": 20,
+      "interlinea": "1.5"
+    }
+  ],
+  "acento": {
+    "$regla": "Montserrat tiene la caja alta ancha, y el tono de la marca es maternal y cercano, no gritado: el titular va en frase. Sólo el antetítulo va en MAYÚSCULAS.",
+    "regla": "Una sola palabra del titular en naranja #EE924A, marcada con ⟦ ⟧. No es un subrayado, no es un resaltado, no es una caja: es la palabra en color."
+  },
+  "velo": "",
+  "plantillas": [
+    {
+      "id": "A",
+      "nombre": "Educativa",
+      "cuando": "desmontar un mito; el registro que mejor funciona en esta marca",
+      "composicion": "Fondo #EFFFED o #F9F6ED liso, sin foto. Titular grande en Navy Ink con una palabra en naranja. Es la plantilla del hashtag #QUENOTENEGAÑEN."
+    },
+    {
+      "id": "B",
+      "nombre": "Producto y talla",
+      "cuando": "producto con su precio verificado",
+      "composicion": "Fondo #F9F6ED. Foto real del producto en la banda alta, con su selector de archivo. Placa naranja con el precio y la guía de peso por talla."
+    },
+    {
+      "id": "C",
+      "nombre": "Cercanía",
+      "cuando": "la pieza que pide algo",
+      "composicion": "Fondo #91C9A2 con el texto en #1B3246. Sin foto y sin precio. «Escríbenos ahora», «Haz tu pedido»."
+    }
+  ],
+  "logo": {
+    "$regla": "El logo es una insignia circular con un personaje ilustrado y texto arqueado: exactamente lo que un modelo de imagen devuelve mal, y devuelve mal con confianza. No se describe como instrucción de dibujo; se carga.",
+    "archivo": "",
+    "posicion": "centrado horizontalmente, base en y=1270 en las plantillas A y C; esquina inferior derecha, base en y=1270 y borde derecho en x=1008, en la B",
+    "ancho": 200,
+    "ancla": "su base",
+    "proporcion": "1:1 — es un círculo, caja cuadrada de 200×200",
+    "resguardo": "40 px libres por los cuatro lados; nada de texto dentro",
+    "sobreFondo": "Siempre sobre fondo liso, nunca sobre la foto real ni sobre la placa del precio. Su fondo es verde menta: sobre el verde background de la marca casi no se separa, así que en la plantilla A el fondo bajo el logo es beige #F9F6ED.",
+    "reglas": [
+      "Nunca se recolorea, ni se recorta a otra forma, ni se le baja la opacidad, ni se le pone borde o sombra.",
+      "Assets_Visuales_Base/ no tiene todavía el archivo: hasta que lo tenga, el documento se entrega igual y el humano lo carga al abrirlo."
+    ]
+  },
+  "bloqueEstilo": "Estilo: fondo liso de color plano, sin textura, sin degradado y sin sombra.\nEstética limpia, minimalista y orgánica, de las que construyen un feed\nordenado. Si la pieza lleva un elemento gráfico, es una forma vegetal simple\n—una hoja, un tallo, una flor pequeña— en verde secundario, plana, sin\nvolumen y sin brillo, apoyada en una esquina y nunca detrás del texto. Luz\nuniforme, sin foco y sin viñeta. Nada de fotografía, nada de render 3D,\nnada de ilustración con personajes.",
+  "negativos": "bebés, niños, personas, gente, rostros, manos, madres, familias, pañales, cajas de producto, wipes, biberones, juguetes, ositos de peluche, cunas, render 3D, ilustración infantil, dibujo animado, personajes, degradados, sombras, viñeta, texturas, papel arrugado, acuarela, bokeh, brillo, destellos, stickers de oferta, círculos rojos, explosiones de precio, rojo, rosa, celeste bebé, pastel saturado, tipografía serif, scripts, caligrafía, texto, letras, números, logotipos, marcas de agua, marcos, collage, fotografía",
+  "trampasPropias": [
+    "La placa del precio se posiciona por su base en y=800. Colocada por su borde superior se solapa con la foto.",
+    "Si el usuario no ha cargado la foto real de una pieza de producto, el botón de descarga de esa pieza avisa y NO exporta."
+  ],
+  "interfaz": "Fondo #F9F6ED, texto #1B3246, títulos y acentos #EE924A, botones con fondo #1B3246 y texto blanco. Ningún color fuera de la paleta.",
+  "reglasDuras": [
+    "Ningún precio que no esté en 01_brand_guidelines.md §4.",
+    "El costo interno y la ganancia por caja NO se dicen nunca: son memoria interna.",
+    "Nunca se llama a un producto por una marca que no es. Se dice «wipes de agua Dany Baby», nunca «WaterWipes». Riesgo legal y aduanero.",
+    "Nunca se minimiza la seguridad del bebé ni se exagera un beneficio sin respaldo.",
+    "Nunca mensajería religiosa explícita: el origen de fe del nombre es un valor interno silencioso hasta que el cliente diga lo contrario.",
+    "El delivery no se promete: zona y costo están pendientes de validar."
+  ],
+  "verificacionPropia": [
+    "¿La proporción es 70 % fondo claro · 20 % Navy Ink · 10 % naranja, mirando la pieza entera?",
+    "¿Hay UNA SOLA palabra en naranja por titular?",
+    "¿Algún texto largo quedó en naranja o en verde? Sólo Navy Ink sobre fondo claro lee.",
+    "¿Está todo el documento en Montserrat, sin una segunda familia?",
+    "¿El titular quedó en frase, no en MAYÚSCULAS? Sólo el antetítulo va en caja alta.",
+    "¿Está escrito «Talla» y «libras», y no «size» ni «kg»?",
+    "¿Dice el nombre real de cada producto, sin sustituirlo por otra marca?"
+  ],
+  "tildes": [
+    "PAÑALES",
+    "BEBÉ",
+    "HIPOALERGÉNICO",
+    "QUÍMICOS",
+    "MÁS",
+    "ESCRÍBENOS",
+    "PANAMÁ",
+    "TAMBIÉN",
+    "SEGÚN"
+  ],
+  "hashtags": {
+    "cantidad": 6,
+    "donde": "al final de la descripción, en una sola línea"
+  },
+  "emojis": {
+    "cantidad": 0,
+    "donde": "ninguno dentro del lienzo; hasta dos en la descripción"
+  },
+  "cifrasPermitidas": [
+    "$45.00",
+    "$50.00",
+    "$35"
+  ],
+  "cta": "Escríbenos al WhatsApp +507 6757-5065",
+  "interlineado": {
+    "$regla": "La interlínea del titular no es un número: es una cuenta. En español, la tilde de una Á y el trazo de una Ñ sobresalen por encima de la altura de versalita, y Montserrat 700 no rebaja los acentos en caja alta. Con la interlínea por debajo de 1 esa tilde acaba DENTRO de las letras de la línea de arriba. La holgura va donde hace falta y sólo donde hace falta: subir la interlínea de todas las líneas afloja el bloque entero para arreglar dos.",
+    "$medidoEn": "Montserrat 700, métrica real del archivo de Google Fonts. holguraSuperior = (alto de la tinta del glifo − altura de versalita); holguraInferior = lo que baja la tinta por debajo de la línea base. Medido el 2026-08-25.",
+    "formula": "avance(n → n+1) = base + holguraSuperior(línea n+1) + holguraInferior(línea n)",
+    "holguraSuperior": {
+      "Á É Í Ó Ú": 0.2,
+      "Ñ Ü": 0.21
+    },
+    "holguraInferior": {
+      "Q ¿ ¡ ,": 0.17
+    },
+    "seAplicaA": "sólo el titular y la cifra, que son lo único por debajo de interlínea 1. La bajada, el subtítulo, las listas y las notas van por encima de 1: ahí sobra sitio y no hay nada que corregir."
+  },
+  "anclajes": [
+    {
+      "plantilla": "A",
+      "nombre": "Base baja",
+      "donde": "base del bloque en y=1180; la zona del logo empieza ahí"
+    },
+    {
+      "plantilla": "B",
+      "nombre": "Base baja",
+      "donde": "base del bloque en y=1180, bajo la zona de foto real"
+    },
+    {
+      "plantilla": "C",
+      "nombre": "Centro óptico",
+      "donde": "bloque centrado ópticamente, base en y=1120"
+    }
+  ]
+}

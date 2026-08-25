@@ -1,0 +1,326 @@
+{
+  "$comentario": "Receta visual de D'CASA Panamá, legible por máquina. La lee el calendario de Juancito Ads para armar el prompt maestro de Meta AI sin pedirle a ningún modelo que deduzca la estructura. Máquina antes que prosa: cuando este archivo y 05_prompt_maestro_meta_ai.md se contradigan, manda este; el .md es la capa legible que explica el porqué.",
+  "version": 1,
+  "verificadoContra": {
+    "archivos": [
+      "01_brand_guidelines.md",
+      "05_prompt_maestro_meta_ai.md"
+    ],
+    "fecha": "2026-08-25"
+  },
+  "marca": "D'CASA Panamá",
+  "slug": "dcasa",
+  "productoFisico": true,
+  "fotoReal": true,
+  "lienzo": {
+    "ancho": 1080,
+    "alto": 1350
+  },
+  "fuentes": {
+    "$regla": "Tres familias con el papel cerrado. Anton SOLO en caja alta y sólo en titulares y precios: es la voz gráfica firme del logo. Oswald e Inter nunca en caja alta en párrafos — el ADN §6 prohíbe las mayúsculas gritadas.",
+    "url": "https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500&family=Inter:wght@400;500&display=swap",
+    "familias": [
+      {
+        "nombre": "Anton",
+        "pesos": "400",
+        "rol": "titulares y precios, SOLO en caja alta"
+      },
+      {
+        "nombre": "Oswald",
+        "pesos": "400;500",
+        "rol": "antetítulos y subtítulos, nunca en caja alta en párrafos"
+      },
+      {
+        "nombre": "Inter",
+        "pesos": "400;500",
+        "rol": "cuerpo, listas, notas y código de producto"
+      }
+    ]
+  },
+  "fuentesProhibidas": [
+    "Bebas Neue",
+    "Impact",
+    "Archivo Narrow",
+    "Montserrat",
+    "Poppins",
+    "Roboto",
+    "Open Sans",
+    "Lato",
+    "Helvetica",
+    "Arial"
+  ],
+  "colores": [
+    {
+      "hex": "#1340B1",
+      "nombre": "azul D'CASA",
+      "rol": "titulares sobre claro, masa de fondo de la plantilla C, antetítulos, textos de la banda"
+    },
+    {
+      "hex": "#FED00F",
+      "nombre": "amarillo D'CASA",
+      "rol": "banda inferior, placa del precio, badge, subrayado del acento"
+    },
+    {
+      "hex": "#FFFFFF",
+      "nombre": "blanco",
+      "rol": "fondo dominante, marco de la placa y titulares sobre azul"
+    },
+    {
+      "hex": "#E0DDD1",
+      "nombre": "hueso",
+      "rol": "fondo completo de la plantilla B"
+    },
+    {
+      "hex": "#3A3A3A",
+      "nombre": "grafito",
+      "rol": "subtítulos, listas y notas sobre fondo claro"
+    }
+  ],
+  "coloresProhibidos": [
+    {
+      "hex": "terracota, bronce, cobre",
+      "porque": "red flags del ADN §9: contradicen el azul y el amarillo del logo"
+    },
+    {
+      "hex": "verde salvia, beige premium, tonos tierra apagados",
+      "porque": "misma razón"
+    },
+    {
+      "hex": "gris frío, azul grisáceo nórdico",
+      "porque": "la marca es cálida tropical panameña, no escandinava"
+    },
+    {
+      "hex": "dorado, mármol",
+      "porque": "sacan a la marca de su casilla de mercado"
+    },
+    {
+      "hex": "rojo de oferta",
+      "porque": "los stickers rojos son el mercado masivo del que la marca se separa"
+    }
+  ],
+  "combinacionesProhibidas": [
+    "Amarillo #FED00F sobre blanco #FFFFFF — ratio 1.47:1, es invisible. Ni texto, ni ícono, ni línea.",
+    "Amarillo #FED00F sobre hueso #E0DDD1 — misma razón."
+  ],
+  "proporcionCromatica": {
+    "$regla": "Se mira la pieza entera, no cada elemento suelto. El amarillo nunca pasa del 15 % o la marca se vuelve estridente.",
+    "claro": "60 %",
+    "azul": "30 %",
+    "amarillo": "10 %"
+  },
+  "reticula": {
+    "$regla": "D'CASA no tiene una retícula única: tiene cuatro plantillas, y la regla de convivencia del ADN §5 decide cuál toca. La fotografía manda; la marca firma en una esquina, nunca al revés. Una pieza no lleva las dos líneas al 50 %.",
+    "texto": "Lienzo 1080×1350 exactos. Margen de seguridad x=80 en los dos lados. Ancho útil 920 px.\n\nBanda inferior amarilla (plantillas B y C): 88 px de alto, de y=1262 a y=1350. Se posiciona por su BASE en y=1350. Lleva D'CASA a la izquierda en x=80 y ESCRÍBENOS AL WHATSAPP a la derecha, las dos en azul #1340B1.\n\nBadge amarillo (plantillas A y D): esquina inferior derecha, base en y=1230.\n\nPlaca de la plantilla A: marco blanco de 12 px, inset 32 px, radio 48 px. La foto va a sangre dentro del marco.\n\nPlantilla B: antetítulo en x=80 y=200. Tope del bloque de titular en y=280.\n\nPlantilla C: foto real del producto recortada sobre el azul. Placa amarilla del precio bajo el titular.\n\nPlantilla D: velo azul rgba(19,64,177,0.55) sobre la foto. Titular anclado al centro óptico y=594. Ícono de play de línea blanca, 72×72, centrado, y=1120."
+  },
+  "anclaje": "El bloque de texto se ancla por su BASE, no por su borde superior: se mide el alto real del bloque ya maquetado con getBoundingClientRect() y se resta de la Y de base. Así el titular de dos líneas y el de cinco acaban a la misma distancia del borde inferior. En la plantilla D el titular se ancla al centro óptico en y=594.",
+  "ordenBloque": [
+    "antetítulo",
+    "titular",
+    "subtítulo o lista",
+    "precio",
+    "código de producto",
+    "nota"
+  ],
+  "escala": [
+    {
+      "elemento": "Titular XL · 2–3 líneas",
+      "familia": "Anton",
+      "px": 128,
+      "interlinea": "0.92",
+      "mayusculas": true,
+      "maxCaracteresLinea": 16
+    },
+    {
+      "elemento": "Titular L · 4–5 líneas",
+      "familia": "Anton",
+      "px": 104,
+      "interlinea": "0.94",
+      "mayusculas": true,
+      "maxCaracteresLinea": 20
+    },
+    {
+      "elemento": "Precio actual",
+      "familia": "Anton",
+      "px": 96,
+      "mayusculas": true
+    },
+    {
+      "elemento": "Precio anterior (tachado)",
+      "familia": "Inter",
+      "px": 34
+    },
+    {
+      "elemento": "Código de producto",
+      "familia": "Inter",
+      "px": 22,
+      "tracking": "0.1em"
+    },
+    {
+      "elemento": "Antetítulo",
+      "familia": "Oswald",
+      "px": 26,
+      "tracking": "0.14em"
+    },
+    {
+      "elemento": "Subtítulo",
+      "familia": "Oswald",
+      "px": 34,
+      "interlinea": "1.3"
+    },
+    {
+      "elemento": "Lista / cuerpo",
+      "familia": "Inter",
+      "px": 26,
+      "interlinea": "1.5"
+    },
+    {
+      "elemento": "Nota",
+      "familia": "Inter",
+      "px": 20,
+      "interlinea": "1.5"
+    },
+    {
+      "elemento": "Wordmark de banda",
+      "familia": "Anton",
+      "px": 30
+    }
+  ],
+  "acento": {
+    "$regla": "El acento de esta marca no es un tramo de color: es el subrayado amarillo bajo UNA SOLA palabra del titular. Dos palabras subrayadas ya no son un acento, y dos subrayados menos todavía.",
+    "regla": "Un solo subrayado amarillo #FED00F bajo una sola palabra del titular. Se marca con ⟦ ⟧, que no se imprimen."
+  },
+  "velo": "Sólo en la plantilla D (portada de Reel): velo azul rgba(19,64,177,0.55) sobre la foto de ambiente. Es lo que separa una portada de Reel de una pieza de ambiente: sin él, el titular blanco desaparece sobre la foto.",
+  "plantillas": [
+    {
+      "id": "A",
+      "nombre": "Ambiente",
+      "cuando": "la foto manda; ritmo del feed",
+      "composicion": "Foto a sangre dentro de placa con marco blanco de 12 px, inset 32 px, radio 48 px. Sin titular, o con uno de dos palabras dentro de la placa. Si lleva más texto, deja de ser ambiente. Firma: badge en la esquina inferior derecha."
+    },
+    {
+      "id": "B",
+      "nombre": "Valor",
+      "cuando": "un beneficio o un dato; es el 40 % de la semana y la pieza que se guarda y se comparte",
+      "composicion": "Fondo hueso #E0DDD1 completo. Antetítulo, titular a dos o tres líneas en azul, subtítulo en grafito y lista de tres puntos. Firma: banda inferior amarilla."
+    },
+    {
+      "id": "C",
+      "nombre": "Producto y precio",
+      "cuando": "producto con su precio verificado",
+      "composicion": "Fondo azul #1340B1 completo. Foto real del producto recortada sobre el azul, que sube el humano. Titular en blanco, placa amarilla con el precio en azul, código de producto y nota. Firma: banda inferior amarilla. Variante con rebaja: ANTES tachado arriba, pequeño y sin drama, nunca en rojo. Variante sin precio: la placa amarilla NO se dibuja, no se rellena con «consúltanos» y no se inventa un importe."
+    },
+    {
+      "id": "D",
+      "nombre": "Portada de Reel",
+      "cuando": "portada vertical de un reel",
+      "composicion": "Foto de ambiente a sangre bajo velo azul. Titular en blanco de 2 a 4 líneas anclado al centro óptico. Ícono de play. Firma: badge en la esquina inferior derecha."
+    }
+  ],
+  "firma": {
+    "$regla": "Toda pieza lleva al menos un elemento del sistema: la placa, la banda inferior amarilla o el badge. Nunca los tres a la vez — se pisan.",
+    "porPlantilla": {
+      "A": "badge",
+      "B": "banda inferior",
+      "C": "banda inferior",
+      "D": "badge"
+    }
+  },
+  "logo": {
+    "$regla": "El logo ya es la placa: trae dentro el marco blanco, el borde azul, la masa azul con D'CASA y la banda amarilla con PANAMÁ. Sustituye al badge tipográfico y a la banda dibujada, no se suma a ellos.",
+    "archivo": "Assets_Visuales_Base/logo-dcasa.png",
+    "posicion": "esquina inferior derecha en las plantillas A y D; sobre la banda amarilla, a la izquierda, en las B y C",
+    "ancho": 360,
+    "ancla": "su base",
+    "proporcion": "2.204 : 1 — a 360 px de ancho mide 163 de alto",
+    "resguardo": "como mínimo la altura de su banda amarilla, un 18 % de su alto, libre por los cuatro lados",
+    "sobreFondo": "Sobre foto oscura o con detalle va sobre la banda amarilla o dentro de una zona limpia: tiene marco blanco y sobre un fondo claro y movido desaparece.",
+    "reglas": [
+      "Nunca se recolorea, ni se pone en blanco y negro, ni se le baja la opacidad. Es un raster: cualquier retoque se ve.",
+      "No se apoya sobre una masa plana de azul ni de amarillo de la marca: los HEX del logo (#1648C0 / #FFD000) no son los del ADN (#1340B1 / #FED00F) y pegados se ve el escalón. La divergencia está anotada en 01_brand_guidelines.md §10, pendiente de que el cliente decida cuál es el oficial.",
+      "El .svg del mismo directorio no es vectorial: es el mismo PNG incrustado en base64, así que no aporta nada para maquetar y pesa seis veces más."
+    ]
+  },
+  "bloqueEstilo": "Estilo: fotografía de interiores de un hogar panameño real, no un showroom.\nLuz natural cálida de media mañana entrando por una ventana, sombras suaves.\nPaleta de la escena: hueso, arena, madera natural, gris cálido, verde de\nplanta viva. Ambiente ordenado pero habitado, con la escala de un apartamento\no una casa de barrio panameño, no de una mansión. Cámara a la altura de los\nojos, encuadre frontal y limpio, profundidad natural. Sin personas. Fotografía\nrealista, nada de render 3D ni de ilustración.",
+  "negativos": "personas, gente, rostros, manos, niños, mascotas, terracota, bronce, cobre, verde salvia, beige premium, tonos tierra apagados, gris frío, azul grisáceo nórdico, estética escandinava, minimalismo frío, nieve, invierno, chimenea, lujo, mármol, dorado, candelabros, degradados, sombras dramáticas, viñeta, stickers de oferta, círculos rojos, explosiones de precio, tipografía serif, scripts, texto, letras, números, logotipos, marcas de agua, marcos, collage, render 3D, ilustración, dibujo, fisheye, gran angular deformado, HDR exagerado, saturación excesiva",
+  "trampasPropias": [
+    "La banda inferior amarilla y la placa se posicionan por su BASE (y=1350 y y=1318). Colocadas por su borde superior quedan fuera del lienzo.",
+    "Ningún texto, ícono ni línea en #FED00F puede terminar sobre #FFFFFF ni sobre #E0DDD1. Busca esa combinación en tu propio código y corrígela.",
+    "Si el usuario no ha cargado la foto real de una pieza de producto, el botón de descarga de esa pieza avisa y NO exporta. Un PNG con el rectángulo de «cárgala aquí» dentro se publica por error una de cada tres veces."
+  ],
+  "interfaz": "Fondo #FFFFFF, texto #3A3A3A, títulos y acentos #1340B1, botones con fondo #FED00F y texto #1340B1. La misma regla de contraste aplica a la interfaz.",
+  "reglasDuras": [
+    "La única cifra verificada en el ADN es «camas desde $49.99». Cualquier otro precio se le pide a Marcial y se cita con su fecha.",
+    "«Desde» no se cae nunca cuando el precio es un mínimo de rango.",
+    "No hay costo de delivery, ni de armado, ni plazo de entrega en el ADN. Ninguna pieza los menciona: ni «entrega gratis», ni «armado incluido», ni «te llega mañana».",
+    "Ninguna prueba social sin foto real y sin permiso.",
+    "Nada de escasez falsa: sin «últimos días», sin «corre», sin «liquidación total» si no es verdad.",
+    "Nunca se nombra a la competencia: ni Jamar, ni Conway, ni PriceSmart, ni HomeCenter, ni IKEA.",
+    "El amarillo nunca sobre blanco."
+  ],
+  "verificacionPropia": [
+    "¿La proporción cromática de cada pieza es 60 % claro · 30 % azul · 10 % amarillo, mirando la pieza entera?",
+    "¿Hay una sola palabra subrayada por titular, y un solo subrayado?",
+    "¿Lleva cada pieza al menos un elemento del sistema (placa, banda o badge) y nunca los tres a la vez?",
+    "¿Alguna pieza menciona delivery, armado o plazo de entrega? Fuera.",
+    "¿Va el código de producto en todas las piezas de producto?"
+  ],
+  "tildes": [
+    "PANAMÁ",
+    "MÁS",
+    "ESCRÍBENOS",
+    "AQUÍ",
+    "CUÁNTOS",
+    "DÍAS",
+    "DISEÑO",
+    "CAMPAÑA",
+    "SÓLO",
+    "ÚLTIMAS"
+  ],
+  "hashtags": {
+    "cantidad": 6,
+    "donde": "al final de la descripción, en una sola línea"
+  },
+  "emojis": {
+    "cantidad": 0,
+    "donde": "ninguno dentro del lienzo"
+  },
+  "cifrasPermitidas": [
+    "desde $49.99"
+  ],
+  "cta": "ESCRÍBENOS AL WHATSAPP",
+  "interlineado": {
+    "$regla": "La interlínea del titular no es un número: es una cuenta. En español, la tilde de una Á y el trazo de una Ñ sobresalen por encima de la altura de versalita, y Anton no rebaja los acentos en caja alta. Con la interlínea por debajo de 1 esa tilde acaba DENTRO de las letras de la línea de arriba. La holgura va donde hace falta y sólo donde hace falta: subir la interlínea de todas las líneas afloja el bloque entero para arreglar dos.",
+    "$medidoEn": "Anton, métrica real del archivo de Google Fonts. holguraSuperior = (alto de la tinta del glifo − altura de versalita); holguraInferior = lo que baja la tinta por debajo de la línea base. Medido el 2026-08-25.",
+    "formula": "avance(n → n+1) = base + holguraSuperior(línea n+1) + holguraInferior(línea n)",
+    "holguraSuperior": {
+      "Á É Í Ó Ú": 0.24,
+      "Ñ Ü": 0.21
+    },
+    "holguraInferior": {
+      "Q ¿ ¡ ,": 0.11
+    },
+    "seAplicaA": "sólo el titular y la cifra, que son lo único por debajo de interlínea 1. La bajada, el subtítulo, las listas y las notas van por encima de 1: ahí sobra sitio y no hay nada que corregir."
+  },
+  "anclajes": [
+    {
+      "plantilla": "A",
+      "nombre": "Dentro de la placa",
+      "donde": "sin bloque anclado: el titular, si lo lleva, va de dos palabras dentro de la placa"
+    },
+    {
+      "plantilla": "B",
+      "nombre": "Base sobre la banda",
+      "donde": "base del bloque en y=1258, justo encima de la banda amarilla"
+    },
+    {
+      "plantilla": "C",
+      "nombre": "Base sobre la banda",
+      "donde": "base del bloque en y=1258, justo encima de la banda amarilla"
+    },
+    {
+      "plantilla": "D",
+      "nombre": "Centro óptico",
+      "donde": "centro óptico del bloque en y=594; el centro óptico va por encima del geométrico"
+    }
+  ]
+}

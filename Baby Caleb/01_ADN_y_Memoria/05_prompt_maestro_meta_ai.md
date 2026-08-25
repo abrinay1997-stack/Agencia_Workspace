@@ -1,5 +1,12 @@
 # Sistema · Meta AI → lote de contenido en HTML (Baby Caleb Panamá)
 
+> **La fuente de verdad de este sistema visual es
+> [`05_receta.json`](05_receta.json).** Este archivo es la capa legible: explica
+> el porqué de cada decisión y es lo que se lee antes de escribir. El JSON es lo
+> que lee la máquina —el calendario de Juancito Ads lo usa para armar el prompt
+> maestro sin pasar por ningún modelo—. Si los dos se contradicen, se corrige el
+> que esté mal, y quien manda es el JSON. Máquina antes que prosa.
+
 > **Este archivo NO repite el estándar de agencia.** La estructura de siete
 > secciones, las convenciones de notación, la regla del exportador y la
 > verificación común están en

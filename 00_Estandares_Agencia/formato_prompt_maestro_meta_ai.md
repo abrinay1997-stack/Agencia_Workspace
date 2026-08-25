@@ -206,11 +206,91 @@ ocurrir. Aun así van escritas, porque cada una es un fallo observado:
 5. Un botón que lanza muchas descargas seguidas lo bloquea el navegador a la
    tercera. Sepáralas con una pausa y avisa de que hay que permitirlas, o
    agrúpalas en un ZIP de verdad.
+
+6. El avance vertical entre líneas del titular NO es líneas × interlínea.
+   Lleva la holgura de las tildes sumada línea a línea (sección 3 bis).
+   Acumula el avance real; si lo calculas multiplicando, el PNG sale con las
+   líneas comidas aunque la vista previa esté bien, o al revés.
+
+7. En un carrusel, el fondo de cada diapositiva es un TROZO de una sola
+   imagen. Se dibuja la panorámica entera desplazada −1080·k, no una imagen
+   por diapositiva. Si recortas y reescalas cada trozo por separado, los
+   redondeos dejan una línea de costura de uno o dos píxeles en cada corte.
 ```
 
 **Y la comprobación que hace el humano, no el modelo:** descargar una pieza y
 ponerla al lado de su vista previa. Si no son idénticas, el exportador está mal
 — y si está mal en una, está mal en todas.
+
+---
+
+## 3 bis · La interlínea del titular no es un número: es una cuenta
+
+**Es lo que más rompe una pieza en español sin que nadie sepa nombrarlo: las
+tildes y la eñe se comen la línea de arriba.**
+
+Las familias de titular que usamos no traen acentos rebajados para versalitas.
+Así que la tilde de una `Á` ocupa toda su altura natural y sobresale por encima
+de la altura de versalita. Con la interlínea por debajo de 1 —que es donde va
+todo titular compacto— esa tilde acaba **dentro** de las letras de la línea de
+arriba. Y por abajo pasa lo mismo con la cola de una `Q`, un `¿`, un `¡` o una
+coma.
+
+### La cuenta
+
+```
+avance(n → n+1) = base + holguraSuperior(línea n+1) + holguraInferior(línea n)
+```
+
+Las dos se suman cuando coinciden. Va literal en el prompt, con esta
+advertencia, porque es el error que más se comete:
+
+```
+SE CALCULA PARA CADA PAR DE LÍNEAS CONSECUTIVAS, SIN EXCEPCIÓN. No sólo para
+el primer par que se note. Un titular de cuatro líneas con tilde en la 2 y
+eñe en la 3 lleva DOS holguras distintas, una en cada par.
+```
+
+### Los valores son de la familia, no de la marca
+
+**No se copian de otro cliente.** Cada holgura es exactamente lo que sobresale
+la tinta de **esa** familia, medida sobre el archivo de la fuente:
+
+```
+holguraSuperior = (alto de la tinta del glifo) − (altura de versalita)
+holguraInferior = lo que baja la tinta por debajo de la línea base
+```
+
+Medido el 2026-08-25 sobre los archivos de Google Fonts:
+
+| Familia | Cliente | `Á É Í Ó Ú` | `Ñ Ü` | `Q ¿ ¡ ,` |
+|---|---|---|---|---|
+| Anton | D'CASA | 0.24 | 0.21 | 0.11 |
+| Oswald 600 | Feria del Lente | 0.26 | 0.24 | 0.18 |
+| Montserrat 700 | Baby Caleb | 0.20 | **0.21** | 0.17 |
+| Inter 900 | Juancito Ads | 0.23 | 0.23 | 0.21 |
+
+Fíjate en Montserrat: **la eñe pide más que la tilde.** Por eso no se copian
+los valores de una familia a otra ni se ponen a ojo — se miden. Viven en el
+`05_receta.json` de cada cliente, en el bloque `interlineado`.
+
+### Por qué no se afloja el bloque entero
+
+La alternativa era subir la interlínea en todas las líneas. Despeja la tilde,
+sí, y **afloja el bloque entero para arreglar dos líneas**. El titular de estas
+marcas es un bloque compacto; una interlínea uniforme que respete las tildes
+deja de serlo. La holgura va donde hace falta y sólo donde hace falta.
+
+### Dos reglas que vienen con ella
+
+- **El anclaje se mide sobre la versalita, no sobre la tinta.** El tope del
+  bloque es el tope de versalita de la primera línea, y la base es la línea
+  base de la última. Si se midieran sobre la tinta, una pieza cuyo titular
+  empieza con tilde caería respecto de otra que no la lleva, y dos piezas del
+  mismo mes no cuadrarían.
+- **El bloque no lleva recorte.** Con interlínea por debajo de 1 la tinta de la
+  primera línea sale por encima de su caja de línea; cualquier `overflow:
+  hidden` o caja de alto fijo le rasura la tilde.
 
 ---
 
@@ -271,6 +351,18 @@ descripciones.
 | Numerador | No | No | **Sí: 01/06 … en todas** |
 | Anclaje | Puede variar por pieza | Puede variar | **No salta: el mismo en todas** |
 | Firma | En todas | En todas | En todas — cada una se comparte suelta |
+
+**Un carrusel se monta como una tira, no como N piezas seguidas.** Es una pieza
+larga cortada, y el documento tiene que enseñar las dos cosas en este orden:
+primero la tira —las N diapositivas pegadas por el borde, sin separación ni
+margen, reducidas para que quepan a lo ancho—, y debajo cada una suelta con su
+botón. El fondo es **una sola imagen panorámica** de 1080·N de ancho, y la
+diapositiva k lleva esa panorámica desplazada −1080·k, no una imagen propia.
+
+Por qué la tira va primero: una diapositiva suelta puede estar perfecta y
+romper el carrusel. Un escalón de brillo o un punto focal partido por la mitad
+sólo se ven con las N pegadas. Si el documento no las enseña juntas, ese fallo
+llega a la publicación.
 
 **Reglas propias del carrusel**, que van escritas en la sección 1 del prompt:
 

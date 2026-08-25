@@ -1,0 +1,282 @@
+{
+  "$comentario": "Receta visual de Juancito Ads, legible por máquina. La lee el calendario para armar el prompt maestro de Meta AI sin pedirle a ningún modelo que deduzca la estructura. Máquina antes que prosa: cuando este archivo y 05_prompt_maestro_meta_ai.md se contradigan, manda este; el .md es la capa legible que explica el porqué.",
+  "version": 1,
+  "verificadoContra": {
+    "archivos": [
+      "01_brand_guidelines.md",
+      "05_prompt_maestro_meta_ai.md"
+    ],
+    "fecha": "2026-08-25"
+  },
+  "marca": "Juancito Ads",
+  "slug": "juancito-ads",
+  "productoFisico": false,
+  "fotoReal": false,
+  "lienzo": {
+    "ancho": 1080,
+    "alto": 1350
+  },
+  "fuentes": {
+    "$regla": "Dos familias. Inter 900 es ancha, no condensada, así que los cuerpos son más bajos que los de otras marcas del sistema y los rangos de caracteres por línea más cortos. Nada de serif en ningún punto: es red flag del ADN §9.",
+    "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Hanken+Grotesk:wght@300;400;500;700&display=swap",
+    "familias": [
+      {
+        "nombre": "Inter",
+        "pesos": "400;700;900",
+        "rol": "titulares, cifras y wordmark, siempre en versalitas"
+      },
+      {
+        "nombre": "Hanken Grotesk",
+        "pesos": "300;400;500;700",
+        "rol": "antetítulos, bajadas y notas; la bajada nunca en versalitas"
+      }
+    ]
+  },
+  "fuentesProhibidas": [
+    "cualquier serif",
+    "scripts",
+    "tipografías con bordes, sombras o degradados"
+  ],
+  "colores": [
+    {
+      "hex": "#050D1F",
+      "nombre": "azul noche",
+      "rol": "fondo de la pieza y de la interfaz del documento"
+    },
+    {
+      "hex": "#FFFFFF",
+      "nombre": "blanco",
+      "rol": "titular, cifra y JUANCITO del wordmark"
+    },
+    {
+      "hex": "#1E90FF",
+      "nombre": "azul eléctrico",
+      "rol": "antetítulo y líneas de constelación del fondo, y nada más dentro del bloque de texto"
+    },
+    {
+      "hex": "#CF6019",
+      "nombre": "naranja",
+      "rol": "un solo tramo continuo del titular, y el ADS del wordmark"
+    },
+    {
+      "hex": "#A0B4CC",
+      "nombre": "gris azulado",
+      "rol": "bajada y nota"
+    }
+  ],
+  "coloresProhibidos": [
+    {
+      "hex": "#0D489F",
+      "porque": "es el azul del logo: sirve para logo y fondos, JAMÁS para un texto — sobre #050D1F no se lee"
+    },
+    {
+      "hex": "verde, morado, rosa, amarillo, turquesa",
+      "porque": "fuera de paleta"
+    },
+    {
+      "hex": "tonos pastel, blanco puro de fondo, fondos claros",
+      "porque": "la marca es dark mode; un fondo claro la deshace"
+    }
+  ],
+  "combinacionesProhibidas": [
+    "Azul del logo #0D489F como color de texto sobre el fondo #050D1F — no se lee.",
+    "El titular entero en naranja: eso no es un acento, es una pieza naranja."
+  ],
+  "reticula": {
+    "$regla": "Todo alineado a la izquierda en x=80. La marca de constelación es la única excepción: va centrada.",
+    "texto": "Lienzo 1080×1350. Todas las medidas en píxeles.\n\nMárgenes laterales: x=80 y x=1000. Ancho útil 920 px.\n\nMarca de constelación: centrada, borde superior en y=88, dentro de una caja de 120×72.\n\nBloque de texto: alineado a la izquierda en x=80. Se ancla arriba, al medio o abajo según el número de líneas del titular.\n\nWordmark: alineado a x=80, BASE del bloque en y=1258."
+  },
+  "anclaje": "Tres anclajes verticales según el número de líneas del titular. Alto: tope del bloque en y=260, para titulares de 6–7 líneas. Medio: centro óptico del bloque en y=594, para titulares de 3–5 líneas. Bajo: base del bloque en y=1120, cuando la imagen manda en la mitad superior. Es 594 y no 675 porque el centro óptico va por encima del geométrico: un bloque centrado matemáticamente se lee caído.",
+  "ordenBloque": [
+    "antetítulo",
+    "titular",
+    "bajada",
+    "cifra",
+    "nota"
+  ],
+  "escala": [
+    {
+      "elemento": "Titular XL · 2–3 líneas",
+      "familia": "Inter",
+      "peso": 900,
+      "px": 104,
+      "interlinea": "0.94",
+      "tracking": "-0.03em",
+      "mayusculas": true,
+      "maxCaracteresLinea": 14
+    },
+    {
+      "elemento": "Titular L · 4–5 líneas",
+      "familia": "Inter",
+      "peso": 900,
+      "px": 88,
+      "interlinea": "0.96",
+      "tracking": "-0.03em",
+      "mayusculas": true,
+      "maxCaracteresLinea": 17
+    },
+    {
+      "elemento": "Titular M · 6–7 líneas",
+      "familia": "Inter",
+      "peso": 900,
+      "px": 72,
+      "interlinea": "1.00",
+      "tracking": "-0.02em",
+      "mayusculas": true,
+      "maxCaracteresLinea": 21
+    },
+    {
+      "elemento": "Antetítulo",
+      "familia": "Hanken Grotesk",
+      "peso": 500,
+      "px": 24,
+      "tracking": "0.16em"
+    },
+    {
+      "elemento": "Bajada",
+      "familia": "Hanken Grotesk",
+      "peso": 300,
+      "px": 30,
+      "interlinea": "1.45",
+      "mayusculas": false
+    },
+    {
+      "elemento": "Nota / límite",
+      "familia": "Hanken Grotesk",
+      "peso": 400,
+      "px": 20,
+      "interlinea": "1.5",
+      "tracking": "0.14em"
+    },
+    {
+      "elemento": "Cifra",
+      "familia": "Inter",
+      "peso": 900,
+      "px": 76,
+      "tracking": "-0.02em",
+      "mayusculas": true
+    },
+    {
+      "elemento": "Wordmark",
+      "familia": "Inter",
+      "peso": 900,
+      "px": 28,
+      "tracking": "0.22em"
+    }
+  ],
+  "acento": {
+    "$regla": "La marca tiene dos acentos y ése es justamente el riesgo. En naranja va la afirmación, la consecuencia o la cifra: en un titular con forma «no hacemos X, hacemos Y», el naranja es Y. Nunca la negación, ni la bajada, ni la nota, ni el titular entero.",
+    "regla": "Un solo tramo continuo del titular en naranja #CF6019, marcado con ⟦ ⟧. El resto del titular en blanco #FFFFFF. Nunca más de un tramo por pieza."
+  },
+  "velo": "La imagen va a sangre bajo un velo que abre el carril del texto. Brillo de la imagen entre 0.50 y 0.70. Degradado lineal desde el borde donde cae el texto hacia el opuesto, de rgba(5,13,31,0.94) a rgba(5,13,31,0.15). Ninguna caja detrás del texto: ni tarjeta, ni franja, ni rectángulo semitransparente, ni sombra sobre las letras. El contraste lo pone el velo, que es continuo y no tiene borde. Si con el velo puesto el titular todavía compite con la imagen, el fondo está mal generado y se regenera; no se sube el velo hasta tapar la imagen.",
+  "plantillas": [
+    {
+      "id": "unica",
+      "nombre": "Pieza de servicio",
+      "cuando": "todas las piezas del lote mensual",
+      "composicion": "Imagen a sangre bajo el velo. Bloque de texto alineado a x=80 con antetítulo, titular, bajada opcional, cifra sólo si es de un caso verificado, y nota obligatoria si hay cifra. Constelación arriba y wordmark abajo."
+    }
+  ],
+  "firma": {
+    "$regla": "El logo no se usa. Assets_Visuales_Base/logo.png es 2048×2048 con fondo claro NO transparente: pegado sobre #050D1F deja un cuadrado blanco. Hasta que exista un PNG o SVG recortado con transparencia, la firma es la constelación más el wordmark tipográfico.",
+    "arriba": "Marca de constelación: tres o cuatro estrellas unidas por líneas finas en #1E90FF, con un nodo en #CF6019. Centrada, borde superior en y=88, caja de 120×72. Es el motivo del logo (mapa estelar), no el logo entero.",
+    "abajo": "JUANCITO en blanco + ADS en naranja, Inter 900, tracking 0.22em, alineado a x=80, BASE del bloque en y=1258."
+  },
+  "logo": {
+    "$regla": "Pendiente de un recorte con transparencia. Mientras no exista, la firma es tipográfica y el documento NO pide cargar ningún archivo.",
+    "archivo": "",
+    "posicion": "no se usa todavía; la firma es la constelación arriba y el wordmark abajo",
+    "ancho": 0,
+    "ancla": "su base",
+    "proporcion": "",
+    "resguardo": "la banda del wordmark y la de la constelación van sobre fondo liso: un resplandor detrás se las come",
+    "sobreFondo": "",
+    "reglas": [
+      "Cuando exista el PNG recortado con transparencia, sustituye la constelación por el ícono y se actualiza el .md.",
+      "Decisión a validar con el fundador: el wordmark del logo dice sólo «JUANCITO». Aquí se usa «JUANCITO ADS» porque la pieza tiene que decir el nombre completo sin depender del pie de foto."
+    ]
+  },
+  "bloqueEstilo": "Estilo: render cinematográfico tecnológico nocturno. Fondo azul noche #050D1F,\ncasi sin luz ambiente. La luz nace de la propia escena: constelaciones de\nestrellas y nodos unidos por líneas finas de luz azul eléctrica #1E90FF, con\ndestellos puntuales ámbar #CF6019 marcando los nodos clave. Materiales: cristal\noscuro, metal pulido azulado, superficies mate con reflejos contenidos, polvo\nestelar muy fino. Contraste alto, negros azulados profundos que se tragan los\nbordes del encuadre. Composición limpia y sistemática, aire despejado, sin\nniebla lechosa. Grano digital fino. Sin personas.",
+  "negativos": "personas, gente, rostros, manos humanas, equipos de trabajo, oficinas, escritorios, laptops, monitores con interfaces, teclados, sillas de oficina, verde, morado, rosa, amarillo, turquesa, tonos pastel, blanco puro, fondos claros, fondos blancos, degradados multicolor, arcoíris, luz natural, luz de ventana, luz diurna, cielo diurno, exteriores, plantas, madera, texturas cálidas u orgánicas, tipografía serif, ilustración plana, vector, 3D de dibujos caricaturescos, texto, letras, números, tipografía, gráficos, tablas, flechas, infografías, collage, marco, borde, viñeta, stock corporativo, apretón de manos, gráfico de barras subiendo, bombilla, engranajes, cohete de dibujo, robots, androides, burbujas de chat, logotipos de Meta, Facebook, Instagram, TikTok o WhatsApp, cualquier logotipo de terceros, marcas de agua",
+  "trampasPropias": [
+    "El wordmark se posiciona por su BASE en y=1258. Colocado por su borde superior queda fuera del lienzo.",
+    "ctx.letterSpacing no se reinicia al cambiar ctx.font: el tracking de 0.22em del wordmark se filtra al titular y lo saca del lienzo. Ponlo a '0px' inmediatamente después de dibujarlo."
+  ],
+  "interfaz": "Fondo #050D1F, texto #FFFFFF, secundario #A0B4CC, acento #CF6019, enlaces #1E90FF. Es una herramienta interna, pero se ve todo el mes: si el documento es feo, las piezas parecen feas.",
+  "reglasDuras": [
+    "El número de líneas propone, el carácter más largo dispone: si una línea se pasa del rango de su tamaño, baja un escalón.",
+    "Más de 7 líneas no es un titular: son dos ideas y son dos piezas.",
+    "La cifra va después del titular, nunca antes. Si lo primero que se lee es un número, la pieza está al revés.",
+    "Toda cifra sale de un caso verificado del ADN §8, y si hay cifra la nota con su límite o su fuente es obligatoria.",
+    "El azul del logo #0D489F jamás es color de texto.",
+    "Nada de serif en ningún punto."
+  ],
+  "verificacionPropia": [
+    "¿Hay UN SOLO tramo naranja en el titular, y es la afirmación o la consecuencia, nunca la negación?",
+    "¿Va el titular y la cifra en versalitas, y la bajada en minúscula?",
+    "¿Está la nota puesta en todas las piezas que llevan cifra?",
+    "¿Hay alguna caja, tarjeta, franja o sombra detrás del texto? El contraste lo pone el velo.",
+    "¿Aparece #0D489F como color de algún texto? Quítalo."
+  ],
+  "tildes": [
+    "CAMPAÑA",
+    "DISEÑO",
+    "PÁGINA",
+    "MÁS",
+    "SEGÚN",
+    "CUÁL",
+    "DÍAS",
+    "PANAMÁ",
+    "ÚNICO",
+    "AQUÍ"
+  ],
+  "hashtags": {
+    "cantidad": 6,
+    "donde": "al final de la descripción, en una sola línea"
+  },
+  "emojis": {
+    "cantidad": 0,
+    "donde": "ninguno dentro del lienzo"
+  },
+  "cifrasPermitidas": [],
+  "cta": "Escríbenos",
+  "interlineado": {
+    "$regla": "La interlínea del titular no es un número: es una cuenta. Inter no rebaja los acentos en versalitas, así que la tilde de una Á sube por encima de la altura de versalita y, con la interlínea por debajo de 1, acaba dentro de las letras de la línea de arriba. La holgura va donde hace falta y sólo donde hace falta.",
+    "$medidoEn": "Inter 900, métrica real del archivo de Google Fonts. holguraSuperior = (alto de la tinta del glifo − altura de versalita, 0.7275 em); holguraInferior = lo que baja la tinta por debajo de la línea base. Medido el 2026-08-25.",
+    "formula": "avance(n → n+1) = base + holguraSuperior(línea n+1) + holguraInferior(línea n)",
+    "holguraSuperior": {
+      "Á É Í Ó Ú": 0.23,
+      "Ñ Ü": 0.23
+    },
+    "holguraInferior": {
+      "Q ¿ ¡ ,": 0.21
+    },
+    "seAplicaA": "sólo el titular y la cifra, que son lo único por debajo de interlínea 1. La bajada va a 1.45 y la nota a 1.5, las dos en Hanken Grotesk: ahí sobra sitio y no hay nada que corregir."
+  },
+  "anclajes": [
+    {
+      "lineas": [
+        6,
+        7
+      ],
+      "nombre": "Alto",
+      "donde": "tope del bloque en y=260"
+    },
+    {
+      "lineas": [
+        2,
+        5
+      ],
+      "nombre": "Medio",
+      "donde": "centro óptico del bloque en y=594; es 594 y no 675 porque el centro óptico va por encima del geométrico"
+    },
+    {
+      "lineas": [
+        1,
+        1
+      ],
+      "nombre": "Bajo",
+      "donde": "base del bloque en y=1120, cuando la imagen manda en la mitad superior"
+    }
+  ]
+}
