@@ -154,6 +154,18 @@ Institucional (plantilla D):
 
 ---
 
+### Las fuentes, para el contrato del HTML
+
+Oswald sólo para titulares de impacto y el dato de urgencia; Montserrat para
+todo lo demás. Los pesos son los de la escala de arriba y ninguno más.
+
+```
+Carga Oswald y Montserrat desde Google Fonts:
+https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@600;700&display=swap
+```
+
+---
+
 ## 4 · El bloque de estilo y los negativos
 
 ### Estilo consumer (se copia literal, idéntico en todas las piezas consumer)

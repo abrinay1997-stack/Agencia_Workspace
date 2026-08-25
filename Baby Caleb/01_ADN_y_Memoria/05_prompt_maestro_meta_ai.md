@@ -149,6 +149,18 @@ Plantilla C (cercanía):
 
 ---
 
+### Las fuentes, para el contrato del HTML
+
+Una sola familia y tres pesos: el 400 del cuerpo, el 500 de la guía de tallas
+y el 700 de titulares y antetítulos.
+
+```
+Carga Montserrat desde Google Fonts:
+https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap
+```
+
+---
+
 ## 4 · El bloque de estilo y los negativos
 
 ### Estilo (se copia literal, idéntico en todas las piezas)
