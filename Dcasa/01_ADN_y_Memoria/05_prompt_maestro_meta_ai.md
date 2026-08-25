@@ -1,5 +1,12 @@
 # Sistema · Meta AI → semana de contenido en HTML (D'CASA Panamá)
 
+> **La fuente de verdad de este sistema visual es
+> [`05_receta.json`](05_receta.json).** Este archivo es la capa legible: explica
+> el porqué de cada decisión y es lo que se lee antes de escribir. El JSON es lo
+> que lee la máquina —el calendario de Juancito Ads lo usa para armar el prompt
+> maestro sin pasar por ningún modelo—. Si los dos se contradicen, se corrige el
+> que esté mal, y quien manda es el JSON. Máquina antes que prosa.
+
 Cómo se le pide a **Meta AI** un documento HTML con la semana entera de D'CASA:
 cada pieza ya compuesta a 1080×1350, su descripción, sus hashtags, el guion de
 los Reels y un botón que descarga cada pieza en PNG.

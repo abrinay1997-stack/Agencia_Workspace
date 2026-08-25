@@ -1,0 +1,284 @@
+{
+  "$comentario": "Receta visual de Feria del Lente, legible por máquina. La lee el calendario para armar el prompt maestro de Meta AI sin pedirle a ningún modelo que deduzca la estructura. Máquina antes que prosa: cuando este archivo y 05_prompt_maestro_meta_ai.md se contradigan, manda este.",
+  "version": 1,
+  "verificadoContra": {
+    "archivos": [
+      "01_brand_guidelines.md",
+      "05_prompt_maestro_meta_ai.md"
+    ],
+    "fecha": "2026-08-25"
+  },
+  "marca": "Feria del Lente",
+  "slug": "feria-del-lente",
+  "productoFisico": true,
+  "fotoReal": true,
+  "$registros": {
+    "$regla": "LA DECISIÓN QUE VA ANTES QUE LA PLANTILLA. El ADN §7 lo dice como instrucción explícita y no negociable del fundador: nunca mezclar el ángulo cristiano en material institucional o B2B. Un lote no cruza los dos registros; si el humano no dice cuál, se pregunta antes de escribir.",
+    "consumer": {
+      "fondo": "#F2EDE4",
+      "dorado": "no se usa",
+      "anguloDeFe": "sí, es donde la marca es imbatible",
+      "tono": "voseo panameño, cálido, urgente"
+    },
+    "institucional": {
+      "fondo": "#FFFFFF o #000000",
+      "dorado": "sí, franjas y detalles",
+      "anguloDeFe": "jamás, ni una palabra",
+      "tono": "neutro-profesional, directo"
+    }
+  },
+  "lienzo": {
+    "ancho": 1080,
+    "alto": 1350
+  },
+  "fuentes": {
+    "$regla": "Dos familias con el papel cerrado (ADN §2): Oswald para titulares de impacto en mayúsculas, Montserrat para cuerpo y estructura general.",
+    "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@600;700&display=swap",
+    "familias": [
+      {
+        "nombre": "Oswald",
+        "pesos": "600;700",
+        "rol": "titulares de impacto y el dato de urgencia, siempre en MAYÚSCULAS"
+      },
+      {
+        "nombre": "Montserrat",
+        "pesos": "400;500;700",
+        "rol": "antetítulos, subtítulos, listas, notas y el WhatsApp de sucursal"
+      }
+    ]
+  },
+  "fuentesProhibidas": [
+    "Bebas Neue",
+    "Impact",
+    "Anton",
+    "Archivo Narrow",
+    "Poppins",
+    "Roboto",
+    "Open Sans",
+    "Lato",
+    "Helvetica",
+    "Arial"
+  ],
+  "colores": [
+    {
+      "hex": "#D91B19",
+      "nombre": "Oxblood Red",
+      "rol": "color primario — logo, titulares, franjas, banda de ofertas"
+    },
+    {
+      "hex": "#FFFFFF",
+      "nombre": "Pure White",
+      "rol": "fondos institucionales y texto sobre rojo o negro"
+    },
+    {
+      "hex": "#C5A059",
+      "nombre": "Doe Brown / dorado",
+      "rol": "acento premium, SÓLO en institucional: franjas doradas"
+    },
+    {
+      "hex": "#000000",
+      "nombre": "Jet Black",
+      "rol": "texto principal y fondos de alto contraste"
+    },
+    {
+      "hex": "#F2EDE4",
+      "nombre": "crema hueso",
+      "rol": "fondo del registro consumer"
+    }
+  ],
+  "coloresProhibidos": [
+    {
+      "hex": "azul, verde, morado",
+      "porque": "son de la competencia genérica del sector; el rojo oxblood es lo que hace reconocible a ésta"
+    },
+    {
+      "hex": "#C5A059 en consumer",
+      "porque": "el dorado es exclusivo del registro institucional: usarlo en consumer es cruzar registros"
+    }
+  ],
+  "combinacionesProhibidas": [
+    "Dorado #C5A059 sobre crema #F2EDE4 — no hay contraste, y además es cruzar registros.",
+    "Dorado #C5A059 sobre blanco #FFFFFF — ratio insuficiente para texto.",
+    "Rojo #D91B19 sobre negro #000000 — los dos son oscuros y saturados."
+  ],
+  "proporcionCromatica": {
+    "consumer": {
+      "crema": "70 %",
+      "negro": "20 %",
+      "rojo": "10 %"
+    },
+    "institucional": {
+      "blancoONegro": "60 %",
+      "rojo": "25 %",
+      "dorado": "15 %"
+    }
+  },
+  "reticula": {
+    "$regla": "Decisión de maquetación tomada el 2026-08-25, derivada de la identidad. Marcada con ✎ en el .md.",
+    "texto": "Lienzo 1080×1350. Margen lateral x=76 en los dos lados. Ancho útil 928 px.\n\nConsumer (plantillas A, B, C): banda de ofertas fijas de 96 px de alto, de y=1254 a y=1350, posicionada por su BASE en y=1350, fondo rojo #D91B19 y texto blanco. Bloque de texto anclado por su BASE en y=1230. La plantilla B lleva zona de foto real de y=0 a y=740.\n\nInstitucional (plantilla D): franja diagonal de la esquina superior derecha al borde izquierdo, 120 px de ancho perpendicular. Bloque de texto anclado por su BASE en y=1180. Sin banda de ofertas: el institucional no lleva las ofertas consumer."
+  },
+  "anclaje": "El bloque de texto se ancla por su BASE: se mide el alto real del bloque ya maquetado y se resta de la Y de base. Consumer en y=1230, institucional en y=1180.",
+  "ordenBloque": [
+    "antetítulo",
+    "titular",
+    "subtítulo",
+    "lista de ofertas fijas",
+    "WhatsApp de sucursal",
+    "nota"
+  ],
+  "escala": [
+    {
+      "elemento": "Titular XL · 2–3 líneas",
+      "familia": "Oswald",
+      "peso": 600,
+      "px": 124,
+      "interlinea": "0.94",
+      "mayusculas": true
+    },
+    {
+      "elemento": "Titular L · 4–5 líneas",
+      "familia": "Oswald",
+      "peso": 600,
+      "px": 98,
+      "interlinea": "0.98",
+      "mayusculas": true
+    },
+    {
+      "elemento": "Dato de urgencia",
+      "familia": "Oswald",
+      "peso": 700,
+      "px": 88,
+      "mayusculas": true
+    },
+    {
+      "elemento": "Antetítulo",
+      "familia": "Montserrat",
+      "peso": 700,
+      "px": 24,
+      "tracking": "0.14em"
+    },
+    {
+      "elemento": "Subtítulo",
+      "familia": "Montserrat",
+      "peso": 500,
+      "px": 34,
+      "interlinea": "1.35"
+    },
+    {
+      "elemento": "Lista de ofertas fijas",
+      "familia": "Montserrat",
+      "peso": 400,
+      "px": 26,
+      "interlinea": "1.5"
+    },
+    {
+      "elemento": "Nota / limitación",
+      "familia": "Montserrat",
+      "peso": 400,
+      "px": 20,
+      "interlinea": "1.5"
+    },
+    {
+      "elemento": "WhatsApp de sucursal",
+      "familia": "Montserrat",
+      "peso": 700,
+      "px": 30
+    }
+  ],
+  "acento": {
+    "$regla": "Una sola palabra o cifra del titular. En rojo cuando el fondo es crema; en blanco cuando el fondo ya es rojo.",
+    "regla": "Un solo tramo del titular en rojo oxblood #D91B19 sobre crema, o en blanco sobre rojo. Se marca con ⟦ ⟧."
+  },
+  "velo": "",
+  "plantillas": [
+    {
+      "id": "A",
+      "nombre": "Feria",
+      "cuando": "consumer; la que más se publica — lunes, martes, miércoles y jueves",
+      "composicion": "Fondo crema #F2EDE4. Titular negro con una palabra en rojo oxblood. Banda de ofertas fijas abajo."
+    },
+    {
+      "id": "B",
+      "nombre": "Testimonio",
+      "cuando": "consumer; los viernes",
+      "composicion": "Fondo crema. Foto real del cliente con su selector de archivo, nunca generada: la prueba social va con foto real o no va."
+    },
+    {
+      "id": "C",
+      "nombre": "Óptica cristiana",
+      "cuando": "consumer; sábados y domingos. NO EXISTE en el registro institucional",
+      "composicion": "Fondo crema o rojo #D91B19 con texto blanco."
+    },
+    {
+      "id": "D",
+      "nombre": "Institucional",
+      "cuando": "B2B; empresas aliadas y financiamiento por planilla",
+      "composicion": "Fondo blanco o negro. Franja diagonal roja o dorada. Cuadros de beneficios con checks. Sin ángulo de fe, sin voseo, sin urgencia de cupos."
+    }
+  ],
+  "logo": {
+    "$regla": "El isotipo es un monograma entrelazado: exactamente lo que un modelo devuelve mal —dos letras que casi son las iniciales, con un trazo que casi son unos lentes. No se describe como instrucción de dibujo; se carga.",
+    "archivo": "",
+    "posicion": "280 px de ancho, centrado horizontalmente, base en y=1214 (justo encima de la banda de ofertas) en consumer; esquina superior izquierda, x=76, base en y=180, en institucional",
+    "ancho": 280,
+    "ancla": "su base",
+    "proporcion": "la del archivo, calculada de naturalWidth / naturalHeight. Nunca se mete en un cuadrado",
+    "resguardo": "36 px libres por los cuatro lados",
+    "sobreFondo": "Siempre sobre fondo liso, nunca sobre la foto real ni cruzando la franja diagonal.",
+    "reglas": [
+      "Nunca se recolorea, ni se pone en blanco y negro, ni se le baja la opacidad, ni se le añade sombra o borde.",
+      "Sobre fondo rojo o negro se usa la versión sobre fondo claro del archivo, no una recoloreada.",
+      "Assets_Visuales_Base/ no tiene todavía el archivo: hasta que lo tenga, el humano lo carga al abrir el documento."
+    ]
+  },
+  "bloqueEstilo": "Estilo: fondo de color crema plano y liso, sin textura y sin degradado.\nEstética limpia y luminosa, de óptica de barrio bien llevada, no de clínica\nfría ni de boutique de lujo. Si la pieza lleva un elemento gráfico, es una\nforma geométrica simple y plana —un arco, un círculo, una línea— en rojo\noxblood o en negro, apoyada en una esquina y nunca detrás del texto. Luz\nuniforme, sin foco, sin viñeta y sin sombra. Nada de fotografía, nada de\nrender 3D, nada de ilustración.",
+  "bloqueEstiloInstitucional": "Estilo: fondo blanco o negro plano y liso, sin textura y sin degradado.\nEstética corporativa y sobria, de material de empresa a empresa. Una franja\ndiagonal roja o dorada como único elemento gráfico, plana y sin volumen.\nLuz uniforme, sin foco, sin viñeta y sin sombra. Nada de fotografía, nada de\nrender 3D, nada de ilustración, nada de iconografía religiosa.",
+  "negativos": "personas, gente, rostros, ojos, manos, clientes, doctores, optometristas, lentes, gafas, anteojos, monturas, aros, armazones, estuches, cajas de producto, locales, vitrinas, sillas de examen, equipos ópticos, render 3D, ilustración, dibujo, degradados, sombras, viñeta, texturas, bokeh, brillo, destellos, reflejos de cristal, stickers de oferta, círculos rojos, explosiones de precio, azul, verde, morado, tipografía serif, scripts, caligrafía, texto, letras, números, logotipos, marcas de agua, marcos, collage, fotografía",
+  "negativosInstitucional": "cruces, biblias, manos en oración, palomas, iconografía religiosa, símbolos de fe de cualquier tipo",
+  "trampasPropias": [
+    "La banda de ofertas se posiciona por su BASE en y=1350. Colocada por su borde superior queda fuera del lienzo.",
+    "Si el usuario no ha cargado la foto real de un testimonio, el botón de descarga de esa pieza avisa y NO exporta."
+  ],
+  "interfaz": "Fondo #FFFFFF, texto #000000, títulos y acentos #D91B19, botones con fondo #D91B19 y texto blanco. Ningún color fuera de la paleta.",
+  "reglasDuras": [
+    "Nunca mezclar el ángulo cristiano en material institucional o B2B. Instrucción explícita del fundador: no es un matiz de tono, es rehacer el lote.",
+    "Siempre el WhatsApp correcto por sucursal. Ciudad de Panamá 6544-5656 · La Chorrera 6554-6752 · Nuevo Arraiján 6445-3379 · Alianzas B2B 6386-9908.",
+    "No prometer «40 minutos» en Nuevo Arraiján: aplica sólo a Ciudad de Panamá y La Chorrera.",
+    "No se mencionan precios en consumer. El rango $90–$180 es memoria interna: el precio se da tras el examen.",
+    "El «4.9/5 en Google» es de la competencia (Óptica Optilux, ADN §6), no de esta marca."
+  ],
+  "verificacionPropia": [
+    "¿Todas las piezas del lote son del MISMO registro, sin una sola cruzada?",
+    "Si es institucional: ¿hay alguna palabra, símbolo o hashtag de fe? Quítalo.",
+    "Si es consumer: ¿aparece el dorado #C5A059 en algún sitio? Quítalo.",
+    "¿El WhatsApp de cada pieza es el de SU sucursal?",
+    "¿Alguna pieza de Nuevo Arraiján promete «40 minutos»? Quítalo.",
+    "¿Aparece algún precio? En consumer no va ninguno.",
+    "¿Está el voseo bien puesto en consumer —«visitás», «llevás», «vos»— y ausente en institucional?"
+  ],
+  "tildes": [
+    "FÓRMULAS",
+    "ÓPTICA",
+    "PANAMÁ",
+    "MÁS",
+    "VISIÓN",
+    "ARRAIJÁN",
+    "SÁBADO",
+    "AQUÍ",
+    "ÚLTIMAS"
+  ],
+  "hashtags": {
+    "cantidad": 6,
+    "donde": "al final de la descripción, en una sola línea. En institucional, #OpticaCristiana y #Fe NO van"
+  },
+  "emojis": {
+    "cantidad": 0,
+    "donde": "ninguno dentro del lienzo; hasta dos en la descripción consumer, ninguno en institucional"
+  },
+  "cifrasPermitidas": [
+    "28 años",
+    "40 minutos",
+    "3 sucursales"
+  ],
+  "cta": "Agenda tu cita + el WhatsApp de la sucursal que toque"
+}
