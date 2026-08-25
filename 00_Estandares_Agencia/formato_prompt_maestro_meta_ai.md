@@ -214,6 +214,50 @@ ponerla al lado de su vista previa. Si no son idénticas, el exportador está ma
 
 ---
 
+## 4 bis · El logo se carga, no se dibuja
+
+**La regla de arriba —«que no genere un logotipo»— dejaba abierto qué hacer en
+su lugar, y esto lo cierra.**
+
+Hay marcas cuyo símbolo es un trazado vectorial corto: se puede pegar literal
+en el prompt como `<path>` y como `Path2D`, y sale idéntico. **Casi ningún
+cliente de esta agencia está en ese caso.** Sus logos son insignias
+circulares con personaje, monogramas entrelazados, rasters con marco y banda,
+piezas con volumen. Describirlos en prosa devuelve algo que casi es el logo, y
+«casi» en un logo es peor que nada: se publica y no se nota hasta que lo ve el
+cliente.
+
+Así que en esta agencia el logo **es un archivo que el humano carga**, y el
+prompt pide tres cosas:
+
+```
+1. Un <input type="file"> arriba del documento, UNA sola vez para todas las
+   piezas. Al elegirlo se dibuja en todas a la vez, en la vista previa y en
+   el PNG exportado.
+2. Una constante `const LOGO_MARCA = "";` justo encima del script, por si la
+   agencia prefiere pegar el logo en base64 y que el documento salga ya
+   compuesto. Si trae contenido, manda ella; si está vacía, manda el archivo
+   que cargue el humano.
+3. Que el botón de descarga BLOQUEE mientras no haya logo, con aviso. No que
+   avise y deje pasar: un PNG con el rectángulo de «cárgalo aquí» dentro se
+   publica por error una de cada tres veces.
+```
+
+Y dos detalles del exportador que son propios de esto:
+
+- **`await img.decode()` antes de dibujar el logo.** Un logo a medio cargar
+  sale en blanco en el PNG y perfecto en la vista previa: el fallo clásico de
+  esta mecánica.
+- **La proporción se calcula de `naturalWidth / naturalHeight`**, no se
+  supone. Meter un logo en una caja cuadrada lo deforma, y un logo deformado
+  es lo único que un cliente detecta a la primera.
+
+Lo que sí va escrito en la receta del cliente es **dónde** se coloca, con qué
+resguardo y sobre qué fondo puede apoyarse. Lo que no va nunca es **cómo se
+dibuja**.
+
+---
+
 ## 5 · Los tres modos
 
 La estructura es la misma; cambia qué es "una pieza" y cómo se agrupan las
@@ -280,6 +324,13 @@ esta estructura** — la referencia. Hoy existen:
 
 - `Juancito Ads/` — lote mensual, dark-mode, piezas de servicio sin precio
 - `Dcasa/` — semana, foto-dependiente, con hueco para cargar la foto real
+- `Baby Caleb/` — lote mensual, una sola familia tipográfica, fondos lisos
+- `Feria del lente/` — semana, con dos registros que no se mezclan nunca
+
+Pendientes, y por qué: `57Dmc/` no tiene los HEX confirmados (su ADN los da
+como estimación visual) y `Fotosonido/` tiene el ADN sin extraer. En los dos
+casos el archivo se escribiría inventando la identidad, así que no se escribe:
+se pide el dato.
 
 Para un cliente nuevo se copia el de la marca más parecida y se cambian los
 valores, nunca la estructura.
@@ -334,7 +385,7 @@ valores, nunca la estructura.
 - Que traduzca al inglés
 - Que meta emojis dentro de una imagen
 - Que genere un logotipo — ni el de la marca, ni el de una red social, ni el de
-  un tercero
+  un tercero (lo que se hace en su lugar está en la sección 4 bis)
 
 ---
 
