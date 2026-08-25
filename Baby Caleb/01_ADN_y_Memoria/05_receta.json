@@ -255,5 +255,18 @@
     "$50.00",
     "$35"
   ],
-  "cta": "Escríbenos al WhatsApp +507 6757-5065"
+  "cta": "Escríbenos al WhatsApp +507 6757-5065",
+  "interlineado": {
+    "$regla": "La interlínea del titular no es un número: es una cuenta. En español, la tilde de una Á y el trazo de una Ñ sobresalen por encima de la altura de versalita, y Montserrat 700 no rebaja los acentos en caja alta. Con la interlínea por debajo de 1 esa tilde acaba DENTRO de las letras de la línea de arriba. La holgura va donde hace falta y sólo donde hace falta: subir la interlínea de todas las líneas afloja el bloque entero para arreglar dos.",
+    "$medidoEn": "Montserrat 700, métrica real del archivo de Google Fonts. holguraSuperior = (alto de la tinta del glifo − altura de versalita); holguraInferior = lo que baja la tinta por debajo de la línea base. Medido el 2026-08-25.",
+    "formula": "avance(n → n+1) = base + holguraSuperior(línea n+1) + holguraInferior(línea n)",
+    "holguraSuperior": {
+      "Á É Í Ó Ú": 0.2,
+      "Ñ Ü": 0.21
+    },
+    "holguraInferior": {
+      "Q ¿ ¡ ,": 0.17
+    },
+    "seAplicaA": "sólo el titular y la cifra, que son lo único por debajo de interlínea 1. La bajada, el subtítulo, las listas y las notas van por encima de 1: ahí sobra sitio y no hay nada que corregir."
+  }
 }
