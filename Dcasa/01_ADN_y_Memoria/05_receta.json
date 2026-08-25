@@ -300,5 +300,27 @@
       "Q ¿ ¡ ,": 0.11
     },
     "seAplicaA": "sólo el titular y la cifra, que son lo único por debajo de interlínea 1. La bajada, el subtítulo, las listas y las notas van por encima de 1: ahí sobra sitio y no hay nada que corregir."
-  }
+  },
+  "anclajes": [
+    {
+      "plantilla": "A",
+      "nombre": "Dentro de la placa",
+      "donde": "sin bloque anclado: el titular, si lo lleva, va de dos palabras dentro de la placa"
+    },
+    {
+      "plantilla": "B",
+      "nombre": "Base sobre la banda",
+      "donde": "base del bloque en y=1258, justo encima de la banda amarilla"
+    },
+    {
+      "plantilla": "C",
+      "nombre": "Base sobre la banda",
+      "donde": "base del bloque en y=1258, justo encima de la banda amarilla"
+    },
+    {
+      "plantilla": "D",
+      "nombre": "Centro óptico",
+      "donde": "centro óptico del bloque en y=594; el centro óptico va por encima del geométrico"
+    }
+  ]
 }

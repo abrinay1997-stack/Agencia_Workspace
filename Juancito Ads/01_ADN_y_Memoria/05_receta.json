@@ -252,5 +252,31 @@
       "Q ¿ ¡ ,": 0.21
     },
     "seAplicaA": "sólo el titular y la cifra, que son lo único por debajo de interlínea 1. La bajada va a 1.45 y la nota a 1.5, las dos en Hanken Grotesk: ahí sobra sitio y no hay nada que corregir."
-  }
+  },
+  "anclajes": [
+    {
+      "lineas": [
+        6,
+        7
+      ],
+      "nombre": "Alto",
+      "donde": "tope del bloque en y=260"
+    },
+    {
+      "lineas": [
+        2,
+        5
+      ],
+      "nombre": "Medio",
+      "donde": "centro óptico del bloque en y=594; es 594 y no 675 porque el centro óptico va por encima del geométrico"
+    },
+    {
+      "lineas": [
+        1,
+        1
+      ],
+      "nombre": "Bajo",
+      "donde": "base del bloque en y=1120, cuando la imagen manda en la mitad superior"
+    }
+  ]
 }

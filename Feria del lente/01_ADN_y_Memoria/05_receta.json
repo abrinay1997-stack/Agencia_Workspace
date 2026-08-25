@@ -293,5 +293,27 @@
       "Q ¿ ¡ ,": 0.18
     },
     "seAplicaA": "sólo el titular y la cifra, que son lo único por debajo de interlínea 1. La bajada, el subtítulo, las listas y las notas van por encima de 1: ahí sobra sitio y no hay nada que corregir."
-  }
+  },
+  "anclajes": [
+    {
+      "plantilla": "A",
+      "nombre": "Base sobre la banda",
+      "donde": "base del bloque en y=1230, encima de la banda de ofertas fijas"
+    },
+    {
+      "plantilla": "B",
+      "nombre": "Base sobre la banda",
+      "donde": "base del bloque en y=1230, bajo la zona de foto real"
+    },
+    {
+      "plantilla": "C",
+      "nombre": "Base sobre la banda",
+      "donde": "base del bloque en y=1230"
+    },
+    {
+      "plantilla": "D",
+      "nombre": "Base institucional",
+      "donde": "base del bloque en y=1180; el institucional no lleva banda de ofertas"
+    }
+  ]
 }

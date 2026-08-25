@@ -268,5 +268,22 @@
       "Q ¿ ¡ ,": 0.17
     },
     "seAplicaA": "sólo el titular y la cifra, que son lo único por debajo de interlínea 1. La bajada, el subtítulo, las listas y las notas van por encima de 1: ahí sobra sitio y no hay nada que corregir."
-  }
+  },
+  "anclajes": [
+    {
+      "plantilla": "A",
+      "nombre": "Base baja",
+      "donde": "base del bloque en y=1180; la zona del logo empieza ahí"
+    },
+    {
+      "plantilla": "B",
+      "nombre": "Base baja",
+      "donde": "base del bloque en y=1180, bajo la zona de foto real"
+    },
+    {
+      "plantilla": "C",
+      "nombre": "Centro óptico",
+      "donde": "bloque centrado ópticamente, base en y=1120"
+    }
+  ]
 }
