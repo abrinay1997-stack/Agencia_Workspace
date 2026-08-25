@@ -1,0 +1,22 @@
+# Comprueba que el repositorio no se haya desincronizado.
+#
+# Existe porque la receta de cada cliente vive en dos sitios —el JSON que
+# lee la máquina y la prosa que lee el humano— y en cuanto uno de los dos
+# cambia sin el otro, el calendario entrega una pieza con el color, la
+# tipografía o la base que ya no son.
+name: Verificar
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node herramientas/verificar.mjs

@@ -68,6 +68,11 @@
       "hex": "#EE924A",
       "nombre": "naranja",
       "rol": "acento de una sola palabra del titular y placa del precio"
+    },
+    {
+      "hex": "#FFFFFF",
+      "nombre": "blanco",
+      "rol": "texto del precio sobre la placa naranja, y texto de los botones de la interfaz"
     }
   ],
   "coloresProhibidos": [
