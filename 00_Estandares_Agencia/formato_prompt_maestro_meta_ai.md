@@ -400,8 +400,28 @@ cliente. Si un dato no está ahí, **no se usa** — se pide.
 | El tono, el léxico y el CTA | `01_brand_guidelines.md` · ADN verbal |
 | A quién le habla el lote | `02_buyer_personas.md` |
 | Toda cifra, precio, plazo y caso | `01_brand_guidelines.md`, y solo de ahí |
+| La información dura del negocio, si el cliente la tiene aparte | `01_ADN_y_Memoria/06_ficha_negocio.json` · va **literal** en el prompt |
 | La mezcla de tipos y el ritmo del feed | `01_brand_guidelines.md` · aplicación a Instagram |
 | Lo ya publicado que no se repite | `03_Redes_Sociales/Calendarios_Aprobados/` |
+
+### La ficha de negocio, cuando el cliente la tiene
+
+El ADN dice **cómo habla** la marca y la receta dice **cómo se ve**. Falta lo
+tercero: **qué es cierto del negocio** — el precio de hoy, el número de
+WhatsApp, qué talla cubre qué peso, si hay tienda física. Eso es justo lo que un
+modelo generalista rellena solo, con algo verosímil y bien formateado.
+
+El cliente que lo necesite lo tiene en un
+`01_ADN_y_Memoria/06_ficha_negocio.json` con dos zonas: los campos, para las
+automatizaciones, y un **`bloqueLiteral`** que entra en el prompt en una
+**sección 1 bis**, justo detrás de la prohibición de escribir, y se copia
+carácter por carácter. Con él viaja también la lista de lo que **no** se dice y
+por qué. Es más barato prohibirle a Meta AI escribir «envío gratis» que revisar
+nueve lienzos buscándolo.
+
+Hoy la tiene **Baby Caleb**. `herramientas/verificar.mjs` (comprobación 8) no
+deja que un precio viva sólo en la ficha, ni que un canal esté en los campos y
+falte en el bloque.
 
 **La regla de oro del repositorio se aplica igual aquí:** ningún valor de una
 marca aparece en el prompt de otra, aunque compartan nicho y aunque el formato
@@ -416,7 +436,7 @@ esta estructura** — la referencia. Hoy existen:
 
 - `Juancito Ads/` — lote mensual, dark-mode, piezas de servicio sin precio
 - `Dcasa/` — semana, foto-dependiente, con hueco para cargar la foto real
-- `Baby Caleb/` — lote mensual, una sola familia tipográfica, fondos lisos
+- `Baby Caleb/` — lote mensual y **semana de los miércoles**, una sola familia tipográfica, fondos lisos, con ficha de negocio literal
 - `Feria del lente/` — semana, con dos registros que no se mezclan nunca
 
 Pendientes, y por qué: `57Dmc/` no tiene los HEX confirmados (su ADN los da

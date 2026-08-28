@@ -34,6 +34,8 @@ Este repositorio es el sistema de memoria y orquestación de la agencia **Juanci
 
   **Máquina antes que prosa.** Los valores salen del `01_ADN_y_Memoria/05_receta.json` del cliente, que es la fuente de verdad y lo que lee el calendario de Juancito Ads sin pasar por ningún modelo. El `05_prompt_maestro_meta_ai.md` es la capa legible que explica el porqué de cada decisión: se lee antes de escribir, pero cuando los dos se contradigan, manda el JSON y se corrige el `.md`. Si tocas uno, toca el otro y pasa `node herramientas/verificar.mjs`.
 
+  La información dura del negocio —contacto, precios, tallas, y lo que **no** se dice porque no está confirmado— vive aparte, en el `01_ADN_y_Memoria/06_ficha_negocio.json` del cliente, y entra en el prompt como bloque literal: Meta AI la copia, no la recuerda. Hoy la tiene `Baby Caleb/`, que además entrega **la semana los miércoles** (5 publicaciones, 9 lienzos).
+
   Hoy tienen receta `Dcasa/`, `Juancito Ads/`, `Baby Caleb/` y `Feria del lente/`. `57Dmc/` y `Fotosonido/` no: al primero le faltan los HEX confirmados por el cliente y al segundo la extracción del ADN, y sin esos datos la receta se inventaría.
 
 ## Cuándo va cada archivo

@@ -1,0 +1,182 @@
+{
+  "$comentario": "Ficha de negocio de Baby Caleb Panamá, legible por máquina. Es la información dura del negocio —quiénes son, qué venden, cómo se vende, contacto, precios y tallas— separada del ADN de marca (que vive en 01_brand_guidelines.md) y del sistema visual (que vive en 05_receta.json). Existe por una razón concreta: Meta AI no deduce ni recuerda datos de negocio, los rellena. Todo lo que está en `bloqueLiteral` entra en el prompt tal cual, y nada que no esté ahí puede aparecer en una pieza.",
+  "version": 1,
+  "verificadoContra": {
+    "archivos": [
+      "01_brand_guidelines.md"
+    ],
+    "fecha": "2026-08-28",
+    "nota": "Todos los datos de `bloqueLiteral` salen del formulario de onboarding verificado por el cliente (2026-08) recogido en 01_brand_guidelines.md §0, §1, §3, §4 y §7. Lo que no está verificado ahí no entra: vive en `porConfirmar`."
+  },
+  "marca": "Baby Caleb Panamá",
+  "slug": "baby-caleb",
+  "$regla": "`bloqueLiteral` es lo que se pega en el prompt maestro de Meta AI, en la sección 1 bis, carácter por carácter. Los campos estructurados de abajo son el mismo dato para las automatizaciones que no leen prosa. Si tocas un dato, tócalo en los dos sitios y pasa `node herramientas/verificar.mjs`: la comprobación 8 exige que cada canal y cada precio de los campos aparezca dentro del bloque literal, y que ningún precio exista que no esté en 01_brand_guidelines.md §4.",
+  "negocio": {
+    "nombrePublico": "Baby Caleb Panamá",
+    "desde": "2024",
+    "naturaleza": "Retail de esenciales de bebé hipoalergénicos y biodegradables: pañales y wipes desechables + fulares/portabebés.",
+    "modelo": "Venta 100 % online con entrega a domicilio.",
+    "tiendaFisica": false,
+    "canalDePedido": "WhatsApp y mensaje directo de Instagram.",
+    "diferenciadorOperativo": "Se vende en caja grande, para el mes completo: sale más a cuenta que comprar por paquete suelto.",
+    "promesa": "En Baby Caleb Panamá pensamos en cada etapa de tu bebé.",
+    "duenos": "Yulilka Godoy / Juan Arrieta",
+    "$duenos": "Memoria interna. No entra en el bloque literal ni en ninguna pieza: la marca no comunica hoy quién está detrás y publicar un nombre propio es una decisión del cliente, no de la agencia."
+  },
+  "canales": {
+    "whatsapp": "+507 6757-5065",
+    "instagram": "@babycalebpanama",
+    "correo": "babycalebpanama@gmail.com",
+    "web": "babycaleb.netlify.app",
+    "facebook": "Baby Caleb"
+  },
+  "productos": [
+    {
+      "nombre": "Pañales Nateen",
+      "comoSeNombra": "pañales Nateen",
+      "atributos": [
+        "hipoalergénicos",
+        "súper absorbentes",
+        "sin cloro ni perfumes",
+        "100 % fibras de bambú",
+        "biodegradables"
+      ],
+      "tallas": [
+        "RN",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "nombre": "Wipes Nateen",
+      "comoSeNombra": "wipes Nateen",
+      "atributos": [
+        "hipoalergénicos",
+        "en caja grande"
+      ],
+      "precio": null,
+      "$precio": "Sin precio verificado: no se dice ninguno."
+    },
+    {
+      "nombre": "Wipes de agua Dany Baby (AquaWipes 100)",
+      "comoSeNombra": "wipes de agua Dany Baby",
+      "atributos": [
+        "agua 99 % pura"
+      ],
+      "presentacion": "Combo de 2 cajas, 1,200 toallitas",
+      "precio": "$35",
+      "$nombre": "NUNCA se le llama «WaterWipes» ni ninguna otra marca. Red flag §6 del ADN: riesgo legal y aduanero."
+    },
+    {
+      "nombre": "Fulares y portabebés Moon",
+      "comoSeNombra": "fulares Moon",
+      "atributos": [
+        "unitalla ajustable",
+        "de recién nacido hasta unas 25 libras"
+      ],
+      "precio": null,
+      "$precio": "Sin precio verificado: no se dice ninguno."
+    }
+  ],
+  "tallas": [
+    {
+      "talla": "RN",
+      "pesoKg": "2–5 kg",
+      "pesoLb": "de 5 a 11 libras",
+      "precio": "$45.00"
+    },
+    {
+      "talla": "S",
+      "pesoKg": "3–6 kg",
+      "pesoLb": "de 7 a 13 libras",
+      "precio": "$50.00"
+    },
+    {
+      "talla": "M",
+      "pesoKg": "4–9 kg",
+      "pesoLb": "de 9 a 19 libras",
+      "precio": "$50.00"
+    },
+    {
+      "talla": "L",
+      "pesoKg": "7–18 kg",
+      "pesoLb": "de 16 a 39 libras",
+      "precio": "$45.00"
+    },
+    {
+      "talla": "XL",
+      "pesoKg": "12–25 kg",
+      "pesoLb": "de 27 a 55 libras",
+      "precio": "$45.00"
+    },
+    {
+      "talla": "XXL",
+      "pesoKg": "+55 lbs",
+      "pesoLb": "más de 55 libras",
+      "precio": "$45.00"
+    }
+  ],
+  "conversionLibras": {
+    "$regla": "El ADN §3 fija el léxico: de cara al público se escribe «libras», no «kg». Pero la tabla del fabricante (01_brand_guidelines.md §4) está en kg salvo la XXL. Así que la columna en libras es una conversión, no un dato del cliente, y va marcada como tal.",
+    "factor": 2.2046,
+    "redondeo": "Hacia DENTRO del rango verificado: el mínimo se redondea hacia arriba y el máximo hacia abajo. Así ninguna talla promete cubrir un peso que el fabricante no cubre. Ejemplo: 7–18 kg son 15.4–39.7 libras y se publica «de 16 a 39 libras».",
+    "derivado": true,
+    "pendienteConfirmar": true,
+    "$pendiente": "Confirmar con el cliente que quiere la guía en libras convertidas. La alternativa es publicar los kg del fabricante, que es lo que llevaban los creativos de junio 2026."
+  },
+  "precios": [
+    "$45.00",
+    "$50.00",
+    "$35"
+  ],
+  "$precios": "La lista cerrada de importes que pueden aparecer en una pieza. Sale de 01_brand_guidelines.md §4, que es la única fuente de precios. Cualquier otro importe está inventado. El costo interno y la ganancia por caja de esa misma tabla son memoria interna y no se dicen jamás.",
+  "afirmacionesRespaldadas": [
+    "hipoalergénico",
+    "sin cloro",
+    "sin perfumes",
+    "sin alcohol",
+    "sin químicos agresivos",
+    "biodegradable",
+    "100 % fibras de bambú",
+    "súper absorbente",
+    "fulares Moon: unitalla ajustable, de recién nacido hasta unas 25 libras"
+  ],
+  "noSeDice": [
+    "El costo de la entrega y las zonas a las que llega: pendiente de validar (ADN §7). Se coordina por WhatsApp y ninguna pieza dice «envío gratis», «entrega en 24 horas» ni nombra una zona.",
+    "Los métodos de pago: si se abona antes o si es contra entrega (ADN §7).",
+    "El horario de atención: no está en el ADN.",
+    "Cuántos pañales trae cada caja: la cifra existe en creativos viejos, no en el ADN verificado.",
+    "El precio de los wipes Nateen y el de los fulares Moon: no están en §4.",
+    "Cualquier promoción, descuento, fecha límite, escasez o nivel de stock.",
+    "Cualquier testimonio, reseña o nombre de clienta: sin permiso escrito no hay prueba social.",
+    "Cualquier mensaje religioso: el origen de fe del nombre es un valor interno silencioso (ADN §3).",
+    "El costo interno y la ganancia por caja: memoria interna (ADN §4).",
+    "El nombre de los dueños."
+  ],
+  "porConfirmar": [
+    {
+      "dato": "Unidades por caja: RN 160, S 160, M 144, L 128, XL 112, XXL 112.",
+      "origen": "04_master_prompts.md §1 — creativos de Meta Ads validados en junio 2026.",
+      "porQueNoEntra": "No está en el ADN verificado por el cliente. Es el dato que más piden las mamás antes de comprar: en cuanto el cliente lo confirme, sube a §4 del ADN y de ahí a esta ficha."
+    },
+    {
+      "dato": "Zona de cobertura y costo de la entrega.",
+      "origen": "Pregunta frecuente registrada en 01_brand_guidelines.md §5.",
+      "porQueNoEntra": "ADN §7 lo tiene como pendiente de validar."
+    },
+    {
+      "dato": "Métodos de pago: abono previo o contra entrega.",
+      "origen": "Pregunta frecuente registrada en 01_brand_guidelines.md §5.",
+      "porQueNoEntra": "ADN §7 lo tiene como pendiente de validar."
+    },
+    {
+      "dato": "Si los pañales son tipo pants o de cierre.",
+      "origen": "Pregunta frecuente registrada en 01_brand_guidelines.md §5.",
+      "porQueNoEntra": "El ADN recoge la pregunta, no la respuesta."
+    }
+  ],
+  "bloqueLiteral": "FICHA DE NEGOCIO — BABY CALEB PANAMÁ\nSe copia tal cual. No se resume, no se reescribe, no se completa y no se\ntraduce. Ningún dato de negocio que no esté en esta ficha existe: si no está\naquí, no se escribe en ninguna pieza, en ninguna descripción y en ningún\nhashtag.\n\nQUIÉNES SON\nBaby Caleb Panamá. Tienda panameña de esenciales de bebé hipoalergénicos y\nbiodegradables. Opera desde 2024.\nPromesa de la marca: «En Baby Caleb Panamá pensamos en cada etapa de tu bebé.»\n\nQUÉ VENDEN, Y NADA MÁS QUE ESTO\n· Pañales Nateen — hipoalergénicos, súper absorbentes, sin cloro ni perfumes,\n  100 % fibras de bambú, biodegradables. Tallas RN, S, M, L, XL y XXL.\n· Wipes Nateen hipoalergénicos, en caja grande.\n· Wipes de agua Dany Baby (AquaWipes 100, agua 99 % pura).\n· Fulares y portabebés Moon — unitalla ajustable, de recién nacido hasta unas\n  25 libras.\n\nCÓMO SE VENDE\nVenta 100 % online con entrega a domicilio. No hay tienda física.\nLos pedidos entran por WhatsApp y por mensaje directo de Instagram.\nSe vende en caja grande, para el mes completo: sale más a cuenta que comprar\npor paquete suelto.\n\nCONTACTO — LOS ÚNICOS DATOS QUE EXISTEN\nWhatsApp: +507 6757-5065\nInstagram: @babycalebpanama\nCorreo: babycalebpanama@gmail.com\nTienda online: babycaleb.netlify.app\nFacebook: Baby Caleb\n\nPRECIOS QUE SE PUEDEN DECIR — NO HAY NINGÚN OTRO\nCaja de pañales Nateen talla RN — $45.00\nCaja de pañales Nateen talla S — $50.00\nCaja de pañales Nateen talla M — $50.00\nCaja de pañales Nateen talla L — $45.00\nCaja de pañales Nateen talla XL — $45.00\nCaja de pañales Nateen talla XXL — $45.00\nCombo de 2 cajas de wipes de agua Dany Baby, 1,200 toallitas — $35\n\nGUÍA DE TALLA POR PESO\nTalla RN — de 5 a 11 libras\nTalla S — de 7 a 13 libras\nTalla M — de 9 a 19 libras\nTalla L — de 16 a 39 libras\nTalla XL — de 27 a 55 libras\nTalla XXL — más de 55 libras\n\nLO QUE SÍ SE PUEDE AFIRMAR DEL PRODUCTO\nHipoalergénico · sin cloro · sin perfumes · sin alcohol · sin químicos\nagresivos · biodegradable · 100 % fibras de bambú · súper absorbente.\nLos fulares Moon son unitalla ajustable, de recién nacido hasta unas 25 libras.\nNada más está respaldado. No se añade ningún otro beneficio, certificación,\ncomparación con otra marca ni promesa de resultado.\n\nCÓMO SE NOMBRA CADA PRODUCTO\nSe dice «wipes de agua Dany Baby». Nunca «WaterWipes» ni el nombre de ninguna\notra marca: es un problema legal y aduanero, no un matiz de estilo.\nSe escribe «talla» y «libras». Nunca «size» ni «kg».\n\nLO QUE NO SE DICE, PORQUE NO ESTÁ CONFIRMADO\n· El costo de la entrega y las zonas a las que llega. Se coordina por WhatsApp.\n  Ninguna pieza dice «envío gratis», «entrega en 24 horas» ni nombra una zona.\n· Los métodos de pago: si se abona antes o si es contra entrega.\n· El horario de atención.\n· Cuántos pañales trae cada caja.\n· El precio de los wipes Nateen y el precio de los fulares Moon.\n· Cualquier promoción, descuento, fecha límite, escasez o nivel de stock.\n· Cualquier testimonio, reseña o nombre de clienta.\n· Cualquier mensaje religioso."
+}

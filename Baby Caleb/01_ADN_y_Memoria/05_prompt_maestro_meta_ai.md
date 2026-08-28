@@ -1,4 +1,4 @@
-# Sistema · Meta AI → lote de contenido en HTML (Baby Caleb Panamá)
+# Sistema · Meta AI → contenido en HTML (Baby Caleb Panamá)
 
 > **La fuente de verdad de este sistema visual es
 > [`05_receta.json`](05_receta.json).** Este archivo es la capa legible: explica
@@ -6,6 +6,10 @@
 > que lee la máquina —el calendario de Juancito Ads lo usa para armar el prompt
 > maestro sin pasar por ningún modelo—. Si los dos se contradicen, se corrige el
 > que esté mal, y quien manda es el JSON. Máquina antes que prosa.
+
+Dos cadencias con el mismo sistema: **la semana, todos los miércoles** —cinco
+publicaciones, nueve lienzos— y el **lote mensual** de diez piezas. Cambia
+cuántas piezas y cómo se agrupan; no cambia ni un valor de la marca.
 
 > **Este archivo NO repite el estándar de agencia.** La estructura de siete
 > secciones, las convenciones de notación, la regla del exportador y la
@@ -35,6 +39,47 @@ Y una que es legal, no estética: la red flag §6 del ADN dice que **nunca se
 declara un producto como una marca que no es**. Un modelo que "mejora" el
 texto y escribe *WaterWipes* donde decía *wipes de agua* crea un problema
 aduanero. Por eso el texto se copia y no se redacta.
+
+---
+
+## 1 bis · La ficha de negocio se copia, no se recuerda
+
+**Los colores y el tono ya los tiene el sistema. Lo que Meta AI no tiene —y no
+puede deducir— es qué es cierto de este negocio.** Cuánto cuesta la caja, a qué
+número se escribe, qué peso cubre cada talla, si hay tienda física, si el envío
+es gratis.
+
+Un modelo generalista no deja ese hueco vacío: lo rellena con algo verosímil y
+bien formateado. Aquí eso significa un precio que no existe, un horario que
+nadie prometió o un «envío gratis» que se descubre en la conversación de
+WhatsApp donde se estaba cerrando la venta.
+
+Por eso la información viaja como **bloque literal**:
+
+- Vive en [`06_ficha_negocio.json`](06_ficha_negocio.json), campo
+  `bloqueLiteral`. La capa legible —de dónde sale cada dato, qué se dejó fuera
+  y por qué— está en [`06_ficha_negocio.md`](06_ficha_negocio.md).
+- Entra en el prompt en la **sección 1 bis**, justo después de la prohibición de
+  escribir y antes del sistema visual.
+- Se pega **carácter por carácter**. No se resume para que quepa, no se reordena
+  y no se actualiza a mano dentro del prompt: se corrige la ficha y se vuelve a
+  copiar.
+- **Lo que no está en la ficha no existe.** Ningún precio, peso, contacto,
+  cobertura, horario, unidad por caja ni testimonio puede aparecer en una pieza
+  si no está en ese bloque.
+
+La ficha trae también su propia lista de lo que **no** se dice y por qué —
+costo y zona de la entrega, métodos de pago, horario, unidades por caja,
+promociones, testimonios—. Esa lista viaja dentro del bloque a propósito: es más
+barato prohibirle a Meta AI escribir «envío gratis» que revisar nueve lienzos
+buscándolo.
+
+> **La guía de tallas va en libras y es una conversión.** El ADN §3 fija el
+> léxico —«libras», nunca «kg»—, pero la tabla del fabricante está en kg salvo
+> la XXL. La ficha convierte **hacia dentro del rango**: el mínimo redondea
+> hacia arriba y el máximo hacia abajo, para no prometer un peso que el
+> fabricante no cubre. La L (7–18 kg) se publica como *de 16 a 39 libras*. Está
+> marcada como pendiente de confirmar con el cliente.
 
 ---
 
@@ -95,20 +140,26 @@ acento» y esto lo traduce a la pieza.
 Montserrat en todo. El ADN es explícito: **no se usa Playfair Display**, que
 fue una lectura previa que el cliente descartó.
 
-| Rol | Peso | Tamaño | Interlínea | Color |
-|---|---|---|---|---|
-| Titular XL · 2–3 líneas | 700 | 116 | 0.98 | `#1B3246` |
-| Titular L · 4–5 líneas | 700 | 92 | 1.02 | `#1B3246` |
-| Precio | 700 | 88 | — | `#FFFFFF` sobre placa `#EE924A` |
-| Guía de talla y peso | 500 | 28 | 1.4 | `#1B3246` |
-| Antetítulo | 700 | 24 | — | `#EE924A`, tracking 0.12em, MAYÚSCULAS |
-| Subtítulo | 400 | 34 | 1.35 | `#1B3246` |
-| Lista / cuerpo | 400 | 26 | 1.55 | `#1B3246` |
-| Nota | 400 | 20 | 1.5 | `#1B3246` al 70 % |
+| Rol | Peso | Tamaño | Interlínea | Máx. car./línea | Color |
+|---|---|---|---|---|---|
+| Titular XL · 2–3 líneas | 700 | 116 | 0.98 | 14 | `#1B3246` |
+| Titular L · 3–5 líneas | 700 | 92 | 1.02 | 18 | `#1B3246` |
+| Precio | 700 | 88 | — | — | `#FFFFFF` sobre placa `#EE924A` |
+| Guía de talla y peso | 500 | 28 | 1.4 | — | `#1B3246` |
+| Antetítulo | 700 | 24 | — | — | `#EE924A`, tracking 0.12em, MAYÚSCULAS |
+| Subtítulo | 400 | 34 | 1.35 | — | `#1B3246` |
+| Lista / cuerpo | 400 | 26 | 1.55 | — | `#1B3246` |
+| Nota | 400 | 20 | 1.5 | — | `#1B3246` al 70 % |
 
 Montserrat tiene la caja alta ancha: **el titular no se pone en MAYÚSCULAS**
 salvo el antetítulo. Va en frase, que además es el tono de la marca —
 maternal y cercano, no gritado.
+
+Esa misma caja alta ancha fija el corte ✎: sobre los 936 px de ancho útil, el
+titular XL cabe en unos **14 caracteres por línea** y el L en unos **18**. Y de
+ahí sale la regla que decide el tamaño: **si una línea pasa de 14 caracteres, el
+titular baja a L aunque tenga sólo tres líneas.** Un titular más pequeño se lee;
+uno que se sale del lienzo, no.
 
 Y la puerta cerrada a las sustituciones, literal en el prompt:
 
@@ -152,6 +203,11 @@ Plantilla B (producto):
 Plantilla C (cercanía):
   Bloque de texto centrado ópticamente, base en y=1120.
   Zona del logo: de y=1120 a y=1350, fondo liso.
+
+El logo se apoya SIEMPRE en beige #F9F6ED:
+  En A, la zona del logo es una banda lisa de beige de y=1180 a y=1350.
+  En C, otra de y=1120 a y=1350.
+  En B el fondo ya es beige y no hace falta banda.
 ```
 
 ---
@@ -245,16 +301,45 @@ Reglas de colocación ✎:
 3. **Resguardo:** 40 px libres por los cuatro lados. Nada de texto dentro.
 4. **Nunca se recolorea, ni se recorta a otra forma, ni se le baja la
    opacidad, ni se le pone borde o sombra.**
-5. **Va sobre fondo liso**, nunca sobre la foto real ni sobre la placa del
-   precio. Su fondo es verde menta: sobre el verde background de la marca
-   casi no se separa, así que en la plantilla A el fondo bajo el logo es
-   beige `#F9F6ED`.
+5. **Va sobre fondo liso y siempre sobre beige `#F9F6ED`**, nunca sobre la
+   foto real ni sobre la placa del precio. Su fondo es verde menta: sobre el
+   verde background y sobre el verde de marca casi no se separa, así que en
+   las plantillas A y C la zona del logo es una banda lisa de beige. En la B
+   el fondo ya es beige.
 
 ---
 
-## 6 · Cómo se arma el lote
+## 6 · Cómo se arma el lote, y cómo se arma la semana
 
-### La mezcla ✎
+### La semana de los miércoles ✎
+
+**Cinco publicaciones, nueve lienzos: cuatro sueltas y un carrusel de cinco
+diapositivas.** Se entrega el miércoles y se publica de miércoles a domingo.
+
+| | |
+|---|---|
+| Mezcla | 3 educativas (A) · 1 de producto (B) · 1 de cercanía (C) |
+| El carrusel | Cuenta como educativa. Cinco diapositivas, una sola descripción, un solo juego de hashtags, numerador 01/05 en las cinco |
+| Anclaje del carrusel | No salta: las cinco anclan por la base, igual que la plantilla que usen |
+| Descripciones | Una por publicación |
+| Hashtags | Seis por publicación |
+
+Sobre diez piezas la mezcla del lote es 5A/3B/2C. Sobre cinco publicaciones no
+cae exacta: **producto queda corto —una en vez de una y media— y se rota a la
+semana siguiente.** No se maquilla subiendo una educativa a producto.
+
+**La plantilla A también puede llevar la guía de peso por talla** cuando la
+publicación es la guía de tallas: es un dato de atención al cliente, no un
+argumento de venta, y ahí va sin foto y sin precio. Misma escala que en la B
+(Montserrat 500, 28 px, interlínea 1.4).
+
+**El fondo del carrusel es UNA sola imagen panorámica** de 5400×1350, y la
+diapositiva k lleva esa panorámica desplazada −1080·k. En esta marca el fondo es
+plano, así que la panorámica es una banda lisa: aun así se genera entera y se
+desplaza, porque recortar y reescalar cada trozo por separado deja una costura
+de uno o dos píxeles en cada corte.
+
+### La mezcla del lote mensual ✎
 
 De 10 piezas: **5 educativas (A), 3 de producto (B), 2 de cercanía (C)**.
 Sale del posicionamiento del ADN §1 y §3: la marca convence desmontando
@@ -277,6 +362,12 @@ corto y se rota al mes siguiente; no se maquilla.
   se dice qué falta.
 - ¿El precio que va a aparecer sigue vigente? Se verifica contra §4 del ADN
   en el momento de escribir, no de memoria.
+- ¿La ficha de negocio sigue al día? Se relee `06_ficha_negocio.json` entero
+  antes de armar la semana, y se copia el bloque tal cual. Si un dato cambió,
+  se corrige primero en el ADN, después en la ficha, y recién entonces se arma
+  el prompt.
+- ¿Alguna pieza necesita un dato que está en `porConfirmar`? Entonces esa pieza
+  no se escribe: se dice qué falta y se pide al cliente.
 
 ---
 
@@ -321,4 +412,9 @@ Además de la lista común del estándar:
     ¿Aparece alguna otra? Quítala.
 [ ] ¿Están con su tilde o su eñe: PAÑALES, BEBÉ, HIPOALERGÉNICO, QUÍMICOS,
     MÁS, ESCRÍBENOS, PANAMÁ, TAMBIÉN, SEGÚN?
+[ ] ¿Aparece algún dato de negocio —precio, peso, contacto, cobertura,
+    horario, unidades por caja— que no esté en el bloque literal de la
+    ficha? Quítalo.
+[ ] ¿Se cambió alguna palabra del bloque de la ficha? Va carácter por
+    carácter.
 ```

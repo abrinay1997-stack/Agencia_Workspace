@@ -16,6 +16,10 @@
  *   5. Los anclajes cubren todas las plantillas que la marca declara.
  *   6. Feria del Lente usa el WhatsApp de la sucursal que toca.
  *   7. No quedan enlaces internos rotos ni huecos de plantilla sin rellenar.
+ *   8. La ficha de negocio de un cliente dice lo mismo que su ADN y que el
+ *      bloque literal que se le pega a Meta AI. Un precio que sólo vive en la
+ *      ficha es un precio inventado; un canal que está en los campos y no en
+ *      el bloque es un dato que el prompt no lleva.
  *
  * Las demás reglas son de criterio y las revisa quien entrega
  * (_EL_ORQUESTADOR_MAESTRO.md).
@@ -410,6 +414,108 @@ function reglaHuecosYEnlaces() {
 }
 
 /* ------------------------------------------------------------------ *
+ * 8 · La ficha de negocio dice lo mismo que el ADN y que su bloque
+ * ------------------------------------------------------------------ */
+
+// La información dura del negocio —precios, tallas, contacto— se le pega a
+// Meta AI como bloque literal. Si el bloque y los campos se separan, el
+// prompt sale con un dato y las automatizaciones con otro, y nadie se entera
+// hasta que la pieza está publicada.
+
+const CAMPOS_FICHA = [
+  ["marca", (f) => f.marca],
+  ["canales", (f) => f.canales && Object.keys(f.canales).length],
+  ["precios", (f) => Array.isArray(f.precios)],
+  ["noSeDice", (f) => (f.noSeDice || []).length],
+  ["bloqueLiteral", (f) => f.bloqueLiteral],
+  ["verificadoContra.fecha", (f) => f.verificadoContra?.fecha],
+];
+
+const soloDigitos = (s) => String(s).replace(/\D/g, "");
+const esTelefono = (v) => /^\+?[\d\s()-]{7,}$/.test(v);
+
+function reglaFichaNegocio() {
+  for (const c of clientes) {
+    const ruta = join(c.adn, "06_ficha_negocio.json");
+    if (!existsSync(ruta)) continue;
+
+    let ficha;
+    try {
+      ficha = JSON.parse(readFileSync(ruta, "utf8"));
+    } catch (e) {
+      error(rel(ruta), null, `No es JSON válido: ${e.message}`);
+      continue;
+    }
+
+    for (const [campo, tiene] of CAMPOS_FICHA) {
+      if (!tiene(ficha)) error(rel(ruta), null, `Falta «${campo}».`);
+    }
+
+    const bloque = ficha.bloqueLiteral || "";
+    const guias = join(c.adn, "01_brand_guidelines.md");
+    const adn = existsSync(guias) ? readFileSync(guias, "utf8") : "";
+
+    // El bloque es lo único que viaja al prompt: un dato que está en los
+    // campos y no en el bloque no llega.
+    for (const [nombre, valor] of Object.entries(ficha.canales || {})) {
+      if (!bloque.includes(valor)) {
+        error(rel(ruta), null,
+          `El canal «${nombre}» (${valor}) no está en bloqueLiteral: el prompt no lo llevará.`);
+      }
+      if (!adn) continue;
+      const enAdn = esTelefono(valor)
+        ? soloDigitos(adn).includes(soloDigitos(valor))
+        : /[@.]/.test(valor) ? adn.includes(valor) : true;
+      if (!enAdn) {
+        error(rel(ruta), null,
+          `El canal «${nombre}» (${valor}) no está declarado en 01_brand_guidelines.md.`);
+      }
+    }
+
+    // El ADN es la única fuente de precios. La ficha los copia; no los crea.
+    for (const p of ficha.precios || []) {
+      if (!bloque.includes(p)) {
+        error(rel(ruta), null, `El precio ${p} no está en bloqueLiteral.`);
+      }
+      if (adn && !adn.includes(p)) {
+        error(rel(ruta), null,
+          `El precio ${p} no está en 01_brand_guidelines.md. Un precio que sólo vive en la ficha es un precio inventado.`);
+      }
+    }
+
+    for (const t of ficha.tallas || []) {
+      if (t.precio && !(ficha.precios || []).includes(t.precio)) {
+        error(rel(ruta), null,
+          `La talla ${t.talla} lleva ${t.precio}, que no está en la lista de precios.`);
+      }
+      if (t.pesoLb && !bloque.includes(t.pesoLb)) {
+        error(rel(ruta), null,
+          `La guía de peso de la talla ${t.talla} («${t.pesoLb}») no está en bloqueLiteral.`);
+      }
+    }
+
+    // Y la receta no puede autorizar una cifra que la ficha no tenga.
+    if (c.receta) {
+      for (const cifra of c.receta.cifrasPermitidas || []) {
+        if (!(ficha.precios || []).includes(cifra)) {
+          error(rel(c.rutaJson), null,
+            `cifrasPermitidas autoriza ${cifra}, que no está en la ficha de negocio.`);
+        }
+      }
+      if (!c.receta.fichaNegocio?.archivo) {
+        aviso(rel(c.rutaJson), null,
+          "El cliente tiene ficha de negocio y la receta no la referencia: quien arme el prompt no sabrá que existe.");
+      }
+    }
+
+    if (c.tieneMd && !readFileSync(c.rutaMd, "utf8").includes("06_ficha_negocio")) {
+      aviso(rel(c.rutaMd), null,
+        "La prosa del sistema no cita 06_ficha_negocio: la información del negocio se quedará fuera del prompt.");
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ *
  * Ejecución
  * ------------------------------------------------------------------ */
 
@@ -420,6 +526,7 @@ reglaInterlinea();
 reglaAnclajes();
 reglaTelefonos();
 reglaHuecosYEnlaces();
+reglaFichaNegocio();
 
 const totalMd = listar(RAIZ, ".md").length;
 console.log(`\nAgencia_Workspace — verificación`);

@@ -1,17 +1,49 @@
 {
   "$comentario": "Receta visual de Baby Caleb Panamá, legible por máquina. La lee el calendario para armar el prompt maestro de Meta AI sin pedirle a ningún modelo que deduzca la estructura. Máquina antes que prosa: cuando este archivo y 05_prompt_maestro_meta_ai.md se contradigan, manda este.",
-  "version": 1,
+  "version": 2,
   "verificadoContra": {
     "archivos": [
       "01_brand_guidelines.md",
-      "05_prompt_maestro_meta_ai.md"
+      "05_prompt_maestro_meta_ai.md",
+      "06_ficha_negocio.json"
     ],
-    "fecha": "2026-08-25"
+    "fecha": "2026-08-28"
   },
   "marca": "Baby Caleb Panamá",
   "slug": "baby-caleb",
   "productoFisico": true,
   "fotoReal": true,
+  "fichaNegocio": {
+    "$regla": "La información del negocio no se deduce, no se resume y no se recuerda: se copia. Meta AI no deja un hueco vacío, lo rellena con algo verosímil y bien formateado — y en esta marca eso es un precio que no existe o un envío que nadie prometió.",
+    "archivo": "06_ficha_negocio.json",
+    "campo": "bloqueLiteral",
+    "seCopiaLiteral": true,
+    "donde": "Sección 1 bis del prompt, justo después de la prohibición de escribir y antes del sistema visual.",
+    "regla": "Ningún dato de negocio —precio, talla, peso, contacto, cobertura, horario, unidades por caja, testimonio— aparece en una pieza si no está en el bloque literal. Lo que no está en la ficha no existe."
+  },
+  "modos": [
+    {
+      "id": "semana",
+      "cadencia": "Todos los miércoles",
+      "publicaciones": 5,
+      "lienzos": 9,
+      "composicion": "4 publicaciones sueltas + 1 carrusel de 5 diapositivas",
+      "mezcla": "3 educativas (A) · 1 de producto (B) · 1 de cercanía (C). El carrusel cuenta como educativa.",
+      "$mezcla": "La del lote es 5A/3B/2C sobre 10. En cinco publicaciones no cae exacta: producto queda corto (1 en vez de 1.5) y se rota a la semana siguiente. No se maquilla.",
+      "descripciones": "Una por publicación. El carrusel lleva UNA sola para sus cinco diapositivas.",
+      "hashtags": "Seis por publicación. El carrusel, un solo juego al final.",
+      "guiaDeTallasEnPlantillaA": true,
+      "$guiaDeTallasEnPlantillaA": "En el lote mensual la guía de peso por talla vive sólo en la plantilla B, que es la de producto. En la semana el carrusel de tallas la necesita sin foto y sin precio, así que la plantilla A también puede llevarla, con la misma escala (Montserrat 500, 28 px, interlínea 1.4)."
+    },
+    {
+      "id": "lote",
+      "cadencia": "Mensual",
+      "publicaciones": 10,
+      "lienzos": 10,
+      "composicion": "10 piezas sueltas",
+      "mezcla": "5 educativas (A) · 3 de producto (B) · 2 de cercanía (C)"
+    }
+  ],
   "lienzo": {
     "ancho": 1080,
     "alto": 1350
@@ -102,7 +134,7 @@
   },
   "reticula": {
     "$regla": "Decisión de maquetación tomada el 2026-08-25, derivada de la identidad. Marcada con ✎ en el .md para poder discutirla sin confundirla con datos del cliente.",
-    "texto": "Lienzo 1080×1350. Margen lateral x=72 en los dos lados. Ancho útil 936 px.\n\nPlantilla A (educativa): bloque de texto anclado por su BASE en y=1180. Antetítulo por encima del titular, separado 24 px. Zona del logo de y=1180 a y=1350, fondo liso.\n\nPlantilla B (producto): zona de foto real de y=0 a y=756, el 56 % de la altura. Placa del precio de 300×120, esquina inferior derecha de la foto, base en y=800. Bloque de texto anclado por su BASE en y=1180.\n\nPlantilla C (cercanía): bloque de texto centrado ópticamente, base en y=1120. Zona del logo de y=1120 a y=1350, fondo liso."
+    "texto": "Lienzo 1080×1350. Margen lateral x=72 en los dos lados. Ancho útil 936 px.\n\nPlantilla A (educativa): bloque de texto anclado por su BASE en y=1180. Antetítulo por encima del titular, separado 24 px. Zona del logo de y=1180 a y=1350, fondo liso.\n\nPlantilla B (producto): zona de foto real de y=0 a y=756, el 56 % de la altura. Placa del precio de 300×120, esquina inferior derecha de la foto, base en y=800. Bloque de texto anclado por su BASE en y=1180.\n\nPlantilla C (cercanía): bloque de texto centrado ópticamente, base en y=1120. Zona del logo de y=1120 a y=1350, fondo liso.\n\nEl logo se apoya siempre en beige #F9F6ED: en la plantilla A la zona del logo es una banda lisa de beige de y=1180 a y=1350, y en la C otra de y=1120 a y=1350. En la B el fondo ya es beige y no hace falta banda."
   },
   "anclaje": "El bloque de texto se ancla por su BASE: se mide el alto real del bloque ya maquetado y se resta de la Y de base. En la plantilla C se centra ópticamente con base en y=1120.",
   "ordenBloque": [
@@ -120,15 +152,17 @@
       "peso": 700,
       "px": 116,
       "interlinea": "0.98",
-      "mayusculas": false
+      "mayusculas": false,
+      "maxCaracteresPorLinea": 14
     },
     {
-      "elemento": "Titular L · 4–5 líneas",
+      "elemento": "Titular L · 3–5 líneas",
       "familia": "Montserrat",
       "peso": 700,
       "px": 92,
       "interlinea": "1.02",
-      "mayusculas": false
+      "mayusculas": false,
+      "maxCaracteresPorLinea": 18
     },
     {
       "elemento": "Precio",
@@ -206,7 +240,7 @@
     "ancla": "su base",
     "proporcion": "1:1 — es un círculo, caja cuadrada de 200×200",
     "resguardo": "40 px libres por los cuatro lados; nada de texto dentro",
-    "sobreFondo": "Siempre sobre fondo liso, nunca sobre la foto real ni sobre la placa del precio. Su fondo es verde menta: sobre el verde background de la marca casi no se separa, así que en la plantilla A el fondo bajo el logo es beige #F9F6ED.",
+    "sobreFondo": "Siempre sobre fondo liso y siempre sobre beige #F9F6ED, nunca sobre la foto real ni sobre la placa del precio. Su fondo es verde menta: sobre el verde background y sobre el verde del logo de la marca casi no se separa, así que en las plantillas A y C la zona del logo es una banda lisa de beige. En la B el fondo ya es beige.",
     "reglas": [
       "Nunca se recolorea, ni se recorta a otra forma, ni se le baja la opacidad, ni se le pone borde o sombra.",
       "Assets_Visuales_Base/ no tiene todavía el archivo: hasta que lo tenga, el documento se entrega igual y el humano lo carga al abrirlo."
@@ -234,7 +268,9 @@
     "¿Está todo el documento en Montserrat, sin una segunda familia?",
     "¿El titular quedó en frase, no en MAYÚSCULAS? Sólo el antetítulo va en caja alta.",
     "¿Está escrito «Talla» y «libras», y no «size» ni «kg»?",
-    "¿Dice el nombre real de cada producto, sin sustituirlo por otra marca?"
+    "¿Dice el nombre real de cada producto, sin sustituirlo por otra marca?",
+    "¿Aparece algún dato de negocio —precio, peso, contacto, cobertura, horario, unidades por caja— que no esté en el bloque literal de la ficha? Quítalo.",
+    "¿Se cambió alguna palabra del bloque de la ficha? Tiene que ir carácter por carácter."
   ],
   "tildes": [
     "PAÑALES",
@@ -290,5 +326,7 @@
       "nombre": "Centro óptico",
       "donde": "bloque centrado ópticamente, base en y=1120"
     }
-  ]
+  ],
+  "$cifrasPermitidas": "Son los únicos importes de dinero. Cualquier otro está inventado. El resto de datos numéricos de una pieza —peso por talla, toallitas por combo— no se inventan tampoco: salen del bloque literal de 06_ficha_negocio.json y de ningún otro sitio.",
+  "$escala": "Montserrat 700 es ancha: sobre los 936 px de ancho útil, el titular XL cabe en unos 14 caracteres por línea y el L en unos 18. Medida tomada el 2026-08-28 al armar la primera semana. Si una línea pasa de 14 caracteres, el titular baja a tamaño L aunque tenga sólo tres líneas: es preferible un titular más pequeño que uno que se sale del lienzo."
 }
