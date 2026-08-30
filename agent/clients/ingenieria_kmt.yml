@@ -1,0 +1,69 @@
+# Ingeniería KMT — construcción, remodelación y supervisión de obra (Panamá + Venezuela).
+# Objetivo comercial: generar consultas/solicitudes de asesoría (WhatsApp / formulario) que se
+#   conviertan en proyectos residenciales y comerciales; posicionar autoridad de ingeniería.
+# Notas especiales:
+#   - DOS SEGMENTOS que no se mezclan en la misma pieza: A) residencial (propietario de vivienda)
+#     y B) corporativo (empresa / administrador de PH / oficina-local). Ver dual_voice_split.
+#   - Sitio web propio y funcional (ingenieriakmt.com) → activa web_seo_audit.
+#   - TikTok Business activo (@kmt00836) → tiktok_insights.
+#   - Regla del cliente: usar SIEMPRE obra real de KMT antes que stock.
+#   - NO posicionar por precio ni como "decoración".
+
+id: ingenieria_kmt
+folder: "Ingenieria KMT"
+clientName: "Ingeniería KMT"
+active: true
+recipientEmails:
+  - abrinay1997@gmail.com
+  - juanarrietabusiness@gmail.com
+
+# Colores de marca — ⚠️ PROVISIONALES. El cliente marcó identidad visual "por mejorar":
+# no hay HEX ni brand book confirmados (ver 01_brand_guidelines.md §2 y §12). Estos son
+# defaults corporativos sensatos por vertical (construcción/ingeniería): navy corporativo
+# + ámbar de obra. REEMPLAZAR por los HEX reales en cuanto el cliente entregue el brand book.
+branding:
+  primary: "#1B2A4A"   # Navy corporativo (PROVISIONAL — pendiente HEX real del cliente)
+  accent: "#E08A1E"    # Ámbar de obra (PROVISIONAL — pendiente HEX real del cliente)
+  logoChar: "🏗️"
+
+llm:
+  primary: { provider: claude, model: haiku-4-5 }
+  fast: { provider: groq, model: llama-3.3-70b-versatile }
+
+sources:
+  instagram:
+    handle: "@ingenieriakmt"
+    ig_user_id_env: IG_USER_ID_KMT
+  tiktok:
+    handle: "@kmt00836"
+  website:
+    url: "https://ingenieriakmt.com"
+  whatsapp:
+    - { label: "Asesoría / proyectos", number: "+507 6095-6890" }
+
+capabilities:
+  - adn_completeness_guard
+  - campaign_calendar_check
+  - instagram_insights
+  - tiktok_insights
+  - web_seo_audit                        # sitio propio funcional (ingenieriakmt.com)
+  - insights_digest
+  - market_trends_scan:
+      subreddits: [Construction, HomeImprovement, Renovations, InteriorDesign, Contractor]
+      focus: "remodelación de viviendas/oficinas/locales, procesos constructivos, supervisión y control de calidad; señales de decisión de propietarios y de administradores de PH/empresas en Panamá"
+      geo: PA
+      limit: 8
+  - instagram_content_ideas:
+      variants: 4                        # 2 por segmento
+      formats: [reel, carrusel, story]
+      objective: "generar consultas/solicitudes de asesoría (WhatsApp o formulario) mostrando obra real, autoridad de ingeniería y supervisión; NUNCA mezclar el registro residencial con el corporativo en una misma pieza; nunca posicionar por precio ni como decoración"
+      cta_options: [whatsapp, formulario_web]
+  - dual_voice_split:
+      voices:
+        - name: residencial_cliente_a
+          persona_hint: "familia"
+          rules: "propietario de vivienda medio-alto/alto; confianza, orden y control de obra; acabados; tono claro y profesional (por defecto usted)"
+        - name: corporativo_cliente_b
+          persona_hint: "empresa"
+          rules: "empresa / administrador de PH / oficina-local; foco en continuidad operativa, plazos, control de costos y coordinación; sin lenguaje emocional de 'tu hogar'"
+  - whatsapp_cta_review

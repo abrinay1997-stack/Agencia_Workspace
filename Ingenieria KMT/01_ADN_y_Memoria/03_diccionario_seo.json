@@ -1,0 +1,46 @@
+{
+  "cliente": "Ingenieria KMT",
+  "_nota": "Keywords derivadas del ADN verificado (construcción, remodelación, supervisión) y de las zonas confirmadas por el cliente. PENDIENTE de validar con volumen de búsqueda real (Google Keyword Planner) antes de tratarlo como definitivo. No se inventaron servicios ni precios.",
+  "ubicacion": "Ciudad de Panamá (Costa del Este, Santa María, Punta Pacífica, San Francisco, Paitilla). Empresa opera en Panamá y Venezuela.",
+  "keywords_principales": [
+    "remodelación de oficinas Panamá",
+    "remodelación de locales comerciales Panamá",
+    "empresa de construcción Panamá",
+    "remodelación de apartamentos Panamá"
+  ],
+  "keywords_secundarias": [
+    "empresa de remodelación Panamá",
+    "contratista de obras Panamá",
+    "remodelación de viviendas Panamá",
+    "construcción de obras civiles y comerciales Panamá",
+    "adecuación de oficinas Panamá",
+    "supervisión y control de calidad de obra",
+    "administración de proyectos de construcción Panamá",
+    "remodelación Costa del Este",
+    "remodelación Punta Pacífica",
+    "empresa de ingeniería Panamá"
+  ],
+  "entidades_semanticas_lsi": [
+    "obra civil",
+    "superestructura",
+    "instalaciones eléctricas",
+    "instalaciones sanitarias",
+    "instalaciones mecánicas",
+    "sistema contra incendio",
+    "inspección civil",
+    "control de calidad",
+    "control de costos",
+    "acabados",
+    "supervisión de obra",
+    "administración de obra",
+    "antes y después",
+    "PH / propiedad horizontal",
+    "oficina",
+    "local comercial"
+  ],
+  "notas_de_intencion": {
+    "residencial_cliente_A": "intención transaccional/confianza: 'empresa seria para remodelar mi apartamento', 'contratista confiable Panamá'.",
+    "corporativo_cliente_B": "intención de gestión/continuidad: 'remodelar oficina sin frenar operación', 'adecuación de local comercial', 'administración de obra'.",
+    "regla": "no posicionar por precio ni como 'decoración'; el eje SEO es ingeniería + ejecución + supervisión."
+  }
+}
