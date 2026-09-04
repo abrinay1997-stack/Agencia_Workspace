@@ -2,7 +2,7 @@
 
 > 📁 **Multimedia del cliente:** [Google Drive](https://drive.google.com/drive/folders/1_E7qEASLABx6pCQNr1N-jc1kyCWboEQK) · Canva _(pendiente: crear carpeta cuando la conexión de Canva esté autorizada)_ — los archivos pesados (fotos y videos de obra, diseños) viven ahí; este repo es la memoria/estrategia. No mezclar multimedia con otros clientes.
 
-> Última actualización: 2026-08-30 · **Fuente de verdad:** formulario de onboarding verificado (carta de presentación de la empresa + datos de redes dados por el cliente + revisión de `ingenieriakmt.com`). El original queda en el historial de git. **Estado del ADN: 🟡 base** — el posicionamiento, el ADN verbal, el público y los diferenciales están confirmados por el cliente; la **identidad visual (colores, tipografía, brand book) está "por mejorar"** y varios datos comerciales (precios, garantía, proceso de venta) están pendientes. Todo lo marcado ⚠️ **no se inventa**: se pregunta.
+> Última actualización: 2026-09-04 · **Fuente de verdad:** formulario de onboarding verificado (carta de presentación de la empresa + datos de redes dados por el cliente + revisión de `ingenieriakmt.com`) + **brand book del cliente (2026-09-04)**. El original queda en el historial de git. **Estado del ADN: 🟡 base** — el posicionamiento, el ADN verbal, el público, los diferenciales y ya la **identidad visual (paleta + tipografía, §2)** están confirmados por el cliente; siguen pendientes varios datos comerciales (precios, garantía, proceso de venta). Todo lo marcado ⚠️ **no se inventa**: se pregunta.
 
 ## 0. Datos del negocio (verificado por el cliente)
 
@@ -42,15 +42,21 @@
 - ❌ Como "el contratista más barato".
 - ❌ Como una empresa **solo de decoración** — se debe reconocer el valor de la ingeniería, ejecución y supervisión.
 
-## 2. Identidad visual — ⚠️ POR MEJORAR (no inventar)
+## 2. Identidad visual — ✅ CONFIRMADA (2026-09-04)
 
-> El cliente marcó **"por mejorar"** en brand book, colores y tipografía. **No hay HEX ni tipografías confirmadas.** Hasta que lleguen, ninguna pieza fija colores de marca "de memoria"; se pregunta o se trabaja con neutros corporativos declarados como provisionales.
+> Brand book recibido del cliente el 2026-09-04 (captura de paleta y tipografía). Reemplaza la referencia provisional anterior. Concepto declarado: **"Confianza técnica, orden y control. Evolución premium del actual."**
 
 - **Logo:** ✅ disponible (usado en la propuesta comercial ya aceptada). El sitio usa `cropped-Logo-KMT-Ajustado.png` (versión raster PNG/JPG); **falta confirmar si existe versión vectorial**. Cuando el cliente suba el archivo, va en `Assets_Visuales_Base/`.
-- **Colores de marca:** ⚠️ **pendientes** — el cliente los dará al mejorar el brand book. _(Referencia provisional para no bloquear el agente/email: paleta corporativa neutra profesional; ver nota en `agent/clients/ingenieria_kmt.yml`, marcada como provisional.)_
-- **Tipografía:** ⚠️ **pendiente.**
-- **Estilo visual declarado:** profesional, confiable, elegante, técnico pero claro → probablemente "elegante / premium" + "corporativo / serio". **Confirmar antes de fijarlo.**
-- **Marcas que admira visualmente:** ⚠️ no especificado.
+- **Colores de marca (paleta oficial):**
+  - `#0A1931` — Navy Profundo (primario, fondos oscuros)
+  - `#185ADB` — Azul KMT (color de marca/acento principal)
+  - `#FFC300` — Amarillo Seguridad (acento, CTA, alertas visuales — connota ingeniería/seguridad de obra)
+  - `#F5F7FA` — Concreto (fondo claro / texto sobre oscuro)
+- **Tipografía:**
+  - Titulares: **Sora**, peso Bold (700)
+  - Cuerpo: **Inter**, peso Regular (400)
+- **Estilo visual declarado:** profesional, confiable, elegante, técnico pero claro — "premium / evolución de lo actual". Confirmado por el cliente, ya no es supuesto.
+- **Marcas que admira visualmente:** ⚠️ no especificado (sigue pendiente).
 - **Regla de contenido del cliente (fundamental):** siempre que exista material propio adecuado, **usar obra real ejecutada por KMT antes que stock o imágenes genéricas.**
 
 ## 3. ADN Verbal (verificado)
@@ -135,7 +141,7 @@
 
 ## 12. Pendiente de validar (para cerrar el ADN a ✅)
 
-1. **Identidad visual:** HEX de marca, tipografía primaria/secundaria, brand book, versión vectorial del logo, marcas que admira. → mientras tanto, colores del agente/email son **provisionales**.
+1. **Identidad visual:** ✅ paleta y tipografía confirmadas (§2, brand book 2026-09-04). Restan menores: **versión vectorial del logo** (confirmar si existe) y **marcas que admira visualmente**.
 2. **Comercial:** rango de precios, ticket promedio, métodos de pago, promociones/financiamiento.
 3. **Garantía y postventa:** qué se ofrece y por cuánto tiempo.
 4. **Proceso de venta:** paso a paso, cómo cierra, cuánto tarda, tiempo de respuesta, cuántos clientes nuevos aguanta al mes (clave para dimensionar la pauta).
