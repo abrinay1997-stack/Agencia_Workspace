@@ -17,13 +17,13 @@ recipientEmails:
   - abrinay1997@gmail.com
   - juanarrietabusiness@gmail.com
 
-# Colores de marca — ⚠️ PROVISIONALES. El cliente marcó identidad visual "por mejorar":
-# no hay HEX ni brand book confirmados (ver 01_brand_guidelines.md §2 y §12). Estos son
-# defaults corporativos sensatos por vertical (construcción/ingeniería): navy corporativo
-# + ámbar de obra. REEMPLAZAR por los HEX reales en cuanto el cliente entregue el brand book.
+# Colores de marca — ✅ paleta oficial del brand book del cliente (2026-09-04).
+# Ver 01_brand_guidelines.md §2. Paleta completa: Navy Profundo #0A1931 (fondos oscuros) ·
+# Azul KMT #185ADB (marca) · Amarillo Seguridad #FFC300 (CTA) · Concreto #F5F7FA (fondo claro).
+# Tipografía: Sora (titulares) + Inter (cuerpo).
 branding:
-  primary: "#1B2A4A"   # Navy corporativo (PROVISIONAL — pendiente HEX real del cliente)
-  accent: "#E08A1E"    # Ámbar de obra (PROVISIONAL — pendiente HEX real del cliente)
+  primary: "#185ADB"   # Azul KMT — color de marca (headers, botones, badges)
+  accent: "#FFC300"    # Amarillo Seguridad — CTA/highlights
   logoChar: "🏗️"
 
 llm:
